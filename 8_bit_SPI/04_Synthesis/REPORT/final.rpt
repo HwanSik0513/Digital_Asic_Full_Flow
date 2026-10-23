@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/hah003/PROJ1/Proj1_make/TOP/SYN
+QoS Summary for spi_bridge_top
+================================================================================
+Metric                          syn_generic     syn_map         syn_opt        
+================================================================================
+Slack (ps):                       313             109             109
+  R2R (ps):                       322             237             169
+  I2R (ps):                       555             318             313
+  R2O (ps):                       313             109             109
+  I2O (ps):                       471             250             250
+  CG  (ps):                  no_value        no_value        no_value
+TNS (ps):                           0               0               0
+  R2R (ps):                         0               0               0
+  I2R (ps):                         0               0               0
+  R2O (ps):                         0               0               0
+  I2O (ps):                         0               0               0
+  CG  (ps):                  no_value        no_value        no_value
+Failing Paths:                      0               0               0
+Cell Area:                      5,465           3,407           3,397
+Total Cell Area:                5,465           3,407           3,397
+Leaf Instances:                 1,273             822             806
+Total Instances:                1,273             822             806
+Utilization (%):                 0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:00:21        00:00:16        00:00:03
+Real Runtime (h:m:s):        00:00:20        00:00:14        00:00:04
+CPU  Elapsed (h:m:s):        00:00:29        00:00:45        00:00:48
+Real Elapsed (h:m:s):        00:00:25        00:00:38        00:00:42
+Memory (MB):                  1740.28         1740.38         1740.20
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:00:38
+Total Memory (MB):     1740.20
+Executable Version:    22.17-s071_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+
