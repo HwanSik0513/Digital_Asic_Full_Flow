@@ -143,7 +143,7 @@ end
 
 // FIX: EMPTY comparison is now registered in the read-clock process above.
 
-function [ADDR_WIDTH:0] gray2bin ;
+function automatic [ADDR_WIDTH:0] gray2bin ;
     input   [ADDR_WIDTH:0] g ;
     integer                i ;
     begin

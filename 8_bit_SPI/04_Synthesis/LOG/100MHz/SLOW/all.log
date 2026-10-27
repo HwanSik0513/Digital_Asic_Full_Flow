@@ -3,19 +3,19 @@ Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
 Cadence and the Cadence logo are registered trademarks and Genus is a trademark
 of Cadence Design Systems, Inc. in the United States and other countries.
 
-[04:10:10.163121] Configured Lic search path (22.01-s003): 5280@172.31.52.241
+[03:13:35.158585] Configured Lic search path (22.01-s003): 5280@localhost
 
 Version: 22.17-s071_1, built Wed Sep 11 20:37:05 PDT 2024
 Options: -files ./script/spi_bridge_top_45nm_SLOW.tcl -log ./log/all.log 
-Date:    Tue Oct 27 04:10:10 2026
+Date:    Wed Oct 28 03:13:35 2026
 Host:    kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*2physical cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB) (394624392KB)
-PID:     243257
+PID:     6151
 OS:      CentOS Linux release 7.9.2009 (Core)
 
 Checking out license: Genus_Synthesis
-[04:10:10.245729] Periodic Lic check successful
-[04:10:10.245737] Feature usage summary:
-[04:10:10.245737] Genus_Synthesis
+[03:13:35.231643] Periodic Lic check successful
+[03:13:35.231651] Feature usage summary:
+[03:13:35.231651] Genus_Synthesis
 
 
 
@@ -27,7 +27,7 @@ Checking out license: Genus_Synthesis
 Finished executable startup (1 second elapsed).
 
 Loading tool scripts...
-Finished loading tool scripts (12 seconds elapsed).
+Finished loading tool scripts (13 seconds elapsed).
 
 #@ Processing -files option
 @genus 1> source ./script/spi_bridge_top_45nm_SLOW.tcl
@@ -235,11 +235,6 @@ Done reading qrc_tech_file
                  ../RTL/Spi_slave.v \
                  ../RTL/Spi_bridge_top.v"
 @file(spi_bridge_top_45nm_SLOW.tcl) 58: read_hdl $RTL_SOURCES
-function [ADDR_WIDTH:0] gray2bin ;
-         |
-Warning : Usage of non-static tasks or functions might result in simulation-synthesis mismatch. [VLOGPT-692]
-        : in file '../RTL/Async_fifo.v' on line 146, column 10.
-        : Use the 'automatic' keyword for declaring functions and tasks.
 @file(spi_bridge_top_45nm_SLOW.tcl) 59: elaborate $TOP_DESIGN
   Libraries have 324 usable logic and 128 usable sequential lib-cells.
 Info    : Elaborating Design. [ELAB-1]
@@ -293,9 +288,9 @@ stamp 'Elaboration' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:17 (Oct27) |  219.0 MB | init
+ 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:42 (Oct28) |  239.1 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:08) |  00:00:08(00:00:08) | 100.0(100.0) |    4:10:25 (Oct27) |  397.4 MB | Elaboration
+ 00:00:15(00:00:08) |  00:00:08(00:00:08) | 100.0(100.0) |    3:13:50 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -336,7 +331,7 @@ No empty modules in design 'spi_bridge_top'
 
   Done Checking the design.
 @file(spi_bridge_top_45nm_SLOW.tcl) 74: source -verbose ./cons/spi_bridge_top.sdc
-Sourcing './cons/spi_bridge_top.sdc' (Tue Oct 27 04:10:25 KST 2026)...
+Sourcing './cons/spi_bridge_top.sdc' (Wed Oct 28 03:13:51 KST 2026)...
 #@ Begin verbose source ./cons/spi_bridge_top.sdc
 @file(spi_bridge_top.sdc) 12: set STD_LIB_slow slow_vdd1v0_basicCells.lib:slow_vdd1v0
 @file(spi_bridge_top.sdc) 13: set STD_LIB_fast fast_vdd1v0_basicCells.lib:fast_vdd1v0
@@ -366,57 +361,6 @@ Sourcing './cons/spi_bridge_top.sdc' (Tue Oct 27 04:10:25 KST 2026)...
 @file(spi_bridge_top.sdc) 79: set_false_path -to [get_ports {o_dbg_sclk o_dbg_cs_n o_dbg_mosi o_dbg_miso}]
 @file(spi_bridge_top.sdc) 86: set_driving_cell -lib_cell DFFHQX1 -pin Q [remove_from_collection [all_inputs] [get_ports ACLK]]
 @file(spi_bridge_top.sdc) 87: set_load 0.02 [all_outputs]
-@file(spi_bridge_top.sdc) 93: set_operating_conditions \
-    -max_library [get_libs $STD_LIB_slow] -max PVT_0P9V_125C \
-    -min_library [get_libs $STD_LIB_fast] -min PVT_1P1V_0C
-Warning : Could not find requested search value. [SDC-208] [get_libs]
-        : The 'get_libs' command cannot find any libraries named 'fast_vdd1v0'.
-        : Use get_* commands to find the objects along with a wild card entry in the name of the object to check if the object is existing with different naming style.
-@file(spi_bridge_top.sdc) 104: set SYNC_CELLS [get_cells -quiet -hierarchical {*meta*_reg* *sync*_reg* *gray_wclk_reg* *gray_rclk_reg*}]
-@file(spi_bridge_top.sdc) 105: if {[llength $SYNC_CELLS] > 0} { set_dont_touch $SYNC_CELLS }
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-        : This object is not valid for the indicated SDC command. Check object passed to the SDC command and contact Cadence customer support if you believe this option combination should be supported.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Maximum message print count reached. [MESG-11] [set_dont_touch]
-        : Maximum print count of '20' reached for message 'SDC-248'.
 @file(spi_bridge_top.sdc) 107: set_ideal_network [get_ports {ACLK ARESETn}]
 @file(spi_bridge_top.sdc) 115: set_false_path -from [get_ports ARESETn]
 @file(spi_bridge_top.sdc) 126: set CDC_MAX_DELAY $CLK_PERIOD
@@ -425,7 +369,7 @@ Warning : Maximum message print count reached. [MESG-11] [set_dont_touch]
 @file(spi_bridge_top.sdc) 133: set RDD    [get_cells -quiet -hierarchical {*o_rd_data_reg*}]
 #@ End verbose source ./cons/spi_bridge_top.sdc
 @file(spi_bridge_top_45nm_SLOW.tcl) 75: source -verbose ./cons/dont_use_45nm.tcl
-Sourcing './cons/dont_use_45nm.tcl' (Tue Oct 27 04:10:26 KST 2026)...
+Sourcing './cons/dont_use_45nm.tcl' (Wed Oct 28 03:13:51 KST 2026)...
 #@ Begin verbose source ./cons/dont_use_45nm.tcl
 @file(dont_use_45nm.tcl) 1: set_dont_use [get_lib_cells */ANTENNA*]
 @file(dont_use_45nm.tcl) 2: set_dont_use [get_lib_cells */DLY*]
@@ -535,7 +479,7 @@ stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -543,7 +487,7 @@ Info: CPU time includes time of parent + longest thread
 Info    : Partition Based Synthesis execution skipped. [PHYS-752]
         : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
 Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: spi_bridge_top, recur: true)
-Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.002s)
 
 Stage: pre_to_gen_setup
 -----------------------------------------------------
@@ -552,7 +496,7 @@ Stage: pre_to_gen_setup
 | hlo_mux_reorder |       0 |       0 |        0.00 | 
 -----------------------------------------------------
 Starting mux data reorder optimization [v1.0] (stage: post_to_gen_setup, startdef: spi_bridge_top, recur: true)
-Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.001s)
 
 Stage: post_to_gen_setup
 -----------------------------------------------------
@@ -650,41 +594,41 @@ Begin SDR optimization
 No special hier is found 
 End SDR optimization 
 Starting recase case-box optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed recase case-box optimization (accepts: 0, rejects: 0, runtime: 0.004s)
+Completed recase case-box optimization (accepts: 0, rejects: 0, runtime: 0.005s)
 Starting infer macro optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed infer macro optimization (accepts: 0, rejects: 9, runtime: 0.002s)
+Completed infer macro optimization (accepts: 0, rejects: 9, runtime: 0.001s)
 Starting decode mux sandwich optimization [v2.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting decode mux optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed decode mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting chop wide muxes [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting constant-data mux optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed constant-data mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting chain-to-tree inequality transform [v2.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.002s)
 Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting identity transform [v3.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed identity transform (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed identity transform (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting reduce operator chain [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting optimize datapath elements [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting datapath recasting [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed datapath recasting (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting word-level redundancy removal [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed word-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.012s)
+Completed word-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.010s)
 Starting clip mux common data inputs [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting clip the non-user hierarchies [v2.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
@@ -2570,7 +2514,7 @@ Info    : Done optimizing datapath logic. [DPOPT-2]
         : Done optimizing datapath logic in 'spi_bridge_top'.
 Number of big hc bmuxes after = 0
 Starting bit-level redundancy removal [v1.0] (stage: post_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed bit-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.010s)
+Completed bit-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.009s)
 Starting logic reduction [v1.0] (stage: post_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed logic reduction (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: spi_bridge_top, recur: true)
@@ -2592,7 +2536,7 @@ Running post blast mux optimization. Please follow up with Cadence support if ru
 Starting mux speculation [v1.0] (stage: post_muxopt, startdef: spi_bridge_top, recur: true)
 Starting speculation optimization
 Completed speculation optimization (accepts:0)
-Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.076s)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.077s)
 
 Stage: post_muxopt
 -----------------------------------------------------
@@ -2606,89 +2550,81 @@ Stage : to_generic
   =================
    Message Summary
   =================
---------------------------------------------------------------------------------------------------------------------
-|    Id     |  Sev  |Count|                                      Message Text                                      |
---------------------------------------------------------------------------------------------------------------------
-|CDFG-250   |Info   |    2|Processing multi-dimensional arrays.                                                    |
-|CDFG-472   |Warning|    2|Unreachable statements for case item.                                                   |
-|CDFG-567   |Info   |    9|Instantiating Subdesign.                                                                |
-|CDFG-738   |Info   |   11|Common subexpression eliminated.                                                        |
-|CDFG-739   |Info   |   11|Common subexpression kept.                                                              |
-|CDFG-769   |Info   |    1|Identified sum-of-products logic to be optimized during syn_generic.                    |
-|CWD-19     |Info   |   97|An implementation was inferred.                                                         |
-|DPOPT-1    |Info   |    1|Optimizing datapath logic.                                                              |
-|DPOPT-2    |Info   |    1|Done optimizing datapath logic.                                                         |
-|DPOPT-3    |Info   |   14|Implementing datapath configurations.                                                   |
-|DPOPT-4    |Info   |   14|Done implementing datapath configurations.                                              |
-|DPOPT-6    |Info   |    1|Pre-processed datapath logic.                                                           |
-|ELAB-1     |Info   |    1|Elaborating Design.                                                                     |
-|ELAB-2     |Info   |    8|Elaborating Subdesign.                                                                  |
-|ELAB-3     |Info   |    1|Done Elaborating Design.                                                                |
-|ELABUTL-132|Info   |    3|Unused instance port.                                                                   |
-|           |       |     |Please check the reported scenario of unconnected instance port to ensure that it       |
-|           |       |     | matches the design intent.                                                             |
-|GLO-34     |Info   |    3|Deleting instances not driving any primary outputs.                                     |
-|           |       |     |Optimizations such as constant propagation or redundancy removal could change the       |
-|           |       |     | connections so a hierarchical instance does not drive any primary outputs anymore. To  |
-|           |       |     | see the list of deleted hierarchical instances, set the 'information_level' attribute  |
-|           |       |     | to 2 or above. If the message is truncated set the message attribute 'truncate' to     |
-|           |       |     | false to see the complete list. To prevent this optimization, set the                  |
-|           |       |     | 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance     |
-|           |       |     | attribute to 'true'.                                                                   |
-|LBR-9      |Warning|   20|Library cell has no output pins defined.                                                |
-|           |       |     |Add the missing output pin(s)                                                           |
-|           |       |     | , then reload the library. Else the library cell will be marked as timing model i.e.   |
-|           |       |     | unusable. Timing_model means that the cell does not have any defined function. If there|
-|           |       |     | is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' |
-|           |       |     | will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping  |
-|           |       |     | and it will not be picked up from the library for synthesis. If you query the attribute|
-|           |       |     | 'unusable_reason' on the libcell; result will be: 'Library cell has no output          |
-|           |       |     | pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground|
-|           |       |     | pins. Genus will depend upon the output function defined in the pin group (output pin) |
-|           |       |     | of the cell, to use it for mapping. The pg_pin will not have any function defined.     |
-|LBR-12     |Warning|    1|Found libraries with and without pg_pin construct.                                      |
-|           |       |     |This can lead to issues later in the flow.                                              |
-|LBR-40     |Info   |   16|An unsupported construct was detected in this library.                                  |
-|           |       |     |Check to see if this construct is really needed for synthesis. Many liberty constructs  |
-|           |       |     | are not actually required.                                                             |
-|LBR-41     |Info   |    1|An output library pin lacks a function attribute.                                       |
-|           |       |     |If the remainder of this library cell's semantic checks are successful, it will be      |
-|           |       |     | considered as a timing-model                                                           |
-|           |       |     | (because one of its outputs does not have a valid function.                            |
-|LBR-155    |Info   |  528|Mismatch in unateness between 'timing_sense' attribute and the function.                |
-|           |       |     |The 'timing_sense' attribute will be respected.                                         |
-|LBR-161    |Info   |    1|Setting the maximum print count of this message to 10 if information_level is less than |
-|           |       |     | 9.                                                                                     |
-|LBR-162    |Info   |  124|Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed.                 |
-|           |       |     |Setting the 'timing_sense' to non_unate.                                                |
-|LBR-412    |Info   |    2|Created nominal operating condition.                                                    |
-|           |       |     |The nominal operating condition is represented, either by the nominal PVT values        |
-|           |       |     | specified in the library source                                                        |
-|           |       |     | (via nom_process,nom_voltage and nom_temperature respectively)                         |
-|           |       |     | , or by the default PVT values (1.0,1.0,1.0).                                          |
-|LBR-516    |Info   |    1|Missing library level attribute.                                                        |
-|LBR-518    |Info   |    1|Missing a function attribute in the output pin definition.                              |
-|PHYS-103   |Warning|    4|Marking library cell 'avoid'.                                                           |
-|           |       |     |To prevent the library cell from being set to 'avoid', set attribute                    |
-|           |       |     | 'lib_lef_consistency_check_enable' to 'false'.                                         |
-|PHYS-127   |Info   |   17|Macro with non-zero origin.                                                             |
-|PHYS-129   |Info   |  119|Via with no resistance will have a value of '0.0' assigned for resistance value.        |
-|           |       |     |If this is the expected behavior, this message can be ignored.                          |
-|PHYS-279   |Warning|  107|Physical cell not defined in library.                                                   |
-|           |       |     |Ensure that the proper library files are available and have been imported.              |
-|PHYS-752   |Info   |    1|Partition Based Synthesis execution skipped.                                            |
-|SDC-208    |Warning|    1|Could not find requested search value.                                                  |
-|           |       |     |Use get_* commands to find the objects along with a wild card entry in the name of the  |
-|           |       |     | object to check if the object is existing with different naming style.                 |
-|SDC-248    |Warning|   41|Invalid object passed to SDC command.                                                   |
-|           |       |     |This object is not valid for the indicated SDC command. Check object passed to the SDC  |
-|           |       |     | command and contact Cadence customer support if you believe this option combination    |
-|           |       |     | should be supported.                                                                   |
-|SYNTH-1    |Info   |    1|Synthesizing.                                                                           |
-|TIM-1000   |Info   |    1|Multimode clock gating check is disabled.                                               |
-|VLOGPT-692 |Warning|    1|Usage of non-static tasks or functions might result in simulation-synthesis mismatch.   |
-|           |       |     |Use the 'automatic' keyword for declaring functions and tasks.                          |
---------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+|    Id     |  Sev  |Count|                                    Message Text                                     |
+-----------------------------------------------------------------------------------------------------------------
+|CDFG-250   |Info   |    2|Processing multi-dimensional arrays.                                                 |
+|CDFG-472   |Warning|    2|Unreachable statements for case item.                                                |
+|CDFG-567   |Info   |    9|Instantiating Subdesign.                                                             |
+|CDFG-738   |Info   |   11|Common subexpression eliminated.                                                     |
+|CDFG-739   |Info   |   11|Common subexpression kept.                                                           |
+|CDFG-769   |Info   |    1|Identified sum-of-products logic to be optimized during syn_generic.                 |
+|CWD-19     |Info   |   97|An implementation was inferred.                                                      |
+|DPOPT-1    |Info   |    1|Optimizing datapath logic.                                                           |
+|DPOPT-2    |Info   |    1|Done optimizing datapath logic.                                                      |
+|DPOPT-3    |Info   |   14|Implementing datapath configurations.                                                |
+|DPOPT-4    |Info   |   14|Done implementing datapath configurations.                                           |
+|DPOPT-6    |Info   |    1|Pre-processed datapath logic.                                                        |
+|ELAB-1     |Info   |    1|Elaborating Design.                                                                  |
+|ELAB-2     |Info   |    8|Elaborating Subdesign.                                                               |
+|ELAB-3     |Info   |    1|Done Elaborating Design.                                                             |
+|ELABUTL-132|Info   |    3|Unused instance port.                                                                |
+|           |       |     |Please check the reported scenario of unconnected instance port to ensure that it    |
+|           |       |     | matches the design intent.                                                          |
+|GLO-34     |Info   |    3|Deleting instances not driving any primary outputs.                                  |
+|           |       |     |Optimizations such as constant propagation or redundancy removal could change the    |
+|           |       |     | connections so a hierarchical instance does not drive any primary outputs anymore.  |
+|           |       |     | To see the list of deleted hierarchical instances, set the 'information_level'      |
+|           |       |     | attribute to 2 or above. If the message is truncated set the message attribute      |
+|           |       |     | 'truncate' to false to see the complete list. To prevent this optimization, set the |
+|           |       |     | 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance  |
+|           |       |     | attribute to 'true'.                                                                |
+|LBR-9      |Warning|   20|Library cell has no output pins defined.                                             |
+|           |       |     |Add the missing output pin(s)                                                        |
+|           |       |     | , then reload the library. Else the library cell will be marked as timing model i.e.|
+|           |       |     | unusable. Timing_model means that the cell does not have any defined function. If   |
+|           |       |     | there is no output pin, Genus will mark library cell as unusable i.e. the attribute |
+|           |       |     | 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used  |
+|           |       |     | for mapping and it will not be picked up from the library for synthesis. If you     |
+|           |       |     | query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell |
+|           |       |     | has no output pins.'Note: The message LBR-9 is only for the logical pins and not for|
+|           |       |     | the power_ground pins. Genus will depend upon the output function defined in the pin|
+|           |       |     | group (output pin)                                                                  |
+|           |       |     | of the cell, to use it for mapping. The pg_pin will not have any function defined.  |
+|LBR-12     |Warning|    1|Found libraries with and without pg_pin construct.                                   |
+|           |       |     |This can lead to issues later in the flow.                                           |
+|LBR-40     |Info   |   16|An unsupported construct was detected in this library.                               |
+|           |       |     |Check to see if this construct is really needed for synthesis. Many liberty          |
+|           |       |     | constructs are not actually required.                                               |
+|LBR-41     |Info   |    1|An output library pin lacks a function attribute.                                    |
+|           |       |     |If the remainder of this library cell's semantic checks are successful, it will be   |
+|           |       |     | considered as a timing-model                                                        |
+|           |       |     | (because one of its outputs does not have a valid function.                         |
+|LBR-155    |Info   |  280|Mismatch in unateness between 'timing_sense' attribute and the function.             |
+|           |       |     |The 'timing_sense' attribute will be respected.                                      |
+|LBR-161    |Info   |    1|Setting the maximum print count of this message to 10 if information_level is less   |
+|           |       |     | than 9.                                                                             |
+|LBR-162    |Info   |  124|Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed.              |
+|           |       |     |Setting the 'timing_sense' to non_unate.                                             |
+|LBR-412    |Info   |    2|Created nominal operating condition.                                                 |
+|           |       |     |The nominal operating condition is represented, either by the nominal PVT values     |
+|           |       |     | specified in the library source                                                     |
+|           |       |     | (via nom_process,nom_voltage and nom_temperature respectively)                      |
+|           |       |     | , or by the default PVT values (1.0,1.0,1.0).                                       |
+|LBR-516    |Info   |    1|Missing library level attribute.                                                     |
+|LBR-518    |Info   |    1|Missing a function attribute in the output pin definition.                           |
+|PHYS-103   |Warning|    4|Marking library cell 'avoid'.                                                        |
+|           |       |     |To prevent the library cell from being set to 'avoid', set attribute                 |
+|           |       |     | 'lib_lef_consistency_check_enable' to 'false'.                                      |
+|PHYS-127   |Info   |   17|Macro with non-zero origin.                                                          |
+|PHYS-129   |Info   |  119|Via with no resistance will have a value of '0.0' assigned for resistance value.     |
+|           |       |     |If this is the expected behavior, this message can be ignored.                       |
+|PHYS-279   |Warning|  107|Physical cell not defined in library.                                                |
+|           |       |     |Ensure that the proper library files are available and have been imported.           |
+|PHYS-752   |Info   |    1|Partition Based Synthesis execution skipped.                                         |
+|SYNTH-1    |Info   |    1|Synthesizing.                                                                        |
+|TIM-1000   |Info   |    1|Multimode clock gating check is disabled.                                            |
+-----------------------------------------------------------------------------------------------------------------
 Current PLE settings:
 
 Aspect ratio        : 1.000
@@ -2789,14 +2725,14 @@ Excluded from State Retention     343        100.0
 State Retention instances           0          0.0
 --------------------------------------------------
 
-PBS_Generic_Opt-Post - Elapsed_Time 9, CPU_Time 8.888993000000001
+PBS_Generic_Opt-Post - Elapsed_Time 8, CPU_Time 8.951960999999999
 stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) | 100.0(100.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) | 100.0(100.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -2806,11 +2742,11 @@ stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) | 100.0(100.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) | 100.0(100.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -2821,7 +2757,7 @@ Info: CPU time includes time of parent + longest thread
 ##>----------------------------------------------------------------------------------------
 ##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
 ##>----------------------------------------------------------------------------------------
-##>G:Initial                            0         -         -       886      4918       397
+##>G:Initial                            1         -         -       886      4918       432
 ##>G:Setup                              0         -         -         -         -         -
 ##>G:Early Clock Gating                 0         -         -         -         -         -
 ##>G:Launch ST                          0         -         -         -         -         -
@@ -2836,8 +2772,8 @@ Info: CPU time includes time of parent + longest thread
 ##>G:Timer                              0         -         -         -         -         -
 ##>G:Assembly                           0         -         -         -         -         -
 ##>G:DFT                                0         -         -         -         -         -
-##>G:Const Prop                         0         -         -      1265      5435       784
-##>G:PostGen Opt                        1         -         -      1265      5435       784
+##>G:Const Prop                         0         -         -      1265      5435       821
+##>G:PostGen Opt                        0         -         -      1265      5435       821
 ##>G:Early Clock Gating Cleanup         0         -         -         -         -         -
 ##>G:Misc                               8
 ##>----------------------------------------------------------------------------------------
@@ -2852,11 +2788,11 @@ stamp 'GENERIC' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:17 (Oct27) |  219.0 MB | init
+ 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:42 (Oct28) |  239.1 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:08) |  00:00:08(00:00:08) |  44.8( 44.4) |    4:10:25 (Oct27) |  397.4 MB | Elaboration
+ 00:00:15(00:00:08) |  00:00:08(00:00:08) |  44.6( 42.1) |    3:13:50 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:09(00:00:10) |  55.2( 55.6) |    4:10:35 (Oct27) |  784.7 MB | GENERIC
+ 00:00:24(00:00:19) |  00:00:09(00:00:11) |  55.4( 57.9) |    3:14:01 (Oct28) |  817.4 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -2867,9 +2803,9 @@ Warning : The filename, column and line number information will not be available
         : The attribute for getting HDL filename and line number is not set.
         : You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate) to enable filename, column, and line number tracking in the datapath report.
 @file(spi_bridge_top_45nm_SLOW.tcl) 90: write_snapshot -outdir $RPT_DIR -tag syn_generic
-%# Begin write_snapshot (10/27 04:10:35, mem=1728.90M)
-%# Begin qos_stats (10/27 04:10:35, mem=1732.72M)
-%# End qos_stats (10/27 04:10:35, total cpu=17:00:00, real=17:00:00, peak res=784.70M, current mem=1732.72M)
+%# Begin write_snapshot (10/28 03:14:01, mem=1728.66M)
+%# Begin qos_stats (10/28 03:14:01, mem=1732.48M)
+%# End qos_stats (10/28 03:14:01, total cpu=17:00:00, real=17:00:00, peak res=821.20M, current mem=1732.48M)
 Warning : A required object parameter could not be found. [TUI-78]
         : An object named "" could not be found for attribute 'name'.
         : Check if a previous get_db or find returned an empty string.
@@ -2909,17 +2845,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value
   Tot Cong:                  no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:19
-Real Runtime (h:m:s):        00:00:18
-CPU  Elapsed (h:m:s):        00:00:26
-Real Elapsed (h:m:s):        00:00:21
-Memory (MB):                  1732.72
+CPU  Runtime (h:m:s):        00:00:20
+Real Runtime (h:m:s):        00:00:19
+CPU  Elapsed (h:m:s):        00:00:27
+Real Elapsed (h:m:s):        00:00:22
+Memory (MB):                  1732.48
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:00:18
-Total Memory (MB):     1732.72
+Total Runtime (h:m:s): 00:00:19
+Total Memory (MB):     1732.48
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -2930,7 +2866,7 @@ Total Instances =  Leaf Instances + Physical Instances
 
 Finished exporting design database to file './report/syn_generic_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
 Finished generating snapshot at stage syn_generic (command execution time mm:ss cpu = 00:00, real = 00:01).
-%# End write_snapshot (10/27 04:10:36, total cpu=17:00:00, real=17:00:01, peak res=785.30M, current mem=1732.72M)
+%# End write_snapshot (10/28 03:14:02, total cpu=17:00:01, real=17:00:01, peak res=821.20M, current mem=1732.48M)
 @file(spi_bridge_top_45nm_SLOW.tcl) 91: write_db -to_file ${UNMAPPED_DIR}/syn_generic.db
 Finished exporting design database to file './unmapped/syn_generic.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:01).
 @file(spi_bridge_top_45nm_SLOW.tcl) 96: syn_map
@@ -3016,31 +2952,31 @@ stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  90.3( 81.8) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  90.3( 72.7) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   9.7( 18.2) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   9.7( 27.3) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+PBS_TechMap-Premap HBO Optimizations - Elapsed_Time 0, CPU_Time 1.0
 stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  90.3( 81.8) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  82.1( 72.7) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   9.7( 18.2) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   8.8( 27.3) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:26(00:00:21) |  00:00:01(00:00:00) |   9.2(  0.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3148,20 +3084,20 @@ Stage : global_incr_map
   =================
    Message Summary
   =================
---------------------------------------------------------------------------------------------------------------------
-|    Id    |  Sev  |Count|                                      Message Text                                       |
---------------------------------------------------------------------------------------------------------------------
-|PA-7      |Info   |   36|Resetting power analysis results.                                                        |
-|          |       |     |All computed switching activities are removed.                                           |
-|PHYS-752  |Info   |    1|Partition Based Synthesis execution skipped.                                             |
-|RPT_DP-100|Warning|    1|The filename, column and line number information will not be available in the report.    |
-|          |       |     |You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate)     |
-|          |       |     | to enable filename, column, and line number tracking in the datapath report.            |
-|SYNTH-2   |Info   |    1|Done synthesizing.                                                                       |
-|SYNTH-4   |Info   |    1|Mapping.                                                                                 |
-|TUI-78    |Warning|    2|A required object parameter could not be found.                                          |
-|          |       |     |Check if a previous get_db or find returned an empty string.                             |
---------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+|    Id    |  Sev  |Count|                                     Message Text                                     |
+-----------------------------------------------------------------------------------------------------------------
+|PA-7      |Info   |   36|Resetting power analysis results.                                                     |
+|          |       |     |All computed switching activities are removed.                                        |
+|PHYS-752  |Info   |    1|Partition Based Synthesis execution skipped.                                          |
+|RPT_DP-100|Warning|    1|The filename, column and line number information will not be available in the report. |
+|          |       |     |You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate)  |
+|          |       |     | to enable filename, column, and line number tracking in the datapath report.         |
+|SYNTH-2   |Info   |    1|Done synthesizing.                                                                    |
+|SYNTH-4   |Info   |    1|Mapping.                                                                              |
+|TUI-78    |Warning|    2|A required object parameter could not be found.                                       |
+|          |       |     |Check if a previous get_db or find returned an empty string.                          |
+-----------------------------------------------------------------------------------------------------------------
  
 Global incremental optimization status
 ======================================
@@ -3197,22 +3133,22 @@ Info    : Relaxed some design requirements on sequential instances to run synthe
         : One or more of the following design requirements relaxed on 3 sequential instance(s): map_prefer_non_inverted_clock_line.
         : To see the list of relaxed sequential instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list.
 INFO: skipping constant propagation
-PBS_Techmap-Global Mapping - Elapsed_Time 8, CPU_Time 7.403036999999998
+PBS_Techmap-Global Mapping - Elapsed_Time 6, CPU_Time 6.846769000000002
 stamp 'PBS_Techmap-Global Mapping' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  51.5( 47.4) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  50.4( 47.1) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   5.5( 10.5) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   5.4( 17.6) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:26(00:00:21) |  00:00:01(00:00:00) |   5.6(  0.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:33(00:00:28) |  00:00:07(00:00:08) |  42.9( 42.1) |    4:10:45 (Oct27) |  804.3 MB | PBS_Techmap-Global Mapping
+ 00:00:33(00:00:27) |  00:00:06(00:00:06) |  38.6( 35.3) |    3:14:09 (Oct28) |  855.8 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3222,48 +3158,48 @@ Info    : Wrote formal verification information. [CFM-5]
 Info    : Wrote dofile. [CFM-1]
         : Dofile is 'fv/spi_bridge_top/rtl_to_fv_map.do'.
         : Alias mapping flow is enabled.
-PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 2, CPU_Time 1.982917999999998
+PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 2, CPU_Time 0.9829769999999982
 stamp 'PBS_TechMap-Datapath Postmap Operations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  46.2( 42.9) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  47.8( 42.1) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   5.0(  9.5) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   5.1( 15.8) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:26(00:00:21) |  00:00:01(00:00:00) |   5.3(  0.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:33(00:00:28) |  00:00:07(00:00:08) |  38.5( 38.1) |    4:10:45 (Oct27) |  804.3 MB | PBS_Techmap-Global Mapping
+ 00:00:33(00:00:27) |  00:00:06(00:00:06) |  36.5( 31.6) |    3:14:09 (Oct28) |  855.8 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:01(00:00:02) |  10.3(  9.5) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:34(00:00:29) |  00:00:00(00:00:02) |   5.2( 10.5) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 0, CPU_Time -0.016770000000001062
+PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 0, CPU_Time -0.016683999999997923
 stamp 'PBS_TechMap-Postmap HBO Optimizations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  46.3( 42.9) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  47.8( 42.1) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   5.0(  9.5) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   5.1( 15.8) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:26(00:00:21) |  00:00:01(00:00:00) |   5.3(  0.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:33(00:00:28) |  00:00:07(00:00:08) |  38.5( 38.1) |    4:10:45 (Oct27) |  804.3 MB | PBS_Techmap-Global Mapping
+ 00:00:33(00:00:27) |  00:00:06(00:00:06) |  36.6( 31.6) |    3:14:09 (Oct28) |  855.8 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:01(00:00:02) |  10.3(  9.5) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:34(00:00:29) |  00:00:00(00:00:02) |   5.3( 10.5) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:00(00:00:00) |  -0.1(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:34(00:00:29) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3271,28 +3207,28 @@ Info: CPU time includes time of parent + longest thread
  Doing ConstProp on design:spi_bridge_top ... 
 
 Time taken by ConstProp Step: 00:00:00
-PBS_TechMap-Postmap Clock Gating - Elapsed_Time 0, CPU_Time 0.0
+PBS_TechMap-Postmap Clock Gating - Elapsed_Time 0, CPU_Time 1.0
 stamp 'PBS_TechMap-Postmap Clock Gating' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  46.3( 42.9) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  45.4( 42.1) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   5.0(  9.5) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   4.9( 15.8) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:26(00:00:21) |  00:00:01(00:00:00) |   5.1(  0.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:33(00:00:28) |  00:00:07(00:00:08) |  38.5( 38.1) |    4:10:45 (Oct27) |  804.3 MB | PBS_Techmap-Global Mapping
+ 00:00:33(00:00:27) |  00:00:06(00:00:06) |  34.7( 31.6) |    3:14:09 (Oct28) |  855.8 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:01(00:00:02) |  10.3(  9.5) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:34(00:00:29) |  00:00:00(00:00:02) |   5.0( 10.5) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:00(00:00:00) |  -0.1(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:34(00:00:29) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap Clock Gating
+ 00:00:35(00:00:29) |  00:00:01(00:00:00) |   5.1(  0.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3352,30 +3288,30 @@ Operation                   Area   Slacks      Slack    Trans      Cap
         setup_dn         0  (        0 /        0 )  0.00
         mb_split         0  (        0 /        0 )  0.00
 
-PBS_TechMap-Postmap Cleanup - Elapsed_Time 0, CPU_Time 0.9835279999999997
+PBS_TechMap-Postmap Cleanup - Elapsed_Time 1, CPU_Time -0.016938000000003228
 stamp 'PBS_TechMap-Postmap Cleanup' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  44.0( 42.9) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  45.4( 40.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   4.7(  9.5) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   4.9( 15.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:26(00:00:21) |  00:00:01(00:00:00) |   5.1(  0.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:33(00:00:28) |  00:00:07(00:00:08) |  36.7( 38.1) |    4:10:45 (Oct27) |  804.3 MB | PBS_Techmap-Global Mapping
+ 00:00:33(00:00:27) |  00:00:06(00:00:06) |  34.7( 30.0) |    3:14:09 (Oct28) |  855.8 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:01(00:00:02) |   9.8(  9.5) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:34(00:00:29) |  00:00:00(00:00:02) |   5.0( 10.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:00(00:00:00) |  -0.1(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:34(00:00:29) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap Clock Gating
+ 00:00:35(00:00:29) |  00:00:01(00:00:00) |   5.1(  0.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:36(00:00:30) |  00:00:00(00:00:00) |   4.9(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap Cleanup
+ 00:00:35(00:00:30) |  00:00:00(00:00:01) |  -0.1(  5.0) |    3:14:12 (Oct28) |  856.2 MB | PBS_TechMap-Postmap Cleanup
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3385,27 +3321,27 @@ stamp 'PBS_Techmap-Post_MBCI' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:26 (Oct27) |  397.4 MB | PBS_Generic-Start
+ 00:00:15(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:52 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:08(00:00:09) |  44.0( 42.9) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic_Opt-Post
+ 00:00:24(00:00:18) |  00:00:08(00:00:08) |  45.4( 40.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:35 (Oct27) |  784.7 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:24(00:00:18) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:00 (Oct28) |  821.2 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:02) |   4.7(  9.5) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Start
+ 00:00:25(00:00:21) |  00:00:00(00:00:03) |   4.9( 15.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:25(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:37 (Oct27) |  785.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:26(00:00:21) |  00:00:01(00:00:00) |   5.1(  0.0) |    3:14:03 (Oct28) |  817.4 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:33(00:00:28) |  00:00:07(00:00:08) |  36.7( 38.1) |    4:10:45 (Oct27) |  804.3 MB | PBS_Techmap-Global Mapping
+ 00:00:33(00:00:27) |  00:00:06(00:00:06) |  34.7( 30.0) |    3:14:09 (Oct28) |  855.8 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:01(00:00:02) |   9.8(  9.5) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:34(00:00:29) |  00:00:00(00:00:02) |   5.0( 10.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:00(00:00:00) |  -0.1(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:34(00:00:29) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:35(00:00:30) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap Clock Gating
+ 00:00:35(00:00:29) |  00:00:01(00:00:00) |   5.1(  0.0) |    3:14:11 (Oct28) |  856.2 MB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:36(00:00:30) |  00:00:00(00:00:00) |   4.9(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_TechMap-Postmap Cleanup
+ 00:00:35(00:00:30) |  00:00:00(00:00:01) |  -0.1(  5.0) |    3:14:12 (Oct28) |  856.2 MB | PBS_TechMap-Postmap Cleanup
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:36(00:00:30) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:47 (Oct27) |  803.7 MB | PBS_Techmap-Post_MBCI
+ 00:00:35(00:00:30) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:14:12 (Oct28) |  856.2 MB | PBS_Techmap-Post_MBCI
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3415,8 +3351,8 @@ Info: CPU time includes time of parent + longest thread
 ##>----------------------------------------------------------------------------------------
 ##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
 ##>----------------------------------------------------------------------------------------
-##>M:Initial                            0         -         -      1265      5435       785
-##>M:Pre Cleanup                        0         -         -      1265      5435       785
+##>M:Initial                            0         -         -      1265      5435       817
+##>M:Pre Cleanup                        0         -         -      1265      5435       817
 ##>M:Setup                              0         -         -         -         -         -
 ##>M:Early Clock Gating                 0         -         -         -         -         -
 ##>M:Launch ST                          0         -         -         -         -         -
@@ -3431,16 +3367,16 @@ Info: CPU time includes time of parent + longest thread
 ##>M:Timer                              0         -         -         -         -         -
 ##>M:Assembly                           0         -         -         -         -         -
 ##>M:DFT                                0         -         -         -         -         -
-##>M:DP Operations                      2         -         -       849      3525       803
-##>M:Const Prop                         0      7100         0       849      3525       803
-##>M:Cleanup                            0      7100         0       849      3525       803
-##>M:MBCI                               0         -         -       849      3525       803
+##>M:DP Operations                      2         -         -       849      3525       856
+##>M:Const Prop                         0      7100         0       849      3525       856
+##>M:Cleanup                            1      7100         0       849      3525       856
+##>M:MBCI                               0         -         -       849      3525       856
 ##>M:PostGen Opt                        0         -         -         -         -         -
 ##>M:Early Clock Gating Cleanup         0         -         -         -         -         -
 ##>M:Const Gate Removal                 0         -         -         -         -         -
-##>M:Misc                               8
+##>M:Misc                               6
 ##>----------------------------------------------------------------------------------------
-##>Total Elapsed                       10
+##>Total Elapsed                        9
 ##>========================================================================================
 Info    : Relaxed some design requirements on sequential instances to run synthesis successfully. [MAP-32]
         : One or more of the following design requirements relaxed on 3 sequential instance(s): map_prefer_non_inverted_clock_line.
@@ -3453,13 +3389,13 @@ stamp 'MAPPED' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:17 (Oct27) |  219.0 MB | init
+ 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:42 (Oct28) |  239.1 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:08) |  00:00:08(00:00:08) |  27.4( 26.7) |    4:10:25 (Oct27) |  397.4 MB | Elaboration
+ 00:00:15(00:00:08) |  00:00:08(00:00:08) |  27.9( 26.7) |    3:13:50 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:09(00:00:10) |  33.8( 33.3) |    4:10:35 (Oct27) |  784.7 MB | GENERIC
+ 00:00:24(00:00:19) |  00:00:09(00:00:11) |  34.6( 36.7) |    3:14:01 (Oct28) |  817.4 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:36(00:00:30) |  00:00:11(00:00:12) |  38.8( 40.0) |    4:10:47 (Oct27) |  803.7 MB | MAPPED
+ 00:00:35(00:00:30) |  00:00:10(00:00:11) |  37.5( 36.7) |    3:14:12 (Oct28) |  856.2 MB | MAPPED
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3472,9 +3408,9 @@ Warning : The filename, column and line number information will not be available
     report timing -cost_group [list $cg] > ${RPT_DIR}/05_[basename $cg]_post_syn_map.rpt
 }
 @file(spi_bridge_top_45nm_SLOW.tcl) 105: write_snapshot -outdir $RPT_DIR -tag syn_map
-%# Begin write_snapshot (10/27 04:10:47, mem=1733.82M)
-%# Begin qos_stats (10/27 04:10:47, mem=1733.82M)
-%# End qos_stats (10/27 04:10:47, total cpu=17:00:00, real=17:00:00, peak res=804.30M, current mem=1733.82M)
+%# Begin write_snapshot (10/28 03:14:12, mem=1732.58M)
+%# Begin qos_stats (10/28 03:14:12, mem=1732.58M)
+%# End qos_stats (10/28 03:14:12, total cpu=17:00:00, real=17:00:00, peak res=856.20M, current mem=1732.58M)
 Warning : A required object parameter could not be found. [TUI-78]
         : An object named "" could not be found for attribute 'name'.
 Warning : A required object parameter could not be found. [TUI-78]
@@ -3513,17 +3449,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value        no_value
   Tot Cong:                  no_value        no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:19        00:00:14
-Real Runtime (h:m:s):        00:00:18        00:00:12
-CPU  Elapsed (h:m:s):        00:00:26        00:00:40
-Real Elapsed (h:m:s):        00:00:21        00:00:33
-Memory (MB):                  1732.72         1733.82
+CPU  Runtime (h:m:s):        00:00:20        00:00:12
+Real Runtime (h:m:s):        00:00:19        00:00:11
+CPU  Elapsed (h:m:s):        00:00:27        00:00:39
+Real Elapsed (h:m:s):        00:00:22        00:00:33
+Memory (MB):                  1732.48         1732.58
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
 Total Runtime (h:m:s): 00:00:30
-Total Memory (MB):     1733.82
+Total Memory (MB):     1732.58
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -3532,7 +3468,7 @@ Total Instances =  Leaf Instances + Physical Instances
 
 
 
-Finished exporting design database to file './report/syn_map_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:01).
+Finished exporting design database to file './report/syn_map_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
 Info    : Joules engine is used. [RPT-16]
         : Joules engine is being used for the command report_gates -power.
 Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
@@ -3560,9 +3496,9 @@ Info   : PWRA-0002 Finished power computation.
 Info   : PWRA-0007 [PwrInfo] Completed successfully.
        : Info=6, Warn=2, Error=0, Fatal=0
 Finished generating snapshot at stage syn_map (command execution time mm:ss cpu = 00:00, real = 00:01).
-%# End write_snapshot (10/27 04:10:48, total cpu=17:00:00, real=17:00:01, peak res=804.30M, current mem=1733.82M)
+%# End write_snapshot (10/28 03:14:13, total cpu=17:00:00, real=17:00:01, peak res=856.20M, current mem=1732.58M)
 @file(spi_bridge_top_45nm_SLOW.tcl) 106: write_db -to_file ${MAPPED_DIR}/syn_map.db
-Finished exporting design database to file './mapped/syn_map.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:01).
+Finished exporting design database to file './mapped/syn_map.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
 @file(spi_bridge_top_45nm_SLOW.tcl) 111: syn_opt
 Current PLE settings:
 
@@ -3873,13 +3809,13 @@ Operation                   Area   Slacks      Slack    Trans      Cap
          rem_inv         0  (        0 /        0 )  0.00
         merge_bi         1  (        1 /        1 )  0.01
       rem_inv_qb         7  (        3 /        3 )  0.02
-    seq_res_area        33  (        2 /        2 )  1.68
+    seq_res_area        33  (        2 /        2 )  2.04
         io_phase         4  (        1 /        1 )  0.01
-       gate_comp        15  (        3 /        3 )  0.06
+       gate_comp        15  (        3 /        3 )  0.07
        gcomp_mog         0  (        0 /        0 )  0.01
-       glob_area        16  (        6 /       16 )  0.09
-       area_down        31  (        3 /        3 )  0.10
-      size_n_buf         4  (        0 /        0 )  0.01
+       glob_area        16  (        6 /       16 )  0.10
+       area_down        31  (        3 /        3 )  0.12
+      size_n_buf         4  (        0 /        0 )  0.02
   gate_deco_area         0  (        0 /        0 )  0.00
          rem_buf         8  (        0 /        0 )  0.01
          rem_inv         0  (        0 /        0 )  0.00
@@ -4057,10 +3993,10 @@ Operation                   Area   Slacks      Slack    Trans      Cap
         merge_bi         0  (        0 /        0 )  0.00
       rem_inv_qb         1  (        0 /        0 )  0.00
         io_phase         3  (        0 /        0 )  0.01
-       gate_comp        12  (        0 /        0 )  0.05
+       gate_comp        12  (        0 /        0 )  0.06
        gcomp_mog         0  (        0 /        0 )  0.01
        glob_area        13  (        0 /       13 )  0.09
-       area_down        30  (        1 /        1 )  0.09
+       area_down        30  (        1 /        1 )  0.11
       size_n_buf         0  (        0 /        0 )  0.01
   gate_deco_area         0  (        0 /        0 )  0.00
 
@@ -4170,25 +4106,26 @@ Stage : incr_opt
   =================
    Message Summary
   =================
---------------------------------------------------------------------------------------------------------------------
-|    Id    |  Sev  |Count|                                      Message Text                                       |
---------------------------------------------------------------------------------------------------------------------
-|CFM-1     |Info   |    1|Wrote dofile.                                                                            |
-|CFM-5     |Info   |    1|Wrote formal verification information.                                                   |
-|MAP-32    |Info   |    2|Relaxed some design requirements on sequential instances to run synthesis successfully.  |
-|          |       |     |To see the list of relaxed sequential instances, set the 'information_level' attribute to|
-|          |       |     | 2 or above. If the message is truncated set the message attribute 'truncate' to false to|
-|          |       |     | see the complete list.                                                                  |
-|PA-7      |Info   |    4|Resetting power analysis results.                                                        |
-|          |       |     |All computed switching activities are removed.                                           |
-|RPT_DP-100|Warning|    1|The filename, column and line number information will not be available in the report.    |
-|          |       |     |You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate)     |
-|          |       |     | to enable filename, column, and line number tracking in the datapath report.            |
-|SYNTH-5   |Info   |    1|Done mapping.                                                                            |
-|SYNTH-7   |Info   |    1|Incrementally optimizing.                                                                |
-|TUI-78    |Warning|    2|A required object parameter could not be found.                                          |
-|          |       |     |Check if a previous get_db or find returned an empty string.                             |
---------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+|    Id    |  Sev  |Count|                                     Message Text                                     |
+-----------------------------------------------------------------------------------------------------------------
+|CFM-1     |Info   |    1|Wrote dofile.                                                                         |
+|CFM-5     |Info   |    1|Wrote formal verification information.                                                |
+|MAP-32    |Info   |    2|Relaxed some design requirements on sequential instances to run synthesis             |
+|          |       |     | successfully.                                                                        |
+|          |       |     |To see the list of relaxed sequential instances, set the 'information_level' attribute|
+|          |       |     | to 2 or above. If the message is truncated set the message attribute 'truncate' to   |
+|          |       |     | false to see the complete list.                                                      |
+|PA-7      |Info   |    4|Resetting power analysis results.                                                     |
+|          |       |     |All computed switching activities are removed.                                        |
+|RPT_DP-100|Warning|    1|The filename, column and line number information will not be available in the report. |
+|          |       |     |You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate)  |
+|          |       |     | to enable filename, column, and line number tracking in the datapath report.         |
+|SYNTH-5   |Info   |    1|Done mapping.                                                                         |
+|SYNTH-7   |Info   |    1|Incrementally optimizing.                                                             |
+|TUI-78    |Warning|    2|A required object parameter could not be found.                                       |
+|          |       |     |Check if a previous get_db or find returned an empty string.                          |
+-----------------------------------------------------------------------------------------------------------------
 Info    : Done incrementally optimizing. [SYNTH-8]
         : Done incrementally optimizing 'spi_bridge_top'.
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
@@ -4201,9 +4138,9 @@ No max_transition rule violations.
 No max_fanout rule violations.
 
 @file(spi_bridge_top_45nm_SLOW.tcl) 115: write_snapshot -outdir $RPT_DIR -tag syn_opt
-%# Begin write_snapshot (10/27 04:10:51, mem=1734.64M)
-%# Begin qos_stats (10/27 04:10:51, mem=1734.64M)
-%# End qos_stats (10/27 04:10:51, total cpu=17:00:00, real=17:00:00, peak res=804.30M, current mem=1734.64M)
+%# Begin write_snapshot (10/28 03:14:17, mem=1733.40M)
+%# Begin qos_stats (10/28 03:14:17, mem=1733.40M)
+%# End qos_stats (10/28 03:14:17, total cpu=17:00:00, real=17:00:00, peak res=861.70M, current mem=1733.40M)
 Warning : A required object parameter could not be found. [TUI-78]
         : An object named "" could not be found for attribute 'name'.
 Warning : A required object parameter could not be found. [TUI-78]
@@ -4242,17 +4179,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value        no_value        no_value
   Tot Cong:                  no_value        no_value        no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:19        00:00:14        00:00:03
-Real Runtime (h:m:s):        00:00:18        00:00:12        00:00:04
-CPU  Elapsed (h:m:s):        00:00:26        00:00:40        00:00:43
-Real Elapsed (h:m:s):        00:00:21        00:00:33        00:00:37
-Memory (MB):                  1732.72         1733.82         1734.64
+CPU  Runtime (h:m:s):        00:00:20        00:00:12        00:00:04
+Real Runtime (h:m:s):        00:00:19        00:00:11        00:00:05
+CPU  Elapsed (h:m:s):        00:00:27        00:00:39        00:00:43
+Real Elapsed (h:m:s):        00:00:22        00:00:33        00:00:38
+Memory (MB):                  1732.48         1732.58         1733.40
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:00:34
-Total Memory (MB):     1734.64
+Total Runtime (h:m:s): 00:00:35
+Total Memory (MB):     1733.40
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -4261,9 +4198,9 @@ Total Instances =  Leaf Instances + Physical Instances
 
 
 
+Finished exporting design database to file './report/syn_opt_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
 Info    : Joules engine is used. [RPT-16]
         : Joules engine is being used for the command report_gates -power.
-Finished exporting design database to file './report/syn_opt_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
 Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
        : spi_bridge_top
 Info   : ACTP-0009 [ACTPInfo] Activity Propagation Progress Report :   0%   1%   2%   3%   4%   5%   6%   7%   8%   9%  10%  11%  12%  13%  14%  15%  16%  17%  18%  19%  20%  21%  22%  23%  24%  25%  26%  27%  28%  29%  30%  31%  32%  33%  34%  35%  36%  37%  38%  39%  40%  41%  42%  43%  44%  45%  46%  47%  48%  49%  50%  51%  52%  53%  54%  55%  56%  57%  58%  59%  60%  61%  62%  63%  64%  65%  66%  67%  68%  69%  70%  71%  72%  73%  74%  75%  76%  77%  78%  79%  80%  81%  82%  83%  84%  85%  86%  87%  88%  89%  90%  91%  92%  93%  94%  95%  96%  97%  98%  99% 100%
@@ -4288,22 +4225,22 @@ Info   : PWRA-0009 [PwrInfo] Power Computation Progress Report :   0%   1%   2% 
 Info   : PWRA-0002 Finished power computation.
 Info   : PWRA-0007 [PwrInfo] Completed successfully.
        : Info=6, Warn=2, Error=0, Fatal=0
-Finished generating snapshot at stage syn_opt (command execution time mm:ss cpu = 00:00, real = 00:02).
-%# End write_snapshot (10/27 04:10:53, total cpu=17:00:00, real=17:00:02, peak res=805.20M, current mem=1734.64M)
+Finished generating snapshot at stage syn_opt (command execution time mm:ss cpu = 00:00, real = 00:01).
+%# End write_snapshot (10/28 03:14:18, total cpu=17:00:00, real=17:00:01, peak res=861.70M, current mem=1733.40M)
 @file(spi_bridge_top_45nm_SLOW.tcl) 117: time_info OPT
 stamp 'OPT' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:17 (Oct27) |  219.0 MB | init
+ 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:42 (Oct28) |  239.1 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:08) |  00:00:08(00:00:08) |  25.0( 22.2) |    4:10:25 (Oct27) |  397.4 MB | Elaboration
+ 00:00:15(00:00:08) |  00:00:08(00:00:08) |  24.6( 22.2) |    3:13:50 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:09(00:00:10) |  30.8( 27.8) |    4:10:35 (Oct27) |  784.7 MB | GENERIC
+ 00:00:24(00:00:19) |  00:00:09(00:00:11) |  30.5( 30.6) |    3:14:01 (Oct28) |  817.4 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:36(00:00:30) |  00:00:11(00:00:12) |  35.3( 33.3) |    4:10:47 (Oct27) |  803.7 MB | MAPPED
+ 00:00:35(00:00:30) |  00:00:10(00:00:11) |  33.0( 30.6) |    3:14:12 (Oct28) |  856.2 MB | MAPPED
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:39(00:00:36) |  00:00:02(00:00:06) |   9.0( 16.7) |    4:10:53 (Oct27) |  805.2 MB | OPT
+ 00:00:39(00:00:36) |  00:00:03(00:00:06) |  11.9( 16.7) |    3:14:18 (Oct28) |  861.7 MB | OPT
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4405,17 +4342,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value        no_value        no_value
   Tot Cong:                  no_value        no_value        no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:19        00:00:14        00:00:03
-Real Runtime (h:m:s):        00:00:18        00:00:12        00:00:04
-CPU  Elapsed (h:m:s):        00:00:26        00:00:40        00:00:43
-Real Elapsed (h:m:s):        00:00:21        00:00:33        00:00:37
-Memory (MB):                  1732.72         1733.82         1734.64
+CPU  Runtime (h:m:s):        00:00:20        00:00:12        00:00:04
+Real Runtime (h:m:s):        00:00:19        00:00:11        00:00:05
+CPU  Elapsed (h:m:s):        00:00:27        00:00:39        00:00:43
+Real Elapsed (h:m:s):        00:00:22        00:00:33        00:00:38
+Memory (MB):                  1732.48         1732.58         1733.40
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:00:37
-Total Memory (MB):     1771.65
+Total Runtime (h:m:s): 00:00:38
+Total Memory (MB):     1769.41
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -4427,39 +4364,39 @@ Total Instances =  Leaf Instances + Physical Instances
 @file(spi_bridge_top_45nm_SLOW.tcl) 149: write_design -basename ${MAPPED_DIR}/${TOP_DESIGN}_mapped
 (write_design): Writing Genus content. Constraint interface is 'smsc'
 Exporting design data for 'spi_bridge_top' to ./mapped/spi_bridge_top_mapped...
-%# Begin write_design (10/27 04:10:55, mem=1772.65M)
+%# Begin write_design (10/28 03:14:20, mem=1770.41M)
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   write_design
   Setting attribute of root '/': 'set_boundary_change' = 
 No scan chains were found.
 File ./mapped/spi_bridge_top_mapped.mmmc.tcl has been written.
-Finished SDC export (command execution time mm:ss (real) = 00:00).
+Finished SDC export (command execution time mm:ss (real) = 00:01).
 Info: file ./mapped/spi_bridge_top_mapped.default_emulate_constraint_mode.sdc has been written
 Info: file ./mapped/spi_bridge_top_mapped.default_emulate_constraint_mode.sdc has been written
 ** To load the database source ./mapped/spi_bridge_top_mapped.genus_setup.tcl in an Genus(TM) Synthesis Solution session.
 Finished exporting design data for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:02).
 .
-%# End write_design (10/27 04:10:57, total cpu=17:00:00, real=17:00:02, peak res=805.20M, current mem=1772.65M)
+%# End write_design (10/28 03:14:22, total cpu=17:00:00, real=17:00:02, peak res=869.10M, current mem=1770.41M)
 @file(spi_bridge_top_45nm_SLOW.tcl) 151: write_hdl > ${MAPPED_DIR}/${TOP_DESIGN}_syn_final.v
 @file(spi_bridge_top_45nm_SLOW.tcl) 152: write_sdc > ${MAPPED_DIR}/${TOP_DESIGN}_syn_final.sdc
-Finished SDC export (command execution time mm:ss (real) = 00:01).
+Finished SDC export (command execution time mm:ss (real) = 00:00).
 @file(spi_bridge_top_45nm_SLOW.tcl) 154: write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split > ${MAPPED_DIR}/${TOP_DESIGN}_delays.sdf
 @file(spi_bridge_top_45nm_SLOW.tcl) 159: time_info FINAL
 stamp 'FINAL' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    4:10:17 (Oct27) |  219.0 MB | init
+ 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:42 (Oct28) |  239.1 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:08) |  00:00:08(00:00:08) |  22.8( 19.5) |    4:10:25 (Oct27) |  397.4 MB | Elaboration
+ 00:00:15(00:00:08) |  00:00:08(00:00:08) |  22.5( 19.5) |    3:13:50 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:24(00:00:18) |  00:00:09(00:00:10) |  28.2( 24.4) |    4:10:35 (Oct27) |  784.7 MB | GENERIC
+ 00:00:24(00:00:19) |  00:00:09(00:00:11) |  27.9( 26.8) |    3:14:01 (Oct28) |  817.4 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:36(00:00:30) |  00:00:11(00:00:12) |  32.3( 29.3) |    4:10:47 (Oct27) |  803.7 MB | MAPPED
+ 00:00:35(00:00:30) |  00:00:10(00:00:11) |  30.2( 26.8) |    3:14:12 (Oct28) |  856.2 MB | MAPPED
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:39(00:00:36) |  00:00:02(00:00:06) |   8.2( 14.6) |    4:10:53 (Oct27) |  805.2 MB | OPT
+ 00:00:39(00:00:36) |  00:00:03(00:00:06) |  10.9( 14.6) |    3:14:18 (Oct28) |  861.7 MB | OPT
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:42(00:00:41) |  00:00:03(00:00:05) |   8.6( 12.2) |    4:10:58 (Oct27) |  815.6 MB | FINAL
+ 00:00:42(00:00:41) |  00:00:03(00:00:05) |   8.4( 12.2) |    3:14:23 (Oct28) |  869.1 MB | FINAL
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -4471,12 +4408,572 @@ Synthesis Finished .........
 @file(spi_bridge_top_45nm_SLOW.tcl) 163: puts "============================"
 ============================
 #@ End verbose source ./script/spi_bridge_top_45nm_SLOW.tcl
-WARNING: This version of the tool is 774 days old.
-@genus:root: 2> quit
+WARNING: This version of the tool is 775 days old.
+@genus:root: 2> get_db [get_db library_sets] .library_files
+{/home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/giolib045_v3.5/timing/pads_SS_s1vg.lib} {/home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/giolib045_v3.5/timing/pads_SS_s1vg.lib}
+@genus:root: 3> get_db [get_db opconds] .*
+Object: opcond:default_emulate_opcond
+  base_name:             default_emulate_opcond
+  escaped_name:          default_emulate_opcond
+  is_hold:               false
+  is_setup:              true
+  is_virtual:            true
+  library_file:          {}
+  name:                  default_emulate_opcond
+  obj_type:              opcond
+  process:               1.0
+  temperature:           125.0
+  tree_type:             balanced_tree
+  voltage:               0.9
+@genus:root: 4> get_db analysis_views
+analysis_view:spi_bridge_top/default_emulate_view
+@genus:root: 5> get_db [get_db analysis_views] .*
+Object: analysis_view:spi_bridge_top/default_emulate_view
+  base_name:             default_emulate_view
+  constraint_mode:       constraint_mode:spi_bridge_top/default_emulate_constraint_mode
+  delay_corner:          delay_corner:spi_bridge_top/default_emulate_delay_corner
+  design:                design:spi_bridge_top
+  escaped_name:          default_emulate_view
+  is_active:             true
+  is_dynamic:            false
+  is_hold:               false
+  is_hold_default:       false
+  is_leakage:            false
+  is_setup:              true
+  is_setup_default:      true
+  latency_file:          {}
+  name:                  default_emulate_view
+  obj_type:              analysis_view
+  path_adjust_file:      {}
+  power_modes:           {}
+@genus:root: 6> get_db [get_db delay_corners] .*
+Object: delay_corner:spi_bridge_top/default_emulate_delay_corner
+  design:                design:spi_bridge_top
+  early_irdrop_files:    {}
+  early_rc_corner:       rc_corner:default_emulate_rc_corner
+  early_temperature_files:  {}
+  early_timing_condition:  {}
+  early_timing_condition_string:  {}
+  escaped_name:          default_emulate_delay_corner
+  is_dynamic:            false
+  is_hold:               false
+  is_leakage:            false
+  is_setup:              true
+  is_si_enabled:         {}
+  late_irdrop_files:     {}
+  late_rc_corner:        rc_corner:default_emulate_rc_corner
+  late_temperature_files:  {}
+  late_timing_condition:  timing_condition:default_emulate_timing_cond_max
+  late_timing_condition_string:  default_emulate_timing_cond_max
+  name:                  default_emulate_delay_corner
+  obj_type:              delay_corner
+@genus:root: 7> 
+@genus:root: 7> report_timing -from [all_registers] -to [all_registers] -nworst 5
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 22.17-s071_1
+  Generated on:           Oct 28 2026  03:50:26 am
+  Module:                 spi_bridge_top
+  Operating conditions:   PVT_0P9V_125C 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+
+Path 1: MET (7337 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2398                  
+             Slack:=    7337                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/g2437__4733/S                   -       B->S  F     ADDHX1         3  4.0   117   209    2047    (-,-) 
+  u_rx_fifo/g2434__5115/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    82   198    2244    (-,-) 
+  u_rx_fifo/g3/Y                            -       B->Y  F     CLKXOR2X1      1  1.8    63   189    2433    (-,-) 
+  u_rx_fifo/g2/Y                            -       A->Y  F     OR3X1          1  1.9    70   225    2658    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       C->Y  R     NOR3BX1        1  1.8   173   140    2798    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2798    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 2: MET (7344 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2391                  
+             Slack:=    7344                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/g2437__4733/S                   -       B->S  R     ADDHX1         3  4.0   101   195    2033    (-,-) 
+  u_rx_fifo/g2434__5115/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    82   204    2237    (-,-) 
+  u_rx_fifo/g3/Y                            -       B->Y  F     CLKXOR2X1      1  1.8    63   189    2426    (-,-) 
+  u_rx_fifo/g2/Y                            -       A->Y  F     OR3X1          1  1.9    70   225    2651    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       C->Y  R     NOR3BX1        1  1.8   173   140    2791    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2791    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 3: MET (7350 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2385                  
+             Slack:=    7350                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/g2437__4733/CO                  -       B->CO R     ADDHX1         1  2.0    57   155    1993    (-,-) 
+  u_rx_fifo/g2435__7482/Y                   -       B->Y  F     CLKXOR2X1      4  5.4   152   226    2219    (-,-) 
+  u_rx_fifo/g2431__1881/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    83   212    2430    (-,-) 
+  u_rx_fifo/g4349__4319/Y                   -       B->Y  F     CLKXOR2X1      1  2.0    68   192    2622    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       B->Y  R     NOR3BX1        1  1.8   173   163    2785    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2785    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 4: MET (7361 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2374                  
+             Slack:=    7361                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/g2437__4733/CO                  -       B->CO R     ADDHX1         1  2.0    57   155    1993    (-,-) 
+  u_rx_fifo/g2435__7482/Y                   -       B->Y  R     CLKXOR2X1      4  5.4   129   209    2202    (-,-) 
+  u_rx_fifo/g2431__1881/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    83   218    2420    (-,-) 
+  u_rx_fifo/g4349__4319/Y                   -       B->Y  F     CLKXOR2X1      1  2.0    68   192    2612    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       B->Y  R     NOR3BX1        1  1.8   173   163    2774    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2774    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 5: MET (7365 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2370                  
+             Slack:=    7365                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/g2437__4733/S                   -       B->S  R     ADDHX1         3  4.0   101   195    2033    (-,-) 
+  u_rx_fifo/g2434__5115/Y                   -       B->Y  F     CLKXOR2X1      2  3.1    95   215    2247    (-,-) 
+  u_rx_fifo/g3/Y                            -       B->Y  F     CLKXOR2X1      1  1.8    63   158    2405    (-,-) 
+  u_rx_fifo/g2/Y                            -       A->Y  F     OR3X1          1  1.9    70   225    2630    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       C->Y  R     NOR3BX1        1  1.8   173   140    2770    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2770    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+@genus:root: 8> 
+@genus:root: 8> 
+@genus:root: 8> report_timing -from [all_registers] -to [all_registers] -nworst 5 -net
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 22.17-s071_1
+  Generated on:           Oct 28 2026  03:52:38 am
+  Module:                 spi_bridge_top
+  Operating conditions:   PVT_0P9V_125C 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+
+Path 1: MET (7337 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2398                  
+             Slack:=    7337                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  o_rx_valid                                -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  w_rx_fifo_rd_en                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/n_189                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/n_174                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/n_175                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/n_176                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/n_177                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2437__4733/S                   -       B->S  F     ADDHX1         3  4.0   117   209    2047    (-,-) 
+  u_rx_fifo/w_rd_ptr_bin_next[3]            -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2434__5115/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    82   198    2244    (-,-) 
+  u_rx_fifo/n_186                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g3/Y                            -       B->Y  F     CLKXOR2X1      1  1.8    63   189    2433    (-,-) 
+  u_rx_fifo/n_201                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2/Y                            -       A->Y  F     OR3X1          1  1.9    70   225    2658    (-,-) 
+  u_rx_fifo/n_202                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       C->Y  R     NOR3BX1        1  1.8   173   140    2798    (-,-) 
+  u_rx_fifo/n_124                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2798    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 2: MET (7344 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2391                  
+             Slack:=    7344                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  o_rx_valid                                -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  w_rx_fifo_rd_en                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/n_189                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/n_174                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/n_175                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/n_176                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/n_177                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2437__4733/S                   -       B->S  R     ADDHX1         3  4.0   101   195    2033    (-,-) 
+  u_rx_fifo/w_rd_ptr_bin_next[3]            -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2434__5115/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    82   204    2237    (-,-) 
+  u_rx_fifo/n_186                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g3/Y                            -       B->Y  F     CLKXOR2X1      1  1.8    63   189    2426    (-,-) 
+  u_rx_fifo/n_201                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2/Y                            -       A->Y  F     OR3X1          1  1.9    70   225    2651    (-,-) 
+  u_rx_fifo/n_202                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       C->Y  R     NOR3BX1        1  1.8   173   140    2791    (-,-) 
+  u_rx_fifo/n_124                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2791    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 3: MET (7350 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2385                  
+             Slack:=    7350                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  o_rx_valid                                -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  w_rx_fifo_rd_en                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/n_189                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/n_174                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/n_175                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/n_176                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/n_177                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2437__4733/CO                  -       B->CO R     ADDHX1         1  2.0    57   155    1993    (-,-) 
+  u_rx_fifo/n_178                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2435__7482/Y                   -       B->Y  F     CLKXOR2X1      4  5.4   152   226    2219    (-,-) 
+  u_rx_fifo/w_rd_ptr_bin_next[4]            -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2431__1881/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    83   212    2430    (-,-) 
+  u_rx_fifo/n_185                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g4349__4319/Y                   -       B->Y  F     CLKXOR2X1      1  2.0    68   192    2622    (-,-) 
+  u_rx_fifo/n_23                            -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       B->Y  R     NOR3BX1        1  1.8   173   163    2785    (-,-) 
+  u_rx_fifo/n_124                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2785    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 4: MET (7361 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2374                  
+             Slack:=    7361                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  o_rx_valid                                -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  w_rx_fifo_rd_en                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/n_189                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/n_174                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/n_175                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/n_176                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/n_177                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2437__4733/CO                  -       B->CO R     ADDHX1         1  2.0    57   155    1993    (-,-) 
+  u_rx_fifo/n_178                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2435__7482/Y                   -       B->Y  R     CLKXOR2X1      4  5.4   129   209    2202    (-,-) 
+  u_rx_fifo/w_rd_ptr_bin_next[4]            -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2431__1881/Y                   -       B->Y  R     CLKXOR2X1      2  3.1    83   218    2420    (-,-) 
+  u_rx_fifo/n_185                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g4349__4319/Y                   -       B->Y  F     CLKXOR2X1      1  2.0    68   192    2612    (-,-) 
+  u_rx_fifo/n_23                            -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       B->Y  R     NOR3BX1        1  1.8   173   163    2774    (-,-) 
+  u_rx_fifo/n_124                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2774    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+
+
+Path 5: MET (7365 ps) Setup Check with Pin u_rx_fifo/r_empty_reg/CKN->D
+          Group: ACLK
+     Startpoint: (R) u_register_block/rx_data_buf_valid_reg/CK
+          Clock: (R) ACLK
+       Endpoint: (R) u_rx_fifo/r_empty_reg/D
+          Clock: (R) ACLK
+
+                     Capture       Launch     
+        Clock Edge:+   10000            0     
+       Src Latency:+     200          200     
+       Net Latency:+     200 (I)      200 (I) 
+           Arrival:=   10400          400     
+                                              
+             Setup:-     165                  
+       Uncertainty:-     100                  
+     Required Time:=   10135                  
+      Launch Clock:-     400                  
+         Data Path:-    2370                  
+             Slack:=    7365                  
+
+#------------------------------------------------------------------------------------------------------------------
+#               Timing Point                Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival Instance 
+#                                                                                (fF)  (ps)  (ps)   (ps)  Location 
+#------------------------------------------------------------------------------------------------------------------
+  u_register_block/rx_data_buf_valid_reg/CK <<<     -     R     (arrival)    105    -   100     0     400    (-,-) 
+  u_register_block/rx_data_buf_valid_reg/Q  -       CK->Q F     DFFQX4         5 26.1   184   366     766    (-,-) 
+  o_rx_valid                                -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_register_block/g1228__1705/Y            -       A0->Y R     OAI21X1        1  2.4   159   199     965    (-,-) 
+  w_rx_fifo_rd_en                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2479__1666/Y                   -       B->Y  F     NAND2BX2       6  7.0   238   216    1182    (-,-) 
+  u_rx_fifo/n_189                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2478/Y                         -       A->Y  R     INVX1          1  2.2    92   169    1350    (-,-) 
+  u_rx_fifo/n_174                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2446__2346/CO                  -       B->CO R     ADDHX1         1  2.2    62   172    1522    (-,-) 
+  u_rx_fifo/n_175                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2445__2883/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1680    (-,-) 
+  u_rx_fifo/n_176                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2442__9315/CO                  -       B->CO R     ADDHX1         1  2.2    62   158    1838    (-,-) 
+  u_rx_fifo/n_177                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2437__4733/S                   -       B->S  R     ADDHX1         3  4.0   101   195    2033    (-,-) 
+  u_rx_fifo/w_rd_ptr_bin_next[3]            -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2434__5115/Y                   -       B->Y  F     CLKXOR2X1      2  3.1    95   215    2247    (-,-) 
+  u_rx_fifo/n_186                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g3/Y                            -       B->Y  F     CLKXOR2X1      1  1.8    63   158    2405    (-,-) 
+  u_rx_fifo/n_201                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g2/Y                            -       A->Y  F     OR3X1          1  1.9    70   225    2630    (-,-) 
+  u_rx_fifo/n_202                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/g4246__4733/Y                   -       C->Y  R     NOR3BX1        1  1.8   173   140    2770    (-,-) 
+  u_rx_fifo/n_124                           -       -     -     (net)          -    -     -     -       -    (-,-) 
+  u_rx_fifo/r_empty_reg/D                   <<<     -     R     DFFNSRX1       1    -     -     0    2770    (-,-) 
+#------------------------------------------------------------------------------------------------------------------
+
+@genus:root: 9> 
+@genus:root: 9> quit
 
 Lic Summary:
-[04:11:20.185354] Cdslmd servers: kopo-seongnam
-[04:11:20.185384] Feature usage summary:
-[04:11:20.185386] Genus_Synthesis
+[03:57:19.308577] Cdslmd servers: kopo-seongnam
+[03:57:19.308601] Feature usage summary:
+[03:57:19.308603] Genus_Synthesis
 
 Normal exit.

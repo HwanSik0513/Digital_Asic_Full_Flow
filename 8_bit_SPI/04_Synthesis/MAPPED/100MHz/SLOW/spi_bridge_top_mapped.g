@@ -1,14 +1,12 @@
 ######################################################################
 
-# Created by Genus(TM) Synthesis Solution 22.17-s071_1 on Tue Oct 27 04:10:55 KST 2026
+# Created by Genus(TM) Synthesis Solution 22.17-s071_1 on Wed Oct 28 03:14:20 KST 2026
 
 # This file contains the Genus script for design:spi_bridge_top
 
 ######################################################################
 
 set_db -quiet init_lib_search_path {../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing ../../../GPDK045/digital/giolib045_v3.5/timing ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/lef ../../../GPDK045/digital/giolib045_v3.5/lef ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx}
-set_db -quiet operating_conditions_min PVT_1P1V_0C
-set_db -quiet operating_conditions_library_given true
 set_db -quiet design_mode_process 60.0
 set_db -quiet phys_assume_met_fill 0.0
 set_db -quiet map_placed_for_route_early_global false
@@ -17,7 +15,7 @@ set_db -quiet phys_route_time_out 120.0
 set_db -quiet db_units 2000
 set_db -quiet capacitance_per_unit_length_mmmc {}
 set_db -quiet resistance_per_unit_length_mmmc {}
-set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 17 0.0 15.98522} {to_generic 4 22 4 20} {first_condense 3 25 4 25} {PBS_Generic_Opt-Post 9 26 8.888993000000001 24.874213} {{PBS_Generic-Postgen HBO Optimizations} 0 26 0.0 24.874213} {PBS_TechMap-Start 0 28 0.0 25.83066} {{PBS_TechMap-Premap HBO Optimizations} 0 28 0.0 25.83066} {second_condense 2 30 2 29} {reify 4 34 6 36} {global_incr_map 0 35 1 37} {{PBS_Techmap-Global Mapping} 8 36 7.403036999999998 33.233697} {{PBS_TechMap-Datapath Postmap Operations} 2 38 1.982917999999998 35.216615} {{PBS_TechMap-Postmap HBO Optimizations} 0 38 -0.016770000000001062 35.199844999999996} {{PBS_TechMap-Postmap Clock Gating} 0 38 0.0 35.199844999999996} {{PBS_TechMap-Postmap Cleanup} 0 38 0.9835279999999997 36.183372999999996} {PBS_Techmap-Post_MBCI 0 38 0.0 36.183372999999996} {incr_opt 2 42 2 43} }
+set_db -quiet runtime_by_stage {{PBS_Generic-Start 0 18 0.0 15.980198} {to_generic 4 22 4 21} {first_condense 4 26 4 26} {PBS_Generic_Opt-Post 8 26 8.951960999999999 24.932159} {{PBS_Generic-Postgen HBO Optimizations} 0 26 0.0 24.932159} {PBS_TechMap-Start 0 29 0.0 25.889105} {{PBS_TechMap-Premap HBO Optimizations} 0 29 1.0 26.889105} {second_condense 1 30 2 30} {reify 4 34 5 35} {global_incr_map 0 35 0 36} {{PBS_Techmap-Global Mapping} 6 35 6.846769000000002 33.735874} {{PBS_TechMap-Datapath Postmap Operations} 2 37 0.9829769999999982 34.718851} {{PBS_TechMap-Postmap HBO Optimizations} 0 37 -0.016683999999997923 34.702167} {{PBS_TechMap-Postmap Clock Gating} 0 37 1.0 35.702167} {{PBS_TechMap-Postmap Cleanup} 1 38 -0.016938000000003228 35.685229} {PBS_Techmap-Post_MBCI 0 38 0.0 35.685229} {incr_opt 3 42 3 42} }
 set_db -quiet timing_adjust_tns_of_complex_flops false
 set_db -quiet hdl_array_naming_style %s_%d
 set_db -quiet tinfo_tstamp_file .rs_hah003.tstamp
@@ -244,7 +242,6 @@ set_db -quiet lib_cell:default_emulate_libset_max/slow_vdd1v0/TLATX1 .avoid true
 set_db -quiet lib_cell:default_emulate_libset_max/slow_vdd1v0/TLATX2 .avoid true
 set_db -quiet lib_cell:default_emulate_libset_max/slow_vdd1v0/TLATX4 .avoid true
 set_db -quiet lib_cell:default_emulate_libset_max/slow_vdd1v0/TLATXL .avoid true
-set_db -quiet operating_conditions operating_condition:default_emulate_libset_max/slow_vdd1v0/PVT_0P9V_125C
 set_db -quiet wireload_selection none
 set_db -quiet operating_condition:default_emulate_libset_max/slow_vdd1v0/PVT_0P9V_125C .tree_type balanced_tree
 set_db -quiet operating_condition:default_emulate_libset_max/slow_vdd1v0/_nominal_ .tree_type balanced_tree
@@ -341,7 +338,7 @@ set_db -quiet dft_scan_style muxed_scan
 set_db -quiet dft_scanbit_waveform_analysis false
 # END DFT SECTION
 set_db -quiet design:spi_bridge_top .seq_reason_deleted_internal {{u_spi_master/o_rx_captured_reg_0 unloaded {u_spi_master/o_rx_captured[0]}} {u_spi_master/o_rx_captured_reg_1 unloaded {u_spi_master/o_rx_captured[1]}} {u_spi_master/o_rx_captured_reg_2 unloaded {u_spi_master/o_rx_captured[2]}} {u_spi_master/o_rx_captured_reg_3 unloaded {u_spi_master/o_rx_captured[3]}} {u_spi_master/o_rx_captured_reg_4 unloaded {u_spi_master/o_rx_captured[4]}} {u_spi_master/o_rx_captured_reg_5 unloaded {u_spi_master/o_rx_captured[5]}} {u_spi_master/o_rx_captured_reg_6 unloaded {u_spi_master/o_rx_captured[6]}} {u_spi_master/o_rx_captured_reg_7 unloaded {u_spi_master/o_rx_captured[7]}} {u_spi_master/o_rx_captured_valid_reg unloaded u_spi_master/o_rx_captured_valid} {u_spi_master/r_shift_in_reg_0 unloaded {u_spi_master/r_shift_in[0]}} {u_spi_master/r_shift_in_reg_1 unloaded {u_spi_master/r_shift_in[1]}} {u_spi_master/r_shift_in_reg_2 unloaded {u_spi_master/r_shift_in[2]}} {u_spi_master/r_shift_in_reg_3 unloaded {u_spi_master/r_shift_in[3]}} {u_spi_master/r_shift_in_reg_4 unloaded {u_spi_master/r_shift_in[4]}} {u_spi_master/r_shift_in_reg_5 unloaded {u_spi_master/r_shift_in[5]}} {u_spi_master/r_shift_in_reg_6 unloaded {u_spi_master/r_shift_in[6]}} {u_spi_master/r_shift_in_reg_7 unloaded {u_spi_master/r_shift_in[7]}}}
-set_db -quiet design:spi_bridge_top .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 4954} {cell_count 844} {utilization  0.00} {runtime 4 22 4 20} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 5447} {cell_count 1274} {utilization  0.00} {runtime 3 25 4 25} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 5444} {cell_count 1272} {utilization  0.00} {runtime 2 30 2 29} }{reify {wns 7102} {tns 0} {vep 0} {area 3591} {cell_count 867} {utilization  0.00} {runtime 4 35 6 36} }{global_incr_map {wns 7100} {tns 0} {vep 0} {area 3525} {cell_count 849} {utilization  0.00} {runtime 0 35 1 37} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 3506} {cell_count 837} {utilization  0.00} {runtime 2 42 2 43} }}
+set_db -quiet design:spi_bridge_top .qos_by_stage {{to_generic {wns -11111111} {tns -111111111} {vep -111111111} {area 4954} {cell_count 844} {utilization  0.00} {runtime 4 22 4 21} }{first_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 5447} {cell_count 1274} {utilization  0.00} {runtime 4 26 4 26} }{second_condense {wns -11111111} {tns -111111111} {vep -111111111} {area 5444} {cell_count 1272} {utilization  0.00} {runtime 1 30 2 30} }{reify {wns 7102} {tns 0} {vep 0} {area 3591} {cell_count 867} {utilization  0.00} {runtime 4 35 5 35} }{global_incr_map {wns 7100} {tns 0} {vep 0} {area 3525} {cell_count 849} {utilization  0.00} {runtime 0 35 0 36} }{incr_opt {wns 214748365} {tns 0} {vep 0} {area 3506} {cell_count 837} {utilization  0.00} {runtime 3 42 3 42} }}
 set_db -quiet design:spi_bridge_top .seq_mbci_coverage 0.0
 set_db -quiet design:spi_bridge_top .hdl_filelist {{default -v2001 {SYNTHESIS} {../RTL/Async_fifo.v ../RTL/Pulse_sync.v ../RTL/Register_block.v ../RTL/Reset_sync.v ../RTL/Sclk_gen.v ../RTL/Spi_master.v ../RTL/Spi_slave.v ../RTL/Spi_bridge_top.v} {} {}}}
 set_db -quiet design:spi_bridge_top .verification_directory fv/spi_bridge_top
@@ -2277,7 +2274,7 @@ set_db -quiet source_verbose true
 ##
 ## Written by Genus(TM) Synthesis Solution version 22.17-s071_1
 ## flowkit v22.15-s003_1
-## Written on 04:10:55 27-Oct 2026
+## Written on 03:14:21 28-Oct 2026
 #############################################################
 #####   Flow Definitions   ##################################
 
