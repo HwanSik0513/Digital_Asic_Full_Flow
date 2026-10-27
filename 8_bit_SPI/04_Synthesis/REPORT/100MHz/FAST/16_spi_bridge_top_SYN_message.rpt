@@ -34,14 +34,11 @@
 |          |       |     | of the cell, to use it for mapping. The pg_pin will not have any function defined.      |
 |LBR-12    |Warning|    1|Found libraries with and without pg_pin construct.                                       |
 |          |       |     |This can lead to issues later in the flow.                                               |
-|LBR-22    |Warning|   20|Multiply-defined library cell.                                                           |
-|          |       |     |Library cell names must be unique.  Any duplicates will be deleted.  Only the first      |
-|          |       |     | (as determined by the order of libraries) will be retained.                             |
-|LBR-38    |Warning|    2|Libraries have inconsistent nominal operating conditions. In the Liberty library, there  |
+|LBR-38    |Warning|    1|Libraries have inconsistent nominal operating conditions. In the Liberty library, there  |
 |          |       |     | are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the   |
 |          |       |     | message, if the respective values of the 2 given .libs differ.                          |
 |          |       |     |This is a common source of delay calculation confusion and should be avoided.            |
-|LBR-412   |Info   |    3|Created nominal operating condition.                                                     |
+|LBR-412   |Info   |    2|Created nominal operating condition.                                                     |
 |          |       |     |The nominal operating condition is represented, either by the nominal PVT values         |
 |          |       |     | specified in the library source                                                         |
 |          |       |     | (via nom_process,nom_voltage and nom_temperature respectively)                          |
@@ -50,7 +47,7 @@
 |          |       |     |To see the list of relaxed sequential instances, set the 'information_level' attribute to|
 |          |       |     | 2 or above. If the message is truncated set the message attribute 'truncate' to false to|
 |          |       |     | see the complete list.                                                                  |
-|MESG-11   |Warning|    5|Maximum message print count reached.                                                     |
+|MESG-11   |Warning|    2|Maximum message print count reached.                                                     |
 |PHYS-103  |Warning|    4|Marking library cell 'avoid'.                                                            |
 |          |       |     |To prevent the library cell from being set to 'avoid', set attribute                     |
 |          |       |     | 'lib_lef_consistency_check_enable' to 'false'.                                          |
@@ -63,10 +60,6 @@
 |RPT_DP-100|Warning|    3|The filename, column and line number information will not be available in the report.    |
 |          |       |     |You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate)     |
 |          |       |     | to enable filename, column, and line number tracking in the datapath report.            |
-|SDC-248   |Warning|   20|Invalid object passed to SDC command.                                                    |
-|          |       |     |This object is not valid for the indicated SDC command. Check object passed to the SDC   |
-|          |       |     | command and contact Cadence customer support if you believe this option combination     |
-|          |       |     | should be supported.                                                                    |
 |SYNTH-1   |Info   |    1|Synthesizing.                                                                            |
 |SYNTH-2   |Info   |    1|Done synthesizing.                                                                       |
 |SYNTH-4   |Info   |    1|Mapping.                                                                                 |
@@ -75,6 +68,4 @@
 |SYNTH-8   |Info   |    1|Done incrementally optimizing.                                                           |
 |TUI-78    |Warning|    6|A required object parameter could not be found.                                          |
 |          |       |     |Check if a previous get_db or find returned an empty string.                             |
-|VLOGPT-692|Warning|    1|Usage of non-static tasks or functions might result in simulation-synthesis mismatch.    |
-|          |       |     |Use the 'automatic' keyword for declaring functions and tasks.                           |
 --------------------------------------------------------------------------------------------------------------------

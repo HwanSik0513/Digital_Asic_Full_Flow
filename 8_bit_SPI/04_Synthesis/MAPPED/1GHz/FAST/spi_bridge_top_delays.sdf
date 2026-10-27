@@ -1,14 +1,14 @@
 (DELAYFILE
   (SDFVERSION  "OVI 3.0")
   (DESIGN      "spi_bridge_top")
-  (DATE        "Fri Oct 23 04:32:16 KST 2026")
+  (DATE        "Wed Oct 28 06:05:01 KST 2026")
   (VENDOR      "Cadence, Inc.")
   (PROGRAM     "Genus(TM) Synthesis Solution")
   (VERSION     "22.17-s071_1")
   (DIVIDER     .)
-  (VOLTAGE     ::0.9)
+  (VOLTAGE     ::1.1)
   (PROCESS     "::1.0")
-  (TEMPERATURE ::125.0)
+  (TEMPERATURE ::0.0)
   (TIMESCALE   1ns)
   (CELL
      (CELLTYPE "CLKXOR2X1")

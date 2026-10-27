@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 22.17-s071_1 on Fri Oct 23 04:32:16 KST 2026
+#  Created by Genus(TM) Synthesis Solution 22.17-s071_1 on Wed Oct 28 06:05:01 KST 2026
 
 # ####################################################################
 
@@ -93,7 +93,6 @@ set_output_delay -clock [get_clocks ACLK] -add_delay -min -0.01 [get_ports {o_bu
 set_output_delay -clock [get_clocks ACLK] -add_delay -min -0.01 [get_ports {o_bus_rdata[0]}]
 set_output_delay -clock [get_clocks ACLK] -add_delay -min -0.01 [get_ports o_overflow]
 set_output_delay -clock [get_clocks ACLK] -add_delay -min -0.01 [get_ports o_rx_valid]
-set_operating_conditions -max_library slow_vdd1v0 -min_library library:default_emulate_libset_max/fast_vdd1v0 -min PVT_1P1V_0C -max PVT_0P9V_125C
 set_driving_cell -lib_cell DFFHQX1 -library fast_vdd1v0 -pin "Q" [get_ports ARESETn]
 set_driving_cell -lib_cell DFFHQX1 -library fast_vdd1v0 -pin "Q" [get_ports {i_bus_addr[7]}]
 set_driving_cell -lib_cell DFFHQX1 -library fast_vdd1v0 -pin "Q" [get_ports {i_bus_addr[6]}]

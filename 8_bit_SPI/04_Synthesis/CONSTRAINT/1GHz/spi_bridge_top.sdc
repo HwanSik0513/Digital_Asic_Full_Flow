@@ -90,9 +90,9 @@ set_load 0.02 [all_outputs]
 # 4. Operating conditions (same as the professor:
 #    setup = slow 0.9V/125C, hold = fast 1.1V/0C)
 #----------------------------------------------------------------
-set_operating_conditions \
-    -max_library [get_libs $STD_LIB_slow] -max PVT_0P9V_125C \
-    -min_library [get_libs $STD_LIB_fast] -min PVT_1P1V_0C
+#set_operating_conditions \
+#    -max_library [get_libs $STD_LIB_slow] -max PVT_0P9V_125C \
+#    -min_library [get_libs $STD_LIB_fast] -min PVT_1P1V_0C
 
 #----------------------------------------------------------------
 # 5. Attributes
@@ -101,8 +101,8 @@ set_operating_conditions \
 # restructure them:
 #   r_*_meta*, r_dst_meta / r_dst_sync, r_*_gray_*_meta_*,
 #   r_*_gray_wclk / rclk, r_spi_busy_*, r_rx_full_*
-set SYNC_CELLS [get_cells -quiet -hierarchical {*meta*_reg* *sync*_reg* *gray_wclk_reg* *gray_rclk_reg*}]
-if {[llength $SYNC_CELLS] > 0} { set_dont_touch $SYNC_CELLS }
+#set SYNC_CELLS [get_cells -quiet -hierarchical {*meta*_reg* *sync*_reg* *gray_wclk_reg* *gray_rclk_reg*}]
+#if {[llength $SYNC_CELLS] > 0} { set_dont_touch $SYNC_CELLS }
 
 set_ideal_network [get_ports {ACLK ARESETn}]
 

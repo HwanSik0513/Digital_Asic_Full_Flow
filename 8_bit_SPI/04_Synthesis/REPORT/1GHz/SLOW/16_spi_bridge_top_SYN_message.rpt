@@ -43,7 +43,7 @@
 |          |       |     |To see the list of relaxed sequential instances, set the 'information_level' attribute to|
 |          |       |     | 2 or above. If the message is truncated set the message attribute 'truncate' to false to|
 |          |       |     | see the complete list.                                                                  |
-|MESG-11   |Warning|    3|Maximum message print count reached.                                                     |
+|MESG-11   |Warning|    2|Maximum message print count reached.                                                     |
 |PHYS-103  |Warning|    4|Marking library cell 'avoid'.                                                            |
 |          |       |     |To prevent the library cell from being set to 'avoid', set attribute                     |
 |          |       |     | 'lib_lef_consistency_check_enable' to 'false'.                                          |
@@ -56,13 +56,6 @@
 |RPT_DP-100|Warning|    3|The filename, column and line number information will not be available in the report.    |
 |          |       |     |You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate)     |
 |          |       |     | to enable filename, column, and line number tracking in the datapath report.            |
-|SDC-208   |Warning|    1|Could not find requested search value.                                                   |
-|          |       |     |Use get_* commands to find the objects along with a wild card entry in the name of the   |
-|          |       |     | object to check if the object is existing with different naming style.                  |
-|SDC-248   |Warning|   20|Invalid object passed to SDC command.                                                    |
-|          |       |     |This object is not valid for the indicated SDC command. Check object passed to the SDC   |
-|          |       |     | command and contact Cadence customer support if you believe this option combination     |
-|          |       |     | should be supported.                                                                    |
 |SYNTH-1   |Info   |    1|Synthesizing.                                                                            |
 |SYNTH-2   |Info   |    1|Done synthesizing.                                                                       |
 |SYNTH-4   |Info   |    1|Mapping.                                                                                 |
@@ -71,6 +64,4 @@
 |SYNTH-8   |Info   |    1|Done incrementally optimizing.                                                           |
 |TUI-78    |Warning|    6|A required object parameter could not be found.                                          |
 |          |       |     |Check if a previous get_db or find returned an empty string.                             |
-|VLOGPT-692|Warning|    1|Usage of non-static tasks or functions might result in simulation-synthesis mismatch.    |
-|          |       |     |Use the 'automatic' keyword for declaring functions and tasks.                           |
 --------------------------------------------------------------------------------------------------------------------

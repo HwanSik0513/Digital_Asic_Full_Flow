@@ -3,19 +3,19 @@ Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
 Cadence and the Cadence logo are registered trademarks and Genus is a trademark
 of Cadence Design Systems, Inc. in the United States and other countries.
 
-[03:12:50.163161] Configured Lic search path (22.01-s003): 5280@172.31.52.241
+[06:25:06.158617] Configured Lic search path (22.01-s003): 5280@localhost
 
 Version: 22.17-s071_1, built Wed Sep 11 20:37:05 PDT 2024
-Options: -files ./script/spi_bridge_top_45nm.tcl -log ./log/all.log 
-Date:    Tue Oct 27 03:12:50 2026
+Options: -files ./script/spi_bridge_top_45nm_SLOW.tcl -log ./log/all.log 
+Date:    Wed Oct 28 06:25:06 2026
 Host:    kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*2physical cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB) (394624392KB)
-PID:     232348
+PID:     100757
 OS:      CentOS Linux release 7.9.2009 (Core)
 
 Checking out license: Genus_Synthesis
-[03:12:50.235896] Periodic Lic check successful
-[03:12:50.235920] Feature usage summary:
-[03:12:50.235921] Genus_Synthesis
+[06:25:06.466786] Periodic Lic check successful
+[06:25:06.466793] Feature usage summary:
+[06:25:06.466793] Genus_Synthesis
 
 
 
@@ -24,43 +24,43 @@ Checking out license: Genus_Synthesis
 
 
 
-Finished executable startup (1 second elapsed).
+Finished executable startup (0 seconds elapsed).
 
 Loading tool scripts...
-Finished loading tool scripts (13 seconds elapsed).
+Finished loading tool scripts (14 seconds elapsed).
 
 #@ Processing -files option
-@genus 1> source ./script/spi_bridge_top_45nm.tcl
-#@ Begin verbose source ./script/spi_bridge_top_45nm.tcl
-@file(spi_bridge_top_45nm.tcl) 6: set TOP_DESIGN spi_bridge_top
-@file(spi_bridge_top_45nm.tcl) 8: set LOG_DIR      "./log"
-@file(spi_bridge_top_45nm.tcl) 9: set RPT_DIR      "./report"
-@file(spi_bridge_top_45nm.tcl) 10: set UNMAPPED_DIR "./unmapped"
-@file(spi_bridge_top_45nm.tcl) 11: set MAPPED_DIR   "./mapped"
-@file(spi_bridge_top_45nm.tcl) 13: file mkdir $LOG_DIR
-@file(spi_bridge_top_45nm.tcl) 14: file mkdir $RPT_DIR
-@file(spi_bridge_top_45nm.tcl) 15: file mkdir $UNMAPPED_DIR
-@file(spi_bridge_top_45nm.tcl) 16: file mkdir $MAPPED_DIR
-@file(spi_bridge_top_45nm.tcl) 21: set STD_LIB_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing"
-@file(spi_bridge_top_45nm.tcl) 22: set IO_LIB_PATH  "../../../GPDK045/digital/giolib045_v3.5/timing"
-@file(spi_bridge_top_45nm.tcl) 23: set LEF_LIB_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/lef ../../../GPDK045/digital/giolib045_v3.5/lef"
-@file(spi_bridge_top_45nm.tcl) 24: set QRC_FILE_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx"
-@file(spi_bridge_top_45nm.tcl) 26: set LIB_LIST {slow_vdd1v0_basicCells.lib pads_SS_s1vg.lib}
-@file(spi_bridge_top_45nm.tcl) 27: set LEF_LIST {gsclib045_tech.lef gsclib045_macro.lef giolib045.lef}
-@file(spi_bridge_top_45nm.tcl) 28: set QRC_LIST {gpdk045.tch}
-@file(spi_bridge_top_45nm.tcl) 30: set_db auto_ungroup none
+@genus 1> source ./script/spi_bridge_top_45nm_SLOW.tcl
+#@ Begin verbose source ./script/spi_bridge_top_45nm_SLOW.tcl
+@file(spi_bridge_top_45nm_SLOW.tcl) 6: set TOP_DESIGN spi_bridge_top
+@file(spi_bridge_top_45nm_SLOW.tcl) 8: set LOG_DIR      "./log"
+@file(spi_bridge_top_45nm_SLOW.tcl) 9: set RPT_DIR      "./report"
+@file(spi_bridge_top_45nm_SLOW.tcl) 10: set UNMAPPED_DIR "./unmapped"
+@file(spi_bridge_top_45nm_SLOW.tcl) 11: set MAPPED_DIR   "./mapped"
+@file(spi_bridge_top_45nm_SLOW.tcl) 13: file mkdir $LOG_DIR
+@file(spi_bridge_top_45nm_SLOW.tcl) 14: file mkdir $RPT_DIR
+@file(spi_bridge_top_45nm_SLOW.tcl) 15: file mkdir $UNMAPPED_DIR
+@file(spi_bridge_top_45nm_SLOW.tcl) 16: file mkdir $MAPPED_DIR
+@file(spi_bridge_top_45nm_SLOW.tcl) 21: set STD_LIB_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing"
+@file(spi_bridge_top_45nm_SLOW.tcl) 22: set IO_LIB_PATH  "../../../GPDK045/digital/giolib045_v3.5/timing"
+@file(spi_bridge_top_45nm_SLOW.tcl) 23: set LEF_LIB_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/lef ../../../GPDK045/digital/giolib045_v3.5/lef"
+@file(spi_bridge_top_45nm_SLOW.tcl) 24: set QRC_FILE_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx"
+@file(spi_bridge_top_45nm_SLOW.tcl) 26: set LIB_LIST {slow_vdd1v0_basicCells.lib pads_SS_s1vg.lib}
+@file(spi_bridge_top_45nm_SLOW.tcl) 27: set LEF_LIST {gsclib045_tech.lef gsclib045_macro.lef giolib045.lef}
+@file(spi_bridge_top_45nm_SLOW.tcl) 28: set QRC_LIST {gpdk045.tch}
+@file(spi_bridge_top_45nm_SLOW.tcl) 30: set_db auto_ungroup none
   Setting attribute of root '/': 'auto_ungroup' = none
-@file(spi_bridge_top_45nm.tcl) 31: set_db max_cpus_per_server 2
+@file(spi_bridge_top_45nm_SLOW.tcl) 31: set_db max_cpus_per_server 2
   Setting attribute of root '/': 'max_cpus_per_server' = 2
-@file(spi_bridge_top_45nm.tcl) 33: set_db syn_generic_effort high
+@file(spi_bridge_top_45nm_SLOW.tcl) 33: set_db syn_generic_effort high
   Setting attribute of root '/': 'syn_generic_effort' = high
-@file(spi_bridge_top_45nm.tcl) 34: set_db syn_map_effort high
+@file(spi_bridge_top_45nm_SLOW.tcl) 34: set_db syn_map_effort high
   Setting attribute of root '/': 'syn_map_effort' = high
-@file(spi_bridge_top_45nm.tcl) 35: set_db syn_opt_effort high
+@file(spi_bridge_top_45nm_SLOW.tcl) 35: set_db syn_opt_effort high
   Setting attribute of root '/': 'syn_opt_effort' = high
-@file(spi_bridge_top_45nm.tcl) 37: set_db init_lib_search_path [concat $STD_LIB_PATH $IO_LIB_PATH $LEF_LIB_PATH $QRC_FILE_PATH]
+@file(spi_bridge_top_45nm_SLOW.tcl) 37: set_db init_lib_search_path [concat $STD_LIB_PATH $IO_LIB_PATH $LEF_LIB_PATH $QRC_FILE_PATH]
   Setting attribute of root '/': 'init_lib_search_path' = ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing ../../../GPDK045/digital/giolib045_v3.5/timing ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/lef ../../../GPDK045/digital/giolib045_v3.5/lef ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx
-@file(spi_bridge_top_45nm.tcl) 39: read_libs $LIB_LIST
+@file(spi_bridge_top_45nm_SLOW.tcl) 39: read_libs $LIB_LIST
 
   Message Summary for Library both libraries:
   *******************************************
@@ -118,7 +118,7 @@ Warning : Library cell has no output pins defined. [LBR-9]
 Warning : Found libraries with and without pg_pin construct. [LBR-12]
         : Libraries with and without pg_pin construct have been loaded.
         : This can lead to issues later in the flow.
-@file(spi_bridge_top_45nm.tcl) 40: read_physical -lef $LEF_LIST
+@file(spi_bridge_top_45nm_SLOW.tcl) 40: read_physical -lef $LEF_LIST
 Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
         : Via 'M2_M1_HV' has no resistance value.
         : If this is the expected behavior, this message can be ignored.
@@ -217,16 +217,16 @@ Warning : Physical cell not defined in library. [PHYS-279]
         : The physical (LEF) cell HSWNX1 cannot be found in library.
 Warning : Maximum message print count reached. [MESG-11]
         : Maximum print count of '20' reached for message 'PHYS-279'.
-@file(spi_bridge_top_45nm.tcl) 41: read_qrc $QRC_LIST
+@file(spi_bridge_top_45nm_SLOW.tcl) 41: read_qrc $QRC_LIST
 
   According to qrc_tech_file, there are total 11 routing layers [ V(5) / H(6) ]
 
 Done reading qrc_tech_file
-@file(spi_bridge_top_45nm.tcl) 43: set_db hdl_array_naming_style %s_%d
+@file(spi_bridge_top_45nm_SLOW.tcl) 43: set_db hdl_array_naming_style %s_%d
   Setting attribute of root '/': 'hdl_array_naming_style' = %s_%d
-@file(spi_bridge_top_45nm.tcl) 44: set_db / .uniquify_naming_style ${TOP_DESIGN}_%s_%d
+@file(spi_bridge_top_45nm_SLOW.tcl) 44: set_db / .uniquify_naming_style ${TOP_DESIGN}_%s_%d
   Setting attribute of root '/': 'uniquify_naming_style' = spi_bridge_top_%s_%d
-@file(spi_bridge_top_45nm.tcl) 49: set RTL_SOURCES "../RTL/Async_fifo.v \
+@file(spi_bridge_top_45nm_SLOW.tcl) 49: set RTL_SOURCES "../RTL/Async_fifo.v \
                  ../RTL/Pulse_sync.v \
                  ../RTL/Register_block.v \
                  ../RTL/Reset_sync.v \
@@ -234,13 +234,8 @@ Done reading qrc_tech_file
                  ../RTL/Spi_master.v \
                  ../RTL/Spi_slave.v \
                  ../RTL/Spi_bridge_top.v"
-@file(spi_bridge_top_45nm.tcl) 58: read_hdl $RTL_SOURCES
-function [ADDR_WIDTH:0] gray2bin ;
-         |
-Warning : Usage of non-static tasks or functions might result in simulation-synthesis mismatch. [VLOGPT-692]
-        : in file '../RTL/Async_fifo.v' on line 146, column 10.
-        : Use the 'automatic' keyword for declaring functions and tasks.
-@file(spi_bridge_top_45nm.tcl) 59: elaborate $TOP_DESIGN
+@file(spi_bridge_top_45nm_SLOW.tcl) 58: read_hdl $RTL_SOURCES
+@file(spi_bridge_top_45nm_SLOW.tcl) 59: elaborate $TOP_DESIGN
   Libraries have 324 usable logic and 128 usable sequential lib-cells.
 Info    : Elaborating Design. [ELAB-1]
         : Elaborating top-level block 'spi_bridge_top' from file '../RTL/Spi_bridge_top.v'.
@@ -271,11 +266,11 @@ Stage: post_elab
 Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
 Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
-Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
 Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
-Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.001s)
 
 Stage: post_elab
 --------------------------------------------------------------------
@@ -288,23 +283,23 @@ Stage: post_elab
 --------------------------------------------------------------------
 UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   elaborate
-@file(spi_bridge_top_45nm.tcl) 61: time_info Elaboration
+@file(spi_bridge_top_45nm_SLOW.tcl) 61: time_info Elaboration
 stamp 'Elaboration' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:12:57 (Oct27) |  209.0 MB | init
+ 00:00:08(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:15 (Oct28) |  236.0 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:08(00:00:09) | 100.0(100.0) |    3:13:06 (Oct27) |  388.0 MB | Elaboration
+ 00:00:17(00:00:09) |  00:00:09(00:00:09) | 100.0(100.0) |    6:25:24 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-@file(spi_bridge_top_45nm.tcl) 63: set_db optimize_merge_flops false
+@file(spi_bridge_top_45nm_SLOW.tcl) 63: set_db optimize_merge_flops false
   Setting attribute of root '/': 'optimize_merge_flops' = false
-@file(spi_bridge_top_45nm.tcl) 64: set_db optimize_merge_latches false
+@file(spi_bridge_top_45nm_SLOW.tcl) 64: set_db optimize_merge_latches false
   Setting attribute of root '/': 'optimize_merge_latches' = false
-@file(spi_bridge_top_45nm.tcl) 66: uniquify -verbose $TOP_DESIGN
+@file(spi_bridge_top_45nm_SLOW.tcl) 66: uniquify -verbose $TOP_DESIGN
   Uniquified instance: u_tx_fifo/add_108_39, and its subdesign name is: spi_bridge_top_spi_bridge_top_add_unsigned_15_3
   Uniquified instance: u_tx_fifo/add_70_39, and its subdesign name is: spi_bridge_top_spi_bridge_top_add_unsigned_15_2
   Uniquified instance: u_rx_fifo/add_108_39, and its subdesign name is: spi_bridge_top_spi_bridge_top_add_unsigned_78_1
@@ -320,9 +315,9 @@ Info: CPU time includes time of parent + longest thread
   Uniquified instance: u_spi_master/mux_next_state_82_26, and its subdesign name is: spi_bridge_top_spi_bridge_top_bmux_22_1
   Uniquified instance: u_spi_master/add_136_32, and its subdesign name is: spi_bridge_top_add_unsigned_1
   Uniquified instance: u_reset_sync_sclk, and its subdesign name is: spi_bridge_top_reset_sync_1
-@file(spi_bridge_top_45nm.tcl) 68: check_design > ${RPT_DIR}/00_check_design.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 68: check_design > ${RPT_DIR}/00_check_design.rpt
 
-@file(spi_bridge_top_45nm.tcl) 69: check_design -unresolved >> ${RPT_DIR}/00_check_design.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 69: check_design -unresolved >> ${RPT_DIR}/00_check_design.rpt
 
 
  	 Check Design Report (c)
@@ -335,8 +330,8 @@ No unresolved references in design 'spi_bridge_top'
 No empty modules in design 'spi_bridge_top'
 
   Done Checking the design.
-@file(spi_bridge_top_45nm.tcl) 74: source -verbose ./cons/spi_bridge_top.sdc
-Sourcing './cons/spi_bridge_top.sdc' (Tue Oct 27 03:13:06 KST 2026)...
+@file(spi_bridge_top_45nm_SLOW.tcl) 74: source -verbose ./cons/spi_bridge_top.sdc
+Sourcing './cons/spi_bridge_top.sdc' (Wed Oct 28 06:25:24 KST 2026)...
 #@ Begin verbose source ./cons/spi_bridge_top.sdc
 @file(spi_bridge_top.sdc) 12: set STD_LIB_slow slow_vdd1v0_basicCells.lib:slow_vdd1v0
 @file(spi_bridge_top.sdc) 13: set STD_LIB_fast fast_vdd1v0_basicCells.lib:fast_vdd1v0
@@ -366,57 +361,6 @@ Sourcing './cons/spi_bridge_top.sdc' (Tue Oct 27 03:13:06 KST 2026)...
 @file(spi_bridge_top.sdc) 79: set_false_path -to [get_ports {o_dbg_sclk o_dbg_cs_n o_dbg_mosi o_dbg_miso}]
 @file(spi_bridge_top.sdc) 86: set_driving_cell -lib_cell DFFHQX1 -pin Q [remove_from_collection [all_inputs] [get_ports ACLK]]
 @file(spi_bridge_top.sdc) 87: set_load 0.02 [all_outputs]
-@file(spi_bridge_top.sdc) 93: set_operating_conditions \
-    -max_library [get_libs $STD_LIB_slow] -max PVT_0P9V_125C \
-    -min_library [get_libs $STD_LIB_fast] -min PVT_1P1V_0C
-Warning : Could not find requested search value. [SDC-208] [get_libs]
-        : The 'get_libs' command cannot find any libraries named 'fast_vdd1v0'.
-        : Use get_* commands to find the objects along with a wild card entry in the name of the object to check if the object is existing with different naming style.
-@file(spi_bridge_top.sdc) 104: set SYNC_CELLS [get_cells -quiet -hierarchical {*meta*_reg* *sync*_reg* *gray_wclk_reg* *gray_rclk_reg*}]
-@file(spi_bridge_top.sdc) 105: if {[llength $SYNC_CELLS] > 0} { set_dont_touch $SYNC_CELLS }
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-        : This object is not valid for the indicated SDC command. Check object passed to the SDC command and contact Cadence customer support if you believe this option combination should be supported.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Invalid object passed to SDC command. [SDC-248] [set_dont_touch]
-        : The 'set_dont_touch' command cannot be used on unmapped leaf cell objects.
-Warning : Maximum message print count reached. [MESG-11] [set_dont_touch]
-        : Maximum print count of '20' reached for message 'SDC-248'.
 @file(spi_bridge_top.sdc) 107: set_ideal_network [get_ports {ACLK ARESETn}]
 @file(spi_bridge_top.sdc) 115: set_false_path -from [get_ports ARESETn]
 @file(spi_bridge_top.sdc) 126: set CDC_MAX_DELAY $CLK_PERIOD
@@ -424,8 +368,8 @@ Warning : Maximum message print count reached. [MESG-11] [set_dont_touch]
 @file(spi_bridge_top.sdc) 132: set MEM_Q  [get_cells -quiet -hierarchical {*mem_reg*}]
 @file(spi_bridge_top.sdc) 133: set RDD    [get_cells -quiet -hierarchical {*o_rd_data_reg*}]
 #@ End verbose source ./cons/spi_bridge_top.sdc
-@file(spi_bridge_top_45nm.tcl) 75: source -verbose ./cons/dont_use_45nm.tcl
-Sourcing './cons/dont_use_45nm.tcl' (Tue Oct 27 03:13:06 KST 2026)...
+@file(spi_bridge_top_45nm_SLOW.tcl) 75: source -verbose ./cons/dont_use_45nm.tcl
+Sourcing './cons/dont_use_45nm.tcl' (Wed Oct 28 06:25:24 KST 2026)...
 #@ Begin verbose source ./cons/dont_use_45nm.tcl
 @file(dont_use_45nm.tcl) 1: set_dont_use [get_lib_cells */ANTENNA*]
 @file(dont_use_45nm.tcl) 2: set_dont_use [get_lib_cells */DLY*]
@@ -435,11 +379,11 @@ Sourcing './cons/dont_use_45nm.tcl' (Tue Oct 27 03:13:06 KST 2026)...
 @file(dont_use_45nm.tcl) 7: set_dont_use [get_lib_cells */DFFS*]
 @file(dont_use_45nm.tcl) 9: set_dont_use [get_lib_cells */SDFF*]
 #@ End verbose source ./cons/dont_use_45nm.tcl
-@file(spi_bridge_top_45nm.tcl) 77: check_timing_intent -verbose > ${RPT_DIR}/01_check_timing_intent.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 77: check_timing_intent -verbose > ${RPT_DIR}/01_check_timing_intent.rpt
   Libraries have 316 usable logic and 60 usable sequential lib-cells.
-@file(spi_bridge_top_45nm.tcl) 79: report_port -delay -driver [all_inputs] > ${RPT_DIR}/02_report_port.rpt
-@file(spi_bridge_top_45nm.tcl) 80: report_port -delay -load [all_outputs] >> ${RPT_DIR}/02_report_port.rpt
-@file(spi_bridge_top_45nm.tcl) 85: syn_generic
+@file(spi_bridge_top_45nm_SLOW.tcl) 79: report_port -delay -driver [all_inputs] > ${RPT_DIR}/02_report_port.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 80: report_port -delay -load [all_outputs] >> ${RPT_DIR}/02_report_port.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 85: syn_generic
 
 Stage: pre_early_cg
 -----------------------------------------------
@@ -451,7 +395,7 @@ Found 0 unmapped ChipWare ICG instances
 Mapped 0 of 0 ChipWare ICG instances
 ##Generic Timing Info for library domain: _default_ typical gate delay: 142.3 ps std_slew: 18.2 ps std_load: 1.0 fF
 Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: spi_bridge_top, recur: true)
-Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.001s)
 
 Stage: pre_to_gen_setup
 -----------------------------------------------------
@@ -535,7 +479,7 @@ stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -543,7 +487,7 @@ Info: CPU time includes time of parent + longest thread
 Info    : Partition Based Synthesis execution skipped. [PHYS-752]
         : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
 Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: spi_bridge_top, recur: true)
-Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.002s)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.001s)
 
 Stage: pre_to_gen_setup
 -----------------------------------------------------
@@ -652,39 +596,39 @@ End SDR optimization
 Starting recase case-box optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed recase case-box optimization (accepts: 0, rejects: 0, runtime: 0.005s)
 Starting infer macro optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed infer macro optimization (accepts: 0, rejects: 9, runtime: 0.001s)
+Completed infer macro optimization (accepts: 0, rejects: 9, runtime: 0.002s)
 Starting decode mux sandwich optimization [v2.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting decode mux optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed decode mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting chop wide muxes [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting constant-data mux optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed constant-data mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting chain-to-tree inequality transform [v2.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.003s)
 Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.002s)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.001s)
 Starting identity transform [v3.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed identity transform (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting reduce operator chain [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting optimize datapath elements [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.001s)
+Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting datapath recasting [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed datapath recasting (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting word-level redundancy removal [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed word-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.011s)
+Completed word-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.012s)
 Starting clip mux common data inputs [v1.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting clip the non-user hierarchies [v2.0] (stage: pre_rtlopt, startdef: spi_bridge_top, recur: true)
@@ -2570,7 +2514,7 @@ Info    : Done optimizing datapath logic. [DPOPT-2]
         : Done optimizing datapath logic in 'spi_bridge_top'.
 Number of big hc bmuxes after = 0
 Starting bit-level redundancy removal [v1.0] (stage: post_rtlopt, startdef: spi_bridge_top, recur: true)
-Completed bit-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.010s)
+Completed bit-level redundancy removal (accepts: 0, rejects: 0, runtime: 0.009s)
 Starting logic reduction [v1.0] (stage: post_rtlopt, startdef: spi_bridge_top, recur: true)
 Completed logic reduction (accepts: 0, rejects: 0, runtime: 0.000s)
 Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: spi_bridge_top, recur: true)
@@ -2592,13 +2536,13 @@ Running post blast mux optimization. Please follow up with Cadence support if ru
 Starting mux speculation [v1.0] (stage: post_muxopt, startdef: spi_bridge_top, recur: true)
 Starting speculation optimization
 Completed speculation optimization (accepts:0)
-Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.078s)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.051s)
 
 Stage: post_muxopt
 -----------------------------------------------------
 | Transform       | Accepts | Rejects | Runtime (s) | 
 -----------------------------------------------------
-| hlo_speculation |       0 |       0 |        0.08 | 
+| hlo_speculation |       0 |       0 |        0.05 | 
 -----------------------------------------------------
 ==================================
 Stage : to_generic 
@@ -2655,7 +2599,7 @@ Stage : to_generic
 |           |       |     |If the remainder of this library cell's semantic checks are successful, it will be      |
 |           |       |     | considered as a timing-model                                                           |
 |           |       |     | (because one of its outputs does not have a valid function.                            |
-|LBR-155    |Info   |  528|Mismatch in unateness between 'timing_sense' attribute and the function.                |
+|LBR-155    |Info   |  280|Mismatch in unateness between 'timing_sense' attribute and the function.                |
 |           |       |     |The 'timing_sense' attribute will be respected.                                         |
 |LBR-161    |Info   |    1|Setting the maximum print count of this message to 10 if information_level is less than |
 |           |       |     | 9.                                                                                     |
@@ -2677,17 +2621,8 @@ Stage : to_generic
 |PHYS-279   |Warning|  107|Physical cell not defined in library.                                                   |
 |           |       |     |Ensure that the proper library files are available and have been imported.              |
 |PHYS-752   |Info   |    1|Partition Based Synthesis execution skipped.                                            |
-|SDC-208    |Warning|    1|Could not find requested search value.                                                  |
-|           |       |     |Use get_* commands to find the objects along with a wild card entry in the name of the  |
-|           |       |     | object to check if the object is existing with different naming style.                 |
-|SDC-248    |Warning|   41|Invalid object passed to SDC command.                                                   |
-|           |       |     |This object is not valid for the indicated SDC command. Check object passed to the SDC  |
-|           |       |     | command and contact Cadence customer support if you believe this option combination    |
-|           |       |     | should be supported.                                                                   |
 |SYNTH-1    |Info   |    1|Synthesizing.                                                                           |
 |TIM-1000   |Info   |    1|Multimode clock gating check is disabled.                                               |
-|VLOGPT-692 |Warning|    1|Usage of non-static tasks or functions might result in simulation-synthesis mismatch.   |
-|           |       |     |Use the 'automatic' keyword for declaring functions and tasks.                          |
 --------------------------------------------------------------------------------------------------------------------
 Current PLE settings:
 
@@ -2789,14 +2724,14 @@ Excluded from State Retention     343        100.0
 State Retention instances           0          0.0
 --------------------------------------------------
 
-PBS_Generic_Opt-Post - Elapsed_Time 11, CPU_Time 10.487278
+PBS_Generic_Opt-Post - Elapsed_Time 10, CPU_Time 9.632667999999999
 stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) | 100.0(100.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) | 100.0(100.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -2806,11 +2741,11 @@ stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) | 100.0(100.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) | 100.0(100.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -2821,7 +2756,7 @@ Info: CPU time includes time of parent + longest thread
 ##>----------------------------------------------------------------------------------------
 ##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
 ##>----------------------------------------------------------------------------------------
-##>G:Initial                            0         -         -       886      4918       388
+##>G:Initial                            0         -         -       886      4918       432
 ##>G:Setup                              0         -         -         -         -         -
 ##>G:Early Clock Gating                 0         -         -         -         -         -
 ##>G:Launch ST                          0         -         -         -         -         -
@@ -2836,40 +2771,40 @@ Info: CPU time includes time of parent + longest thread
 ##>G:Timer                              0         -         -         -         -         -
 ##>G:Assembly                           0         -         -         -         -         -
 ##>G:DFT                                0         -         -         -         -         -
-##>G:Const Prop                         0         -         -      1436      5877       787
-##>G:PostGen Opt                        0         -         -      1436      5877       787
+##>G:Const Prop                         0         -         -      1436      5877       834
+##>G:PostGen Opt                        0         -         -      1436      5877       834
 ##>G:Early Clock Gating Cleanup         0         -         -         -         -         -
-##>G:Misc                              11
+##>G:Misc                              10
 ##>----------------------------------------------------------------------------------------
-##>Total Elapsed                       11
+##>Total Elapsed                       10
 ##>========================================================================================
 Info    : Done synthesizing. [SYNTH-2]
         : Done synthesizing 'spi_bridge_top' to generic gates.
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   syn_gen
-@file(spi_bridge_top_45nm.tcl) 87: time_info GENERIC
+@file(spi_bridge_top_45nm_SLOW.tcl) 87: time_info GENERIC
 stamp 'GENERIC' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:12:57 (Oct27) |  209.0 MB | init
+ 00:00:08(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:15 (Oct28) |  236.0 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:08(00:00:09) |  39.1( 42.9) |    3:13:06 (Oct27) |  388.0 MB | Elaboration
+ 00:00:17(00:00:09) |  00:00:09(00:00:09) |  43.7( 45.0) |    6:25:24 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:12(00:00:12) |  60.9( 57.1) |    3:13:18 (Oct27) |  787.3 MB | GENERIC
+ 00:00:28(00:00:20) |  00:00:11(00:00:11) |  56.3( 55.0) |    6:25:35 (Oct28) |  834.9 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-@file(spi_bridge_top_45nm.tcl) 88: report_datapath > ${RPT_DIR}/03_report_datapath_generic.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 88: report_datapath > ${RPT_DIR}/03_report_datapath_generic.rpt
 Beginning report datapath command
 Warning : The filename, column and line number information will not be available in the report. [RPT_DP-100]
         : The attribute for getting HDL filename and line number is not set.
         : You must set the 'hdl_track_filename_row_col' attribute to 'true' (before elaborate) to enable filename, column, and line number tracking in the datapath report.
-@file(spi_bridge_top_45nm.tcl) 90: write_snapshot -outdir $RPT_DIR -tag syn_generic
-%# Begin write_snapshot (10/27 03:13:18, mem=1731.87M)
-%# Begin qos_stats (10/27 03:13:18, mem=1735.69M)
-%# End qos_stats (10/27 03:13:18, total cpu=17:00:01, real=17:00:00, peak res=787.30M, current mem=1735.69M)
+@file(spi_bridge_top_45nm_SLOW.tcl) 90: write_snapshot -outdir $RPT_DIR -tag syn_generic
+%# Begin write_snapshot (10/28 06:25:35, mem=1730.10M)
+%# Begin qos_stats (10/28 06:25:35, mem=1733.92M)
+%# End qos_stats (10/28 06:25:36, total cpu=17:00:00, real=17:00:01, peak res=834.90M, current mem=1733.92M)
 Warning : A required object parameter could not be found. [TUI-78]
         : An object named "" could not be found for attribute 'name'.
         : Check if a previous get_db or find returned an empty string.
@@ -2910,16 +2845,16 @@ Norm Cong Hotspot Area:
   Tot Cong:                  no_value
 ================================================================================
 CPU  Runtime (h:m:s):        00:00:22
-Real Runtime (h:m:s):        00:00:21
+Real Runtime (h:m:s):        00:00:20
 CPU  Elapsed (h:m:s):        00:00:30
-Real Elapsed (h:m:s):        00:00:24
-Memory (MB):                  1735.69
+Real Elapsed (h:m:s):        00:00:25
+Memory (MB):                  1733.92
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
 Total Runtime (h:m:s): 00:00:21
-Total Memory (MB):     1735.69
+Total Memory (MB):     1733.92
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -2928,12 +2863,12 @@ Total Instances =  Leaf Instances + Physical Instances
 
 
 
-Finished exporting design database to file './report/syn_generic_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
-Finished generating snapshot at stage syn_generic (command execution time mm:ss cpu = 00:01, real = 00:02).
-%# End write_snapshot (10/27 03:13:20, total cpu=17:00:01, real=17:00:02, peak res=787.30M, current mem=1735.69M)
-@file(spi_bridge_top_45nm.tcl) 91: write_db -to_file ${UNMAPPED_DIR}/syn_generic.db
+Finished exporting design database to file './report/syn_generic_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:01).
+Finished generating snapshot at stage syn_generic (command execution time mm:ss cpu = 00:00, real = 00:02).
+%# End write_snapshot (10/28 06:25:37, total cpu=17:00:00, real=17:00:02, peak res=834.90M, current mem=1733.92M)
+@file(spi_bridge_top_45nm_SLOW.tcl) 91: write_db -to_file ${UNMAPPED_DIR}/syn_generic.db
 Finished exporting design database to file './unmapped/syn_generic.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
-@file(spi_bridge_top_45nm.tcl) 96: syn_map
+@file(spi_bridge_top_45nm_SLOW.tcl) 96: syn_map
 #--------------------------------------------------------------------------
 # Root attributes for category: opt
 #--------------------------------------------------------------------------
@@ -3016,13 +2951,13 @@ stamp 'PBS_TechMap-Start' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  91.7( 84.6) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  83.1( 76.9) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   8.3( 15.4) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |  16.9( 23.1) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3032,15 +2967,15 @@ stamp 'PBS_TechMap-Premap HBO Optimizations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  91.7( 84.6) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  83.1( 76.9) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   8.3( 15.4) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |  16.9( 23.1) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:29(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3201,22 +3136,22 @@ Info    : Relaxed some design requirements on sequential instances to run synthe
         : One or more of the following design requirements relaxed on 3 sequential instance(s): map_prefer_non_inverted_clock_line.
         : To see the list of relaxed sequential instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list.
 INFO: skipping constant propagation
-PBS_Techmap-Global Mapping - Elapsed_Time 13, CPU_Time 13.362328000000002
+PBS_Techmap-Global Mapping - Elapsed_Time 13, CPU_Time 13.067521000000003
 stamp 'PBS_Techmap-Global Mapping' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  42.3( 42.3) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  39.1( 38.5) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   3.8(  7.7) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |   7.9( 11.5) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:29(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:41(00:00:36) |  00:00:13(00:00:13) |  53.9( 50.0) |    3:13:33 (Oct27) |  810.2 MB | PBS_Techmap-Global Mapping
+ 00:00:42(00:00:36) |  00:00:13(00:00:13) |  53.0( 50.0) |    6:25:51 (Oct28) |  871.5 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3226,48 +3161,48 @@ Info    : Wrote formal verification information. [CFM-5]
 Info    : Wrote dofile. [CFM-1]
         : Dofile is 'fv/spi_bridge_top/rtl_to_fv_map.do'.
         : Alias mapping flow is enabled.
-PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 2, CPU_Time 1.982330999999995
+PBS_TechMap-Datapath Postmap Operations - Elapsed_Time 2, CPU_Time 1.9841199999999972
 stamp 'PBS_TechMap-Datapath Postmap Operations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  39.2( 39.3) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  36.2( 35.7) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   3.6(  7.1) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |   7.3( 10.7) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:29(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:41(00:00:36) |  00:00:13(00:00:13) |  49.9( 46.4) |    3:13:33 (Oct27) |  810.2 MB | PBS_Techmap-Global Mapping
+ 00:00:42(00:00:36) |  00:00:13(00:00:13) |  49.1( 46.4) |    6:25:51 (Oct28) |  871.5 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:01(00:00:02) |   7.4(  7.1) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:44(00:00:38) |  00:00:01(00:00:02) |   7.4(  7.1) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 0, CPU_Time -0.016953000000000884
+PBS_TechMap-Postmap HBO Optimizations - Elapsed_Time 0, CPU_Time -0.018380000000000507
 stamp 'PBS_TechMap-Postmap HBO Optimizations' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  39.2( 39.3) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  36.2( 35.7) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   3.6(  7.1) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |   7.3( 10.7) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:29(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:41(00:00:36) |  00:00:13(00:00:13) |  49.9( 46.4) |    3:13:33 (Oct27) |  810.2 MB | PBS_Techmap-Global Mapping
+ 00:00:42(00:00:36) |  00:00:13(00:00:13) |  49.1( 46.4) |    6:25:51 (Oct28) |  871.5 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:01(00:00:02) |   7.4(  7.1) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:44(00:00:38) |  00:00:01(00:00:02) |   7.5(  7.1) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:44(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3280,23 +3215,23 @@ stamp 'PBS_TechMap-Postmap Clock Gating' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  39.2( 39.3) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  36.2( 35.7) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   3.6(  7.1) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |   7.3( 10.7) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:29(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:41(00:00:36) |  00:00:13(00:00:13) |  49.9( 46.4) |    3:13:33 (Oct27) |  810.2 MB | PBS_Techmap-Global Mapping
+ 00:00:42(00:00:36) |  00:00:13(00:00:13) |  49.1( 46.4) |    6:25:51 (Oct28) |  871.5 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:01(00:00:02) |   7.4(  7.1) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:44(00:00:38) |  00:00:01(00:00:02) |   7.5(  7.1) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:44(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Postmap Clock Gating
+ 00:00:44(00:00:38) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3368,39 +3303,39 @@ Operation                   Area   Slacks      Slack    Trans      Cap
     plc_bal_star         0  (        0 /        0 )  0.00
      drc_buftimb         0  (        0 /        0 )  0.00
      drc_buftims         0  (        0 /        0 )  0.00
-       crit_upsz       319  (       84 /      118 )  0.29
+       crit_upsz       319  (       84 /      118 )  0.30
    plc_laf_lo_st       235  (        0 /        0 )  0.00
        plc_lo_st       235  (        0 /        0 )  0.00
             fopt       235  (        0 /        0 )  0.01
-       crit_dnsz       471  (       16 /       45 )  0.44
+       crit_dnsz       471  (       16 /       45 )  0.43
              dup       219  (        1 /        2 )  0.04
-        setup_dn       218  (        5 /        8 )  0.06
+        setup_dn       218  (        5 /        8 )  0.05
         mb_split       213  (        0 /        0 )  0.00
 
-PBS_TechMap-Postmap Cleanup - Elapsed_Time 1, CPU_Time 0.9694430000000125
+PBS_TechMap-Postmap Cleanup - Elapsed_Time 1, CPU_Time 1.9685729999999992
 stamp 'PBS_TechMap-Postmap Cleanup' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  37.8( 37.9) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  33.7( 34.5) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   3.4(  6.9) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |   6.8( 10.3) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:29(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:41(00:00:36) |  00:00:13(00:00:13) |  48.2( 44.8) |    3:13:33 (Oct27) |  810.2 MB | PBS_Techmap-Global Mapping
+ 00:00:42(00:00:36) |  00:00:13(00:00:13) |  45.7( 44.8) |    6:25:51 (Oct28) |  871.5 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:01(00:00:02) |   7.1(  6.9) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:44(00:00:38) |  00:00:01(00:00:02) |   6.9(  6.9) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:44(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Postmap Clock Gating
+ 00:00:44(00:00:38) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:44(00:00:39) |  00:00:00(00:00:01) |   3.5(  3.4) |    3:13:36 (Oct27) |  807.8 MB | PBS_TechMap-Postmap Cleanup
+ 00:00:46(00:00:39) |  00:00:01(00:00:01) |   6.9(  3.4) |    6:25:54 (Oct28) |  867.5 MB | PBS_TechMap-Postmap Cleanup
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3410,27 +3345,27 @@ stamp 'PBS_Techmap-Post_MBCI' being created for table 'pbs_debug'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:16(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:07 (Oct27) |  388.0 MB | PBS_Generic-Start
+ 00:00:17(00:00:10) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:25 (Oct28) |  432.6 MB | PBS_Generic-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:10(00:00:11) |  37.8( 37.9) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic_Opt-Post
+ 00:00:27(00:00:20) |  00:00:09(00:00:10) |  33.7( 34.5) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic_Opt-Post
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:18 (Oct27) |  787.3 MB | PBS_Generic-Postgen HBO Optimizations
+ 00:00:27(00:00:20) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:35 (Oct28) |  834.9 MB | PBS_Generic-Postgen HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:02) |   3.4(  6.9) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Start
+ 00:00:29(00:00:23) |  00:00:01(00:00:03) |   6.8( 10.3) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Start
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:28(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:20 (Oct27) |  787.3 MB | PBS_TechMap-Premap HBO Optimizations
+ 00:00:29(00:00:23) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:38 (Oct28) |  834.9 MB | PBS_TechMap-Premap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:41(00:00:36) |  00:00:13(00:00:13) |  48.2( 44.8) |    3:13:33 (Oct27) |  810.2 MB | PBS_Techmap-Global Mapping
+ 00:00:42(00:00:36) |  00:00:13(00:00:13) |  45.7( 44.8) |    6:25:51 (Oct28) |  871.5 MB | PBS_Techmap-Global Mapping
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:01(00:00:02) |   7.1(  6.9) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Datapath Postmap Operations
+ 00:00:44(00:00:38) |  00:00:01(00:00:02) |   6.9(  6.9) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Datapath Postmap Operations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Postmap HBO Optimizations
+ 00:00:44(00:00:38) |  00:00:00(00:00:00) |  -0.1(  0.0) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Postmap HBO Optimizations
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:43(00:00:38) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:35 (Oct27) |  810.2 MB | PBS_TechMap-Postmap Clock Gating
+ 00:00:44(00:00:38) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:53 (Oct28) |  867.5 MB | PBS_TechMap-Postmap Clock Gating
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:44(00:00:39) |  00:00:00(00:00:01) |   3.5(  3.4) |    3:13:36 (Oct27) |  807.8 MB | PBS_TechMap-Postmap Cleanup
+ 00:00:46(00:00:39) |  00:00:01(00:00:01) |   6.9(  3.4) |    6:25:54 (Oct28) |  867.5 MB | PBS_TechMap-Postmap Cleanup
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:44(00:00:39) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:13:36 (Oct27) |  807.8 MB | PBS_Techmap-Post_MBCI
+ 00:00:46(00:00:39) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:54 (Oct28) |  867.5 MB | PBS_Techmap-Post_MBCI
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: pbs_debug, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
@@ -3440,8 +3375,8 @@ Info: CPU time includes time of parent + longest thread
 ##>----------------------------------------------------------------------------------------
 ##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
 ##>----------------------------------------------------------------------------------------
-##>M:Initial                            0         -         -      1436      5877       787
-##>M:Pre Cleanup                        0         -         -      1436      5877       787
+##>M:Initial                            0         -         -      1436      5877       834
+##>M:Pre Cleanup                        0         -         -      1436      5877       834
 ##>M:Setup                              0         -         -         -         -         -
 ##>M:Early Clock Gating                 0         -         -         -         -         -
 ##>M:Launch ST                          0         -         -         -         -         -
@@ -3456,10 +3391,10 @@ Info: CPU time includes time of parent + longest thread
 ##>M:Timer                              0         -         -         -         -         -
 ##>M:Assembly                           0         -         -         -         -         -
 ##>M:DFT                                0         -         -         -         -         -
-##>M:DP Operations                      2         -         -       990      4164       810
-##>M:Const Prop                         0      -734     21069       990      4164       810
-##>M:Cleanup                            1      -703     16415       996      4287       807
-##>M:MBCI                               0         -         -       996      4287       807
+##>M:DP Operations                      2         -         -       990      4164       867
+##>M:Const Prop                         0      -734     21069       990      4164       867
+##>M:Cleanup                            1      -703     16415       996      4287       867
+##>M:MBCI                               0         -         -       996      4287       867
 ##>M:PostGen Opt                        0         -         -         -         -         -
 ##>M:Early Clock Gating Cleanup         0         -         -         -         -         -
 ##>M:Const Gate Removal                 0         -         -         -         -         -
@@ -3473,33 +3408,33 @@ Info    : Done mapping. [SYNTH-5]
         : Done mapping 'spi_bridge_top'.
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   syn_map
-@file(spi_bridge_top_45nm.tcl) 98: time_info MAPPED
+@file(spi_bridge_top_45nm_SLOW.tcl) 98: time_info MAPPED
 stamp 'MAPPED' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:12:57 (Oct27) |  209.0 MB | init
+ 00:00:08(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:15 (Oct28) |  236.0 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:08(00:00:09) |  21.2( 23.1) |    3:13:06 (Oct27) |  388.0 MB | Elaboration
+ 00:00:17(00:00:09) |  00:00:09(00:00:09) |  23.3( 22.5) |    6:25:24 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:12(00:00:12) |  33.1( 30.8) |    3:13:18 (Oct27) |  787.3 MB | GENERIC
+ 00:00:28(00:00:20) |  00:00:11(00:00:11) |  30.1( 27.5) |    6:25:35 (Oct28) |  834.9 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:44(00:00:39) |  00:00:17(00:00:18) |  45.7( 46.2) |    3:13:36 (Oct27) |  807.8 MB | MAPPED
+ 00:00:46(00:00:40) |  00:00:17(00:00:20) |  46.6( 50.0) |    6:25:55 (Oct28) |  867.5 MB | MAPPED
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-@file(spi_bridge_top_45nm.tcl) 99: report_datapath > ${RPT_DIR}/04_report_datapath_map.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 99: report_datapath > ${RPT_DIR}/04_report_datapath_map.rpt
 Beginning report datapath command
 Warning : The filename, column and line number information will not be available in the report. [RPT_DP-100]
         : The attribute for getting HDL filename and line number is not set.
-@file(spi_bridge_top_45nm.tcl) 101: foreach cg [vfind / -cost_group *] {
+@file(spi_bridge_top_45nm_SLOW.tcl) 101: foreach cg [vfind / -cost_group *] {
     report timing -cost_group [list $cg] > ${RPT_DIR}/05_[basename $cg]_post_syn_map.rpt
 }
-@file(spi_bridge_top_45nm.tcl) 105: write_snapshot -outdir $RPT_DIR -tag syn_map
-%# Begin write_snapshot (10/27 03:13:36, mem=1744.43M)
-%# Begin qos_stats (10/27 03:13:36, mem=1744.43M)
-%# End qos_stats (10/27 03:13:36, total cpu=17:00:01, real=17:00:00, peak res=810.20M, current mem=1744.43M)
+@file(spi_bridge_top_45nm_SLOW.tcl) 105: write_snapshot -outdir $RPT_DIR -tag syn_map
+%# Begin write_snapshot (10/28 06:25:55, mem=1740.48M)
+%# Begin qos_stats (10/28 06:25:55, mem=1740.48M)
+%# End qos_stats (10/28 06:25:55, total cpu=17:00:00, real=17:00:00, peak res=871.50M, current mem=1740.48M)
 Warning : A required object parameter could not be found. [TUI-78]
         : An object named "" could not be found for attribute 'name'.
 Warning : A required object parameter could not be found. [TUI-78]
@@ -3538,17 +3473,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value        no_value
   Tot Cong:                  no_value        no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:22        00:00:21
-Real Runtime (h:m:s):        00:00:21        00:00:18
-CPU  Elapsed (h:m:s):        00:00:30        00:00:51
-Real Elapsed (h:m:s):        00:00:24        00:00:42
-Memory (MB):                  1735.69         1744.43
+CPU  Runtime (h:m:s):        00:00:22        00:00:22
+Real Runtime (h:m:s):        00:00:20        00:00:20
+CPU  Elapsed (h:m:s):        00:00:30        00:00:52
+Real Elapsed (h:m:s):        00:00:25        00:00:44
+Memory (MB):                  1733.92         1740.48
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:00:39
-Total Memory (MB):     1744.43
+Total Runtime (h:m:s): 00:00:40
+Total Memory (MB):     1740.48
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -3584,11 +3519,11 @@ Info   : PWRA-0009 [PwrInfo] Power Computation Progress Report :   0%   1%   2% 
 Info   : PWRA-0002 Finished power computation.
 Info   : PWRA-0007 [PwrInfo] Completed successfully.
        : Info=6, Warn=2, Error=0, Fatal=0
-Finished generating snapshot at stage syn_map (command execution time mm:ss cpu = 00:01, real = 00:02).
-%# End write_snapshot (10/27 03:13:38, total cpu=17:00:01, real=17:00:02, peak res=810.20M, current mem=1744.43M)
-@file(spi_bridge_top_45nm.tcl) 106: write_db -to_file ${MAPPED_DIR}/syn_map.db
+Finished generating snapshot at stage syn_map (command execution time mm:ss cpu = 00:00, real = 00:01).
+%# End write_snapshot (10/28 06:25:56, total cpu=17:00:00, real=17:00:01, peak res=871.50M, current mem=1740.48M)
+@file(spi_bridge_top_45nm_SLOW.tcl) 106: write_db -to_file ${MAPPED_DIR}/syn_map.db
 Finished exporting design database to file './mapped/syn_map.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
-@file(spi_bridge_top_45nm.tcl) 111: syn_opt
+@file(spi_bridge_top_45nm_SLOW.tcl) 111: syn_opt
 Current PLE settings:
 
 Aspect ratio        : 1.000
@@ -3702,7 +3637,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
         crit_msz       106  (       17 /       34 )  0.18
-       crit_upsz        81  (        0 /        0 )  0.04
+       crit_upsz        81  (        0 /        0 )  0.03
        crit_slew        81  (        0 /       15 )  0.08
         setup_dn        81  (        0 /        0 )  0.00
     plc_bal_star         0  (        0 /        0 )  0.00
@@ -3783,28 +3718,28 @@ Operation                   Area   Slacks      Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-         crr_220        18  (        1 /       15 )  1.31
+         crr_220        18  (        1 /       15 )  1.24
         crr_glob        28  (        0 /        1 )  0.04
          crr_200        23  (        4 /       20 )  0.56
-        crr_glob        40  (        4 /        4 )  0.02
+        crr_glob        40  (        4 /        4 )  0.03
          crr_300        21  (        2 /       17 )  0.64
-        crr_glob        39  (        2 /        2 )  0.03
-         crr_400        14  (        0 /       11 )  0.39
+        crr_glob        39  (        2 /        2 )  0.02
+         crr_400        14  (        0 /       11 )  0.40
         crr_glob        29  (        0 /        0 )  0.01
-         crr_111        51  (       12 /       48 )  1.96
-        crr_glob        78  (       11 /       12 )  0.09
-         crr_210        19  (        1 /       16 )  0.70
+         crr_111        51  (       12 /       48 )  2.27
+        crr_glob        78  (       11 /       12 )  0.11
+         crr_210        19  (        1 /       16 )  0.81
         crr_glob        30  (        0 /        1 )  0.03
-         crr_110        34  (        4 /       29 )  0.85
+         crr_110        34  (        4 /       29 )  0.90
         crr_glob        38  (        3 /        4 )  0.04
-         crr_101        59  (       14 /       41 )  1.04
-        crr_glob        87  (       13 /       14 )  0.06
-         crr_201        20  (        0 /       17 )  0.50
+         crr_101        59  (       14 /       41 )  1.09
+        crr_glob        87  (       13 /       14 )  0.07
+         crr_201        20  (        0 /       17 )  0.53
         crr_glob        30  (        0 /        0 )  0.02
-         crr_211        21  (        4 /       18 )  1.01
+         crr_211        21  (        4 /       18 )  1.07
         crr_glob        33  (        2 /        4 )  0.04
-        crit_msz        80  (       23 /       39 )  0.14
-       crit_upsz        46  (        0 /        0 )  0.01
+        crit_msz        80  (       23 /       39 )  0.15
+       crit_upsz        46  (        0 /        0 )  0.02
        crit_slew        46  (        0 /       12 )  0.04
         setup_dn        92  (        0 /        0 )  0.00
     plc_bal_star         0  (        0 /        0 )  0.00
@@ -3847,7 +3782,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
       mux_retime        46  (        0 /        0 )  0.00
          buf2inv        46  (        0 /        0 )  0.00
              exp        17  (        0 /        7 )  0.01
-       gate_deco         6  (        0 /        0 )  0.04
+       gate_deco         6  (        0 /        0 )  0.05
        gcomp_tim        76  (        0 /        0 )  0.17
   inv_pair_2_buf        46  (        0 /        0 )  0.00
  init_drc                   5622     -703    -15056       290        0
@@ -3909,22 +3844,22 @@ Operation                   Area   Slacks      Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-            fopt       445  (        0 /        0 )  0.02
+            fopt       445  (        0 /        0 )  0.01
     plc_bal_star         0  (        0 /        0 )  0.00
      drc_buftimb         0  (        0 /        0 )  0.00
      drc_buftims         0  (        0 /        0 )  0.00
-        crit_msz       445  (      107 /      235 )  1.05
-       crit_upsz       338  (       34 /       87 )  0.30
+        crit_msz       445  (      107 /      235 )  1.08
+       crit_upsz       338  (       34 /       87 )  0.31
    plc_laf_lo_st       304  (        0 /        0 )  0.00
        plc_lo_st       304  (        0 /        0 )  0.00
-       crit_swap       304  (        2 /       22 )  0.24
+       crit_swap       304  (        2 /       22 )  0.26
        mux2_swap       302  (        0 /        0 )  0.03
-       crit_dnsz       623  (       17 /       54 )  0.58
-       load_swap       285  (        1 /       14 )  0.23
-            fopt       284  (        1 /        6 )  0.28
-        setup_dn       283  (        1 /        4 )  0.06
-       load_isol       282  (        2 /        8 )  0.82
-       load_isol       280  (        0 /        2 )  0.24
+       crit_dnsz       623  (       17 /       54 )  0.59
+       load_swap       285  (        1 /       14 )  0.24
+            fopt       284  (        1 /        6 )  0.29
+        setup_dn       283  (        1 /        4 )  0.07
+       load_isol       282  (        2 /        8 )  0.84
+       load_isol       280  (        0 /        2 )  0.25
         move_for       280  (        0 /        0 )  0.01
         move_for       280  (        0 /        0 )  0.01
           rem_bi       280  (        0 /        0 )  0.00
@@ -3934,17 +3869,17 @@ Operation                   Area   Slacks      Slack    Trans      Cap
        merge_bit       282  (        1 /        3 )  0.01
      merge_idrvr       278  (        0 /        0 )  0.00
      merge_iload       278  (        0 /        0 )  0.00
-    merge_idload       278  (        0 /        0 )  0.00
+    merge_idload       278  (        0 /        0 )  0.01
       merge_drvr       278  (        1 /        3 )  0.19
-      merge_load       277  (        0 /        1 )  0.12
+      merge_load       277  (        0 /        1 )  0.13
            phase       277  (        0 /        0 )  0.00
-          decomp       277  (        5 /        7 )  0.39
+          decomp       277  (        5 /        7 )  0.40
         p_decomp       272  (        0 /        0 )  0.23
         levelize       272  (        1 /        1 )  0.04
         mb_split       271  (        0 /        0 )  0.00
-             dup       271  (        4 /       14 )  0.34
+             dup       271  (        4 /       14 )  0.35
       mux_retime       267  (        0 /        0 )  0.00
-       crr_local       267  (       23 /       97 )  5.63
+       crr_local       267  (       23 /       97 )  5.99
          buf2inv       244  (        0 /        0 )  0.00
 
  init_area                  5855     -700    -10981         0        0
@@ -4000,12 +3935,12 @@ Operation                   Area   Slacks      Slack    Trans      Cap
          rem_inv        11  (        4 /        9 )  0.02
         merge_bi         6  (        2 /        4 )  0.01
       rem_inv_qb        13  (        3 /        5 )  0.03
-    seq_res_area        42  (        4 /        6 )  2.13
+    seq_res_area        42  (        4 /        6 )  2.12
         io_phase        48  (        7 /       15 )  0.10
        gate_comp       152  (        5 /       19 )  0.37
        gcomp_mog         0  (        0 /        0 )  0.02
        glob_area        27  (       20 /       27 )  0.24
-       area_down       134  (       20 /       57 )  0.49
+       area_down       134  (       20 /       57 )  0.47
       size_n_buf         7  (        1 /        1 )  0.06
   gate_deco_area         0  (        0 /        0 )  0.00
          rem_buf        38  (        2 /       14 )  0.08
@@ -4032,11 +3967,11 @@ Operation                   Area   Slacks      Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-         crr_220        11  (        1 /        9 )  0.79
+         crr_220        11  (        1 /        9 )  0.77
         crr_glob        17  (        0 /        1 )  0.03
-         crr_200        15  (        1 /       13 )  0.33
+         crr_200        15  (        1 /       13 )  0.32
         crr_glob        23  (        1 /        1 )  0.01
-         crr_300        10  (        0 /        8 )  0.20
+         crr_300        10  (        0 /        8 )  0.19
         crr_glob        15  (        0 /        0 )  0.01
          crr_400         8  (        0 /        6 )  0.18
         crr_glob        15  (        0 /        0 )  0.01
@@ -4046,14 +3981,14 @@ Operation                   Area   Slacks      Slack    Trans      Cap
         crr_glob        15  (        0 /        0 )  0.01
          crr_110        15  (        1 /       12 )  0.37
         crr_glob        15  (        0 /        1 )  0.02
-         crr_101        15  (        0 /       10 )  0.29
+         crr_101        15  (        0 /       10 )  0.28
         crr_glob        15  (        0 /        0 )  0.01
-         crr_201        10  (        0 /        8 )  0.28
+         crr_201        10  (        0 /        8 )  0.29
         crr_glob        15  (        0 /        0 )  0.01
-         crr_211        10  (        0 /        8 )  0.45
+         crr_211        10  (        0 /        8 )  0.44
         crr_glob        15  (        0 /        0 )  0.01
         crit_msz        30  (        0 /        8 )  0.06
-       crit_upsz        30  (        0 /        0 )  0.04
+       crit_upsz        30  (        0 /        0 )  0.03
        crit_slew        30  (        0 /        9 )  0.04
         setup_dn        60  (        0 /        0 )  0.00
     plc_bal_star         0  (        0 /        0 )  0.00
@@ -4065,15 +4000,15 @@ Operation                   Area   Slacks      Slack    Trans      Cap
  plc_laf_st_fence        30  (        0 /        0 )  0.00
      drc_buftims         0  (        0 /        0 )  0.00
        plc_lo_st        30  (        0 /        0 )  0.00
-            fopt        60  (        0 /        0 )  0.03
+            fopt        60  (        0 /        0 )  0.02
        crit_swap        30  (        0 /        6 )  0.04
        mux2_swap        30  (        0 /        0 )  0.00
        crit_dnsz        19  (        0 /        0 )  0.01
        load_swap        30  (        0 /        0 )  0.01
-            fopt        60  (        0 /        0 )  0.03
+            fopt        60  (        0 /        0 )  0.02
         setup_dn        60  (        0 /        0 )  0.00
-       load_isol        60  (        0 /        0 )  0.07
-       load_isol        60  (        0 /        0 )  0.07
+       load_isol        60  (        0 /        0 )  0.06
+       load_isol        60  (        0 /        0 )  0.06
         move_for        60  (        0 /        0 )  0.00
         move_for        60  (        0 /        0 )  0.00
           rem_bi        60  (        0 /        0 )  0.00
@@ -4097,7 +4032,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
          buf2inv        30  (        0 /        0 )  0.00
              exp         4  (        0 /        2 )  0.00
        gate_deco         2  (        0 /        0 )  0.01
-       gcomp_tim        45  (        0 /        0 )  0.10
+       gcomp_tim        45  (        0 /        0 )  0.09
   inv_pair_2_buf        30  (        0 /        0 )  0.00
  init_drc                   5760     -699    -10783         0        0
             Worst cost_group: ACLK, WNS: -608.3
@@ -4153,22 +4088,22 @@ Operation                   Area   Slacks      Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-            fopt        91  (        0 /        0 )  0.00
+            fopt        91  (        0 /        0 )  0.01
     plc_bal_star         0  (        0 /        0 )  0.00
      drc_buftimb         0  (        0 /        0 )  0.00
      drc_buftims         0  (        0 /        0 )  0.00
-        crit_msz        91  (       20 /       43 )  0.24
-       crit_upsz        71  (        9 /       32 )  0.17
+        crit_msz        91  (       20 /       43 )  0.23
+       crit_upsz        71  (        9 /       32 )  0.15
    plc_laf_lo_st        62  (        0 /        0 )  0.00
        plc_lo_st        62  (        0 /        0 )  0.00
        crit_swap        62  (        0 /        6 )  0.06
        mux2_swap        62  (        0 /        0 )  0.00
-       crit_dnsz       185  (        1 /       15 )  0.22
-       load_swap        61  (        4 /       20 )  0.10
+       crit_dnsz       185  (        1 /       15 )  0.17
+       load_swap        61  (        4 /       20 )  0.09
             fopt        57  (        1 /        2 )  0.05
         setup_dn        56  (        0 /        0 )  0.01
-       load_isol        56  (        1 /        4 )  0.21
-       load_isol        55  (        0 /        0 )  0.07
+       load_isol        56  (        1 /        4 )  0.20
+       load_isol        55  (        0 /        0 )  0.06
         move_for        55  (        0 /        0 )  0.01
         move_for        55  (        0 /        0 )  0.00
           rem_bi        55  (        0 /        0 )  0.00
@@ -4183,12 +4118,12 @@ Operation                   Area   Slacks      Slack    Trans      Cap
       merge_load        55  (        0 /        1 )  0.04
            phase        55  (        0 /        0 )  0.00
           decomp        55  (        0 /        0 )  0.09
-        p_decomp        55  (        0 /        0 )  0.03
+        p_decomp        55  (        0 /        0 )  0.04
         levelize        55  (        0 /        0 )  0.02
         mb_split        55  (        0 /        0 )  0.00
-             dup        55  (        1 /        3 )  0.10
+             dup        55  (        1 /        3 )  0.09
       mux_retime        54  (        0 /        0 )  0.00
-       crr_local        54  (        5 /       21 )  1.55
+       crr_local        54  (        5 /       21 )  1.49
          buf2inv        49  (        0 /        0 )  0.00
 
  init_area                  5821     -698    -10410         0        0
@@ -4218,10 +4153,10 @@ Operation                   Area   Slacks      Slack    Trans      Cap
         merge_bi         2  (        0 /        0 )  0.01
       rem_inv_qb        10  (        1 /        2 )  0.02
         io_phase        40  (        1 /        8 )  0.07
-       gate_comp       160  (        7 /       24 )  0.39
+       gate_comp       160  (        7 /       24 )  0.38
        gcomp_mog         0  (        0 /        0 )  0.02
-       glob_area        19  (        4 /       19 )  0.26
-       area_down       134  (        9 /       38 )  0.44
+       glob_area        19  (        4 /       19 )  0.25
+       area_down       134  (        9 /       38 )  0.43
       size_n_buf         0  (        0 /        0 )  0.01
   gate_deco_area         0  (        0 /        0 )  0.00
 
@@ -4238,8 +4173,8 @@ Operation                   Area   Slacks      Slack    Trans      Cap
 
            Trick     Calls     Accepts   Attempts    Time(secs) 
 -----------------------------------------------------------
-        crit_msz        31  (        0 /        8 )  0.06
-       crit_upsz        31  (        0 /        0 )  0.04
+        crit_msz        31  (        0 /        8 )  0.05
+       crit_upsz        31  (        0 /        0 )  0.03
        crit_slew        31  (        0 /        9 )  0.04
         setup_dn        31  (        0 /        0 )  0.00
     plc_bal_star         0  (        0 /        0 )  0.00
@@ -4284,7 +4219,7 @@ Operation                   Area   Slacks      Slack    Trans      Cap
          buf2inv        31  (        0 /        0 )  0.00
              exp         3  (        0 /        1 )  0.00
        gate_deco         2  (        0 /        0 )  0.01
-       gcomp_tim        49  (        0 /        0 )  0.11
+       gcomp_tim        49  (        0 /        0 )  0.10
   inv_pair_2_buf        31  (        0 /        0 )  0.00
 
  init_drc                   5778     -698    -10342         0        0
@@ -4358,17 +4293,17 @@ Info    : Done incrementally optimizing. [SYNTH-8]
         : Done incrementally optimizing 'spi_bridge_top'.
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   syn_opt
-@file(spi_bridge_top_45nm.tcl) 113: report_constraint -all_violators > ${RPT_DIR}/06_report_constraint.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 113: report_constraint -all_violators > ${RPT_DIR}/06_report_constraint.rpt
 No max_capacitance rule violations.
 
 No max_transition rule violations.
 
 No max_fanout rule violations.
 
-@file(spi_bridge_top_45nm.tcl) 115: write_snapshot -outdir $RPT_DIR -tag syn_opt
-%# Begin write_snapshot (10/27 03:14:14, mem=1745.25M)
-%# Begin qos_stats (10/27 03:14:14, mem=1745.25M)
-%# End qos_stats (10/27 03:14:14, total cpu=17:00:00, real=17:00:00, peak res=810.50M, current mem=1745.25M)
+@file(spi_bridge_top_45nm_SLOW.tcl) 115: write_snapshot -outdir $RPT_DIR -tag syn_opt
+%# Begin write_snapshot (10/28 06:26:33, mem=1742.30M)
+%# Begin qos_stats (10/28 06:26:33, mem=1742.30M)
+%# End qos_stats (10/28 06:26:33, total cpu=17:00:00, real=17:00:00, peak res=872.00M, current mem=1742.30M)
 Warning : A required object parameter could not be found. [TUI-78]
         : An object named "" could not be found for attribute 'name'.
 Warning : A required object parameter could not be found. [TUI-78]
@@ -4407,17 +4342,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value        no_value        no_value
   Tot Cong:                  no_value        no_value        no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:22        00:00:21        00:00:37
-Real Runtime (h:m:s):        00:00:21        00:00:18        00:00:38
-CPU  Elapsed (h:m:s):        00:00:30        00:00:51        00:01:27
-Real Elapsed (h:m:s):        00:00:24        00:00:42        00:01:20
-Memory (MB):                  1735.69         1744.43         1745.25
+CPU  Runtime (h:m:s):        00:00:22        00:00:22        00:00:37
+Real Runtime (h:m:s):        00:00:20        00:00:20        00:00:38
+CPU  Elapsed (h:m:s):        00:00:30        00:00:52        00:01:29
+Real Elapsed (h:m:s):        00:00:25        00:00:44        00:01:22
+Memory (MB):                  1733.92         1740.48         1742.30
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:01:17
-Total Memory (MB):     1745.25
+Total Runtime (h:m:s): 00:01:18
+Total Memory (MB):     1742.30
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -4426,7 +4361,6 @@ Total Instances =  Leaf Instances + Physical Instances
 
 
 
-Finished exporting design database to file './report/syn_opt_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
 Info    : Joules engine is used. [RPT-16]
         : Joules engine is being used for the command report_gates -power.
 Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
@@ -4453,42 +4387,43 @@ Info   : PWRA-0009 [PwrInfo] Power Computation Progress Report :   0%   1%   2% 
 Info   : PWRA-0002 Finished power computation.
 Info   : PWRA-0007 [PwrInfo] Completed successfully.
        : Info=6, Warn=2, Error=0, Fatal=0
-Finished generating snapshot at stage syn_opt (command execution time mm:ss cpu = 00:00, real = 00:01).
-%# End write_snapshot (10/27 03:14:15, total cpu=17:00:00, real=17:00:01, peak res=810.50M, current mem=1745.25M)
-@file(spi_bridge_top_45nm.tcl) 117: time_info OPT
+Finished exporting design database to file './report/syn_opt_spi_bridge_top.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:01).
+Finished generating snapshot at stage syn_opt (command execution time mm:ss cpu = 00:00, real = 00:02).
+%# End write_snapshot (10/28 06:26:35, total cpu=17:00:00, real=17:00:02, peak res=872.00M, current mem=1742.30M)
+@file(spi_bridge_top_45nm_SLOW.tcl) 117: time_info OPT
 stamp 'OPT' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:12:57 (Oct27) |  209.0 MB | init
+ 00:00:08(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:15 (Oct28) |  236.0 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:08(00:00:09) |  10.8( 11.5) |    3:13:06 (Oct27) |  388.0 MB | Elaboration
+ 00:00:17(00:00:09) |  00:00:09(00:00:09) |  12.0( 11.2) |    6:25:24 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:12(00:00:12) |  16.8( 15.4) |    3:13:18 (Oct27) |  787.3 MB | GENERIC
+ 00:00:28(00:00:20) |  00:00:11(00:00:11) |  15.5( 13.8) |    6:25:35 (Oct28) |  834.9 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:44(00:00:39) |  00:00:17(00:00:18) |  23.3( 23.1) |    3:13:36 (Oct27) |  807.8 MB | MAPPED
+ 00:00:46(00:00:40) |  00:00:17(00:00:20) |  23.9( 25.0) |    6:25:55 (Oct28) |  867.5 MB | MAPPED
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:01:21(00:01:18) |  00:00:36(00:00:39) |  49.1( 50.0) |    3:14:15 (Oct27) |  810.5 MB | OPT
+ 00:01:23(00:01:20) |  00:00:36(00:00:40) |  48.6( 50.0) |    6:26:35 (Oct28) |  868.7 MB | OPT
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-@file(spi_bridge_top_45nm.tcl) 119: foreach cg [vfind / -cost_group *] {
+@file(spi_bridge_top_45nm_SLOW.tcl) 119: foreach cg [vfind / -cost_group *] {
     report timing -cost_group [list $cg] > ${RPT_DIR}/07_[basename $cg]_post_syn_opt.rpt
 }
-@file(spi_bridge_top_45nm.tcl) 123: write_db -to_file ${MAPPED_DIR}/syn_opt.db
+@file(spi_bridge_top_45nm_SLOW.tcl) 123: write_db -to_file ${MAPPED_DIR}/syn_opt.db
 Finished exporting design database to file './mapped/syn_opt.db' for 'spi_bridge_top' (command execution time mm:ss cpu = 00:00, real = 00:00).
-@file(spi_bridge_top_45nm.tcl) 128: report_analysis_views -type all > ${RPT_DIR}/08_${TOP_DESIGN}_SYN_analysis_view.rpt
-@file(spi_bridge_top_45nm.tcl) 129: report_area > ${RPT_DIR}/09_${TOP_DESIGN}_SYN_area.rpt
-@file(spi_bridge_top_45nm.tcl) 130: report_clocks > ${RPT_DIR}/10_${TOP_DESIGN}_SYN_clock.rpt
-@file(spi_bridge_top_45nm.tcl) 131: report_clocks -generated >> ${RPT_DIR}/10_${TOP_DESIGN}_SYN_clock.rpt
-@file(spi_bridge_top_45nm.tcl) 132: report_datapath > ${RPT_DIR}/11_${TOP_DESIGN}_SYN_datapath.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 128: report_analysis_views -type all > ${RPT_DIR}/08_${TOP_DESIGN}_SYN_analysis_view.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 129: report_area > ${RPT_DIR}/09_${TOP_DESIGN}_SYN_area.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 130: report_clocks > ${RPT_DIR}/10_${TOP_DESIGN}_SYN_clock.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 131: report_clocks -generated >> ${RPT_DIR}/10_${TOP_DESIGN}_SYN_clock.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 132: report_datapath > ${RPT_DIR}/11_${TOP_DESIGN}_SYN_datapath.rpt
 Beginning report datapath command
 Warning : The filename, column and line number information will not be available in the report. [RPT_DP-100]
         : The attribute for getting HDL filename and line number is not set.
-@file(spi_bridge_top_45nm.tcl) 133: report_design_rules > ${RPT_DIR}/12_${TOP_DESIGN}_SYN_design_rules.rpt
-@file(spi_bridge_top_45nm.tcl) 134: report_gates > ${RPT_DIR}/13_${TOP_DESIGN}_SYN_gate.rpt
-@file(spi_bridge_top_45nm.tcl) 135: report_gates -power >> ${RPT_DIR}/13_${TOP_DESIGN}_SYN_gate.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 133: report_design_rules > ${RPT_DIR}/12_${TOP_DESIGN}_SYN_design_rules.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 134: report_gates > ${RPT_DIR}/13_${TOP_DESIGN}_SYN_gate.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 135: report_gates -power >> ${RPT_DIR}/13_${TOP_DESIGN}_SYN_gate.rpt
 Info    : Joules engine is used. [RPT-16]
         : Joules engine is being used for the command report_gates -power.
 Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
@@ -4515,11 +4450,11 @@ Info   : PWRA-0009 [PwrInfo] Power Computation Progress Report :   0%   1%   2% 
 Info   : PWRA-0002 Finished power computation.
 Info   : PWRA-0007 [PwrInfo] Completed successfully.
        : Info=6, Warn=2, Error=0, Fatal=0
-@file(spi_bridge_top_45nm.tcl) 136: report_hierarchy > ${RPT_DIR}/14_${TOP_DESIGN}_SYN_hier.rpt
-@file(spi_bridge_top_45nm.tcl) 137: report_memory_cells > ${RPT_DIR}/15_${TOP_DESIGN}_SYN_mem_cell.rpt
-@file(spi_bridge_top_45nm.tcl) 138: report_messages -all > ${RPT_DIR}/16_${TOP_DESIGN}_SYN_message.rpt
-@file(spi_bridge_top_45nm.tcl) 139: report_nets -hierarchical > ${RPT_DIR}/17_${TOP_DESIGN}_SYN_net.rpt
-@file(spi_bridge_top_45nm.tcl) 140: report_power > ${RPT_DIR}/18_${TOP_DESIGN}_SYN_pwr.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 136: report_hierarchy > ${RPT_DIR}/14_${TOP_DESIGN}_SYN_hier.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 137: report_memory_cells > ${RPT_DIR}/15_${TOP_DESIGN}_SYN_mem_cell.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 138: report_messages -all > ${RPT_DIR}/16_${TOP_DESIGN}_SYN_message.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 139: report_nets -hierarchical > ${RPT_DIR}/17_${TOP_DESIGN}_SYN_net.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 140: report_power > ${RPT_DIR}/18_${TOP_DESIGN}_SYN_pwr.rpt
 Warning: Library 'giolib045' found in multiple domains.
 Info: Use -domain to uniquify.
 Info: Selecting library 'giolib045' in domain '-1'
@@ -4529,9 +4464,9 @@ Info: Selecting library 'slow_vdd1v0' in domain '-1'
 Info    : Joules engine is used. [RPT-16]
         : Joules engine is being used for the command report_power.
 Output file: ./report/18_spi_bridge_top_SYN_pwr.rpt
-@file(spi_bridge_top_45nm.tcl) 141: report_qor > ${RPT_DIR}/19_${TOP_DESIGN}_SYN_qor.rpt
-@file(spi_bridge_top_45nm.tcl) 142: report_timing -nworst 100 -net > ${RPT_DIR}/20_${TOP_DESIGN}_SYN_timing.rpt
-@file(spi_bridge_top_45nm.tcl) 144: report_summary
+@file(spi_bridge_top_45nm_SLOW.tcl) 141: report_qor > ${RPT_DIR}/19_${TOP_DESIGN}_SYN_qor.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 142: report_timing -nworst 100 -net > ${RPT_DIR}/20_${TOP_DESIGN}_SYN_timing.rpt
+@file(spi_bridge_top_45nm_SLOW.tcl) 144: report_summary
 Warning : A required object parameter could not be found. [TUI-78]
         : An object named "" could not be found for attribute 'name'.
 Warning : A required object parameter could not be found. [TUI-78]
@@ -4570,17 +4505,17 @@ Norm Cong Hotspot Area:
   Max Cong:                  no_value        no_value        no_value
   Tot Cong:                  no_value        no_value        no_value
 ================================================================================
-CPU  Runtime (h:m:s):        00:00:22        00:00:21        00:00:37
-Real Runtime (h:m:s):        00:00:21        00:00:18        00:00:38
-CPU  Elapsed (h:m:s):        00:00:30        00:00:51        00:01:27
-Real Elapsed (h:m:s):        00:00:24        00:00:42        00:01:20
-Memory (MB):                  1735.69         1744.43         1745.25
+CPU  Runtime (h:m:s):        00:00:22        00:00:22        00:00:37
+Real Runtime (h:m:s):        00:00:20        00:00:20        00:00:38
+CPU  Elapsed (h:m:s):        00:00:30        00:00:52        00:01:29
+Real Elapsed (h:m:s):        00:00:25        00:00:44        00:01:22
+Memory (MB):                  1733.92         1740.48         1742.30
 ================================================================================
 ================================================================================
 Flow Settings:
 ================================================================================
-Total Runtime (h:m:s): 00:01:20
-Total Memory (MB):     1779.27
+Total Runtime (h:m:s): 00:01:21
+Total Memory (MB):     1775.31
 Executable Version:    22.17-s071_1
 ================================================================================
 Total Cell Area =  Cell Area + Physical Cell Area
@@ -4589,10 +4524,10 @@ Total Instances =  Leaf Instances + Physical Instances
 
 
 
-@file(spi_bridge_top_45nm.tcl) 149: write_design -basename ${MAPPED_DIR}/${TOP_DESIGN}_mapped
+@file(spi_bridge_top_45nm_SLOW.tcl) 149: write_design -basename ${MAPPED_DIR}/${TOP_DESIGN}_mapped
 (write_design): Writing Genus content. Constraint interface is 'smsc'
 Exporting design data for 'spi_bridge_top' to ./mapped/spi_bridge_top_mapped...
-%# Begin write_design (10/27 03:14:17, mem=1780.27M)
+%# Begin write_design (10/28 06:26:37, mem=1776.31M)
       flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
 UM:*                                                                   write_design
   Setting attribute of root '/': 'set_boundary_change' = 
@@ -4602,46 +4537,46 @@ Finished SDC export (command execution time mm:ss (real) = 00:00).
 Info: file ./mapped/spi_bridge_top_mapped.default_emulate_constraint_mode.sdc has been written
 Info: file ./mapped/spi_bridge_top_mapped.default_emulate_constraint_mode.sdc has been written
 ** To load the database source ./mapped/spi_bridge_top_mapped.genus_setup.tcl in an Genus(TM) Synthesis Solution session.
-Finished exporting design data for 'spi_bridge_top' (command execution time mm:ss cpu = 00:01, real = 00:03).
+Finished exporting design data for 'spi_bridge_top' (command execution time mm:ss cpu = 00:01, real = 00:02).
 .
-%# End write_design (10/27 03:14:20, total cpu=17:00:01, real=17:00:03, peak res=811.60M, current mem=1780.27M)
-@file(spi_bridge_top_45nm.tcl) 151: write_hdl > ${MAPPED_DIR}/${TOP_DESIGN}_syn_final.v
-@file(spi_bridge_top_45nm.tcl) 152: write_sdc > ${MAPPED_DIR}/${TOP_DESIGN}_syn_final.sdc
+%# End write_design (10/28 06:26:39, total cpu=17:00:01, real=17:00:02, peak res=975.70M, current mem=1776.31M)
+@file(spi_bridge_top_45nm_SLOW.tcl) 151: write_hdl > ${MAPPED_DIR}/${TOP_DESIGN}_syn_final.v
+@file(spi_bridge_top_45nm_SLOW.tcl) 152: write_sdc > ${MAPPED_DIR}/${TOP_DESIGN}_syn_final.sdc
 Finished SDC export (command execution time mm:ss (real) = 00:00).
-@file(spi_bridge_top_45nm.tcl) 154: write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split > ${MAPPED_DIR}/${TOP_DESIGN}_delays.sdf
-@file(spi_bridge_top_45nm.tcl) 159: time_info FINAL
+@file(spi_bridge_top_45nm_SLOW.tcl) 154: write_sdf -timescale ns -nonegchecks -recrem split -edges check_edge -setuphold split > ${MAPPED_DIR}/${TOP_DESIGN}_delays.sdf
+@file(spi_bridge_top_45nm_SLOW.tcl) 159: time_info FINAL
 stamp 'FINAL' being created for table 'default'
 
   Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:07(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    3:12:57 (Oct27) |  209.0 MB | init
+ 00:00:08(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |    6:25:15 (Oct28) |  236.0 MB | init
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:15(00:00:09) |  00:00:08(00:00:09) |  10.4( 10.8) |    3:13:06 (Oct27) |  388.0 MB | Elaboration
+ 00:00:17(00:00:09) |  00:00:09(00:00:09) |  11.4( 10.7) |    6:25:24 (Oct28) |  432.6 MB | Elaboration
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:27(00:00:21) |  00:00:12(00:00:12) |  16.2( 14.5) |    3:13:18 (Oct27) |  787.3 MB | GENERIC
+ 00:00:28(00:00:20) |  00:00:11(00:00:11) |  14.7( 13.1) |    6:25:35 (Oct28) |  834.9 MB | GENERIC
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:00:44(00:00:39) |  00:00:17(00:00:18) |  22.4( 21.7) |    3:13:36 (Oct27) |  807.8 MB | MAPPED
+ 00:00:46(00:00:40) |  00:00:17(00:00:20) |  22.7( 23.8) |    6:25:55 (Oct28) |  867.5 MB | MAPPED
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:01:21(00:01:18) |  00:00:36(00:00:39) |  47.2( 47.0) |    3:14:15 (Oct27) |  810.5 MB | OPT
+ 00:01:23(00:01:20) |  00:00:36(00:00:40) |  46.1( 47.6) |    6:26:35 (Oct28) |  868.7 MB | OPT
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
- 00:01:24(00:01:23) |  00:00:03(00:00:05) |   3.9(  6.0) |    3:14:20 (Oct27) |  811.6 MB | FINAL
+ 00:01:27(00:01:24) |  00:00:04(00:00:04) |   5.1(  4.8) |    6:26:39 (Oct28) |  975.7 MB | FINAL
 --------------------+---------------------+--------------+--------------------+-----------+----------------------
 Number of threads: 2 * 1   (id: default, time_info v1.57)
 Info: (*N*) indicates data that was populated from previously saved time_info database
 Info: CPU time includes time of parent + longest thread
-@file(spi_bridge_top_45nm.tcl) 161: puts "============================"
+@file(spi_bridge_top_45nm_SLOW.tcl) 161: puts "============================"
 ============================
-@file(spi_bridge_top_45nm.tcl) 162: puts "Synthesis Finished ........."
+@file(spi_bridge_top_45nm_SLOW.tcl) 162: puts "Synthesis Finished ........."
 Synthesis Finished .........
-@file(spi_bridge_top_45nm.tcl) 163: puts "============================"
+@file(spi_bridge_top_45nm_SLOW.tcl) 163: puts "============================"
 ============================
-#@ End verbose source ./script/spi_bridge_top_45nm.tcl
-WARNING: This version of the tool is 774 days old.
-@genus:root: 2> exit
+#@ End verbose source ./script/spi_bridge_top_45nm_SLOW.tcl
+WARNING: This version of the tool is 775 days old.
+@genus:root: 2> quit
 
 Lic Summary:
-[03:16:50.416314] Cdslmd servers: kopo-seongnam
-[03:16:50.416336] Feature usage summary:
-[03:16:50.416338] Genus_Synthesis
+[06:28:20.368992] Cdslmd servers: kopo-seongnam
+[06:28:20.369019] Feature usage summary:
+[06:28:20.369019] Genus_Synthesis
 
 Normal exit.

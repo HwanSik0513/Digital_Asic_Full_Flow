@@ -1,13 +1,12 @@
 #################################################################################
 #
-# Created by Genus(TM) Synthesis Solution 22.17-s071_1 on Tue Oct 27 04:14:38 KST 2026
+# Created by Genus(TM) Synthesis Solution 22.17-s071_1 on Wed Oct 28 05:49:50 KST 2026
 #
 #################################################################################
 
 ## library_sets
 create_library_set -name default_emulate_libset_max \
     -timing { /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib \
-              /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib \
               /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/giolib045_v3.5/timing/pads_SS_s1vg.lib }
 
 ## opcond
