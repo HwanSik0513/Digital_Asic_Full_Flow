@@ -1,0 +1,16 @@
+########################################################################
+# Final Result Summary - spi_bridge_top  (SLOW / 500MHz, ACLK 2 ns (500 MHz))
+# Genus 22.17 (slow_vdd1v0 (SS, 0.9 V, 125 °C)) -> Innovus 22.17, GPDK045 gsclib045
+########################################################################
+
+[Synthesis]  cell area 3621.438 um^2, 881 instances, ACLK slack 1.8 ps (PVT_0P9V_125C)
+[Physical]   die 92.20 x 91.96 um, core 72.20 x 71.82 um, util 69.84 % -> final density 72.32 %
+             instances 987 / 2312 with 1324 fillers
+[CTS]        22 cells (20 buf + 2 inv), wire 1132.1 um, ACLK skew 0.628 ns
+[Routing]    wire 12,985 um, vias 6,535, verify_drc 0
+[Timing]     setup (SS/125C) WNS +0.054 ns TNS 0.000 viol 0/650
+             hold  (FF/0C)   WNS +0.003 ns TNS 0.000 viol 0/650
+             -> setup PASS / hold PASS  (Innovus postRoute, single mode, SI off)
+[Verify]     final verify_drc 0, connectivity clean, LVS not run
+[Power]      static vectorless, FUNC_SS_WORST, activity 0.2, period 2.0 ns
+             internal 0.24490 mW (81.08%), switching 0.05708 mW (18.90%), leakage 0.00008 mW (0.026%), total 0.30207 mW

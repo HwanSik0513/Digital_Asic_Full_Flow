@@ -1,0 +1,95 @@
+# Extracted from innovus.log lines 323-416 (FAST / 500MHz, all.tcl run)
+<CMD> checkDesign -netlist -physicalLibrary -powerGround -tieHilo -timingLibrary -floorplan -outdir checkDesign
+Creating directory checkDesign.
+**WARN: (IMPREPO-207):	There are 1 Cells dimensions not multiple integer of site.
+############################################################################
+# Innovus Netlist Design Rule Check
+# Tue Nov 10 06:29:20 2026
+############################################################################
+Design: spi_bridge_top
+
+------ Design Summary:
+Total Standard Cell Number   (cells) : 804
+Total Block Cell Number      (cells) : 0
+Total I/O Pad Cell Number    (cells) : 0
+Total Standard Cell Area     ( um^2) : 3398.45
+Total Block Cell Area        ( um^2) : 0.00
+Total I/O Pad Cell Area      ( um^2) : 0.00
+
+------ Design Statistics:
+
+Number of Instances            : 804
+Number of Non-uniquified Insts : 803
+Number of Nets                 : 888
+Average number of Pins per Net : 3.59
+Maximum number of Pins in Net  : 241
+
+------ I/O Port summary
+
+Number of Primary I/O Ports    : 34
+Number of Input Ports          : 20
+Number of Output Ports         : 14
+Number of Bidirectional Ports  : 0
+Number of Power/Ground Ports   : 0
+Number of Floating Ports                     *: 0
+Number of Ports Connected to Multiple Pads   *: 0
+Number of Ports Connected to Core Instances   : 34
+**WARN: (IMPREPO-202):	There are 34 Ports connected to core instances.
+
+------ Design Rule Checking:
+
+Number of Output Pins connect to Power/Ground *: 0
+Number of Insts with Input Pins tied together ?: 0
+Number of TieHi/Lo term nets not connected to instance's PG terms ?: 0
+Number of Input/InOut Floating Pins            : 0
+Number of Output Floating Pins                 : 0
+Number of Output Term Marked TieHi/Lo         *: 0
+
+Number of nets with tri-state drivers          : 0
+Number of nets with parallel drivers           : 0
+Number of nets with multiple drivers           : 0
+Number of nets with no driver (No FanIn)       : 0
+Number of Output Floating nets (No FanOut)     : 23
+Number of High Fanout nets (>50)               : 3
+**WARN: (IMPREPO-227):	There are 3 High Fanout nets (>50).
+Checking routing tracks.....
+Checking other grids.....
+Checking routing blockage.....
+Checking components.....
+Checking constraints (guide/region/fence).....
+Checking groups.....
+Checking Ptn Core Box.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+ Design check done.
+Report saved in file checkDesign/spi_bridge_top.main.htm.ascii
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPREPO-227          1  There are %d High Fanout nets (>50).     
+WARNING   IMPREPO-202          1  There are %d Ports connected to core ins...
+WARNING   IMPREPO-207          1  There are %d Cells dimensions not multip...
+*** Message Summary: 3 warning(s), 0 error(s)
+
+<CMD> floorPlan -site CoreSite -r 1.0 0.7 10 10 10 10
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in the LEF/OA library. The calculations for this site type cannot be made unless standard cell models of this type exist in the LEF/OA library. Ignore this warning if the SITE is not used by the library. Alternatively, remove the SITE definition for the LEF/OA library to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Start create_tracks
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -side Left -layer M3 -spreadType center -spacing 2 -unit MICRON -fixOverlap 1 -pin {{i_bus_addr[7]} {i_bus_addr[6]} {i_bus_addr[5]} {i_bus_addr[4]} {i_bus_addr[3]} {i_bus_addr[2]} {i_bus_addr[1]} {i_bus_addr[0]} i_bus_wr_en {i_bus_wdata[7]} {i_bus_wdata[6]} {i_bus_wdata[5]} {i_bus_wdata[4]} {i_bus_wdata[3]} {i_bus_wdata[2]} {i_bus_wdata[1]} {i_bus_wdata[0]} i_bus_rd_en}
+Successfully spread [18] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 2153.6M).
+<CMD> editPin -side Right -layer M3 -spreadType center -spacing 2 -unit MICRON -fixOverlap 1 -pin {{o_bus_rdata[7]} {o_bus_rdata[6]} {o_bus_rdata[5]} {o_bus_rdata[4]} {o_bus_rdata[3]} {o_bus_rdata[2]} {o_bus_rdata[1]} {o_bus_rdata[0]} o_overflow o_rx_valid o_dbg_sclk o_dbg_cs_n o_dbg_mosi o_dbg_miso}
+Successfully spread [14] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 2153.6M).
+<CMD> editPin -side Top -layer M4 -spreadType center -spacing 4 -unit MICRON -fixOverlap 1 -pin {ACLK ARESETn}
+Successfully spread [2] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 2153.6M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> setDrawView fplan
+<CMD> fit
+<CMD> dumpToGIF capture/00_floorplan.gif
+<CMD> saveDesign -def InitDesign

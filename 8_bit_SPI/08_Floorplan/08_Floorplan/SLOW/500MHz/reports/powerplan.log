@@ -1,0 +1,230 @@
+# Extracted from innovus.log lines 472-700 (SLOW / 500MHz, all.tcl run)
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -instanceBasename *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -instanceBasename *
+<CMD> globalNetConnect VDD -type tiehi -instanceBasename *
+<CMD> globalNetConnect VSS -type tielo -instanceBasename *
+<CMD> setTieHiLoMode -reset
+<CMD> setTieHiLoMode -cell { TIELO TIEHI } -honorDontTouch false -createHierPort false
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top Metal11 bottom Metal11 left Metal10 right Metal10} -width {top 2 bottom 2 left 2 right 2} -spacing {top 1 bottom 1 left 1 right 1} -offset {top 1 bottom 1 left 1 right 1} -center 0 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+#% Begin addRing (date=11/10 06:39:47, mem=2077.3M)
+
+
+viaInitial starts at Tue Nov 10 06:39:47 2026
+viaInitial ends at Tue Nov 10 06:39:47 2026
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2363.6M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal10|        4       |       NA       |
+|  Via10 |        8       |        0       |
+| Metal11|        4       |       NA       |
++--------+----------------+----------------+
+#% End addRing (date=11/10 06:39:47, total cpu=0:00:00.1, real=0:00:00.0, peak res=2079.4M, current mem=2079.4M)
+<CMD> setSrouteMode -viaConnectToShape { noshape }
+<CMD> sroute -connect { corePin } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { VDD VSS } -allowLayerChange 1 -targetViaLayerRange { Metal1(1) Metal11(11) }
+#% Begin sroute (date=11/10 06:39:47, mem=2079.5M)
+**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+*** Begin SPECIAL ROUTE on Tue Nov 10 06:39:47 2026 ***
+SPECIAL ROUTE ran on directory: /home/hah003/PROJ1/Proj1_make/TOP/PNR
+SPECIAL ROUTE ran on machine: kopo-seongnam (Linux 3.10.0-1160.el7.x86_64 Xeon 800Mhz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VDD VSS"
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 11
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 11
+srouteTopTargetLayerLimit set to 11
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 3816.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
+Read in 24 layers, 11 routing layers, 1 overlap layer
+Read in 2 nondefault rules, 0 used
+Read in 583 macros, 73 used
+Read in 73 components
+  73 core components: 73 unplaced, 0 placed, 0 fixed
+Read in 34 physical pins
+  34 physical pins: 0 unplaced, 34 placed, 0 fixed
+Read in 34 nets
+Read in 2 special nets, 2 routed
+Read in 180 terminals
+2 nets selected.
+
+Begin power routing ...
+CPU time for VDD FollowPin 0 seconds
+CPU time for VSS FollowPin 0 seconds
+  Number of Core ports routed: 86
+  Number of Followpin connections: 43
+End power routing: cpu: 0:00:00, real: 0:00:01, peak: 3858.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 34 io pins ...
+ Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+sroute created 129 wires.
+ViaGen created 774 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| Metal1 |       129      |       NA       |
+|  Via1  |       86       |        0       |
+|  Via2  |       86       |        0       |
+|  Via3  |       86       |        0       |
+|  Via4  |       86       |        0       |
+|  Via5  |       86       |        0       |
+|  Via6  |       86       |        0       |
+|  Via7  |       86       |        0       |
+|  Via8  |       86       |        0       |
+|  Via9  |       86       |        0       |
++--------+----------------+----------------+
+#% End sroute (date=11/10 06:39:48, total cpu=0:00:00.9, real=0:00:01.0, peak res=2136.8M, current mem=2122.9M)
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring block_ring } -skip_via_on_pin { standardcell } -skip_via_on_wire_shape { noshape }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {VDD VSS} -layer Metal10 -direction vertical -width 1 -spacing 1.25 -number_of_sets 4 -start_from left -start_offset 8 -stop_offset 8 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=11/10 06:39:48, mem=2123.0M)
+
+Initialize fgc environment(mem: 2404.9M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2404.9M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2404.9M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2404.9M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 2404.9M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 8 wires.
+ViaGen created 1564 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  Via1  |       172      |        0       |
+|  Via2  |       172      |        0       |
+|  Via3  |       172      |        0       |
+|  Via4  |       172      |        0       |
+|  Via5  |       172      |        0       |
+|  Via6  |       172      |        0       |
+|  Via7  |       172      |        0       |
+|  Via8  |       172      |        0       |
+|  Via9  |       172      |        0       |
+| Metal10|        8       |       NA       |
+|  Via10 |       16       |        0       |
++--------+----------------+----------------+
+#% End addStripe (date=11/10 06:39:48, total cpu=0:00:00.1, real=0:00:00.0, peak res=2124.4M, current mem=2124.4M)
+<CMD> setDrawView fplan
+<CMD> fit
+<CMD> dumpToGIF capture/01_powerplan.gif
+<CMD> verifyConnectivity -type all -noOpen -noAntenna -noWeakConnect -noUnConnPin -noUnroutedNet -error 1000 -warning 50
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Tue Nov 10 06:39:48 2026
+
+Design Name: spi_bridge_top
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (92.2000, 91.9600)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Tue Nov 10 06:39:48 2026
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> saveDesign -def PowerPlan
+#% Begin save design ... (date=11/10 06:39:48, mem=2124.9M)
+% Begin Save ccopt configuration ... (date=11/10 06:39:48, mem=2124.9M)
+% End Save ccopt configuration ... (date=11/10 06:39:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=2125.2M, current mem=2125.2M)
+% Begin Save netlist data ... (date=11/10 06:39:48, mem=2125.2M)
+Writing Binary DB to PowerPlan.dat/spi_bridge_top.v.bin in single-threaded mode...
+% End Save netlist data ... (date=11/10 06:39:48, total cpu=0:00:00.0, real=0:00:00.0, peak res=2125.2M, current mem=2125.2M)
+Saving symbol-table file ...
+Saving congestion map file PowerPlan.dat/spi_bridge_top.route.congmap.gz ...
+% Begin Save AAE data ... (date=11/10 06:39:48, mem=2125.8M)
+Saving AAE Data ...
+% End Save AAE data ... (date=11/10 06:39:48, total cpu=0:00:00.1, real=0:00:00.0, peak res=2182.6M, current mem=2125.8M)
+Saving preference file PowerPlan.dat/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=11/10 06:39:49, mem=2124.6M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=11/10 06:39:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=2124.7M, current mem=2124.7M)
+Saving PG file PowerPlan.dat/spi_bridge_top.pg.gz, version#2, (Created by Innovus v22.17-s086_1 on Tue Nov 10 06:39:49 2026)
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=2404.5M) ***
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=11/10 06:39:49, mem=2124.7M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruning View Names to Binary file
+% End Save placement data ... (date=11/10 06:39:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=2124.7M, current mem=2124.7M)
+% Begin Save routing data ... (date=11/10 06:39:49, mem=2124.7M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=2404.5M) ***
+% End Save routing data ... (date=11/10 06:39:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=2124.8M, current mem=2124.8M)
+Saving Def ...
+Writing DEF file 'PowerPlan.dat/spi_bridge_top.def.gz', current time is Tue Nov 10 06:39:49 2026 ...
+unitPerMicron=2000, dbgMicronPerDBU=0.000500, unitPerDBU=1.000000
+DEF file 'PowerPlan.dat/spi_bridge_top.def.gz' is written, current time is Tue Nov 10 06:39:49 2026 ...
+Saving property file PowerPlan.dat/spi_bridge_top.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2407.5M) ***
+% Begin Save power constraints data ... (date=11/10 06:39:49, mem=2124.9M)
+% End Save power constraints data ... (date=11/10 06:39:49, total cpu=0:00:00.0, real=0:00:00.0, peak res=2124.9M, current mem=2124.9M)
+BEST WORST
+BEST WORST
+BEST WORST
+BEST WORST
+BEST WORST
+Generated self-contained design PowerPlan.dat
+SS_Max_0p90v_125c FF_Min_1p10v_0c
+BEST WORST
+FUNC
+../SYN/mapped/spi_bridge_top_syn_final.sdc
+#% End save design ... (date=11/10 06:39:50, total cpu=0:00:01.5, real=0:00:02.0, peak res=2182.6M, current mem=2124.2M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> setPlaceMode -place_global_cong_effort high

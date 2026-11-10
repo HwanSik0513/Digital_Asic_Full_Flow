@@ -1,0 +1,414 @@
+# Extracted from innovus.log lines 6874-7286 (SLOW / 100MHz, all.tcl run)
+<CMD> optDesign -postCTS -hold
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 2519.3M, totSessionCpu=0:02:09 **
+*** optDesign #2 [begin] () : totSession cpu/real = 0:02:08.7/0:03:14.8 (0.7), mem = 3553.6M
+GigaOpt running with 1 threads.
+*** InitOpt #1 [begin] (optDesign #2) : totSession cpu/real = 0:02:08.7/0:03:14.8 (0.7), mem = 3553.6M
+**INFO: User settings:
+setExtractRCMode -engine                                       preRoute
+setUsefulSkewMode -opt_skew_eco_route                          false
+setDelayCalMode -enable_high_fanout                            true
+setDelayCalMode -eng_enablePrePlacedFlow                       false
+setDelayCalMode -engine                                        aae
+setDelayCalMode -ignoreNetLoad                                 false
+setDelayCalMode -socv_accuracy_mode                            low
+setOptMode -opt_view_pruning_setup_views_active_list           { FUNC_SS_WORST }
+setOptMode -opt_view_pruning_setup_views_persistent_list       { FUNC_SS_WORST}
+setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list  { FUNC_SS_WORST}
+setOptMode -opt_drv_margin                                     0
+setOptMode -opt_drv                                            true
+setOptMode -opt_resize_flip_flops                              true
+setOptMode -opt_preserve_all_sequential                        false
+setOptMode -opt_setup_target_slack                             0
+setPlaceMode -place_global_cong_effort                         high
+setAnalysisMode -analysisType                                  bcwc
+setAnalysisMode -checkType                                     setup
+setAnalysisMode -clkSrcPath                                    true
+setAnalysisMode -clockPropagation                              sdcControl
+setAnalysisMode -skew                                          true
+setAnalysisMode -usefulSkew                                    true
+setAnalysisMode -virtualIPO                                    false
+setRouteMode -earlyGlobalHonorMsvRouteConstraint               false
+setRouteMode -earlyGlobalMaxRouteLayer                         11
+setRouteMode -earlyGlobalMinRouteLayer                         1
+setRouteMode -earlyGlobalRoutePartitionPinGuide                true
+
+**INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+Need call spDPlaceInit before registerPrioInstLoc.
+**optDesign ... cpu = 0:00:01, real = 0:00:01, mem = 2524.4M, totSessionCpu=0:02:10 **
+#optDebug: { P: 90 W: 0201 FE: standard PE: none LDR: 1}
+*** optDesign -postCTS ***
+DRC Margin: user margin 0.0
+Hold Target Slack: user slack 0
+Setup Target Slack: user slack 0;
+setUsefulSkewMode -opt_skew_eco_route false
+Start to check current routing status for nets...
+All nets are already routed correctly.
+End to check current routing status for nets (mem=3553.6M)
+Compute RC Scale Done ...
+*** InitOpt #1 [finish] (optDesign #2) : cpu/real = 0:00:02.0/0:00:02.0 (1.0), totSession cpu/real = 0:02:10.8/0:03:16.9 (0.7), mem = 3772.0M
+GigaOpt Hold Optimizer is used
+Starting initialization (fixHold) cpu=0:00:00.0 real=0:00:00.0 totSessionCpu=0:02:11 mem=3650.0M ***
+*** BuildHoldData #1 [begin] (optDesign #2) : totSession cpu/real = 0:02:11.5/0:03:17.6 (0.7), mem = 3650.0M
+Saving timing graph ...
+Done save timing graph
+OPTC: user 20.0
+Starting delay calculation for Hold views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=3682.5)
+*** Calculating scaling factor for FF_Min_1p10v_0c libraries using the default operating condition of each library.
+Total number of fetched objects 982
+End delay calculation. (MEM=3709.18 CPU=0:00:00.2 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3709.18 CPU=0:00:00.3 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.5 real=0:00:00.0 totSessionCpu=0:02:12 mem=3709.2M)
+
+Active hold views:
+ FUNC_FF_BEST
+  Dominating endpoints: 0
+  Dominating TNS: -0.000
+
+Done building cte hold timing graph (fixHold) cpu=0:00:00.8 real=0:00:00.0 totSessionCpu=0:02:12 mem=3725.2M ***
+OPTC: user 20.0
+Done building hold timer [720 node(s), 807 edge(s), 1 view(s)] (fixHold) cpu=0:00:00.9 real=0:00:01.0 totSessionCpu=0:02:12 mem=3725.2M ***
+Restoring timing graph ...
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (EMS-27):	Message (IMPCTE-290) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+AAE_INFO: Resetting and re-constructing cache for AAE clocks ...
+Done restore timing graph
+Done building cte setup timing graph (fixHold) cpu=0:00:01.6 real=0:00:01.0 totSessionCpu=0:02:13 mem=3718.4M ***
+OPTC: m4 20.0 50.0 [ 500.0 20.0 50.0 ]
+OPTC: view 50.0:500.0 [ 0.0500 ]
+
+*Info: minBufDelay = 66.8 ps, libStdDelay = 36.8 ps, minBufSize = 6840000 (5.0)
+*Info: worst delay setup view: FUNC_SS_WORST
+
+------------------------------------------------------------------
+     Hold Opt Initial Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST
+Hold views included:
+ FUNC_FF_BEST
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):|  7.659  |  7.728  |  7.659  |
+|           TNS (ns):|  0.000  |  0.000  |  0.000  |
+|    Violating Paths:|    0    |    0    |    0    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++--------------------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.117  | -0.117  |  0.062  |
+|           TNS (ns):| -1.431  | -1.431  |  0.000  |
+|    Violating Paths:|   16    |   16    |    0    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 72.319%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:05, real = 0:00:05, mem = 2673.7M, totSessionCpu=0:02:14 **
+*** BuildHoldData #1 [finish] (optDesign #2) : cpu/real = 0:00:02.6/0:00:02.7 (1.0), totSession cpu/real = 0:02:14.1/0:03:20.3 (0.7), mem = 3626.2M
+*** HoldOpt #1 [begin] (optDesign #2) : totSession cpu/real = 0:02:14.1/0:03:20.3 (0.7), mem = 3626.2M
+*info: Run optDesign holdfix with 1 thread.
+Info: 24 nets with fixed/cover wires excluded.
+Info: 3 ideal nets excluded from IPO operation.
+Info: 24 clock nets excluded from IPO operation.
+Info: Done creating the CCOpt slew target map.
+
+*** Starting Core Fixing (fixHold) cpu=0:00:02.8 real=0:00:03.0 totSessionCpu=0:02:14 mem=3687.4M density=72.319% ***
+
+Phase I ......
+Executing transform: ECO Safe Resize
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+|Iter| Hold WNS | Hold TNS |  #VP   |  #Buffer  |  #Resize(F/F)  | Density |    Real    |   Mem   |
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+|   0|    -0.117|     -1.43|      16|          0|       0(     0)|   72.32%|   0:00:00.0|  3698.4M|
+|   1|    -0.117|     -1.43|      16|          0|       0(     0)|   72.32%|   0:00:00.0|  3698.4M|
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+Executing transform: AddBuffer + LegalResize
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+|Iter| Hold WNS | Hold TNS |  #VP   |  #Buffer  |  #Resize(F/F)  | Density |    Real    |   Mem   |
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+|   0|    -0.117|     -1.43|      16|          0|       0(     0)|   72.32%|   0:00:00.0|  3698.4M|
+|   1|    -0.096|     -1.04|      16|         16|       0(     0)|   73.01%|   0:00:00.0|  3722.5M|
+|   2|    -0.074|     -0.69|      16|         16|       0(     0)|   73.64%|   0:00:00.0|  3724.0M|
+|   3|    -0.053|     -0.35|      11|         16|       0(     0)|   74.20%|   0:00:00.0|  3724.0M|
+|   4|    -0.031|     -0.15|       8|         11|       0(     0)|   74.57%|   0:00:00.0|  3736.5M|
+|   5|    -0.009|     -0.01|       1|          8|       0(     0)|   74.85%|   0:00:00.0|  3736.5M|
+|   6|     0.001|      0.00|       0|          1|       0(     0)|   74.88%|   0:00:00.0|  3736.5M|
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+
+*info:    Total 68 cells added for Phase I
+*info:        in which 0 is ripple commits (0.000%)
+Bottom Preferred Layer:
++---------------+------------+----------+
+|     Layer     |    CLK     |   Rule   |
++---------------+------------+----------+
+| Metal3 (z=3)  |         22 | default  |
++---------------+------------+----------+
+Via Pillar Rule:
+    None
+
+*** Finished Core Fixing (fixHold) cpu=0:00:03.8 real=0:00:04.0 totSessionCpu=0:02:15 mem=3749.5M density=74.881% ***
+
+*info:
+*info: Added a total of 68 cells to fix/reduce hold violation
+*info:
+*info: Summary: 
+*info:           50 cells of type 'CLKBUFX2' used
+*info:           18 cells of type 'CLKBUFX4' used
+
+*** Starting refinePlace (0:02:15 mem=3751.5M) ***
+Total net bbox length = 1.035e+04 (5.694e+03 4.653e+03) (ext = 5.025e+02)
+Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+	Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 3735.5MB
+Summary Report:
+Instances move: 0 (out of 958 movable)
+Instances flipped: 0
+Mean displacement: 0.00 um
+Max displacement: 0.00 um 
+Total net bbox length = 1.035e+04 (5.694e+03 4.653e+03) (ext = 5.025e+02)
+Runtime: CPU: 0:00:00.2 REAL: 0:00:00.0 MEM: 3735.5MB
+*** Finished refinePlace (0:02:15 mem=3735.5M) ***
+*** maximum move = 0.00 um ***
+*** Finished re-routing un-routed nets (3735.5M) ***
+
+*** Finish Physical Update (cpu=0:00:00.3 real=0:00:00.0 mem=3735.5M) ***
+Capturing unweighted ref hold timing for Post CTS hold recovery....
+*** Finish Post CTS Hold Fixing (cpu=0:00:04.2 real=0:00:04.0 totSessionCpu=0:02:16 mem=3745.5M density=74.881%) ***
+**INFO: total 200 insts, 144 nets marked don't touch
+**INFO: total 200 insts, 144 nets marked don't touch DB property
+**INFO: total 200 insts, 144 nets unmarked don't touch
+*** HoldOpt #1 [finish] (optDesign #2) : cpu/real = 0:00:01.6/0:00:01.6 (1.0), totSession cpu/real = 0:02:15.6/0:03:21.8 (0.7), mem = 3650.5M
+*** Steiner Routed Nets: 8.541%; Threshold: 100; Threshold for Hold: 100
+Re-routed 0 nets
+GigaOpt_HOLD: Recover setup timing after hold fixing
+GigaOpt_HOLD: max_tran 0 => 0, max_cap 0 => 0 (threshold 10) - Skip drv recovery
+GigaOpt: WNS changes after routing: 0.000 -> 0.000 (bump = 0.0)
+GigaOpt: WNS bump threshold: 0.0194
+GigaOpt: Skipping postEco optimization
+GigaOpt: WNS changes after postEco optimization: 0.000 -> 0.000 (bump = 0.0)
+GigaOpt: Skipping nonLegal postEco optimization
+
+Active setup views:
+ FUNC_SS_WORST
+  Dominating endpoints: 0
+  Dominating TNS: -0.000
+
+OPTC: user 20.0
+OPTC: user 20.0
+[NR-eGR] Early global route reroute all routable nets
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] Metal1 has single uniform track structure
+[NR-eGR] Metal2 has single uniform track structure
+[NR-eGR] Metal3 has single uniform track structure
+[NR-eGR] Metal4 has single uniform track structure
+[NR-eGR] Metal5 has single uniform track structure
+[NR-eGR] Metal6 has single uniform track structure
+[NR-eGR] Metal7 has single uniform track structure
+[NR-eGR] Metal8 has single uniform track structure
+[NR-eGR] Metal9 has single uniform track structure
+[NR-eGR] Metal10 has single uniform track structure
+[NR-eGR] Metal11 has single uniform track structure
+[NR-eGR] Read 4726 PG shapes
+[NR-eGR] Read 0 clock shapes
+[NR-eGR] Read 0 other shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Bump Blockages     : 0
+[NR-eGR] #Instance Blockages : 51161
+[NR-eGR] #PG Blockages       : 4726
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] #Clock Blockages    : 0
+[NR-eGR] #Other Blockages    : 0
+[NR-eGR] Num Prerouted Nets = 24  Num Prerouted Wires = 1291
+[NR-eGR] Read 1042 nets ( ignored 24 )
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Rule name: (Default)  Nets: 1018
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 1018 net(s) in layer range [1, 11]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 1.071999e+04um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]        Layer               (1)    OverCon
+[NR-eGR] ----------------------------------------------
+[NR-eGR]  Metal1 ( 1)         3( 0.27%)   ( 0.27%) 
+[NR-eGR]  Metal2 ( 2)         1( 0.04%)   ( 0.04%) 
+[NR-eGR]  Metal3 ( 3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal4 ( 4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal5 ( 5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal6 ( 6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal7 ( 7)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal8 ( 8)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  Metal9 ( 9)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal10 (10)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] Metal11 (11)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]        Total         4( 0.01%)   ( 0.01%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+[NR-eGR] Finished Early Global Route kernel ( CPU: 0.07 sec, Real: 0.06 sec, Curr Mem: 3.53 MB )
+[hotspot] +------------+---------------+---------------+
+[hotspot] |            |   max hotspot | total hotspot |
+[hotspot] +------------+---------------+---------------+
+[hotspot] | normalized |          0.00 |          0.00 |
+[hotspot] +------------+---------------+---------------+
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+[hotspot] Hotspot report including placement blocked areas
+[hotspot] +------------+---------------+---------------+
+[hotspot] |            |   max hotspot | total hotspot |
+[hotspot] +------------+---------------+---------------+
+[hotspot] | normalized |          0.00 |          0.00 |
+[hotspot] +------------+---------------+---------------+
+Local HotSpot Analysis (blockage included): normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Reported timing to dir ./timingReports
+**optDesign ... cpu = 0:00:07, real = 0:00:07, mem = 2602.0M, totSessionCpu=0:02:16 **
+Starting delay calculation for Hold views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=3638.24)
+*** Calculating scaling factor for FF_Min_1p10v_0c libraries using the default operating condition of each library.
+Total number of fetched objects 1050
+End delay calculation. (MEM=3679.93 CPU=0:00:00.2 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=3679.93 CPU=0:00:00.3 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:00.6 real=0:00:01.0 totSessionCpu=0:02:17 mem=3679.9M)
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 0
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in BcWc mode...
+Start delay calculation (fullDC) (1 T). (MEM=3622.95)
+*** Calculating scaling factor for SS_Max_0p90v_125c libraries using the default operating condition of each library.
+Total number of fetched objects 1050
+End delay calculation. (MEM=3680.64 CPU=0:00:00.3 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3680.64 CPU=0:00:00.4 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.5 real=0:00:01.0 totSessionCpu=0:02:17 mem=3680.6M)
+
+------------------------------------------------------------------
+     optDesign Final Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST 
+Hold views included:
+ FUNC_FF_BEST
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):|  7.659  |  7.728  |  7.659  |
+|           TNS (ns):|  0.000  |  0.000  |  0.000  |
+|    Violating Paths:|    0    |    0    |    0    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++--------------------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):|  0.001  |  0.001  |  0.062  |
+|           TNS (ns):|  0.000  |  0.000  |  0.000  |
+|    Violating Paths:|    0    |    0    |    0    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 74.881%
+Routing Overflow: 0.00% H and 0.00% V
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:09, real = 0:00:09, mem = 2642.1M, totSessionCpu=0:02:18 **
+*** Finished optDesign ***
+Info: Summary of CRR changes:
+      - Timing transform commits:       0
+Info: Destroy the CCOpt slew target map.
+*** optDesign #2 [finish] () : cpu/real = 0:00:08.9/0:00:09.4 (0.9), totSession cpu/real = 0:02:17.6/0:03:24.3 (0.7), mem = 3637.8M

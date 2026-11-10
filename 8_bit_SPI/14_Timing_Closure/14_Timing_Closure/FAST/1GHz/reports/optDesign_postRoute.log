@@ -1,0 +1,1863 @@
+# Extracted from innovus.log lines 11979-13840 (FAST / 1GHz, all.tcl run)
+<CMD> optDesign -postRoute -setup
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 2568.6M, totSessionCpu=0:09:55 **
+*** optDesign #4 [begin] () : totSession cpu/real = 0:09:55.5/0:11:35.0 (0.9), mem = 3734.5M
+GigaOpt running with 1 threads.
+*** InitOpt #1 [begin] (optDesign #4) : totSession cpu/real = 0:09:55.5/0:11:35.0 (0.9), mem = 3734.5M
+**INFO: User settings:
+setNanoRouteMode -route_detail_antenna_factor                                             1
+setNanoRouteMode -route_detail_auto_stop                                                  false
+setNanoRouteMode -route_detail_end_iteration                                              5
+setNanoRouteMode -route_detail_fix_antenna                                                true
+setNanoRouteMode -route_detail_post_route_litho_repair                                    false
+setNanoRouteMode -route_detail_post_route_spread_wire                                     auto
+setNanoRouteMode -drouteStartIteration                                                    0
+setNanoRouteMode -route_detail_use_lef_pin_taper_rule                                     true
+setNanoRouteMode -route_detail_use_min_spacing_for_blockage                               auto
+setNanoRouteMode -extract_rc_model_file                                                   rc_model.bin
+setNanoRouteMode -route_extract_third_party_compatible                                    false
+setNanoRouteMode -route_global_exp_timing_driven_std_delay                                38.8
+setNanoRouteMode -route_global_exp_timing_driven_use_tif_timing_engine_for_import_design  false
+setNanoRouteMode -route_bottom_routing_layer                                              1
+setNanoRouteMode -route_antenna_diode_insertion                                           false
+setNanoRouteMode -route_selected_net_only                                                 false
+setNanoRouteMode -route_strict_honor_route_rule                                           false
+setNanoRouteMode -route_tdr_effort                                                        8
+setNanoRouteMode -route_top_routing_layer                                                 11
+setNanoRouteMode -route_with_eco                                                          false
+setNanoRouteMode -route_with_litho_driven                                                 false
+setNanoRouteMode -route_with_si_driven                                                    true
+setNanoRouteMode -route_with_si_post_route_fix                                            false
+setNanoRouteMode -route_with_timing_driven                                                true
+setNanoRouteMode -timingEngine                                                            .timing_file_35291.tif.gz
+setExtractRCMode -coupled                                                                 true
+setExtractRCMode -engine                                                                  postRoute
+setExtractRCMode -noCleanRCDB                                                             true
+setExtractRCMode -nrNetInMemory                                                           100000
+setUsefulSkewMode -opt_skew_eco_route                                                     false
+setDelayCalMode -enable_high_fanout                                                       true
+setDelayCalMode -eng_enablePrePlacedFlow                                                  false
+setDelayCalMode -engine                                                                   aae
+setDelayCalMode -ignoreNetLoad                                                            false
+setDelayCalMode -SIAware                                                                  false
+setDelayCalMode -socv_accuracy_mode                                                       low
+setOptMode -opt_view_pruning_setup_views_active_list                                      { FUNC_SS_WORST }
+setOptMode -opt_view_pruning_setup_views_persistent_list                                  { FUNC_SS_WORST}
+setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list                             { FUNC_SS_WORST}
+setOptMode -opt_delete_insts                                                              true
+setOptMode -opt_drv_margin                                                                0
+setOptMode -opt_drv                                                                       true
+setOptMode -opt_resize_flip_flops                                                         true
+setOptMode -opt_preserve_all_sequential                                                   false
+setOptMode -opt_setup_target_slack                                                        0
+setSIMode -separate_delta_delay_on_data                                                   true
+setPlaceMode -place_global_cong_effort                                                    high
+setAnalysisMode -analysisType                                                             single
+setAnalysisMode -checkType                                                                setup
+setAnalysisMode -clkSrcPath                                                               true
+setAnalysisMode -clockPropagation                                                         sdcControl
+setAnalysisMode -skew                                                                     true
+setAnalysisMode -usefulSkew                                                               true
+setAnalysisMode -virtualIPO                                                               false
+
+**INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+Disable merging buffers from different footprints for postRoute code for non-MSV designs
+Need call spDPlaceInit before registerPrioInstLoc.
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Creating RPSQ from WeeR and WRes ...
+Info: Using Genus executable '/tools/cadence/DDI221/bin/genus'.
+      Genus workers will not check out additional licenses.
+**optDesign ... cpu = 0:00:01, real = 0:00:13, mem = 2593.0M, totSessionCpu=0:09:57 **
+Existing Dirty Nets : 0
+New Signature Flow (optDesignCheckOptions) ....
+#Taking db snapshot
+#Taking db snapshot ... done
+Begin checking placement ... (start mem=3748.5M, init mem=3748.5M)
+*info: Placed = 1195           (Fixed = 8)
+*info: Unplaced = 0           
+Placement Density:95.04%(4615/4856)
+Placement Density (including fixed std cells):95.04%(4615/4856)
+Finished checkPlace (total: cpu=0:00:00.1, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=3748.5M)
+#optDebug: { P: 90 W: 7201 FE: standard PE: none LDR: 1}
+**WARN: (IMPOPT-7139):	'setExtractRCMode -coupled false' has been implicitly activated since current delay calulation is under SIAware false mode.
+setExtractRCMode -coupled false
+**WARN: (IMPEXT-3493):	The design extraction status has been reset by set_analysis_view/update_rc_corner or setExtractRCMode  command. The parasitic data can be regenerated either by extracting the design using the extractRC command or by loading the SPEF or RCDB file(s). To prevent resetting of the extraction status, avoid changing extraction modes.
+Type 'man IMPEXT-3493' for more detail.
+*** optDesign -postRoute ***
+DRC Margin: user margin 0.0; extra margin 0
+Setup Target Slack: user slack 0
+Hold Target Slack: user slack 0
+Opt: RC extraction mode changed to 'detail'
+Multi-VT timing optimization disabled based on library information.
+*** InitOpt #1 [finish] (optDesign #4) : cpu/real = 0:00:01.5/0:00:13.6 (0.1), totSession cpu/real = 0:09:57.0/0:11:48.5 (0.8), mem = 3748.5M
+** INFO : this run is activating 'postRoute' automaton
+**INFO: flowCheckPoint #8 InitialSummary
+Extraction called for design 'spi_bridge_top' of instances=1195 and nets=1272 using extraction engine 'postRoute' at effort level 'low' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PostRoute (effortLevel low) RC Extraction called for design spi_bridge_top.
+RC Extraction called in multi-corner(2) mode.
+Process corner(s) are loaded.
+ Corner: WORST
+ Corner: BEST
+Metal density calculation for erosion effect completed (CPU=0:00:00.0  MEM=3748.49M)
+extractDetailRC Option : -outfile /home/hah003/PROJ1/Proj1_make/TOP/PNR/innovus_temp_35291_355ff181-06df-46af-8555-6d7b448cc30b_kopo-seongnam_hah003_oWi6G1/spi_bridge_top_35291_Einuji.rcdb.d -maxResLength 222.222  -extended
+RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
+      RC Corner Indexes            0       1   
+Capacitance Scaling Factor   : 1.00000 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 
+Shrink Factor                : 0.90000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Creating RPSQ from WeeR and WRes ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 3742.5M)
+Extracted 10.0168% (CPU Time= 0:00:00.3  MEM= 3790.5M)
+Extracted 20.0138% (CPU Time= 0:00:00.3  MEM= 3790.5M)
+Extracted 30.0109% (CPU Time= 0:00:00.3  MEM= 3790.5M)
+Extracted 40.0178% (CPU Time= 0:00:00.3  MEM= 3790.5M)
+Extracted 50.0148% (CPU Time= 0:00:00.3  MEM= 3790.5M)
+Extracted 60.0118% (CPU Time= 0:00:00.4  MEM= 3790.5M)
+Extracted 70.0188% (CPU Time= 0:00:00.4  MEM= 3790.5M)
+Extracted 80.0158% (CPU Time= 0:00:00.4  MEM= 3790.5M)
+Extracted 90.0128% (CPU Time= 0:00:00.4  MEM= 3790.5M)
+Extracted 100% (CPU Time= 0:00:00.5  MEM= 3790.5M)
+Number of Extracted Resistors     : 19041
+Number of Extracted Ground Cap.   : 19263
+Number of Extracted Coupling Cap. : 0
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.6  Real Time: 0:00:00.0  MEM: 3766.492M)
+*** BuildHoldData #1 [begin] (optDesign #4) : totSession cpu/real = 0:09:57.6/0:11:49.1 (0.8), mem = 3766.5M
+OPTC: user 20.0
+Starting delay calculation for Hold views
+AAE_INFO: opIsDesignInPostRouteState() is 1
+AAE DB initialization (MEM=3776.03 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=3787.55)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Creating RPSQ from WeeR and WRes ...
+siFlow : Timing analysis mode is single, using late cdB files
+Total number of fetched objects 1250
+End delay calculation. (MEM=4141.3 CPU=0:00:00.3 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3833.3 CPU=0:00:00.8 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:00.9 real=0:00:01.0 totSessionCpu=0:09:59 mem=3833.3M)
+
+Active hold views:
+ FUNC_FF_BEST
+  Dominating endpoints: 0
+  Dominating TNS: -0.000
+
+Done building cte hold timing graph (HoldAware) cpu=0:00:01.0 real=0:00:01.0 totSessionCpu=0:09:59 mem=3868.4M ***
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 1
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=3868.39)
+Total number of fetched objects 1250
+End delay calculation. (MEM=3852.38 CPU=0:00:00.3 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=3852.38 CPU=0:00:00.3 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:00.5 real=0:00:01.0 totSessionCpu=0:09:59 mem=3852.4M)
+
+------------------------------------------------------------------
+     Initial Non-SI Timing Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.481  | -0.481  | -0.441  |
+|           TNS (ns):| -16.782 | -10.233 | -6.970  |
+|    Violating Paths:|   88    |   79    |   21    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 95.049%
+------------------------------------------------------------------
+*** BuildHoldData #1 [finish] (optDesign #4) : cpu/real = 0:00:01.7/0:00:01.7 (1.0), totSession cpu/real = 0:09:59.3/0:11:50.9 (0.8), mem = 3868.4M
+**optDesign ... cpu = 0:00:04, real = 0:00:16, mem = 2616.2M, totSessionCpu=0:09:59 **
+OPTC: m4 20.0 50.0 [ 50.0 20.0 50.0 ]
+OPTC: view 50.0 [ 0.0500 ]
+Info: Done creating the CCOpt slew target map.
+**INFO: flowCheckPoint #9 OptimizationPass1
+*** ClockDrv #1 [begin] (optDesign #4) : totSession cpu/real = 0:09:59.5/0:11:51.0 (0.8), mem = 3774.4M
+Running CCOpt-PRO on entire clock network
+Leaving CCOpt scope - Initializing power interface...
+Leaving CCOpt scope - Initializing power interface done. (took cpu=0:00:00.0 real=0:00:00.0)
+Net route status summary:
+  Clock:        24 (unrouted=0, trialRouted=0, noStatus=0, routed=24, fixed=0, [crossesIlmBoundary=0, tooFewTerms=0, (crossesIlmBoundary AND tooFewTerms=0)])
+  Non-clock:  1248 (unrouted=27, trialRouted=0, noStatus=0, routed=1221, fixed=0, [crossesIlmBoundary=0, tooFewTerms=27, (crossesIlmBoundary AND tooFewTerms=0)])
+-effortLevel low                           # enums={low medium high signoff}, default=undefined
+Clock tree cells fixed by user: 0 out of 22 (0%)
+PRO...
+Relaxing adjacent_rows_legal and cell_density for the duration of PRO. To stop this set pro_respect_cell_density_and_adjacent_row_legal to true.
+Initializing clock structures...
+  Creating own balancer
+  Permitting the movement of (non-FIXED) datapath insts as required for sized/new clock tree insts
+  Initializing legalizer
+  Using cell based legalization.
+  Leaving CCOpt scope - Initializing placement interface...
+  Leaving CCOpt scope - Initializing placement interface done. (took cpu=0:00:00.0 real=0:00:00.0)
+  Reconstructing clock tree datastructures, skew aware...
+    Validating CTS configuration...
+    Checking module port directions...
+    Checking module port directions done. (took cpu=0:00:00.0 real=0:00:00.0)
+    Non-default CCOpt properties:
+      Public non-default CCOpt properties:
+        adjacent_rows_legal: true (default: false)
+        cell_density is set for at least one object
+        cell_halo_rows: 0 (default: 1)
+        cell_halo_sites: 0 (default: 4)
+        exclusive_sinks_rank is set for at least one object
+        primary_delay_corner: SS_WORST (default: )
+        route_type is set for at least one object
+        source_latency is set for at least one object
+        target_insertion_delay is set for at least one object
+        target_max_trans_sdc is set for at least one object
+        target_skew is set for at least one object
+      Private non-default CCOpt properties:
+        allow_non_fterm_identical_swaps: 0 (default: true)
+        clock_nets_detailed_routed: 1 (default: false)
+        force_design_routing_status: 1 (default: auto)
+        pro_enable_post_commit_delay_update: 1 (default: false)
+    Route type trimming info:
+      No route type modifications were made.
+    Library trimming buffers in power domain auto-default and half-corner SS_WORST:setup.late removed 2 of 5 cells
+    Original list had 5 cells:
+    CLKBUFX4 BUFX4 CLKBUFX3 BUFX3 CLKBUFX2 
+    New trimmed list has 3 cells:
+    CLKBUFX4 CLKBUFX3 CLKBUFX2 
+    Library trimming inverters in power domain auto-default and half-corner SS_WORST:setup.late removed 3 of 7 cells
+    Original list had 7 cells:
+    INVX3 CLKINVX3 INVX2 CLKINVX2 INVX1 CLKINVX1 INVXL 
+    New trimmed list has 4 cells:
+    INVX3 INVX2 INVX1 INVXL 
+**WARN: (IMPCCOPT-1182):	The clock_gating_cells property has no usable full-cycle clock gates for power domain auto-default. Gating limited for clock tree SCLK. You may be able to solve this problem by specifying a list of lib_cells to use with the clock_gating_cells property.
+**WARN: (IMPCCOPT-2431):	Found 107 pin(s) with annotated transitions for the delay corner 'SS_WORST' that are connected to non-ideal or non-dont_touch nets. These pins will be excluded from transition time design rule violation checking in this delay corner.
+Type 'man IMPCCOPT-2431' for more detail.
+**WARN: (IMPCCOPT-1182):	The clock_gating_cells property has no usable full-cycle clock gates for power domain auto-default. Gating limited for clock tree ACLK. You may be able to solve this problem by specifying a list of lib_cells to use with the clock_gating_cells property.
+**WARN: (IMPCCOPT-2431):	Found 107 pin(s) with annotated transitions for the delay corner 'SS_WORST' that are connected to non-ideal or non-dont_touch nets. These pins will be excluded from transition time design rule violation checking in this delay corner.
+Type 'man IMPCCOPT-2431' for more detail.
+    Clock tree balancer configuration for clock_trees SCLK ACLK:
+    Non-default CCOpt properties:
+      Public non-default CCOpt properties:
+        cell_density: 1 (default: 0.75)
+        route_type (leaf): default_route_type_leaf (default: default)
+        route_type (top): default_route_type_nonleaf (default: default)
+        route_type (trunk): default_route_type_nonleaf (default: default)
+      No private non-default CCOpt properties
+    For power domain auto-default:
+      Buffers:     {CLKBUFX4 CLKBUFX3 CLKBUFX2}
+      Inverters:   {INVX3 INVX2 INVX1 INVXL}
+      Unblocked area available for placement of any clock cells in power_domain auto-default: 4856.400um^2
+    Top Routing info:
+      Route-type name: default_route_type_nonleaf; Top/bottom preferred layer name: Metal4/Metal3; 
+      Unshielded; Mask Constraint: 0; Source: route_type.
+    Trunk Routing info:
+      Route-type name: default_route_type_nonleaf; Top/bottom preferred layer name: Metal4/Metal3; 
+      Unshielded; Preferred extra space: 1; Mask Constraint: 0; Source: route_type.
+    Leaf Routing info:
+      Route-type name: default_route_type_leaf; Top/bottom preferred layer name: Metal4/Metal3; 
+      Unshielded; Preferred extra space: 1; Mask Constraint: 0; Source: route_type.
+    For timing_corner SS_WORST:setup, late and power domain auto-default:
+      Slew time target (leaf):    0.100ns
+      Slew time target (trunk):   0.100ns
+      Slew time target (top):     0.100ns (Note: no nets are considered top nets in this clock tree)
+      Buffer unit delay: 0.102ns
+      Buffer max distance: 77.506um
+    Fastest wire driving cells and distances:
+      Buffer    : {lib_cell:CLKBUFX4, fastest_considered_half_corner=SS_WORST:setup.late, optimalDrivingDistance=77.506um, saturatedSlew=0.090ns, speed=529.413um per ns, cellArea=30.888um^2 per 1000um}
+      Inverter  : {lib_cell:INVX3, fastest_considered_half_corner=SS_WORST:setup.late, optimalDrivingDistance=50.514um, saturatedSlew=0.088ns, speed=601.716um per ns, cellArea=27.082um^2 per 1000um}
+    
+    
+    Logic Sizing Table:
+    
+    ----------------------------------------------------------
+    Cell    Instance count    Source    Eligible library cells
+    ----------------------------------------------------------
+      (empty table)
+    ----------------------------------------------------------
+    
+    
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group SCLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+    Clock tree timing engine global stage delay update for SS_WORST:setup.late...
+    Clock tree timing engine global stage delay update for SS_WORST:setup.late done. (took cpu=0:00:00.0 real=0:00:00.0)
+    Clock tree balancer configuration for skew_group ACLK/FUNC:
+     Created from constraint modes: {[FUNC]}
+      Sources:                     pin ACLK
+      Total number of sinks:       344
+      Delay constrained sinks:     341
+      Constrains:                  default
+      Non-leaf sinks:              0
+      Ignore pins:                 0
+     Timing corner SS_WORST:setup.late:
+      Skew target:                 0.102ns
+      Insertion delay target:      0.400ns
+    Clock tree balancer configuration for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC:
+     Created from constraint modes: {[FUNC]}
+      Sources:                     pin ACLK
+      Total number of sinks:       2
+      Delay constrained sinks:     2
+      Constrains:                  default
+      Non-leaf sinks:              1
+      Ignore pins:                 0
+     Timing corner SS_WORST:setup.late:
+      Skew target:                 0.102ns
+    Primary reporting skew groups are:
+    skew_group ACLK/FUNC with 344 clock sinks
+    
+    
+    Constraint summary
+    ==================
+    
+    Transition constraints are active in the following delay corners:
+    
+    SS_WORST:setup.late
+    
+    Cap constraints are active in the following delay corners:
+    
+    SS_WORST:setup.late
+    
+    Transition constraint summary:
+    
+    -------------------------------------------------------------------------------------------
+    Delay corner                     Target (ns)    Num pins    Target source     Clock tree(s)
+    -------------------------------------------------------------------------------------------
+    SS_WORST:setup.late (primary)         -            -              -                 -
+                  -                     0.100         392       auto extracted    all
+    -------------------------------------------------------------------------------------------
+    
+    Capacitance constraint summary:
+    
+    -----------------------------------------------------------------------------------------------------
+    Delay corner                     Limit (pF)    Num nets    Target source                Clock tree(s)
+    -----------------------------------------------------------------------------------------------------
+    SS_WORST:setup.late (primary)        -            -                    -                      -
+                  -                    0.200           1       library_or_sdc_constraint    ACLK
+                  -                    0.250           2       library_or_sdc_constraint    all
+                  -                    0.300           1       library_or_sdc_constraint    SCLK
+                  -                    0.450          20       library_or_sdc_constraint    SCLK
+    -----------------------------------------------------------------------------------------------------
+    
+    
+    Clock DAG stats initial state:
+      cell counts      : b=20, i=2, icg=0, dcg=0, l=0, total=22
+      sink counts      : regular=344, enable_latch=0, load_capacitance=0, antenna=0, node_sink=0, total=344
+      misc counts      : r=2, pp=0, mci=0
+      cell areas       : b=58.140um^2, i=1.710um^2, icg=0.000um^2, dcg=0.000um^2, l=0.000um^2, total=59.850um^2
+      hp wire lengths  : top=0.000um, trunk=129.360um, leaf=491.665um, total=621.025um
+    Clock DAG library cell distribution initial state {count}:
+       Bufs: BUFX6: 15 CLKBUFX4: 5 
+       Invs: INVX2: 1 INVXL: 1 
+**WARN: (IMPCCOPT-2314):	CCOpt found 2 clock tree nets marked as ideal or dont_touch. These will not be buffered.
+Type 'man IMPCCOPT-2314' for more detail.
+    
+    Ideal and dont_touch net fanout counts:
+    
+    -----------------------------------------------------------
+    Min fanout    Max fanout    Number of ideal/dont_touch nets
+    -----------------------------------------------------------
+          1            10                      1
+         11           100                      0
+        101          1000                      1
+       1001         10000                      0
+      10001           +                        0
+    -----------------------------------------------------------
+    
+    Top ideal and dont_touch nets by fanout:
+    
+    --------------------------
+    Net name         Fanout ()
+    --------------------------
+    ACLK                105
+    u_rx_fifo/n_5         1
+    --------------------------
+    
+    
+    No dont_touch hnets found in the clock tree
+    No dont_touch hpins found in the clock network.
+    Checking for illegal sizes of clock logic instances...
+    Checking for illegal sizes of clock logic instances done. (took cpu=0:00:00.0 real=0:00:00.0)
+    Validating CTS configuration done. (took cpu=0:00:00.4 real=0:00:00.4)
+    CCOpt configuration status: all checks passed.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.101ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+  Reconstructing clock tree datastructures, skew aware done.
+Initializing clock structures done.
+PRO...
+  PRO active optimizations:
+   - DRV fixing with sizing
+  
+  Detected clock skew data from CTS
+  ProEngine running partially connected to DB
+  Clock DAG stats PRO initial state:
+    cell counts      : b=20, i=2, icg=0, dcg=0, l=0, total=22
+    sink counts      : regular=344, enable_latch=0, load_capacitance=0, antenna=0, node_sink=0, total=344
+    misc counts      : r=2, pp=0, mci=0
+    cell areas       : b=58.140um^2, i=1.710um^2, icg=0.000um^2, dcg=0.000um^2, l=0.000um^2, total=59.850um^2
+    cell capacitance : b=0.014pF, i=0.001pF, icg=0.000pF, dcg=0.000pF, l=0.000pF, total=0.015pF
+    sink capacitance : total=0.070pF, avg=0.000pF, sd=0.001pF, min=0.000pF, max=0.020pF
+    wire capacitance : top=0.000pF, trunk=0.018pF, leaf=0.108pF, total=0.126pF
+    wire lengths     : top=0.000um, trunk=168.470um, leaf=907.530um, total=1076.000um
+    hp wire lengths  : top=0.000um, trunk=129.360um, leaf=491.665um, total=621.025um
+  Clock DAG net violations PRO initial state:
+    Remaining Transition : {count=1, worst=[0.055ns]} avg=0.055ns sd=0.000ns sum=0.055ns
+    Fanout               : {count=1, worst=[5]} avg=5 sd=0 sum=5
+  Clock DAG primary half-corner transition distribution PRO initial state:
+    Trunk : target=0.100ns count=6 avg=0.044ns sd=0.023ns min=0.000ns max=0.064ns {5 <= 0.060ns, 1 <= 0.080ns, 0 <= 0.090ns, 0 <= 0.095ns, 0 <= 0.100ns}
+    Leaf  : target=0.100ns count=19 avg=0.063ns sd=0.033ns min=0.000ns max=0.155ns {8 <= 0.060ns, 8 <= 0.080ns, 1 <= 0.090ns, 1 <= 0.095ns, 0 <= 0.100ns} {0 <= 0.105ns, 0 <= 0.110ns, 0 <= 0.120ns, 0 <= 0.150ns, 1 > 0.150ns}
+  Clock DAG library cell distribution PRO initial state {count}:
+     Bufs: BUFX6: 15 CLKBUFX4: 5 
+     Invs: INVX2: 1 INVXL: 1 
+  Primary reporting skew groups PRO initial state:
+  Skew group summary PRO initial state:
+    skew_group ACLK/FUNC: insertion delay [min=0.200, max=0.769, avg=0.584, sd=0.248, skn=-0.878, kur=-1.211], skew [0.569 vs 0.568*], 94.4% {0.200, 0.768} (wid=0.203 ws=0.003) (gid=0.566 gs=0.566)
+    skew_group _clock_gen_ACLK_o_sclk_reg/FUNC: insertion delay [min=0.200, max=0.200, avg=0.200, sd=0.000, skn=0.000, kur=0.000], skew [0.000 vs 0.102], 100% {0.200, 0.200} (wid=0.200 ws=0.000) (gid=0.000 gs=0.000)
+  Recomputing CTS skew targets...
+  Resolving skew group constraints...
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+    Solving LP: 2 skew groups; 7 fragments, 12 fraglets and 15 vertices; 43 variables and 105 constraints; tolerance 1
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1059):	Slackened off max insertion delay target for skew_group ACLK/FUNC from 0.452ns to 0.768ns.
+Type 'man IMPCCOPT-1059' for more detail.
+**WARN: (IMPCCOPT-1059):	Slackened off min insertion delay target for skew_group ACLK/FUNC from 0.348ns to 0.200ns.
+Type 'man IMPCCOPT-1059' for more detail.
+**WARN: (IMPCCOPT-1058):	Slackened off skew target for skew_group ACLK/FUNC from 0.102ns to 0.568ns.
+Type 'man IMPCCOPT-1058' for more detail.
+    
+    Slackened skew group targets:
+    
+    ----------------------------------------------------------
+    Skew group    Desired    Slackened    Desired    Slackened
+                  Target     Target       Target     Target
+                  Max ID     Max ID       Skew       Skew
+    ----------------------------------------------------------
+    ACLK/FUNC      0.452       0.768       0.102       0.568
+    ----------------------------------------------------------
+    
+    
+  Resolving skew group constraints done.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group ACLK/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+**WARN: (IMPCCOPT-1261):	The skew target of 0.010ns for skew_group _clock_gen_ACLK_o_sclk_reg/FUNC in primary delay corner SS_WORST is too small. For best results, it is recommended that the skew target be set no lower than 0.102ns. The skew target has been relaxed to 0.102ns. You may force the use of the tighter skew target by setting override_minimum_skew_target to true.
+Type 'man IMPCCOPT-1261' for more detail.
+  Recomputing CTS skew targets done. (took cpu=0:00:00.0 real=0:00:00.0)
+  PRO Fixing DRVs...
+    Fixing clock tree DRVs: ...20% ...40% ...60% ...80% ...100% 
+    CCOpt-PRO: considered: 24, tested: 24, violation detected: 1, violation ignored (due to small violation): 0, cannot run: 0, attempted: 1, unsuccessful: 0, sized: 0
+    
+    Statistics: Fix DRVs (cell sizing):
+    ===================================
+    
+    Cell changes by Net Type:
+    
+    -------------------------------------------------------------------------------------------------------------------
+    Net Type    Attempted            Upsized     Downsized    Swapped Same Size    Total Changed      Not Sized
+    -------------------------------------------------------------------------------------------------------------------
+    top                0                    0           0            0                    0                  0
+    trunk              0                    0           0            0                    0                  0
+    leaf               1 [100.0%]           0           0            0                    0 (0.0%)           1 (100.0%)
+    -------------------------------------------------------------------------------------------------------------------
+    Total              1 [100.0%]           0           0            0                    0 (0.0%)           1 (100.0%)
+    -------------------------------------------------------------------------------------------------------------------
+    
+    Upsized: 0, Downsized: 0, Sized but same area: 0, Unchanged: 1, Area change: 0.000um^2 (0.000%)
+    Max. move: 0.000um, Min. move: 0.000um, Avg. move: 0.000um
+    
+    Clock DAG stats after 'PRO Fixing DRVs':
+      cell counts      : b=20, i=2, icg=0, dcg=0, l=0, total=22
+      sink counts      : regular=344, enable_latch=0, load_capacitance=0, antenna=0, node_sink=0, total=344
+      misc counts      : r=2, pp=0, mci=0
+      cell areas       : b=58.140um^2, i=1.710um^2, icg=0.000um^2, dcg=0.000um^2, l=0.000um^2, total=59.850um^2
+      cell capacitance : b=0.014pF, i=0.001pF, icg=0.000pF, dcg=0.000pF, l=0.000pF, total=0.015pF
+      sink capacitance : total=0.070pF, avg=0.000pF, sd=0.001pF, min=0.000pF, max=0.020pF
+      wire capacitance : top=0.000pF, trunk=0.018pF, leaf=0.108pF, total=0.126pF
+      wire lengths     : top=0.000um, trunk=168.470um, leaf=907.530um, total=1076.000um
+      hp wire lengths  : top=0.000um, trunk=129.360um, leaf=491.665um, total=621.025um
+    Clock DAG net violations after 'PRO Fixing DRVs':
+      Remaining Transition : {count=1, worst=[0.055ns]} avg=0.055ns sd=0.000ns sum=0.055ns
+      Fanout               : {count=1, worst=[5]} avg=5 sd=0 sum=5
+    Clock DAG primary half-corner transition distribution after 'PRO Fixing DRVs':
+      Trunk : target=0.100ns count=6 avg=0.044ns sd=0.023ns min=0.000ns max=0.064ns {5 <= 0.060ns, 1 <= 0.080ns, 0 <= 0.090ns, 0 <= 0.095ns, 0 <= 0.100ns}
+      Leaf  : target=0.100ns count=19 avg=0.063ns sd=0.033ns min=0.000ns max=0.155ns {8 <= 0.060ns, 8 <= 0.080ns, 1 <= 0.090ns, 1 <= 0.095ns, 0 <= 0.100ns} {0 <= 0.105ns, 0 <= 0.110ns, 0 <= 0.120ns, 0 <= 0.150ns, 1 > 0.150ns}
+    Clock DAG library cell distribution after 'PRO Fixing DRVs' {count}:
+       Bufs: BUFX6: 15 CLKBUFX4: 5 
+       Invs: INVX2: 1 INVXL: 1 
+    Primary reporting skew groups after 'PRO Fixing DRVs':
+    Skew group summary after 'PRO Fixing DRVs':
+      skew_group ACLK/FUNC: insertion delay [min=0.200, max=0.769], skew [0.569 vs 0.568*]
+      skew_group _clock_gen_ACLK_o_sclk_reg/FUNC: insertion delay [min=0.200, max=0.200], skew [0.000 vs 0.102]
+    Legalizer API calls during this step: 1 succeeded with high effort: 1 succeeded with medium effort: 0 succeeded with low effort: 0 succeeded with basic effort: 0 succeeded with basic unbounded effort: 0
+  PRO Fixing DRVs done. (took cpu=0:00:00.0 real=0:00:00.0)
+  Reconnecting optimized routes...
+  Reconnecting optimized routes done. (took cpu=0:00:00.0 real=0:00:00.0)
+  Clock tree timing engine global stage delay update for SS_WORST:setup.late...
+  Clock tree timing engine global stage delay update for SS_WORST:setup.late done. (took cpu=0:00:00.0 real=0:00:00.0)
+  Clock DAG stats PRO final:
+    cell counts      : b=20, i=2, icg=0, dcg=0, l=0, total=22
+    sink counts      : regular=344, enable_latch=0, load_capacitance=0, antenna=0, node_sink=0, total=344
+    misc counts      : r=2, pp=0, mci=0
+    cell areas       : b=58.140um^2, i=1.710um^2, icg=0.000um^2, dcg=0.000um^2, l=0.000um^2, total=59.850um^2
+    cell capacitance : b=0.014pF, i=0.001pF, icg=0.000pF, dcg=0.000pF, l=0.000pF, total=0.015pF
+    sink capacitance : total=0.070pF, avg=0.000pF, sd=0.001pF, min=0.000pF, max=0.020pF
+    wire capacitance : top=0.000pF, trunk=0.018pF, leaf=0.108pF, total=0.126pF
+    wire lengths     : top=0.000um, trunk=168.470um, leaf=907.530um, total=1076.000um
+    hp wire lengths  : top=0.000um, trunk=129.360um, leaf=491.665um, total=621.025um
+  Clock DAG net violations PRO final:
+    Remaining Transition : {count=1, worst=[0.055ns]} avg=0.055ns sd=0.000ns sum=0.055ns
+    Fanout               : {count=1, worst=[5]} avg=5 sd=0 sum=5
+  Clock DAG primary half-corner transition distribution PRO final:
+    Trunk : target=0.100ns count=6 avg=0.044ns sd=0.023ns min=0.000ns max=0.064ns {5 <= 0.060ns, 1 <= 0.080ns, 0 <= 0.090ns, 0 <= 0.095ns, 0 <= 0.100ns}
+    Leaf  : target=0.100ns count=19 avg=0.063ns sd=0.033ns min=0.000ns max=0.155ns {8 <= 0.060ns, 8 <= 0.080ns, 1 <= 0.090ns, 1 <= 0.095ns, 0 <= 0.100ns} {0 <= 0.105ns, 0 <= 0.110ns, 0 <= 0.120ns, 0 <= 0.150ns, 1 > 0.150ns}
+  Clock DAG library cell distribution PRO final {count}:
+     Bufs: BUFX6: 15 CLKBUFX4: 5 
+     Invs: INVX2: 1 INVXL: 1 
+  Primary reporting skew groups PRO final:
+  Skew group summary PRO final:
+    skew_group ACLK/FUNC: insertion delay [min=0.200, max=0.769, avg=0.584, sd=0.248, skn=-0.878, kur=-1.211], skew [0.569 vs 0.568*], 94.4% {0.200, 0.768} (wid=0.203 ws=0.003) (gid=0.566 gs=0.566)
+    skew_group _clock_gen_ACLK_o_sclk_reg/FUNC: insertion delay [min=0.200, max=0.200, avg=0.200, sd=0.000, skn=0.000, kur=0.000], skew [0.000 vs 0.102], 100% {0.200, 0.200} (wid=0.200 ws=0.000) (gid=0.000 gs=0.000)
+PRO done.
+Net route status summary:
+  Clock:        24 (unrouted=0, trialRouted=0, noStatus=0, routed=24, fixed=0, [crossesIlmBoundary=0, tooFewTerms=0, (crossesIlmBoundary AND tooFewTerms=0)])
+  Non-clock:  1248 (unrouted=27, trialRouted=0, noStatus=0, routed=1221, fixed=0, [crossesIlmBoundary=0, tooFewTerms=27, (crossesIlmBoundary AND tooFewTerms=0)])
+Updating delays...
+Updating delays done.
+PRO done. (took cpu=0:00:00.5 real=0:00:00.5)
+Leaving CCOpt scope - Cleaning up placement interface...
+Leaving CCOpt scope - Cleaning up placement interface done. (took cpu=0:00:00.0 real=0:00:00.0)
+*** ClockDrv #1 [finish] (optDesign #4) : cpu/real = 0:00:00.6/0:00:00.6 (1.0), totSession cpu/real = 0:10:00.0/0:11:51.5 (0.8), mem = 3775.4M
+**INFO: Start fixing DRV (Mem = 3775.36M) ...
+Begin: GigaOpt DRV Optimization
+*** DrvOpt #1 [begin] (optDesign #4) : totSession cpu/real = 0:10:00.0/0:11:51.6 (0.8), mem = 3775.4M
+Info: 3 ideal nets excluded from IPO operation.
+Info: 24 clock nets excluded from IPO operation.
+**INFO: Extra DRV scale -- maxTran 0.97 maxCap 0.97 (high fanout net > 10: maxTran 0.97 maxCap 0.97) for over fixing
+DRV pessimism of 2.00% is used for tran, 2.00% for cap, 2.00% for fanout, on top of margin 0.00%
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|        max-tran       |        max-cap        |  max-fanout |  max-length |       setup       |        |        |        |       |          |         |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| nets | terms|  wViol  | nets | terms|  wViol  | nets | terms| nets | terms|   WNS   |   TNS   |  #Buf  |  #Inv  | #Resize|Density|   Real   |   Mem   |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|    -0.48|   -16.78|       0|       0|       0| 95.05%|          |         |
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|    -0.48|   -16.78|       0|       0|       0| 95.05%| 0:00:00.0|  3952.1M|
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+Bottom Preferred Layer:
++---------------+------------+------------+----------+
+|     Layer     |   OPT_LA   |    CLK     |   Rule   |
++---------------+------------+------------+----------+
+| Metal3 (z=3)  |          0 |         22 | default  |
+| Metal7 (z=7)  |          1 |          0 | default  |
++---------------+------------+------------+----------+
+Via Pillar Rule:
+    None
+
+*** Finish DRV Fixing (cpu=0:00:00.0 real=0:00:00.0 mem=3952.1M) ***
+
+*** DrvOpt #1 [finish] (optDesign #4) : cpu/real = 0:00:01.5/0:00:01.5 (1.0), totSession cpu/real = 0:10:01.5/0:11:53.1 (0.8), mem = 3858.1M
+drv optimizer changes nothing and skips refinePlace
+End: GigaOpt DRV Optimization
+*info:
+**INFO: Completed fixing DRV (CPU Time = 0:00:02, Mem = 3858.11M).
+
+------------------------------------------------------------------
+     Non-SI Timing Summary (cpu=0.03min real=0.02min mem=3858.1M)
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.481  | -0.481  | -0.441  |
+|           TNS (ns):| -16.782 | -10.233 | -6.970  |
+|    Violating Paths:|   88    |   79    |   21    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 95.049%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:06, real = 0:00:18, mem = 2727.7M, totSessionCpu=0:10:02 **
+*** Timing NOT met, worst failing slack is -0.481
+*** Check timing (0:00:00.0)
+Begin: GigaOpt Optimization in WNS mode
+Info: 3 ideal nets excluded from IPO operation.
+Info: 24 clock nets excluded from IPO operation.
+*** WnsOpt #1 [begin] (optDesign #4) : totSession cpu/real = 0:10:01.7/0:11:53.2 (0.8), mem = 3916.4M
+*info: 24 clock nets excluded
+*info: 3 ideal nets excluded from IPO operation.
+*info: 20 no-driver nets excluded.
+Info: total 5 nets with RC integrity issues will be excluded from IPO operation.
+** GigaOpt Optimizer WNS Slack -0.481 TNS Slack -16.782 Density 95.05
+OptDebug: Start of Optimizer WNS Pass 0:
++----------+------+-------+
+|Path Group|   WNS|    TNS|
++----------+------+-------+
+|default   |-0.441| -6.970|
+|reg2reg   |-0.481|-10.233|
+|HEPG      |-0.481|-10.233|
+|All Paths |-0.481|-16.782|
++----------+------+-------+
+
+Active Path Group: reg2reg  
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  WNS   | All WNS |  TNS   | All TNS | Density |    Real    |  Mem   | Worst View  |Pathgroup|                 End Point                  |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  -0.481|   -0.481| -10.233|  -16.782|   95.05%|   0:00:00.0| 3916.4M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_empty_reg/D                    |
+|  -0.481|   -0.481| -10.227|  -16.776|   95.09%|   0:00:00.0| 3953.1M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_empty_reg/D                    |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  WNS   | All WNS |  TNS   | All TNS | Density |    Real    |  Mem   | Worst View  |Pathgroup|                 End Point                  |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  -0.481|   -0.481| -10.227|  -16.776|   95.09%|   0:00:01.0| 3955.1M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_empty_reg/D                    |
+|  -0.481|   -0.481| -10.227|  -16.776|   95.09%|   0:00:01.0| 3955.1M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_empty_reg/D                    |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+
+*** Finish Core Optimize Step (cpu=0:00:00.9 real=0:00:01.0 mem=3955.1M) ***
+Active Path Group: default 
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  WNS   | All WNS |  TNS   | All TNS | Density |    Real    |  Mem   | Worst View  |Pathgroup|                 End Point                  |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  -0.441|   -0.481|  -6.970|  -16.776|   95.09%|   0:00:00.0| 3955.1M|FUNC_SS_WORST|  default| u_register_block/o_tx_fifo_wr_data_reg_5/D |
+|  -0.441|   -0.481|  -7.263|  -17.069|   95.13%|   0:00:00.0| 3955.1M|FUNC_SS_WORST|  default| u_register_block/o_tx_fifo_wr_data_reg_5/D |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+
+*** Finish Core Optimize Step (cpu=0:00:00.4 real=0:00:00.0 mem=3955.1M) ***
+
+*** Finished Optimize Step Cumulative (cpu=0:00:01.4 real=0:00:01.0 mem=3955.1M) ***
+OptDebug: End of Optimizer WNS Pass 0:
++----------+------+-------+
+|Path Group|   WNS|    TNS|
++----------+------+-------+
+|default   |-0.441| -7.263|
+|reg2reg   |-0.481|-10.227|
+|HEPG      |-0.481|-10.227|
+|All Paths |-0.481|-17.069|
++----------+------+-------+
+
+** GigaOpt Optimizer WNS Slack -0.481 TNS Slack -17.069 Density 95.13
+OptDebug: End of Setup Fixing:
++----------+------+-------+
+|Path Group|   WNS|    TNS|
++----------+------+-------+
+|default   |-0.441| -7.263|
+|reg2reg   |-0.481|-10.227|
+|HEPG      |-0.481|-10.227|
+|All Paths |-0.481|-17.069|
++----------+------+-------+
+
+Bottom Preferred Layer:
++---------------+------------+------------+----------+
+|     Layer     |   OPT_LA   |    CLK     |   Rule   |
++---------------+------------+------------+----------+
+| Metal3 (z=3)  |          0 |         22 | default  |
+| Metal7 (z=7)  |          1 |          0 | default  |
++---------------+------------+------------+----------+
+Via Pillar Rule:
+    None
+
+*** Finish Post Route Setup Fixing (cpu=0:00:01.5 real=0:00:01.0 mem=3955.1M) ***
+*** WnsOpt #1 [finish] (optDesign #4) : cpu/real = 0:00:03.8/0:00:03.8 (1.0), totSession cpu/real = 0:10:05.4/0:11:57.0 (0.8), mem = 3867.1M
+Running refinePlace -preserveRouting true -hardFence false
+*** Starting refinePlace (0:10:05 mem=3867.1M) ***
+Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+	Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 3851.1MB
+Summary Report:
+Instances move: 0 (out of 1190 movable)
+Instances flipped: 0
+Mean displacement: 0.00 um
+Max displacement: 0.00 um 
+Runtime: CPU: 0:00:00.1 REAL: 0:00:00.0 MEM: 3851.1MB
+*** Finished refinePlace (0:10:06 mem=3851.1M) ***
+End: GigaOpt Optimization in WNS mode
+Skipping post route harden opt
+Begin: GigaOpt Optimization in TNS mode
+Info: 3 ideal nets excluded from IPO operation.
+Info: 24 clock nets excluded from IPO operation.
+*** TnsOpt #1 [begin] (optDesign #4) : totSession cpu/real = 0:10:05.6/0:11:57.2 (0.8), mem = 3851.1M
+*info: 24 clock nets excluded
+*info: 3 ideal nets excluded from IPO operation.
+*info: 20 no-driver nets excluded.
+** GigaOpt Optimizer WNS Slack -0.481 TNS Slack -17.069 Density 95.13
+OptDebug: Start of Optimizer TNS Pass:
++----------+------+-------+
+|Path Group|   WNS|    TNS|
++----------+------+-------+
+|default   |-0.441| -7.263|
+|reg2reg   |-0.481|-10.227|
+|HEPG      |-0.481|-10.227|
+|All Paths |-0.481|-17.069|
++----------+------+-------+
+
+Active Path Group: reg2reg  
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  WNS   | All WNS |  TNS   | All TNS | Density |    Real    |  Mem   | Worst View  |Pathgroup|                 End Point                  |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:00.0| 3927.3M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_empty_reg/D                    |
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_rd_ptr_gray_reg_3/D            |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  WNS   | All WNS |  TNS   | All TNS | Density |    Real    |  Mem   | Worst View  |Pathgroup|                 End Point                  |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_rd_ptr_gray_reg_3/D            |
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  reg2reg| u_tx_fifo/r_full_reg/D                     |
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  reg2reg| u_tx_fifo/r_full_reg/D                     |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  WNS   | All WNS |  TNS   | All TNS | Density |    Real    |  Mem   | Worst View  |Pathgroup|                 End Point                  |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  reg2reg| u_tx_fifo/r_full_reg/D                     |
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:01.0| 3953.9M|FUNC_SS_WORST|  reg2reg| u_register_block/r_rx_data_buf_reg_5/D     |
+|  -0.481|   -0.481| -10.227|  -17.069|   95.13%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  reg2reg| u_rx_fifo/r_empty_reg/D                    |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+
+*** Finish Core Optimize Step (cpu=0:00:01.0 real=0:00:01.0 mem=3953.9M) ***
+Active Path Group: default 
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  WNS   | All WNS |  TNS   | All TNS | Density |    Real    |  Mem   | Worst View  |Pathgroup|                 End Point                  |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+|  -0.441|   -0.481|  -7.263|  -17.069|   95.13%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  default| u_register_block/o_tx_fifo_wr_data_reg_5/D |
+|  -0.441|   -0.481|  -7.066|  -16.872|   95.15%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  default| u_register_block/irq_enable_reg/D          |
+|  -0.441|   -0.481|  -7.066|  -16.872|   95.15%|   0:00:00.0| 3953.9M|FUNC_SS_WORST|  default| u_register_block/o_tx_fifo_wr_data_reg_5/D |
++--------+---------+--------+---------+---------+------------+--------+-------------+---------+--------------------------------------------+
+
+*** Finish Core Optimize Step (cpu=0:00:00.5 real=0:00:00.0 mem=3953.9M) ***
+
+*** Finished Optimize Step Cumulative (cpu=0:00:01.6 real=0:00:01.0 mem=3953.9M) ***
+OptDebug: End of Optimizer TNS Pass:
++----------+------+-------+
+|Path Group|   WNS|    TNS|
++----------+------+-------+
+|default   |-0.441| -7.066|
+|reg2reg   |-0.481|-10.227|
+|HEPG      |-0.481|-10.227|
+|All Paths |-0.481|-16.872|
++----------+------+-------+
+
+OptDebug: End of Setup Fixing:
++----------+------+-------+
+|Path Group|   WNS|    TNS|
++----------+------+-------+
+|default   |-0.441| -7.066|
+|reg2reg   |-0.481|-10.227|
+|HEPG      |-0.481|-10.227|
+|All Paths |-0.481|-16.872|
++----------+------+-------+
+
+Bottom Preferred Layer:
++---------------+------------+------------+----------+
+|     Layer     |   OPT_LA   |    CLK     |   Rule   |
++---------------+------------+------------+----------+
+| Metal3 (z=3)  |          0 |         22 | default  |
+| Metal7 (z=7)  |          1 |          0 | default  |
++---------------+------------+------------+----------+
+Via Pillar Rule:
+    None
+
+*** Finish Post Route Setup Fixing (cpu=0:00:01.7 real=0:00:02.0 mem=3953.9M) ***
+*** TnsOpt #1 [finish] (optDesign #4) : cpu/real = 0:00:03.9/0:00:03.9 (1.0), totSession cpu/real = 0:10:09.5/0:12:01.0 (0.8), mem = 3867.9M
+**INFO: Skipping refine place as no non-legal commits were detected
+End: GigaOpt Optimization in TNS mode
+**INFO: flowCheckPoint #10 OptimizationPreEco
+Running postRoute recovery in preEcoRoute mode
+**optDesign ... cpu = 0:00:14, real = 0:00:26, mem = 2748.3M, totSessionCpu=0:10:10 **
+Checking DRV degradation...
+**INFO: Skipping DRV recovery as drv did not degrade beyond margin
+Finish postRoute recovery in preEcoRoute mode (cpu=0:00:00, real=0:00:00, mem=3868.07M, totSessionCpu=0:10:10).
+**optDesign ... cpu = 0:00:14, real = 0:00:26, mem = 2748.2M, totSessionCpu=0:10:10 **
+
+Skipping pre eco harden opt
+Running refinePlace -preserveRouting true -hardFence false
+*** Starting refinePlace (0:10:10 mem=3926.2M) ***
+Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+	Runtime: CPU: 0:00:00.2 REAL: 0:00:01.0 MEM: 3910.2MB
+Summary Report:
+Instances move: 0 (out of 1190 movable)
+Instances flipped: 0
+Mean displacement: 0.00 um
+Max displacement: 0.00 um 
+Runtime: CPU: 0:00:00.2 REAL: 0:00:01.0 MEM: 3910.2MB
+*** Finished refinePlace (0:10:10 mem=3910.2M) ***
+Default Rule : ""
+Non Default Rules : "LEFSpecialRouteSpec" "VLMDefaultSetup"
+Worst Slack : -0.481 ns
+
+Start Layer Assignment ...
+WNS(-0.481ns) Target(0.000ns) MaxAssign(0%) MaxCong(20%) MinLen(100um) MinCap(0.050pf) layerBucket(2)
+
+Select 0 cadidates out of 1275.
+No critical nets selected. Skipped !
+
+Start Assign Priority Nets ...
+TargetSlk(0.200ns) MaxAssign(3%) minLen(50um)
+Existing Priority Nets 0 (0.0%)
+Total Assign Priority Nets 1 (0.1%)
+
+Set Prefer Layer Routing Effort ...
+Total Net(1273) IPOed(0) PreferLayer(0) -> MediumEffort(0)
+
+Default Rule : ""
+Non Default Rules : "LEFSpecialRouteSpec" "VLMDefaultSetup"
+Worst Slack : -0.481 ns
+
+Start Layer Assignment ...
+WNS(-0.481ns) Target(0.000ns) MaxAssign(0%) MaxCong(20%) MinLen(100um) MinCap(0.050pf) layerBucket(2)
+
+Select 0 cadidates out of 1275.
+No critical nets selected. Skipped !
+
+Start Assign Priority Nets ...
+TargetSlk(0.200ns) MaxAssign(3%) minLen(50um)
+Existing Priority Nets 0 (0.0%)
+Total Assign Priority Nets 8 (0.6%)
+
+------------------------------------------------------------------
+        Pre-ecoRoute Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.481  | -0.481  | -0.441  |
+|           TNS (ns):| -16.872 | -10.227 | -7.066  |
+|    Violating Paths:|   88    |   79    |   21    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 95.148%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:15, real = 0:00:27, mem = 2748.2M, totSessionCpu=0:10:10 **
+**INFO: flowCheckPoint #11 GlobalDetailRoute
+-route_with_eco false                     # bool, default=false, user setting
+-route_selected_net_only false            # bool, default=false, user setting
+-route_with_timing_driven true            # bool, default=false, user setting
+-route_with_si_driven true                # bool, default=false, user setting
+Existing Dirty Nets : 5
+New Signature Flow (saveAndSetNanoRouteOptions) ....
+Reset Dirty Nets : 5
+*** EcoRoute #1 [begin] (optDesign #4) : totSession cpu/real = 0:10:10.1/0:12:01.6 (0.8), mem = 3866.4M
+
+globalDetailRoute
+
+#Start globalDetailRoute on Tue Nov 10 07:15:55 2026
+#
+#NanoRoute Version 22.17-s086_1 NR240905-1647/22_17-UB
+#Skip comparing routing design signature in db-snapshot flow
+#Total number of trivial nets (e.g. < 2 pins) = 27 (skipped).
+#Total number of routable nets = 1248.
+#Total number of nets in the design = 1275.
+#8 routable nets do not have any wires.
+#1240 routable nets have routed wires.
+#8 nets will be global routed.
+#36 detail routed (routable) nets have been constrained (e.g. have preferred extra spacing, require shielding etc.)
+#Start routing data preparation on Tue Nov 10 07:15:55 2026
+#
+#Initial pin access analysis.
+#Detail pin access analysis.
+# Metal1       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.13000
+# Metal2       V   Track-Pitch = 0.20000    Line-2-Via Pitch = 0.15000
+# Metal3       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.15000
+# Metal4       V   Track-Pitch = 0.20000    Line-2-Via Pitch = 0.15000
+# Metal5       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.15000
+# Metal6       V   Track-Pitch = 0.20000    Line-2-Via Pitch = 0.15000
+# Metal7       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.15000
+# Metal8       V   Track-Pitch = 0.20000    Line-2-Via Pitch = 0.15000
+# Metal9       H   Track-Pitch = 0.19000    Line-2-Via Pitch = 0.15000
+# Metal10      V   Track-Pitch = 0.50000    Line-2-Via Pitch = 0.42000
+# Metal11      H   Track-Pitch = 0.47500    Line-2-Via Pitch = 0.43000
+#Bottom routing layer index=1(Metal1), bottom routing layer for shielding=1(Metal1), bottom shield layer=1(Metal1)
+#shield_bottom_stripe_layer=1(Metal1), shield_top_stripe_layer=11(Metal11)
+#pin_access_rlayer=2(Metal2)
+#shield_top_dpt_rlayer=-1 top_rlayer=11 top_trim_metal_rlayer=-1 rlayer_lowest=1 bottom_rlayer=1
+#enable_trim_layer_shield=F enable_dpt_layer_shield=F has_line_end_grid=F
+#enable_dpt_layer_shield=F
+#has_line_end_grid=F
+#Processed 6/0 dirty instances, 11/0 dirty terms, 0/0 dirty fterms, 0/0 dirty pgterms, 0/0 misc dirty regions(5 insts marked dirty, reset pre-exisiting dirty flag on 5 insts, 0 nets marked need extraction)
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2749.11 (MB), peak = 2886.85 (MB)
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer Metal3's pitch = 0.19000.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2761.23 (MB), peak = 2886.85 (MB)
+#
+#Finished routing data preparation on Tue Nov 10 07:15:56 2026
+#
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 16.00 (MB)
+#Total memory = 2761.23 (MB)
+#Peak memory = 2886.85 (MB)
+#
+#
+#Start global routing on Tue Nov 10 07:15:56 2026
+#
+#
+#Start global routing initialization on Tue Nov 10 07:15:56 2026
+#
+#Number of eco nets is 8
+#
+#Start global routing data preparation on Tue Nov 10 07:15:56 2026
+#
+#Start routing resource analysis on Tue Nov 10 07:15:56 2026
+#
+#Routing resource analysis is done on Tue Nov 10 07:15:56 2026
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  Metal1         H         163         303         992    59.27%
+#  Metal2         V         232         223         992     0.00%
+#  Metal3         H         313         153         992     0.00%
+#  Metal4         V         351         104         992     0.00%
+#  Metal5         H         437          29         992     0.00%
+#  Metal6         V         390          65         992     0.00%
+#  Metal7         H         444          22         992     0.00%
+#  Metal8         V         389          66         992     0.00%
+#  Metal9         H         425          41         992     0.00%
+#  Metal10        V         115          66         992    28.02%
+#  Metal11        H         161          24         992     5.65%
+#  --------------------------------------------------------------
+#  Total                   3423      24.26%       10912     8.45%
+#
+#  31 nets (2.43%) with 1 preferred extra spacing.
+#
+#
+#
+#Global routing data preparation is done on Tue Nov 10 07:15:56 2026
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2761.37 (MB), peak = 2886.85 (MB)
+#
+#
+#Global routing initialization is done on Tue Nov 10 07:15:56 2026
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2761.37 (MB), peak = 2886.85 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2762.81 (MB), peak = 2955.53 (MB)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2762.81 (MB), peak = 2955.53 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 27 (skipped).
+#Total number of routable nets = 1248.
+#Total number of nets in the design = 1275.
+#
+#1248 routable nets have routed wires.
+#36 detail routed (routable) nets have been constrained (e.g. have preferred extra spacing, require shielding etc.)
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default               8  
+#-----------------------------
+#        Total               8  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#----------------------------------------------------------------------------------------------
+#        Rules   Pref Extra Space   Pref Layer   Expansion Ratio   Avoid Detour   Unconstrained  
+#----------------------------------------------------------------------------------------------
+#      Default                 31            1                 1              4            1212  
+#----------------------------------------------------------------------------------------------
+#        Total                 31            1                 1              4            1212  
+#----------------------------------------------------------------------------------------------
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon          
+#                  #Gcell    %Gcell
+#     Layer           (1)   OverCon
+#  --------------------------------
+#  Metal1        0(0.00%)   (0.00%)
+#  Metal2        0(0.00%)   (0.00%)
+#  Metal3        0(0.00%)   (0.00%)
+#  Metal4        0(0.00%)   (0.00%)
+#  Metal5        0(0.00%)   (0.00%)
+#  Metal6        0(0.00%)   (0.00%)
+#  Metal7        0(0.00%)   (0.00%)
+#  Metal8        0(0.00%)   (0.00%)
+#  Metal9        0(0.00%)   (0.00%)
+#  Metal10       0(0.00%)   (0.00%)
+#  Metal11       0(0.00%)   (0.00%)
+#  --------------------------------
+#     Total      0(0.00%)   (0.00%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+#  Overflow after GR: 0.00% H + 0.00% V
+#
+#Complete Global Routing.
+#Total number of nets with non-default rule or having extra spacing = 31
+#Total wire length = 14838 um.
+#Total half perimeter of net bounding box = 13294 um.
+#Total wire length on LAYER Metal1 = 187 um.
+#Total wire length on LAYER Metal2 = 4913 um.
+#Total wire length on LAYER Metal3 = 6607 um.
+#Total wire length on LAYER Metal4 = 2411 um.
+#Total wire length on LAYER Metal5 = 634 um.
+#Total wire length on LAYER Metal6 = 1 um.
+#Total wire length on LAYER Metal7 = 60 um.
+#Total wire length on LAYER Metal8 = 26 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total wire length on LAYER Metal10 = 0 um.
+#Total wire length on LAYER Metal11 = 0 um.
+#Total number of vias = 7935
+#Up-Via Summary (total 7935):
+#           
+#-----------------------
+# Metal1           4024
+# Metal2           3019
+# Metal3            815
+# Metal4             67
+# Metal5              4
+# Metal6              4
+# Metal7              2
+#-----------------------
+#                  7935 
+#
+#Max overcon = 0 track.
+#Total overcon = 0.00%.
+#Worst layer Gcell overcon rate = 0.00%.
+#
+#Global routing statistics:
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 1.19 (MB)
+#Total memory = 2762.42 (MB)
+#Peak memory = 2955.53 (MB)
+#
+#Finished global routing on Tue Nov 10 07:15:56 2026
+#
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2762.20 (MB), peak = 2955.53 (MB)
+#Start Track Assignment.
+#Done with 2 horizontal wires in 1 hboxes and 3 vertical wires in 1 hboxes.
+#Done with 0 horizontal wires in 1 hboxes and 0 vertical wires in 1 hboxes.
+#Complete Track Assignment.
+#Total number of nets with non-default rule or having extra spacing = 31
+#Total wire length = 14837 um.
+#Total half perimeter of net bounding box = 13294 um.
+#Total wire length on LAYER Metal1 = 187 um.
+#Total wire length on LAYER Metal2 = 4913 um.
+#Total wire length on LAYER Metal3 = 6606 um.
+#Total wire length on LAYER Metal4 = 2411 um.
+#Total wire length on LAYER Metal5 = 634 um.
+#Total wire length on LAYER Metal6 = 1 um.
+#Total wire length on LAYER Metal7 = 60 um.
+#Total wire length on LAYER Metal8 = 26 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total wire length on LAYER Metal10 = 0 um.
+#Total wire length on LAYER Metal11 = 0 um.
+#Total number of vias = 7935
+#Up-Via Summary (total 7935):
+#           
+#-----------------------
+# Metal1           4024
+# Metal2           3019
+# Metal3            815
+# Metal4             67
+# Metal5              4
+# Metal6              4
+# Metal7              2
+#-----------------------
+#                  7935 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2761.82 (MB), peak = 2955.53 (MB)
+#
+#number of short segments in preferred routing layers
+#	
+#	
+#
+#Routing data preparation, pin analysis, global routing and track assignment statistics:
+#Cpu time = 00:00:02
+#Elapsed time = 00:00:02
+#Increased memory = 16.62 (MB)
+#Total memory = 2761.85 (MB)
+#Peak memory = 2955.53 (MB)
+#
+#Start Detail Routing..
+#start initial detail routing ...
+# ECO: 20.00% of the total area was rechecked for DRC, and 16.00% required routing.
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	Metal1        0        0
+#	Metal2        1        1
+#	Totals        1        1
+#5 out of 1198 instances (0.4%) need to be verified(marked ipoed), dirty area = 0.1%.
+#0.00% of the total area is being checked for drcs
+#0.0% of the total area was checked
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	Metal1        0        0
+#	Metal2        1        1
+#	Totals        1        1
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 2762.50 (MB), peak = 2955.53 (MB)
+#start 1st optimization iteration ...
+#   number of violations = 0
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2763.11 (MB), peak = 2955.53 (MB)
+#Complete Detail Routing.
+#Total number of nets with non-default rule or having extra spacing = 31
+#Total wire length = 14846 um.
+#Total half perimeter of net bounding box = 13294 um.
+#Total wire length on LAYER Metal1 = 188 um.
+#Total wire length on LAYER Metal2 = 4905 um.
+#Total wire length on LAYER Metal3 = 6609 um.
+#Total wire length on LAYER Metal4 = 2424 um.
+#Total wire length on LAYER Metal5 = 634 um.
+#Total wire length on LAYER Metal6 = 1 um.
+#Total wire length on LAYER Metal7 = 60 um.
+#Total wire length on LAYER Metal8 = 26 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total wire length on LAYER Metal10 = 0 um.
+#Total wire length on LAYER Metal11 = 0 um.
+#Total number of vias = 7947
+#Up-Via Summary (total 7947):
+#           
+#-----------------------
+# Metal1           4027
+# Metal2           3026
+# Metal3            817
+# Metal4             67
+# Metal5              4
+# Metal6              4
+# Metal7              2
+#-----------------------
+#                  7947 
+#
+#Total number of DRC violations = 0
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 1.28 (MB)
+#Total memory = 2763.13 (MB)
+#Peak memory = 2955.53 (MB)
+#
+#start routing for process antenna violation fix ...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 2763.25 (MB), peak = 2955.53 (MB)
+#
+#Total number of nets with non-default rule or having extra spacing = 31
+#Total wire length = 14846 um.
+#Total half perimeter of net bounding box = 13294 um.
+#Total wire length on LAYER Metal1 = 188 um.
+#Total wire length on LAYER Metal2 = 4905 um.
+#Total wire length on LAYER Metal3 = 6609 um.
+#Total wire length on LAYER Metal4 = 2424 um.
+#Total wire length on LAYER Metal5 = 634 um.
+#Total wire length on LAYER Metal6 = 1 um.
+#Total wire length on LAYER Metal7 = 60 um.
+#Total wire length on LAYER Metal8 = 26 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total wire length on LAYER Metal10 = 0 um.
+#Total wire length on LAYER Metal11 = 0 um.
+#Total number of vias = 7947
+#Up-Via Summary (total 7947):
+#           
+#-----------------------
+# Metal1           4027
+# Metal2           3026
+# Metal3            817
+# Metal4             67
+# Metal5              4
+# Metal6              4
+# Metal7              2
+#-----------------------
+#                  7947 
+#
+#Total number of DRC violations = 0
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#
+#Total number of nets with non-default rule or having extra spacing = 31
+#Total wire length = 14846 um.
+#Total half perimeter of net bounding box = 13294 um.
+#Total wire length on LAYER Metal1 = 188 um.
+#Total wire length on LAYER Metal2 = 4905 um.
+#Total wire length on LAYER Metal3 = 6609 um.
+#Total wire length on LAYER Metal4 = 2424 um.
+#Total wire length on LAYER Metal5 = 634 um.
+#Total wire length on LAYER Metal6 = 1 um.
+#Total wire length on LAYER Metal7 = 60 um.
+#Total wire length on LAYER Metal8 = 26 um.
+#Total wire length on LAYER Metal9 = 0 um.
+#Total wire length on LAYER Metal10 = 0 um.
+#Total wire length on LAYER Metal11 = 0 um.
+#Total number of vias = 7947
+#Up-Via Summary (total 7947):
+#           
+#-----------------------
+# Metal1           4027
+# Metal2           3026
+# Metal3            817
+# Metal4             67
+# Metal5              4
+# Metal6              4
+# Metal7              2
+#-----------------------
+#                  7947 
+#
+#Total number of DRC violations = 0
+#Total number of process antenna violations = 0
+#Total number of net violated process antenna rule = 0
+#
+#detailRoute Statistics:
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 1.40 (MB)
+#Total memory = 2763.25 (MB)
+#Peak memory = 2955.53 (MB)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:00:03
+#Elapsed time = 00:00:03
+#Increased memory = -31.15 (MB)
+#Total memory = 2717.01 (MB)
+#Peak memory = 2955.53 (MB)
+#Number of warnings = 0
+#Total number of warnings = 11
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Tue Nov 10 07:15:58 2026
+#
+*** EcoRoute #1 [finish] (optDesign #4) : cpu/real = 0:00:03.1/0:00:03.1 (1.0), totSession cpu/real = 0:10:13.2/0:12:04.8 (0.8), mem = 3878.9M
+**optDesign ... cpu = 0:00:18, real = 0:00:30, mem = 2717.2M, totSessionCpu=0:10:13 **
+New Signature Flow (restoreNanoRouteOptions) ....
+**INFO: flowCheckPoint #12 PostEcoSummary
+Extraction called for design 'spi_bridge_top' of instances=1198 and nets=1275 using extraction engine 'postRoute' at effort level 'low' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PostRoute (effortLevel low) RC Extraction called for design spi_bridge_top.
+RC Extraction called in multi-corner(2) mode.
+Process corner(s) are loaded.
+ Corner: WORST
+ Corner: BEST
+Metal density calculation for erosion effect completed (CPU=0:00:00.0  MEM=3878.87M)
+extractDetailRC Option : -outfile /home/hah003/PROJ1/Proj1_make/TOP/PNR/innovus_temp_35291_355ff181-06df-46af-8555-6d7b448cc30b_kopo-seongnam_hah003_oWi6G1/spi_bridge_top_35291_Einuji.rcdb.d -maxResLength 222.222  -extended
+RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
+      RC Corner Indexes            0       1   
+Capacitance Scaling Factor   : 1.00000 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 
+Shrink Factor                : 0.90000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Creating RPSQ from WeeR and WRes ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 3878.9M)
+Extracted 10.0138% (CPU Time= 0:00:00.3  MEM= 3934.9M)
+Extracted 20.0178% (CPU Time= 0:00:00.3  MEM= 3934.9M)
+Extracted 30.0119% (CPU Time= 0:00:00.3  MEM= 3934.9M)
+Extracted 40.0158% (CPU Time= 0:00:00.3  MEM= 3934.9M)
+Extracted 50.0198% (CPU Time= 0:00:00.3  MEM= 3934.9M)
+Extracted 60.0138% (CPU Time= 0:00:00.4  MEM= 3934.9M)
+Extracted 70.0178% (CPU Time= 0:00:00.4  MEM= 3934.9M)
+Extracted 80.0119% (CPU Time= 0:00:00.4  MEM= 3934.9M)
+Extracted 90.0158% (CPU Time= 0:00:00.4  MEM= 3934.9M)
+Extracted 100% (CPU Time= 0:00:00.5  MEM= 3934.9M)
+Number of Extracted Resistors     : 19045
+Number of Extracted Ground Cap.   : 19269
+Number of Extracted Coupling Cap. : 0
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.6  Real Time: 0:00:00.0  MEM: 3910.875M)
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 1
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=3912.39)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Creating RPSQ from WeeR and WRes ...
+Total number of fetched objects 1253
+End delay calculation. (MEM=3938.07 CPU=0:00:00.3 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3938.07 CPU=0:00:00.7 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:01.0 real=0:00:01.0 totSessionCpu=0:10:15 mem=3938.1M)
+
+------------------------------------------------------------------
+       Post-ecoRoute Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.481  | -0.481  | -0.441  |
+|           TNS (ns):| -16.865 | -10.230 | -7.054  |
+|    Violating Paths:|   88    |   79    |   21    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 95.148%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:20, real = 0:00:32, mem = 2751.9M, totSessionCpu=0:10:15 **
+Executing marking Critical Nets1
+**INFO: flowCheckPoint #13 OptimizationRecovery
+*** Timing NOT met, worst failing slack is -0.481
+*** Check timing (0:00:00.0)
+VT info 11.992853621 9
+**WARN: (IMPOPT-7293):	Vt partitioning has found only one partition, so aborting this LEF Safe optimization step. Please run report_power -leakage to get more info on the Vt partition created.
+**INFO: flowCheckPoint #14 FinalSummary
+OPTC: user 20.0
+Reported timing to dir ./timingReports
+**optDesign ... cpu = 0:00:20, real = 0:00:32, mem = 2751.4M, totSessionCpu=0:10:15 **
+
+------------------------------------------------------------------
+     optDesign Final Non-SI Timing Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.481  | -0.481  | -0.441  |
+|           TNS (ns):| -16.865 | -10.230 | -7.054  |
+|    Violating Paths:|   88    |   79    |   21    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 95.148%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:20, real = 0:00:32, mem = 2752.1M, totSessionCpu=0:10:15 **
+Opt: RC extraction mode changed to 'detail'
+*** Finished optDesign ***
+Info: final physical memory for 2 CRR processes is 756.11MB.
+Info: Summary of CRR changes:
+      - Timing transform commits:       0
+Info: Destroy the CCOpt slew target map.
+*** optDesign #4 [finish] () : cpu/real = 0:00:20.1/0:00:39.3 (0.5), totSession cpu/real = 0:10:15.6/0:12:14.2 (0.8), mem = 3884.3M
+<CMD> setAnalysisMode -analysisType single -checkType hold
+<CMD> optDesign -postRoute -hold
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 2612.3M, totSessionCpu=0:10:16 **
+*** optDesign #5 [begin] () : totSession cpu/real = 0:10:15.7/0:12:14.3 (0.8), mem = 3774.8M
+GigaOpt running with 1 threads.
+*** InitOpt #1 [begin] (optDesign #5) : totSession cpu/real = 0:10:15.7/0:12:14.3 (0.8), mem = 3774.8M
+**INFO: User settings:
+setNanoRouteMode -route_detail_antenna_factor                                             1
+setNanoRouteMode -route_detail_auto_stop                                                  false
+setNanoRouteMode -route_detail_end_iteration                                              5
+setNanoRouteMode -route_detail_fix_antenna                                                true
+setNanoRouteMode -route_detail_post_route_litho_repair                                    false
+setNanoRouteMode -route_detail_post_route_spread_wire                                     auto
+setNanoRouteMode -drouteStartIteration                                                    0
+setNanoRouteMode -route_detail_use_lef_pin_taper_rule                                     true
+setNanoRouteMode -route_detail_use_min_spacing_for_blockage                               auto
+setNanoRouteMode -extract_rc_model_file                                                   rc_model.bin
+setNanoRouteMode -route_extract_third_party_compatible                                    false
+setNanoRouteMode -route_global_exp_timing_driven_std_delay                                38.8
+setNanoRouteMode -route_global_exp_timing_driven_use_tif_timing_engine_for_import_design  false
+setNanoRouteMode -route_bottom_routing_layer                                              1
+setNanoRouteMode -route_antenna_diode_insertion                                           false
+setNanoRouteMode -route_selected_net_only                                                 false
+setNanoRouteMode -route_strict_honor_route_rule                                           false
+setNanoRouteMode -route_tdr_effort                                                        8
+setNanoRouteMode -route_top_routing_layer                                                 11
+setNanoRouteMode -route_with_eco                                                          false
+setNanoRouteMode -route_with_litho_driven                                                 false
+setNanoRouteMode -route_with_si_driven                                                    true
+setNanoRouteMode -route_with_si_post_route_fix                                            false
+setNanoRouteMode -route_with_timing_driven                                                true
+setNanoRouteMode -timingEngine                                                            .timing_file_35291.tif.gz
+setExtractRCMode -coupled                                                                 false
+setExtractRCMode -engine                                                                  postRoute
+setExtractRCMode -noCleanRCDB                                                             true
+setExtractRCMode -nrNetInMemory                                                           100000
+setUsefulSkewMode -opt_skew_eco_route                                                     false
+setDelayCalMode -enable_high_fanout                                                       true
+setDelayCalMode -eng_enablePrePlacedFlow                                                  false
+setDelayCalMode -engine                                                                   aae
+setDelayCalMode -ignoreNetLoad                                                            false
+setDelayCalMode -SIAware                                                                  false
+setDelayCalMode -socv_accuracy_mode                                                       low
+setOptMode -opt_view_pruning_hold_views_active_list                                       { FUNC_FF_BEST }
+setOptMode -opt_view_pruning_setup_views_active_list                                      { FUNC_SS_WORST }
+setOptMode -opt_view_pruning_hold_views_persistent_list                                   { FUNC_FF_BEST}
+setOptMode -opt_view_pruning_setup_views_persistent_list                                  { FUNC_SS_WORST}
+setOptMode -opt_view_pruning_tdgr_setup_views_persistent_list                             { FUNC_SS_WORST}
+setOptMode -opt_view_pruning_hold_target_slack_auto_flow                                  0
+setOptMode -opt_delete_insts                                                              true
+setOptMode -opt_drv_margin                                                                0
+setOptMode -opt_drv                                                                       true
+setOptMode -opt_resize_flip_flops                                                         true
+setOptMode -opt_preserve_all_sequential                                                   false
+setOptMode -opt_setup_target_slack                                                        0
+setSIMode -separate_delta_delay_on_data                                                   true
+setPlaceMode -place_global_cong_effort                                                    high
+setAnalysisMode -analysisType                                                             single
+setAnalysisMode -checkType                                                                hold
+setAnalysisMode -clkSrcPath                                                               true
+setAnalysisMode -clockPropagation                                                         sdcControl
+setAnalysisMode -skew                                                                     true
+setAnalysisMode -usefulSkew                                                               true
+setAnalysisMode -virtualIPO                                                               false
+
+**INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+Disable merging buffers from different footprints for postRoute code for non-MSV designs
+Need call spDPlaceInit before registerPrioInstLoc.
+**optDesign ... cpu = 0:00:01, real = 0:00:01, mem = 2632.7M, totSessionCpu=0:10:16 **
+*** Changing analysis mode to setup ***
+Existing Dirty Nets : 0
+New Signature Flow (optDesignCheckOptions) ....
+#Taking db snapshot
+#Taking db snapshot ... done
+Begin checking placement ... (start mem=3784.8M, init mem=3784.8M)
+*info: Placed = 1198           (Fixed = 8)
+*info: Unplaced = 0           
+Placement Density:95.14%(4620/4856)
+Placement Density (including fixed std cells):95.14%(4620/4856)
+Finished checkPlace (total: cpu=0:00:00.0, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=3784.8M)
+#optDebug: { P: 90 W: 7201 FE: standard PE: none LDR: 1}
+**WARN: (IMPOPT-7139):	'setExtractRCMode -coupled false' has been implicitly activated since current delay calulation is under SIAware false mode.
+*** optDesign -postRoute ***
+DRC Margin: user margin 0.0; extra margin 0
+Setup Target Slack: user slack 0
+Hold Target Slack: user slack 0
+*** InitOpt #1 [finish] (optDesign #5) : cpu/real = 0:00:00.9/0:00:00.9 (1.0), totSession cpu/real = 0:10:16.6/0:12:15.2 (0.8), mem = 3784.8M
+** INFO : this run is activating 'postRoute' automaton
+**INFO: flowCheckPoint #15 InitialSummary
+Extraction called for design 'spi_bridge_top' of instances=1198 and nets=1275 using extraction engine 'postRoute' at effort level 'low' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PostRoute (effortLevel low) RC Extraction called for design spi_bridge_top.
+RC Extraction called in multi-corner(2) mode.
+Process corner(s) are loaded.
+ Corner: WORST
+ Corner: BEST
+Metal density calculation for erosion effect completed (CPU=0:00:00.0  MEM=3784.84M)
+extractDetailRC Option : -outfile /home/hah003/PROJ1/Proj1_make/TOP/PNR/innovus_temp_35291_355ff181-06df-46af-8555-6d7b448cc30b_kopo-seongnam_hah003_oWi6G1/spi_bridge_top_35291_Einuji.rcdb.d -maxResLength 222.222  -extended
+RC Mode: PostRoute -effortLevel low [Extended CapTable, RC Table Resistances]
+      RC Corner Indexes            0       1   
+Capacitance Scaling Factor   : 1.00000 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 1.00000 
+Resistance Scaling Factor    : 1.00000 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 1.00000 
+Clock Res. Scaling Factor    : 1.00000 1.00000 
+Shrink Factor                : 0.90000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Creating RPSQ from WeeR and WRes ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 3770.8M)
+Extracted 10.0138% (CPU Time= 0:00:00.3  MEM= 3834.9M)
+Extracted 20.0178% (CPU Time= 0:00:00.3  MEM= 3834.9M)
+Extracted 30.0119% (CPU Time= 0:00:00.3  MEM= 3834.9M)
+Extracted 40.0158% (CPU Time= 0:00:00.3  MEM= 3834.9M)
+Extracted 50.0198% (CPU Time= 0:00:00.3  MEM= 3834.9M)
+Extracted 60.0138% (CPU Time= 0:00:00.4  MEM= 3834.9M)
+Extracted 70.0178% (CPU Time= 0:00:00.4  MEM= 3834.9M)
+Extracted 80.0119% (CPU Time= 0:00:00.4  MEM= 3834.9M)
+Extracted 90.0158% (CPU Time= 0:00:00.4  MEM= 3834.9M)
+Extracted 100% (CPU Time= 0:00:00.5  MEM= 3834.9M)
+Number of Extracted Resistors     : 19045
+Number of Extracted Ground Cap.   : 19269
+Number of Extracted Coupling Cap. : 0
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.6  Real Time: 0:00:01.0  MEM: 3810.852M)
+**ERROR: (IMPOPT-310):	Design density (95.15%) exceeds/equals limit (95.00%).
+**INFO: flowCheckPoint #16 OptimizationHold
+**ERROR: (IMPOPT-310):	Design density (95.15%) exceeds/equals limit (95.00%).
+GigaOpt Hold Optimizer is used
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Creating RPSQ from WeeR and WRes ...
+Creating RPSQ from WeeR and WRes ...
+Starting initialization (fixHold) cpu=0:00:00.0 real=0:00:00.0 totSessionCpu=0:10:18 mem=3810.8M ***
+*** BuildHoldData #1 [begin] (optDesign #5) : totSession cpu/real = 0:10:18.1/0:12:16.8 (0.8), mem = 3810.8M
+OPTC: user 20.0
+Starting delay calculation for Hold views
+AAE_INFO: opIsDesignInPostRouteState() is 1
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=3822.37)
+Total number of fetched objects 1253
+End delay calculation. (MEM=3848.05 CPU=0:00:00.3 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3848.05 CPU=0:00:00.3 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.6 real=0:00:01.0 totSessionCpu=0:10:19 mem=3848.1M)
+Done building cte hold timing graph (fixHold) cpu=0:00:00.7 real=0:00:01.0 totSessionCpu=0:10:19 mem=3848.1M ***
+OPTC: user 20.0
+Done building hold timer [725 node(s), 800 edge(s), 1 view(s)] (fixHold) cpu=0:00:00.8 real=0:00:01.0 totSessionCpu=0:10:19 mem=3883.1M ***
+Starting delay calculation for Setup views
+AAE_INFO: opIsDesignInPostRouteState() is 1
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=3883.14)
+Total number of fetched objects 1253
+End delay calculation. (MEM=3867.13 CPU=0:00:00.3 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3867.13 CPU=0:00:00.4 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.5 real=0:00:00.0 totSessionCpu=0:10:20 mem=3867.1M)
+Done building cte setup timing graph (fixHold) cpu=0:00:01.4 real=0:00:01.0 totSessionCpu=0:10:20 mem=3867.1M ***
+OPTC: m4 20.0 50.0 [ 50.0 20.0 50.0 ]
+OPTC: view 50.0 [ 0.0500 ]
+
+*Info: minBufDelay = 66.8 ps, libStdDelay = 36.8 ps, minBufSize = 6840000 (5.0)
+*Info: worst delay setup view: FUNC_SS_WORST
+
+------------------------------------------------------------------
+     Hold Opt Initial Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST
+Hold views included:
+ FUNC_FF_BEST
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.481  | -0.481  | -0.441  |
+|           TNS (ns):| -16.865 | -10.230 | -7.054  |
+|    Violating Paths:|   88    |   79    |   21    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++--------------------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.091  | -0.091  |  0.050  |
+|           TNS (ns):| -1.115  | -1.115  |  0.000  |
+|    Violating Paths:|   16    |   16    |    0    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 95.148%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:06, real = 0:00:06, mem = 2650.5M, totSessionCpu=0:10:21 **
+*** BuildHoldData #1 [finish] (optDesign #5) : cpu/real = 0:00:03.1/0:00:03.1 (1.0), totSession cpu/real = 0:10:21.2/0:12:19.9 (0.8), mem = 3801.1M
+*** HoldOpt #1 [begin] (optDesign #5) : totSession cpu/real = 0:10:21.2/0:12:19.9 (0.8), mem = 3801.1M
+*info: Run optDesign holdfix with 1 thread.
+Info: 3 ideal nets excluded from IPO operation.
+Info: 24 clock nets excluded from IPO operation.
+Info: Done creating the CCOpt slew target map.
+
+*** Starting Core Fixing (fixHold) cpu=0:00:03.8 real=0:00:04.0 totSessionCpu=0:10:22 mem=3966.8M density=95.148% ***
+
+Phase I ......
+Executing transform: ECO Safe Resize
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+|Iter| Hold WNS | Hold TNS |  #VP   |  #Buffer  |  #Resize(F/F)  | Density |    Real    |   Mem   |
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+**Info: Stopping hold fixing due to density exceeding max design density 95.000%
+|   0|    -0.091|     -1.11|      16|          0|       0(     0)|   95.15%|   0:00:00.0|  3966.8M|
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+Executing transform: AddBuffer + LegalResize
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+|Iter| Hold WNS | Hold TNS |  #VP   |  #Buffer  |  #Resize(F/F)  | Density |    Real    |   Mem   |
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+**Info: Stopping hold fixing due to density exceeding max design density 95.000%
+|   0|    -0.091|     -1.11|      16|          0|       0(     0)|   95.15%|   0:00:00.0|  3966.8M|
++----+----------+----------+--------+-----------+----------------+---------+------------+---------+
+Bottom Preferred Layer:
++---------------+------------+------------+----------+
+|     Layer     |   OPT_LA   |    CLK     |   Rule   |
++---------------+------------+------------+----------+
+| Metal3 (z=3)  |          0 |         22 | default  |
+| Metal7 (z=7)  |          1 |          0 | default  |
++---------------+------------+------------+----------+
+Via Pillar Rule:
+    None
+
+
+=======================================================================
+                Reasons for remaining hold violations
+=======================================================================
+*info: Total 69 net(s) have violated hold timing slacks.
+
+Buffering failure reasons
+------------------------------------------------
+
+Resizing failure reasons
+------------------------------------------------
+
+
+*** Finished Core Fixing (fixHold) cpu=0:00:03.9 real=0:00:04.0 totSessionCpu=0:10:22 mem=3966.8M density=95.148% ***
+
+
+Capturing unweighted ref hold timing for Post Route hold recovery....
+*** Finish Post Route Hold Fixing (cpu=0:00:03.9 real=0:00:04.0 totSessionCpu=0:10:22 mem=3966.8M density=95.148%) ***
+**INFO: total 0 insts, 0 nets marked don't touch
+**INFO: total 0 insts, 0 nets marked don't touch DB property
+**INFO: total 0 insts, 0 nets unmarked don't touch
+*** HoldOpt #1 [finish] (optDesign #5) : cpu/real = 0:00:00.7/0:00:00.7 (1.0), totSession cpu/real = 0:10:22.0/0:12:20.6 (0.8), mem = 3872.8M
+Running postRoute recovery in preEcoRoute mode
+**optDesign ... cpu = 0:00:06, real = 0:00:07, mem = 2754.5M, totSessionCpu=0:10:22 **
+Checking DRV degradation...
+**INFO: Skipping DRV recovery as drv did not degrade beyond margin
+Finish postRoute recovery in preEcoRoute mode (cpu=0:00:00, real=0:00:00, mem=3872.92M, totSessionCpu=0:10:22).
+**optDesign ... cpu = 0:00:06, real = 0:00:07, mem = 2754.5M, totSessionCpu=0:10:22 **
+
+Running refinePlace -preserveRouting true -hardFence false
+*** Starting refinePlace (0:10:22 mem=3931.1M) ***
+Move report: Detail placement moves 0 insts, mean move: 0.00 um, max move: 0.00 um 
+	Runtime: CPU: 0:00:00.2 REAL: 0:00:00.0 MEM: 3915.1MB
+Summary Report:
+Instances move: 0 (out of 1190 movable)
+Instances flipped: 0
+Mean displacement: 0.00 um
+Max displacement: 0.00 um 
+Runtime: CPU: 0:00:00.2 REAL: 0:00:00.0 MEM: 3915.1MB
+*** Finished refinePlace (0:10:22 mem=3915.1M) ***
+**INFO: flowCheckPoint #17 FinalSummary
+OPTC: user 20.0
+Reported timing to dir ./timingReports
+**optDesign ... cpu = 0:00:07, real = 0:00:07, mem = 2753.1M, totSessionCpu=0:10:22 **
+Saving timing graph ...
+Done save timing graph
+Starting delay calculation for Hold views
+AAE_INFO: opIsDesignInPostRouteState() is 1
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=3887.6)
+Total number of fetched objects 1253
+End delay calculation. (MEM=3930.28 CPU=0:00:00.3 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3930.28 CPU=0:00:00.3 REAL=0:00:00.0)
+*** Done Building Timing Graph (cpu=0:00:00.5 real=0:00:01.0 totSessionCpu=0:10:23 mem=3930.3M)
+Restoring timing graph ...
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+Type 'man IMPCTE-290' for more detail.
+AAE_INFO: Resetting and re-constructing cache for AAE clocks ...
+Done restore timing graph
+
+------------------------------------------------------------------
+     optDesign Final Non-SI Timing Summary
+------------------------------------------------------------------
+
+Setup views included:
+ FUNC_SS_WORST 
+Hold views included:
+ FUNC_FF_BEST
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.481  | -0.481  | -0.441  |
+|           TNS (ns):| -16.865 | -10.230 | -7.054  |
+|    Violating Paths:|   88    |   79    |   21    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++--------------------+---------+---------+---------+
+|     Hold mode      |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -0.091  | -0.091  |  0.050  |
+|           TNS (ns):| -1.115  | -1.115  |  0.000  |
+|    Violating Paths:|   16    |   16    |    0    |
+|          All Paths:|   650   |   640   |   24    |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      0 (0)       |   0.000    |      0 (0)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 95.148%
+------------------------------------------------------------------
+**optDesign ... cpu = 0:00:09, real = 0:00:10, mem = 2796.8M, totSessionCpu=0:10:24 **
+*** Finished optDesign ***
+*** Changing analysis mode to hold ***
+Info: Summary of CRR changes:
+      - Timing transform commits:       0
+Info: Destroy the CCOpt slew target map.
+*** optDesign #5 [finish] () : cpu/real = 0:00:08.8/0:00:09.3 (0.9), totSession cpu/real = 0:10:24.5/0:12:23.7 (0.8), mem = 3853.0M

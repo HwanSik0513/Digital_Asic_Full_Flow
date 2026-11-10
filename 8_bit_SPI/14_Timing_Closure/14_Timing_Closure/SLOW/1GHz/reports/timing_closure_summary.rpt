@@ -1,0 +1,26 @@
+# Timing Closure Summary - spi_bridge_top  (SLOW / 1GHz, ACLK 1 ns (1 GHz))
+# Innovus 22.17, setup FUNC_SS_WORST (SS/125C), hold FUNC_FF_BEST (FF/0C)
+# Values from innovus.log tables and reports/timing/*/*.summary
+
+Stage                           SetupWNS   SetupTNS  Viol   HoldWNS   HoldTNS  Viol   Density
+---------------------------------------------------------------------------------------------
+place (initial)                   -0.854    -23.332    92         -         -     -    68.60%
+place_opt                         -0.383     -6.633    50         -         -     -    74.23%
+preCTS                            -0.466     -7.923    56         -         -     -    74.32%
+postCTS                           -0.422    -10.922    60         -         -     -    76.50%
+postCTS opt (pre hold fix)        -0.399    -10.847    51    -0.089    -1.111    16         -
+postCTS opt                       -0.399    -10.847    51     0.000     0.000     0    79.72%
+postRoute DRV opt (OCV)           -0.415     -6.362    34         -         -     -         -
+postRoute setup opt (start)       -0.377     -9.985    52         -         -     -         -
+postRoute hold opt (start)             -          -     -    -0.001    -0.001     1         -
+postRoute final                   -0.463    -10.641    64     0.003     0.000     0    80.55%
+
+Cells / instances
+------------------------------------------------------------
+InitDesign instances           1024
+PlaceOpt instances             1178
+PostCTSopt instances           1328
+RouteDesign instances          1332
+CTS cells (ccopt_design)       24 (22 buf + 2 inv)
+postCTS hold fix cells         56
+postRoute hold fix cells       1

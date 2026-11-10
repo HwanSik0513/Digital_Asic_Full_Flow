@@ -1,0 +1,207 @@
+# Extracted from innovus.log lines 11223-11428 (SLOW / 100MHz, all.tcl run)
+<CMD> set_power_analysis_mode -reset
+<CMD> set_power_analysis_mode -method static -analysis_view FUNC_SS_WORST -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+** WARN:  (VOLTUS_POWR-3212): The 'set_power_analysis_mode -leakage_power_view |-dynamic_power_view|-analysis_view' will be obsolete in 18.20 release. Use 'set_analysis_view -leakage <> | -dynamic <>' to set leakage and dynamic power views.
+
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -instanceBasename *
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -instanceBasename *
+<CMD> globalNetConnect VDD -type tiehi -instanceBasename *
+<CMD> globalNetConnect VSS -type tielo -instanceBasename *
+<CMD> set_power_output_dir -reset
+<CMD> set_power_output_dir ./run1
+<CMD> set_dynamic_power_simulation -reset
+<CMD> set_default_switching_activity -reset
+<CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+** INFO:  (VOLTUS_POWR-3229): Using user defined default frequency 100MHz for power calculation.
+
+'set_default_switching_activity' finished successfully.
+<CMD> read_activity_file -reset
+<CMD> set_power -reset
+<CMD> set_powerup_analysis -reset
+<CMD> report_power -rail_analysis_format VS -outfile ./run1/spi_bridge_top.rpt
+env CDS_WORKAREA is set to /home/hah003/PROJ1/Proj1_make/TOP/PNR
+Update analysis mode checkType setup to match with power corner max.
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+           0.9V	    VDD
+Using Power View: FUNC_SS_WORST.
+AAE_INFO: opIsDesignInPostRouteState() is 1
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: spi_bridge_top
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=3708.5)
+Total number of fetched objects 1050
+End delay calculation. (MEM=3758.19 CPU=0:00:00.2 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3758.19 CPU=0:00:00.3 REAL=0:00:00.0)
+
+Begin Power Analysis
+
+             0V	    VSS
+           0.9V	    VDD
+
+Begin Processing Timing Library for Power Calculation
+
+Ended Processing Timing Library for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2631.38MB/5529.94MB/2788.29MB)
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2631.45MB/5529.94MB/2788.29MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+ACLK(100MHz) SCLK(25MHz) Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2631.54MB/5529.94MB/2788.29MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2631.60MB/5529.94MB/2788.29MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT)
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 10%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 20%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 30%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 40%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 50%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 60%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 70%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 80%
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT): 90%
+
+Finished Levelizing
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT)
+
+Starting Activity Propagation
+2026-Nov-10 07:32:08 (2026-Nov-09 22:32:08 GMT)
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 10%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 20%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 30%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 40%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 50%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 60%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 70%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 80%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 90%
+
+Finished Activity Propagation
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2631.87MB/5529.94MB/2788.29MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 1
+      # of cell(s) missing leakage table: 0
+      ----------------------------------------------------------
+CellName                                  Missing Table(s)
+TIEHI                                     internal power, 
+
+
+
+Starting Calculating power
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT)
+ ... Calculating switching power
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 10%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 20%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 30%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 40%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 50%
+ ... Calculating internal and leakage power
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 60%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 70%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 80%
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT): 90%
+
+Finished Calculating power
+2026-Nov-10 07:32:09 (2026-Nov-09 22:32:09 GMT)
+      # of MSMV cell(s) missing power_level: 0
+Ended Power Computation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2632.61MB/5529.94MB/2788.29MB)
+
+Begin Processing User Attributes
+
+Begin Processing set_power
+Ended Processing set_power: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2632.61MB/5529.94MB/2788.29MB)
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2632.68MB/5529.94MB/2788.29MB)
+
+Ended Power Analysis: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=2632.68MB/5529.94MB/2788.29MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2632.75MB/5529.94MB/2788.29MB)
+Begin Static Power Report Generation
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        0.04973234 	   80.3476%
+Total Switching Power:       0.01208386 	   19.5227%
+Total Leakage Power:         0.00008030 	    0.1297%
+Total Power:                 0.06189651
+-----------------------------------------------------------------------------------------
+** WARN:  (VOLTUS_POWR-3424): Cell AND2X4 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell NOR4BBX1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell NOR4X1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell NAND3X1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell DFFQX2 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell AO21X1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell XNOR2X1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell AOI22X1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell DFFNSRX1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell INVXL has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell NAND2BX1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell INVX1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell OAI211X1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell OR2X2 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell ADDHX1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell DFFHQX1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell NAND2X1 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell TIEHI has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell CLKBUFX8 has no power pin defined in LEF/PGV.
+
+** WARN:  (VOLTUS_POWR-3424): Cell DFFRHQX1 has no power pin defined in LEF/PGV.
+
+** WARN:  (EMS-27): Message (VOLTUS_POWR-3424) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=2633.55MB/5529.94MB/2788.29MB)
+
+Begin Creating Binary Database
+Ended Creating Binary Database: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=3147.87MB/7068.36MB/3147.87MB)
+
+Output file is ./run1/spi_bridge_top.rpt.
