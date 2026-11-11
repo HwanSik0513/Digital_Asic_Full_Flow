@@ -1,0 +1,28 @@
+########################################
+# tempus_pre.view - MMMC view for Tempus Pre-STA (legacy / non-Stylus syntax)
+#   Same corners as synthesis and PnR:
+#     setup FUNC_SS_WORST (slow_vdd1v0, 125 C) / hold FUNC_FF_BEST (fast_vdd1v0, 0 C)
+#   Paths are relative to the SYN directory (same depth as PNR).
+########################################
+set GPDK ../../../GPDK045/digital/gsclib045_all_v4.4
+
+create_library_set -name SS_Max_0p90v_125c \
+   -timing [list $GPDK/gsclib045/timing/slow_vdd1v0_basicCells.lib \
+                 $GPDK/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib]
+create_library_set -name FF_Min_1p10v_0c \
+   -timing [list $GPDK/gsclib045/timing/fast_vdd1v0_basicCells.lib \
+                 $GPDK/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib]
+
+create_rc_corner -name WORST -T 125 -qx_tech_file $GPDK/gsclib045/qrc/qx/gpdk045.tch
+create_rc_corner -name BEST  -T 0   -qx_tech_file $GPDK/gsclib045/qrc/qx/gpdk045.tch
+
+create_delay_corner -name SS_WORST -library_set SS_Max_0p90v_125c -rc_corner WORST
+create_delay_corner -name FF_BEST  -library_set FF_Min_1p10v_0c   -rc_corner BEST
+
+# Genus output SDC (same constraints PnR reads)
+create_constraint_mode -name FUNC -sdc_files [list mapped/spi_bridge_top_syn_final.sdc]
+
+create_analysis_view -name FUNC_SS_WORST -constraint_mode FUNC -delay_corner SS_WORST
+create_analysis_view -name FUNC_FF_BEST  -constraint_mode FUNC -delay_corner FF_BEST
+
+set_analysis_view -setup [list FUNC_SS_WORST] -hold [list FUNC_FF_BEST]

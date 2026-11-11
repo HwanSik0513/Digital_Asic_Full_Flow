@@ -1,0 +1,1074 @@
+xrun(64): 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s012: Started on Nov 12, 2026 at 06:08:19 KST
+xrun
+	-64bit
+	+max_err_count+50
+	+define+sdf_gate
+	-access +rwc
+	-gui
+	+libext+.v
+	../TESTBENCH/tb_spi_bridge_top.v
+	spi_bridge_top_syn_final.v
+	../../RTL/Async_fifo.v
+	../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v
+	-l pre_sim.log
+Recompiling... reason: file './spi_bridge_top_delays.sdf' is newer than expected.
+	expected: Thu Nov 12 05:55:52 2026
+	actual:   Thu Nov 12 06:08:19 2026
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_spi_bridge_top
+		ACHCONX2
+		ADDFHX1
+		ADDFHX2
+		ADDFHX4
+		ADDFHXL
+		ADDFX2
+		ADDFX4
+		ADDFXL
+		ADDHX2
+		ADDHX4
+		ADDHXL
+		AND2X6
+		AND2X8
+		AND2XL
+		AND3X2
+		AND3X4
+		AND3X6
+		AND3X8
+		AND4X1
+		AND4X4
+		AND4X6
+		AND4X8
+		AND4XL
+		ANTENNA
+		AO21X2
+		AO21X4
+		AO21XL
+		AO22X2
+		AO22XL
+		AOI211X1
+		AOI211X2
+		AOI211X4
+		AOI211XL
+		AOI21X2
+		AOI21X4
+		AOI21XL
+		AOI221X2
+		AOI221X4
+		AOI221XL
+		AOI222X2
+		AOI222X4
+		AOI222XL
+		AOI22X2
+		AOI22X4
+		AOI22XL
+		AOI2BB1X1
+		AOI2BB1X2
+		AOI2BB1X4
+		AOI2BB1XL
+		AOI2BB2X1
+		AOI2BB2X2
+		AOI2BB2X4
+		AOI2BB2XL
+		AOI31X1
+		AOI31X2
+		AOI31X4
+		AOI31XL
+		AOI32X1
+		AOI32X2
+		AOI32X4
+		AOI32XL
+		AOI33X1
+		AOI33X2
+		AOI33X4
+		AOI33XL
+		BMXIX2
+		BMXIX4
+		BUFX12
+		BUFX16
+		BUFX2
+		BUFX20
+		BUFX3
+		BUFX4
+		BUFX6
+		BUFX8
+		CLKAND2X12
+		CLKAND2X2
+		CLKAND2X3
+		CLKAND2X4
+		CLKAND2X6
+		CLKAND2X8
+		CLKBUFX12
+		CLKBUFX16
+		CLKBUFX2
+		CLKBUFX20
+		CLKBUFX3
+		CLKBUFX4
+		CLKBUFX6
+		CLKBUFX8
+		CLKINVX1
+		CLKINVX12
+		CLKINVX16
+		CLKINVX2
+		CLKINVX20
+		CLKINVX3
+		CLKINVX4
+		CLKINVX6
+		CLKINVX8
+		CLKMX2X12
+		CLKMX2X2
+		CLKMX2X3
+		CLKMX2X4
+		CLKMX2X6
+		CLKMX2X8
+		CLKXOR2X2
+		CLKXOR2X4
+		CLKXOR2X8
+		DECAP10
+		DECAP2
+		DECAP3
+		DECAP4
+		DECAP5
+		DECAP6
+		DECAP7
+		DECAP8
+		DECAP9
+		DFFHQX2
+		DFFHQX4
+		DFFHQX8
+		DFFNSRX2
+		DFFNSRXL
+		DFFQX1
+		DFFQX2
+		DFFRHQX2
+		DFFRHQX4
+		DFFRHQX8
+		DFFRX4
+		DFFRXL
+		DFFSHQX1
+		DFFSHQX2
+		DFFSHQX4
+		DFFSHQX8
+		DFFSRHQX1
+		DFFSRHQX2
+		DFFSRHQX4
+		DFFSRHQX8
+		DFFSRX1
+		DFFSRX2
+		DFFSRX4
+		DFFSRXL
+		DFFSX1
+		DFFSX2
+		DFFSX4
+		DFFSXL
+		DFFTRX1
+		DFFTRX2
+		DFFTRX4
+		DFFTRXL
+		DFFX1
+		DFFX2
+		DFFX4
+		DFFXL
+		DLY1X1
+		DLY1X4
+		DLY2X1
+		DLY2X4
+		DLY3X1
+		DLY3X4
+		DLY4X1
+		DLY4X4
+		EDFFHQX2
+		EDFFHQX4
+		EDFFHQX8
+		EDFFTRX1
+		EDFFTRX2
+		EDFFTRX4
+		EDFFTRXL
+		EDFFX1
+		EDFFX2
+		EDFFX4
+		EDFFXL
+		HOLDX1
+		INVX12
+		INVX16
+		INVX20
+		INVX4
+		INVX6
+		INVX8
+		MDFFHQX1
+		MDFFHQX2
+		MDFFHQX4
+		MDFFHQX8
+		MX2X2
+		MX2X4
+		MX2X6
+		MX2X8
+		MX2XL
+		MX3X1
+		MX3X2
+		MX3X4
+		MX3XL
+		MX4X1
+		MX4X2
+		MX4X4
+		MX4XL
+		MXI2X1
+		MXI2X2
+		MXI2X4
+		MXI2X6
+		MXI2X8
+		MXI3X1
+		MXI3X2
+		MXI3X4
+		MXI3XL
+		MXI4X1
+		MXI4X2
+		MXI4X4
+		MXI4XL
+		NAND2BX4
+		NAND2BXL
+		NAND2X2
+		NAND2X6
+		NAND2X8
+		NAND2XL
+		NAND3BX4
+		NAND3BXL
+		NAND3X2
+		NAND3X4
+		NAND3X6
+		NAND3X8
+		NAND3XL
+		NAND4BBX1
+		NAND4BBX2
+		NAND4BBX4
+		NAND4BBXL
+		NAND4BX1
+		NAND4BX2
+		NAND4BX4
+		NAND4BXL
+		NAND4X1
+		NAND4X2
+		NAND4X4
+		NAND4X6
+		NAND4X8
+		NAND4XL
+		NOR2BX4
+		NOR2BXL
+		NOR2X6
+		NOR2X8
+		NOR2XL
+		NOR3BX2
+		NOR3BX4
+		NOR3BXL
+		NOR3X4
+		NOR3X6
+		NOR3X8
+		NOR3XL
+		NOR4BBX2
+		NOR4BBX4
+		NOR4BBXL
+		NOR4BX1
+		NOR4BX2
+		NOR4BX4
+		NOR4BXL
+		NOR4X4
+		NOR4X6
+		NOR4X8
+		NOR4XL
+		OA21X2
+		OA21X4
+		OA21XL
+		OA22X1
+		OA22X2
+		OA22X4
+		OA22XL
+		OAI211X2
+		OAI211X4
+		OAI211XL
+		OAI21X2
+		OAI21X4
+		OAI21XL
+		OAI221X1
+		OAI221X2
+		OAI221X4
+		OAI221XL
+		OAI222X1
+		OAI222X2
+		OAI222X4
+		OAI222XL
+		OAI22X1
+		OAI22X2
+		OAI22X4
+		OAI22XL
+		OAI2BB1X2
+		OAI2BB1XL
+		OAI2BB2X1
+		OAI2BB2X2
+		OAI2BB2X4
+		OAI2BB2XL
+		OAI31X1
+		OAI31X2
+		OAI31X4
+		OAI31XL
+		OAI32X1
+		OAI32X2
+		OAI32X4
+		OAI32XL
+		OAI33X1
+		OAI33X2
+		OAI33X4
+		OAI33XL
+		OR2X4
+		OR2X6
+		OR2X8
+		OR2XL
+		OR3X2
+		OR3X6
+		OR3X8
+		OR3XL
+		OR4X2
+		OR4X4
+		OR4X6
+		OR4X8
+		OR4XL
+		SDFFHQX1
+		SDFFHQX2
+		SDFFHQX4
+		SDFFHQX8
+		SDFFNSRX1
+		SDFFNSRX2
+		SDFFNSRX4
+		SDFFNSRXL
+		SDFFQX1
+		SDFFQX2
+		SDFFQX4
+		SDFFQXL
+		SDFFRHQX1
+		SDFFRHQX2
+		SDFFRHQX4
+		SDFFRHQX8
+		SDFFRX1
+		SDFFRX2
+		SDFFRX4
+		SDFFRXL
+		SDFFSHQX1
+		SDFFSHQX2
+		SDFFSHQX4
+		SDFFSHQX8
+		SDFFSRHQX1
+		SDFFSRHQX2
+		SDFFSRHQX4
+		SDFFSRHQX8
+		SDFFSRX1
+		SDFFSRX2
+		SDFFSRX4
+		SDFFSRXL
+		SDFFSX1
+		SDFFSX2
+		SDFFSX4
+		SDFFSXL
+		SDFFTRX1
+		SDFFTRX2
+		SDFFTRX4
+		SDFFTRXL
+		SDFFX1
+		SDFFX2
+		SDFFX4
+		SDFFXL
+		SEDFFHQX1
+		SEDFFHQX2
+		SEDFFHQX4
+		SEDFFHQX8
+		SEDFFTRX1
+		SEDFFTRX2
+		SEDFFTRX4
+		SEDFFTRXL
+		SEDFFX1
+		SEDFFX2
+		SEDFFX4
+		SEDFFXL
+		SMDFFHQX1
+		SMDFFHQX2
+		SMDFFHQX4
+		SMDFFHQX8
+		TBUFX1
+		TBUFX12
+		TBUFX16
+		TBUFX2
+		TBUFX20
+		TBUFX3
+		TBUFX4
+		TBUFX6
+		TBUFX8
+		TBUFXL
+		TIEHI
+		TIELO
+		TLATNCAX12
+		TLATNCAX16
+		TLATNCAX2
+		TLATNCAX20
+		TLATNCAX3
+		TLATNCAX4
+		TLATNCAX6
+		TLATNCAX8
+		TLATNSRX1
+		TLATNSRX2
+		TLATNSRX4
+		TLATNSRXL
+		TLATNTSCAX12
+		TLATNTSCAX16
+		TLATNTSCAX2
+		TLATNTSCAX20
+		TLATNTSCAX3
+		TLATNTSCAX4
+		TLATNTSCAX6
+		TLATNTSCAX8
+		TLATNX1
+		TLATNX2
+		TLATNX4
+		TLATNXL
+		TLATSRX1
+		TLATSRX2
+		TLATSRX4
+		TLATSRXL
+		TLATX1
+		TLATX2
+		TLATX4
+		TLATXL
+		XNOR2X2
+		XNOR2X4
+		XNOR2XL
+		XNOR3X1
+		XNOR3XL
+		XOR2X1
+		XOR2X2
+		XOR2X4
+		XOR2XL
+		XOR3X1
+		XOR3XL
+	Reading SDF file from location "spi_bridge_top_delays.sdf"
+	Compiled SDF file "spi_bridge_top_delays.sdf.X" older than source SDF file "spi_bridge_top_delays.sdf".
+	Recompiling.
+	Writing compiled SDF file to "spi_bridge_top_delays.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     spi_bridge_top_delays.sdf.X
+		Log file:              sdf_annotate_pre.log
+		Backannotation scope:  tb_spi_bridge_top.dut
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_dst_sync_d_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 38>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_dst_sync_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 59>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_dst_meta_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 80>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_src_toggle_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 101>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.132)) of instance tb_spi_bridge_top.dut.u_reset_sync_aclk.rst_n_sync_reg of module DFFRX2 <./spi_bridge_top_delays.sdf, line 1672>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.144)) of instance tb_spi_bridge_top.dut.u_reset_sync_aclk.r_meta_ff_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1693>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.144)) of instance tb_spi_bridge_top.dut.u_reset_sync_sclk.rst_n_sync_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1710>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.144)) of instance tb_spi_bridge_top.dut.u_reset_sync_sclk.r_meta_ff_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1731>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1748>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1769>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1790>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1811>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1832>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1853>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1874>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1895>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1916>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1937>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1958>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 1979>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2000>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2021>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2042>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2063>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2084>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2105>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2126>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2147>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2168>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2189>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2210>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2231>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2252>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2273>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2294>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 2315>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (negedge CKN) (0)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_empty_reg of module DFFNSRX1 <./spi_bridge_top_delays.sdf, line 5754>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_full_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 5776>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 5797>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 5818>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 5839>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 5860>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 5881>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8244>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8265>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8286>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.173)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_3 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 8309>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.173)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_2 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 8332>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.173)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_1 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 8355>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.173)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_0 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 8378>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_sclk_gen.o_sclk_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8399>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.173)) of instance tb_spi_bridge_top.dut.u_sclk_gen.r_toggle_phase_reg of module DFFRX1 <./spi_bridge_top_delays.sdf, line 8434>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.bit_cnt_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8467>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.bit_cnt_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8488>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.bit_cnt_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8509>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8530>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8551>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8572>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8593>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8614>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_5 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8635>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_6 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8656>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_7 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8677>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (negedge CKN) (0)) of instance tb_spi_bridge_top.dut.u_spi_master.o_cs_n_reg of module DFFNSRX4 <./spi_bridge_top_delays.sdf, line 8701>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (negedge CKN) (0)) of instance tb_spi_bridge_top.dut.u_spi_master.o_mosi_reg of module DFFNSRX4 <./spi_bridge_top_delays.sdf, line 8726>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8747>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8768>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8789>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8810>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8831>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_5 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8852>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_6 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8873>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_7 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8894>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8915>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8936>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8957>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8978>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_5 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 8999>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_6 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 9020>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_7 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 9041>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.setup_cnt_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 9062>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 9993>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.state_reg_1 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 10016>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.state_reg_0 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 10039>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.bit_cnt_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10132>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_valid_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10153>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10174>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_6 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10195>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10216>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10237>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10284>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_7 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10319>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_5 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10340>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10361>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.bit_cnt_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10382>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_cur_from_hold_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10511>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (negedge CKN) (0)) of instance tb_spi_bridge_top.dut.u_spi_slave.o_miso_reg of module DFFNSRX4 <./spi_bridge_top_delays.sdf, line 10659>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_0 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10682>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_1 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10705>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_2 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10728>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_3 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10751>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_4 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10774>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_5 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10797>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_7 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10904>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_6 of module DFFRX2 <./spi_bridge_top_delays.sdf, line 10927>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10948>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10969>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 10990>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_3 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11011>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_4 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11032>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_5 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11053>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_6 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11074>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_7 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11095>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.17)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_pop_d_reg of module DFFRX2 <./spi_bridge_top_delays.sdf, line 11448>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.bit_cnt_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11541>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_slave.state_reg_0 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 11564>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_spi_slave.state_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11585>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_wclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11606>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_rclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11627>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11648>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11669>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11690>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_wclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11711>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_rclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11732>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11753>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11774>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11795>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11840>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11861>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_wclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 11986>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_rclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 12007>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 12028>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 12049>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge SN) (negedge CKN) (0)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_empty_reg of module DFFNSRX1 <./spi_bridge_top_delays.sdf, line 12947>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_full_reg of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 12969>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_bin_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 12990>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.182)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 13011>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_bin_reg_0 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 13032>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_bin_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 13053>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.183)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_delays.sdf, line 13074>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.173)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_bin_reg_1 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 13739>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.172)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_bin_reg_1 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 13762>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (REMOVAL (posedge RN) (posedge CK) (0.172)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_bin_reg_0 of module DFFRX1 <./spi_bridge_top_delays.sdf, line 13785>.
+	Annotation completed with 0 Errors and 143 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 3623    	 No. of Disabled Pathdelays = 0        Annotated = 58.87% (2133/3623) 
+		 No. of Tchecks    = 3363    	 No. of Disabled Tchecks    = 0        Annotated = 34.14% (1148/3363) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	          3623	             0	              2133	                 58.87
+		       $hold	           238	             0	                 0	                  0.00
+		      $width	          1202	             0	                 0	                  0.00
+		   $recovery	           238	             0	               143	                 60.08
+		  $setuphold	          1685	             0	              1005	                 59.64
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                 1269     501
+		UDPs:                     940      14
+		Primitives:              4446       6
+		Timing outputs:          1385     373
+		Registers:                586     266
+		Scalar wires:            4010       -
+		Expanded wires:            16       2
+		Vectored wires:             3       -
+		Always blocks:             18      18
+		Initial blocks:            12      12
+		Parallel blocks:            1       1
+		Cont. assignments:          1       3
+		Pseudo assignments:        18      18
+		Timing checks:           5048     220
+		Interconnect:            2329       -
+		Delayed tcheck signals:  1369     740
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.tb_spi_bridge_top:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2203/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_spi_bridge_top.dut.ACLK tb_spi_bridge_top.dut.o_dbg_cs_n
+Created probe 1
+xcelium> run
+[195000] TEST 1: RX path end-to-end, 6 frames
+[1115000] PASS: RX_DATA_REG sequential byte = 0
+[1815000] PASS: RX_DATA_REG sequential byte = 1
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:2495280 PS, negedge D:2495280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_0
+            Time: 2495280 PS
+
+[2735000] PASS: RX_DATA_REG sequential byte = 2
+[3435000] PASS: RX_DATA_REG sequential byte = 3
+[4135000] PASS: RX_DATA_REG sequential byte = 4
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:4775280 PS, negedge D:4775280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_1
+            Time: 4775280 PS
+
+[4815000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4835000] PASS: RX_DATA_REG sequential byte = 5
+[4835000] TEST 2: TX path end-to-end
+[4855000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4895000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4935000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4975000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5015000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=1 MISO=0
+[5055000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5095000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=5a VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5135000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=5a VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5175000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=5a VALID=1 CUR=1 SHIFT=5a POP=0 MISO=0
+[5215000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=5a VALID=0 CUR=1 SHIFT=b4 POP=0 MISO=1
+[5255000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=5a VALID=0 CUR=1 SHIFT=68 POP=0 MISO=0
+[5295000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=5a VALID=0 CUR=1 SHIFT=d0 POP=0 MISO=1
+[5335000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=5a VALID=0 CUR=1 SHIFT=a0 POP=0 MISO=1
+[5375000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=5a VALID=0 CUR=1 SHIFT=40 POP=0 MISO=0
+[5415000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=5a VALID=0 CUR=1 SHIFT=80 POP=0 MISO=1
+[5455000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=5a VALID=0 CUR=1 SHIFT=00 POP=0 MISO=0
+[5495000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=5a VALID=0 CUR=1 SHIFT=00 POP=0 MISO=0
+[5497000] TX frame 1: MISO = 0x5a READY=1
+[5497000] PASS: TX_DATA_REG to MISO = 1
+[5497000] TEST 3: TX Burst path end-to-end
+[5535000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:5535280 PS, negedge D:5535280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_0
+            Time: 5535280 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:5535280 PS, negedge D:5535280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_0
+            Time: 5535280 PS
+
+[5575000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5615000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5655000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=1 MISO=0
+[5695000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5735000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5775000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5815000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5855000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5895000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5935000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=11 VALID=1 CUR=1 SHIFT=11 POP=0 MISO=0
+[5975000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=11 VALID=0 CUR=1 SHIFT=22 POP=1 MISO=0
+[6015000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=11 VALID=0 CUR=1 SHIFT=44 POP=0 MISO=0
+[6055000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=22 VALID=1 CUR=1 SHIFT=88 POP=0 MISO=1
+[6095000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=22 VALID=1 CUR=1 SHIFT=10 POP=0 MISO=0
+[6135000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=22 VALID=1 CUR=1 SHIFT=20 POP=0 MISO=0
+[6175000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=22 VALID=1 CUR=1 SHIFT=40 POP=0 MISO=0
+[6215000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=22 VALID=1 CUR=1 SHIFT=80 POP=0 MISO=1
+[6255000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=22 VALID=1 CUR=1 SHIFT=00 POP=0 MISO=1
+[6257000] BURST frame 1: MISO=0x11 READY=1
+[6257000] PASS: TX Burst byte 1 = 0x11
+[6295000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=22 VALID=1 CUR=1 SHIFT=22 POP=0 MISO=0
+[6335000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6375000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6415000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6455000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6495000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6535000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6575000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6615000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6655000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6695000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=22 VALID=1 CUR=1 SHIFT=22 POP=0 MISO=0
+[6735000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=22 VALID=0 CUR=1 SHIFT=44 POP=1 MISO=0
+[6775000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=22 VALID=0 CUR=1 SHIFT=88 POP=0 MISO=1
+[6815000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=1 CUR=1 SHIFT=10 POP=0 MISO=0
+[6855000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=1 CUR=1 SHIFT=20 POP=0 MISO=0
+[6895000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=1 CUR=1 SHIFT=40 POP=0 MISO=0
+[6935000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=1 CUR=1 SHIFT=80 POP=0 MISO=1
+[6975000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=1 CUR=1 SHIFT=00 POP=0 MISO=0
+[7015000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=1 CUR=1 SHIFT=00 POP=0 MISO=0
+[7017000] BURST frame 2: MISO=0x22 READY=1
+[7017000] PASS: TX Burst byte 2 = 0x22
+[7055000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=1 CUR=1 SHIFT=33 POP=0 MISO=0
+[7095000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7135000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7175000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7215000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7255000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7295000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7335000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7375000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7415000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7455000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=1 CUR=1 SHIFT=33 POP=0 MISO=0
+[7495000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=1 SHIFT=66 POP=0 MISO=0
+[7535000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=1 SHIFT=cc POP=0 MISO=1
+[7575000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=1 SHIFT=98 POP=0 MISO=1
+[7615000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=1 SHIFT=30 POP=0 MISO=0
+[7655000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=1 SHIFT=60 POP=0 MISO=0
+[7695000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=1 SHIFT=c0 POP=0 MISO=1
+[7735000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=1 SHIFT=80 POP=0 MISO=1
+[7775000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=1 SHIFT=00 POP=0 MISO=1
+[7777000] BURST frame 3: MISO=0x33 READY=1
+[7777000] PASS: TX Burst byte 3 = 0x33
+[7777000] PASS: TX Burst sequence 11 -> 22 -> 33
+[7777000] TEST 4: RX FIFO Full / Overflow
+[7815000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7855000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7895000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7935000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7975000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8015000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8055000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8095000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8135000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8175000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8215000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8255000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8295000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8335000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8375000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8415000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8455000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8495000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8535000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8575000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:8575280 PS, negedge D:8575280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_0
+            Time: 8575280 PS
+
+[8615000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8655000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8695000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8735000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8775000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8815000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8855000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8895000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8935000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8975000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9015000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9055000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9095000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9135000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9175000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9215000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9255000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9295000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9335000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9375000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9415000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9455000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9495000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9535000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9575000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9615000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9655000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9695000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9735000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9775000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9815000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9855000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9895000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9935000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9975000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10015000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10055000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10095000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10135000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10175000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10215000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10255000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10295000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10335000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10375000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10415000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10455000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10495000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10535000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10575000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10615000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10655000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10695000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10735000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10775000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10815000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10855000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10895000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10935000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10975000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11015000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11055000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11095000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11135000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11175000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11215000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11255000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11295000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11335000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11375000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11415000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11455000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11495000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11535000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11575000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11615000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11655000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11695000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11735000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11775000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11815000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11855000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11895000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11935000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11975000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12015000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12055000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12095000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12135000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12175000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12215000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12255000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12295000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12335000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12375000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12415000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12455000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12495000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12535000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12575000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12615000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12655000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12695000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12735000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12775000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12815000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12855000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12895000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12935000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12975000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13015000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13055000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13095000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13135000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13175000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13215000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13255000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13295000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13335000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13375000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13415000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13455000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13495000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13535000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13575000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13615000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13655000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13695000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13735000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13775000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13815000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13855000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13895000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13935000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13975000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14015000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14055000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14095000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14135000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14175000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14215000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14255000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14295000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14335000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14375000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14415000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14455000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14495000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14535000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14575000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14615000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14655000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14695000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14735000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14775000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14815000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14855000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14895000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14935000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14975000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[25415000] TEST4 status=1a level=16 overflow=1
+[25415000] PASS: TEST4 RX FIFO FULL = 1
+[25415000] PASS: TEST4 RX FIFO LEVEL = 10
+[25415000] PASS: TEST4 OVERFLOW sticky = 1
+[25415000] PASS: TEST4 OVERFLOW output = 1
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:25455280 PS, negedge D:25455280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_1
+            Time: 25455280 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:25535280 PS, negedge D:25535280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_1
+            Time: 25535280 PS
+
+[25675000] PASS: TEST4 FULL cleared after drain = 0
+[25755000] PASS: TEST4 OVERFLOW cleared = 0
+[25755000] TEST 5: TX FIFO Full / Boundary
+[26035000] TEST5 FIFO ACCEPT a1
+[26055000] TEST5 FIFO ACCEPT b2
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:26055280 PS, negedge D:26055280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_2
+            Time: 26055280 PS
+
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:26055280 PS, negedge D:26055280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_1
+            Time: 26055280 PS
+
+[26075000] TEST5 FIFO ACCEPT c3
+[26095000] TEST5 FIFO ACCEPT d4
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:26095280 PS, negedge D:26095280 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_2
+            Time: 26095280 PS
+
+TEST5 ATTEMPTED=8 ACCEPTED=4 NOT_ACCEPTED=4 FULL_CYCLES=11
+PASS: TEST5 FIFO Full observed
+PASS: TEST5 order[0]=a1
+PASS: TEST5 order[1]=b2
+PASS: TEST5 order[2]=c3
+PASS: TEST5 order[3]=d4
+[32098000] TEST 6: Reset During Transfer
+[32620000] TEST6 ASSERT RESET mid-frame CS=0 BIT=3
+[32740000] PASS: TEST6 CS inactive in reset = 1
+[32740000] PASS: TEST6 RX FIFO empty in reset = 1
+[32740000] PASS: TEST6 TX FIFO empty in reset = 1
+[32740000] PASS: TEST6 overflow cleared in reset = 0
+[32740000] PASS: TEST6 RX valid cleared in reset = 0
+[33685000] PASS: TEST6 first RX byte after reset = 0
+[34347000] TEST6 recovery MISO frame 1 = 6b
+[34347000] PASS: TEST6 TX recovered after reset = 1
+[34347000] TEST 7: Repeated Reset / Release Timing
+[34787000] TEST7 RESET #1 asserted during transfer
+[34788000] PASS: EST7 CS released on reset assert = 1
+[34788000] PASS: TEST7 overflow reset = 0
+[34794000] PASS: TEST7 RX FIFO reset = 1
+[34794000] PASS: TEST7 TX FIFO reset = 1
+[35735000] PASS: TEST7 first RX byte after reset = 0
+[36077000] TEST7 RESET #2 asserted during transfer
+[36078000] PASS: EST7 CS released on reset assert = 1
+[36078000] PASS: TEST7 overflow reset = 0
+[36090000] PASS: TEST7 RX FIFO reset = 1
+[36090000] PASS: TEST7 TX FIFO reset = 1
+[37035000] PASS: TEST7 first RX byte after reset = 0
+[37377000] TEST7 RESET #3 asserted during transfer
+[37378000] PASS: EST7 CS released on reset assert = 1
+[37378000] PASS: TEST7 overflow reset = 0
+[37432000] PASS: TEST7 RX FIFO reset = 1
+[37432000] PASS: TEST7 TX FIFO reset = 1
+[37432000] PASS: EST7 RX valid reset (55ns pulse) = 0
+[38375000] PASS: TEST7 first RX byte after reset = 0
+[39797000] TEST7 recovery TX frame 1 = a7
+[39797000] PASS:  recovered after repeated resets = 1
+[39797000] TEST 8: Async FIFO CDC/Gray pointer
+[39890000] PASS: TEST8 initial empty = 1
+[39890000] PASS: TEST8 initial not full = 0
+[40211000] PASS: TEST8 full at 16 writes = 1
+[40250000] PASS: TEST8 full blocks extra write = 10
+[40768000] PASS: TEST8 empty after 16 reads = 1
+[40768000] PASS: TEST8 level zero = 0
+[41594000] PASS: TEST8 empty after wrap = 1
+[41594000] PASS: EST8 Gray single-bit transitions = 0
+[41594000] PASS: TEST8 write count = 20
+[41594000] PASS: TEST8 read count = 20
+[41594000] TEST 9: Concurrent FIFO read/write stress
+[41720000] PASS: TEST9 initial empty = 1
+[44016000] PASS: TEST9 writes = 80
+[44016000] PASS: TEST9 reads = 80
+[44016000] PASS: TEST9 FIFO empty = 1
+[44016000] PASS: TEST9 FIFO level = 0
+[44016000] TEST 10: Register and protocol corner cases
+[44205000] PASS: ST10 unmapped address reads zero = 0
+[44235000] PASS: TEST10 IRQ enable readback = 4
+[44265000] PASS: TEST10 IRQ disable readback = 0
+[44290000] PASS: TEST10 drain finishes = 0
+[44350000] PASS: TEST10 overflow clear = 0
+[44927000] PASS: TEST10 CS idle after frame = 1
+[44927000] PASS: TEST10 completed SPI frame = 1
+[44927000] ALL TESTS PASSED (tb_spi_bridge_top)
+Simulation complete via $finish(1) at time 44926680 PS + 0
+../TESTBENCH/tb_spi_bridge_top.v:1082     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.03-s012: Exiting on Nov 12, 2026 at 06:14:12 KST  (total: 00:05:53)

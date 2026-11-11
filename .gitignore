@@ -1,0 +1,28 @@
+# PDK and PDK-derived files - never commit (license restricted)
+GPDK045/
+*.lib
+*.lef
+*.capTbl
+*.tch
+*basicCells.v
+*multibitsDFF.v
+rc_model.bin
+
+# Tool databases and scratch
+*.dat/
+*.db
+*.swp
+.cadence/
+xcelium.d/
+INCA_libs/
+waves.shm/
+*.history
+*.key
+innovus.cmd*
+innovus.logv*
+genus.cmd*
+tempus.cmd*
+
+# large extraction output (kept on the server)
+*.spef
+*.spef.gz

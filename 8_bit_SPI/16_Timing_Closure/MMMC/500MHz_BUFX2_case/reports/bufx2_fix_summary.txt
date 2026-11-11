@@ -1,0 +1,42 @@
+== IMPSP-365 (first occurrence)
+**ERROR: (IMPSP-365):	Design has inst(s) with SITE 'CoreSiteDouble', but the floorplan has no rows defined for this site. Any locations found for such insts will be illegal; create rows for this site to avoid this.
+Type 'man IMPSP-365' for more detail.
+
+== Fix commands
+<CMD> setDontUse BUFX2 true
+<CMD> ecoChangeCell -inst FE_OFC43_sclk_rst_n -cell BUFX3
+<CMD> ecoChangeCell -inst u_rx_fifo/FE_OFC29_n_144 -cell BUFX3
+<CMD> ecoChangeCell -inst u_rx_fifo/FE_OFC21_n_131 -cell BUFX3
+<CMD> ecoChangeCell -inst u_rx_fifo/FE_OFC20_n_51 -cell BUFX3
+<CMD> ecoChangeCell -inst u_rx_fifo/FE_OFC14_w_rx_wr_data_0 -cell BUFX3
+<CMD> ecoChangeCell -inst u_rx_fifo/FE_OFC12_w_rx_wr_data_2 -cell BUFX3
+<CMD> ecoChangeCell -inst u_rx_fifo/FE_OFC11_w_rx_wr_data_3 -cell BUFX3
+<CMD> ecoChangeCell -inst u_rx_fifo/FE_OFC7_w_rx_wr_data_7 -cell BUFX3
+<CMD> ecoChangeCell -inst u_spi_slave/FE_OFC26_n_63 -cell BUFX3
+<CMD> ecoChangeCell -inst u_spi_slave/FE_OFC13_w_rx_wr_data_1 -cell BUFX3
+<CMD> ecoChangeCell -inst u_spi_slave/FE_OFC10_w_rx_wr_data_4 -cell BUFX3
+<CMD> ecoChangeCell -inst u_spi_slave/FE_OFC9_w_rx_wr_data_5 -cell BUFX3
+<CMD> ecoChangeCell -inst u_spi_slave/FE_OFC8_w_rx_wr_data_6 -cell BUFX3
+<CMD> refinePlace
+<CMD> violationBrowser -all -no_display_false -displayByLayer
+<CMD> ecoRoute
+<CMD> checkPlace
+<CMD> verify_drc
+<CMD> verifyConnectivity -type all -geomConnect -error 1000 -warning 50
+<CMD> extractRC
+<CMD> timeDesign -postRoute -outDir reports/timing/postRoute_bufx2fix
+<CMD> violationBrowser -all -no_display_false -displayByLayer
+<CMD> timeDesign -postRoute -hold -outDir reports/timing/postRoute_hold_bufx2fix
+<CMD> saveDesign -rc -def RouteDesign
+
+== After fix
+<CMD> checkPlace
+Begin checking placement ... (start mem=3757.4M, init mem=3757.4M)
+*info: Placed = 946            (Fixed = 22)
+*info: Unplaced = 0           
+Placement Density:73.05%(3728/5104)
+Placement Density (including fixed std cells):73.05%(3728/5104)
+Finished checkPlace (total: cpu=0:00:00.1, real=0:00:00.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=3757.4M)
+  Verification Complete : 0 Viols.
+  Found no problems or warnings.
+  Verification Complete : 0 Viols.  0 Wrngs.

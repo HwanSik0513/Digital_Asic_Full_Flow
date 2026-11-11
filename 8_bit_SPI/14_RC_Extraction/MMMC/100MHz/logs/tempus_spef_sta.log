@@ -1,0 +1,295 @@
+
+Cadence Tempus(TM) Timing Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.17-s087_1, built Tue Oct 1 11:02:53 PDT 2024
+Options:	-files tempus_spef_sta.tcl -log tempus_spef_sta.log 
+Date:		Thu Nov 12 08:23:33 2026
+Host:		kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB)
+OS:		CentOS Linux 7 (Core)
+
+License:
+		[08:23:33.158617] Configured Lic search path (22.01-s003): 5280@localhost
+
+		tpsxl	Tempus Timing Signoff Solution XL	22.1	Denied
+		tpsl	Tempus Timing Signoff Solution L	22.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (770 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_111702_t87BmG'.
+#@ Processing -files option
+Sourcing tcl/tk file 'tempus_spef_sta.tcl' ...
+<CMD> read_view_definition tempus_spef.view
+<CMD> read_verilog spi_bridge_top_pnr.v
+<CMD> set_top_module spi_bridge_top
+#% Begin Load MMMC data ... (date=11/12 08:23:54, mem=1288.6M)
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=11/12 08:23:54, total cpu=0:00:00.0, real=0:00:00.0, peak res=1288.6M, current mem=1287.1M)
+BEST WORST
+Loading view definition file from tempus_spef.view
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+Read 489 cells in library 'slow_vdd1v0' 
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'slow_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+Read 489 cells in library 'fast_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'fast_vdd1v0' 
+*** End library_loading (cpu=0.02min, real=0.03min, mem=13.5M, fe_cpu=0.37min, fe_real=0.38min, fe_mem=1538.6M) ***
+#% Begin Load netlist data ... (date=11/12 08:23:56, mem=1295.7M)
+*** Begin netlist parsing (mem=1538.6M) ***
+Reading verilog netlist 'spi_bridge_top_pnr.v'
+
+*** Memory Usage v#1 (Current mem = 1906.637M, initial mem = 642.340M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1906.6M) ***
+#% End Load netlist data ... (date=11/12 08:23:56, total cpu=0:00:00.5, real=0:00:00.0, peak res=1432.8M, current mem=1424.8M)
+Set top cell to spi_bridge_top.
+Building hierarchical netlist for Cell spi_bridge_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 1011 modules.
+** info: there are 964 stdCell insts.
+** info: there are 964 stdCell insts with at least one signal pin.
+** info: there are 7 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 2281.594M, initial mem = 642.340M) ***
+Set Default Input Pin Transition as 0.1 ps.
+../SYN/mapped/spi_bridge_top_syn_final.sdc
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: FUNC_SS_WORST
+    RC-Corner Name        : WORST
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/qrc/qx/gpdk045.tch'
+ 
+ Analysis View: FUNC_FF_BEST
+    RC-Corner Name        : BEST
+    RC-Corner Index       : 1
+    RC-Corner Temperature : 0 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/qrc/qx/gpdk045.tch'
+Reading timing constraints file '../SYN/mapped/spi_bridge_top_syn_final.sdc' ...
+Current (total cpu=0:00:23.9, real=0:00:24.0, peak res=2095.5M, current mem=2095.5M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../SYN/mapped/spi_bridge_top_syn_final.sdc, Line 9).
+
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../SYN/mapped/spi_bridge_top_syn_final.sdc, Line 10).
+
+spi_bridge_top
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (EMS-62):	Message <IMPCTE-285> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (EMS-62):	Message <IMPCTE-290> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (EMS-62):	Message <IMPCTE-289> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+INFO (CTE): Reading of timing constraints file ../SYN/mapped/spi_bridge_top_syn_final.sdc completed, with 2 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2137.4M, current mem=2137.3M)
+Current (total cpu=0:00:24.0, real=0:00:24.0, peak res=2137.4M, current mem=2137.3M)
+Reading latency file 'RouteDesign.dat/mmmc/views/FUNC_SS_WORST/latency.sdc' ...
+Reading latency file 'RouteDesign.dat/mmmc/views/FUNC_FF_BEST/latency.sdc' ...
+Total number of combinational cells: 314
+Total number of sequential cells: 168
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX6 INVXL INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X4 DLY4X1
+Total number of identified unusable delay cells: 8
+All delay cells are dont_use. Buffers will be used to fix hold violations.
+#% Begin Load MMMC data post ... (date=11/12 08:23:57, mem=2140.0M)
+#% End Load MMMC data post ... (date=11/12 08:23:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=2140.1M, current mem=2140.1M)
+<CMD> all_setup_analysis_views
+<CMD> all_hold_analysis_views
+<CMD> all_setup_analysis_views
+<CMD> all_hold_analysis_views
+<CMD> read_spef -rc_corner WORST spi_bridge_top_worst.spef
+<CMD> read_spef -rc_corner BEST spi_bridge_top_best.spef
+
+SPEF files for RC Corner WORST:
+Top-level spef file 'spi_bridge_top_worst.spef'.
+
+SPEF files for RC Corner BEST:
+Top-level spef file 'spi_bridge_top_best.spef'.
+Start spef parsing (MEM=2648.89).
+SPEF file spi_bridge_top_worst.spef.
+Number of Resistors     : 15559
+Number of Ground Caps   : 15867
+Number of Coupling Caps : 0
+
+SPEF file spi_bridge_top_best.spef.
+Number of Resistors     : 15559
+Number of Ground Caps   : 15867
+Number of Coupling Caps : 0
+
+End spef parsing (MEM=2662.89 CPU=0:00:00.5 REAL=0:00:00.0).
+16 nets are missing in SPEF file. The names of these nets are saved in ./WORST.missing_nets.rpt.
+16 nets are missing in SPEF file. The names of these nets are saved in ./BEST.missing_nets.rpt.
+<CMD> all_constraint_modes -active
+FUNC
+<CMD> set_interactive_constraint_modes [all_constraint_modes -active]
+<CMD> set_propagated_clock [all_clocks]
+**WARN: (TCLCMD-1126):	Clock object 'ACLK' converted from ideal to propagated mode
+**WARN: (TCLCMD-1126):	Clock object 'ACLK' converted from ideal to propagated mode
+<CMD> set_interactive_constraint_modes {}
+<CMD> report_annotated_parasitics -list_not_annotated > reports/tempus_spef/00_parasitics.rpt
+<CMD> check_timing -verbose                                                         > $RPT/01_check_timing.rpt
+AAE_INFO: opIsDesignInPostRouteState() is 0
+**ERROR: (IMPESI-4001):	CTE single analysis mode does not support SI analysis. It continues with -siAware false.
+AAE DB initialization (MEM=2721.63 CPU=0:00:00.0 REAL=0:00:01.0) 
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_FF_BEST'
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_SS_WORST'
+Start delay calculation (fullDC) (1 T). (MEM=2404.35)
+../SYN/mapped/spi_bridge_top_syn_final.sdc
+End delay calculation. (MEM=2931.94 CPU=0:00:00.7 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2923.94 CPU=0:00:00.9 REAL=0:00:01.0)
+<CMD> report_timing -late  -view FUNC_SS_WORST -max_paths 20 -path_type summary     > $RPT/10_setup_summary.rpt
+<CMD> report_timing -late  -view FUNC_SS_WORST -max_paths 3  -path_type full_clock -net > $RPT/11_setup_paths.rpt
+<CMD> report_timing -early -view FUNC_FF_BEST  -max_paths 20 -path_type summary     > $RPT/20_hold_summary.rpt
+<CMD> report_timing -early -view FUNC_FF_BEST  -max_paths 3  -path_type full_clock -net > $RPT/21_hold_paths.rpt
+<CMD> report_analysis_coverage                                                      > $RPT/02_coverage.rpt
+<CMD> exit
+
+*** Memory Usage v#1 (Current mem = 2836.324M, initial mem = 642.340M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   UI-638               2  The %s to the command '%s' %s ignored si...
+ERROR     IMPESI-4001          1  CTE single analysis mode does not suppor...
+WARNING   IMPCTE-285         266  Could not locate cell %s in library %s.  
+WARNING   IMPCTE-289         152  set_driving_cell : %s Use the cell in li...
+WARNING   IMPCTE-290         152  Could not locate cell %s in any library ...
+WARNING   TCLCMD-1126          2  %s object '%s' converted from %s to %s m...
+WARNING   TCLCMD-1461          2  Skipped unsupported command: %s          
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+*** Message Summary: 596 warning(s), 1 error(s)
+
+--- Ending "Tempus Timing Solution" (totcpu=0:00:29.0, real=0:00:37.0, mem=2836.3M) ---

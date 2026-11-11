@@ -86,7 +86,7 @@ report_* (area / gates / power / qor / timing) → write_hdl / write_sdc / write
 
 ## 6. Notes
 
-- **SLOW는 합성 코너와 PnR setup signoff 코너가 같은(SS, 0.9 V, 125 °C) 기준 실행입니다.** 합성에서 맞춘 타이밍이 PnR 검사 조건과 같은 기준이라, 비교 대상인 FAST의 기준점이 됩니다.
+- **SLOW는 합성 코너와 PnR setup 검사 코너가 같은(SS, 0.9 V, 125 °C) 기준 실행입니다.** 합성에서 맞춘 타이밍이 PnR 검사 조건과 같은 기준이라, 비교 대상인 FAST의 기준점이 됩니다.
 - 합성 단계에서 setup 위반 52개 경로가 남았습니다 (TNS -10,342.3 ps). 세부 경로는 [07_Pre_STA](../../../07_Pre_STA/SLOW/1GHz)에 있습니다.
 - 전력은 Genus 기본 activity로 계산한 추정값입니다.
 

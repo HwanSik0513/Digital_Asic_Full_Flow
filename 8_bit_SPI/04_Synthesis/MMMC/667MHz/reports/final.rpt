@@ -1,0 +1,69 @@
+
+
+Working Directory = /home/hah003/PROJ1/Proj1_make/TOP/SYN
+QoS Summary for spi_bridge_top
+================================================================================
+Metric                          syn_generic     syn_map         syn_opt        
+================================================================================
+
+View : FUNC_SS_WORST
+Slack (ps):                      -368            -234             -25
+  R2R (ps):                      -368            -234             -16
+  I2R (ps):                       328              16              17
+  R2O (ps):                      -340            -181             -25
+  I2O (ps):                       365               2               8
+  CG  (ps):                  no_value        no_value        no_value
+TNS (ps):                      -1,907          -1,713            -106
+  R2R (ps):                      -935          -1,160             -16
+  I2R (ps):                         0               0               0
+  R2O (ps):                      -972            -553             -91
+  I2O (ps):                         0               0               0
+  CG  (ps):                  no_value        no_value        no_value
+Failing Paths:                     15              13               5
+
+View : FUNC_FF_BEST
+Slack (ps):                       822             813             813
+  R2R (ps):                       822             813             813
+  I2R (ps):                     1,046             943             932
+  R2O (ps):                       859             930             960
+  I2O (ps):                       961             858             862
+  CG  (ps):                  no_value        no_value        no_value
+TNS (ps):                           0               0               0
+  R2R (ps):                         0               0               0
+  I2R (ps):                         0               0               0
+  R2O (ps):                         0               0               0
+  I2O (ps):                         0               0               0
+  CG  (ps):                  no_value        no_value        no_value
+Failing Paths:                      0               0               0
+
+Cell Area:                      5,479           4,229           4,360
+Total Cell Area:                5,479           4,229           4,360
+Leaf Instances:                 1,279             969           1,014
+Total Instances:                1,279             969           1,014
+Utilization (%):                 0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:00:25        00:00:25        00:01:07
+Real Runtime (h:m:s):        00:00:25        00:00:21        00:01:08
+CPU  Elapsed (h:m:s):        00:00:33        00:00:57        00:02:05
+Real Elapsed (h:m:s):        00:00:28        00:00:49        00:01:58
+Memory (MB):                  1762.20         1777.23         1778.05
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:01:55
+Total Memory (MB):     1778.05
+Executable Version:    22.17-s071_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

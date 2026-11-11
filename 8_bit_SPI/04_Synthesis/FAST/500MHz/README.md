@@ -85,8 +85,8 @@ report_* (area / gates / power / qor / timing) → write_hdl / write_sdc / write
 
 ## 6. Notes
 
-- **FAST는 합성 코너(FF, 1.1 V, 0 °C)가 PnR setup signoff 코너(SS, 0.9 V, 125 °C)와 다른 비교용 실행입니다.** Genus는 FF 조건에서 셀이 빠르다고 보고 더 작은 셀로 타이밍을 맞추므로, 같은 주파수 SLOW보다 셀 면적이 작고(3,398.5 vs 3,621.4 µm²) 합성 slack도 크게 나옵니다(1,109.4 vs 1.8 ps). 이 넷리스트를 PnR에서 SS 조건으로 검사했을 때의 결과는 [09_Placement](../../../09_Placement/FAST/500MHz)와 [14_Timing_Closure](../../../14_Timing_Closure/FAST/500MHz)에 있습니다.
-- 실무에서는 합성도 setup signoff 코너(SS)로 하거나, Genus에 PnR과 같은 MMMC를 읽혀 여러 코너를 함께 맞추는 것이 일반적입니다.
+- **FAST는 합성 코너(FF, 1.1 V, 0 °C)가 PnR setup 검사 코너(SS, 0.9 V, 125 °C)와 다른 비교용 실행입니다.** Genus는 FF 조건에서 셀이 빠르다고 보고 더 작은 셀로 타이밍을 맞추므로, 같은 주파수 SLOW보다 셀 면적이 작고(3,398.5 vs 3,621.4 µm²) 합성 slack도 크게 나옵니다(1,109.4 vs 1.8 ps). 이 넷리스트를 PnR에서 SS 조건으로 검사했을 때의 결과는 [10_Placement](../../../10_Placement/FAST/500MHz)와 [16_Timing_Closure](../../../16_Timing_Closure/FAST/500MHz)에 있습니다.
+- 실무에서는 합성도 setup 검사 코너(SS)로 하거나, Genus에 PnR과 같은 MMMC를 읽혀 여러 코너를 함께 맞추는 것이 일반적입니다.
 - 합성 단계에서 setup 위반이 없습니다.
 - 전력은 Genus 기본 activity로 계산한 추정값입니다.
 

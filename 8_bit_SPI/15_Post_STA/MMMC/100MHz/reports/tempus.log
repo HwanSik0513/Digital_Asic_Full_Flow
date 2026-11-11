@@ -1,0 +1,377 @@
+
+Cadence Tempus(TM) Timing Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.17-s087_1, built Tue Oct 1 11:02:53 PDT 2024
+Options:	
+Date:		Thu Nov 12 05:32:03 2026
+Host:		kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB)
+OS:		CentOS Linux 7 (Core)
+
+License:
+		[05:32:03.158569] Configured Lic search path (22.01-s003): 5280@localhost
+
+		tpsxl	Tempus Timing Signoff Solution XL	22.1	Denied
+		tpsl	Tempus Timing Signoff Solution L	22.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (770 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_62019_NZgXLP'.
+<CMD> ::stop_gui -keepDgui
+<CMD> read_design RouteDesign.dat spi_bridge_top
+# Tempus Timing Solution 22.17-s087_1
+# read_design
+#  dir RouteDesign.dat spi_bridge_top
+Set Default Input Pin Transition as 0.1 ps.
+Loading design 'spi_bridge_top' saved by 'Innovus' '22.17-s086_1' on 'Thu Nov 12 05:06:26 2026'.
+#% Begin Load MMMC data ... (date=11/12 05:32:50, mem=1281.2M)
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=11/12 05:32:51, total cpu=0:00:00.0, real=0:00:00.0, peak res=1281.2M, current mem=1279.1M)
+BEST WORST
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/libs/lef/gsclib045_tech.lef' ...
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/libs/lef/gsclib045_macro.lef' ...
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/libs/lef/gsclib045_multibitsDFF.lef' ...
+Loading view definition file from /home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/viewDefinition.tcl
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+Read 489 cells in library 'slow_vdd1v0' 
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'slow_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+Read 489 cells in library 'fast_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'fast_vdd1v0' 
+*** End library_loading (cpu=0.02min, real=0.02min, mem=12.5M, fe_cpu=0.46min, fe_real=0.82min, fe_mem=1569.8M) ***
+#% Begin Load netlist data ... (date=11/12 05:32:52, mem=1291.3M)
+*** Begin netlist parsing (mem=1569.8M) ***
+Reading verilogBinary netlist '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/spi_bridge_top.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1941.832M, initial mem = 642.340M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1941.8M) ***
+#% End Load netlist data ... (date=11/12 05:32:52, total cpu=0:00:00.5, real=0:00:00.0, peak res=1428.2M, current mem=1416.2M)
+Reading pin dir info from /tmp/ssv_tmpdir_62019_NZgXLP/.bbx_62019_f2fff711-2c7e-4955-af2f-38fd9f10a93c.
+Set top cell to spi_bridge_top.
+Building hierarchical netlist for Cell spi_bridge_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 1020 modules.
+** info: there are 964 stdCell insts.
+** info: there are 964 stdCell insts with at least one signal pin.
+** info: there are 7 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 2305.789M, initial mem = 642.340M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Set Shrink Factor to 0.90000
+Loading preference file /home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/gui.pref.tcl ...
+**WARN: (UI-156):	preference name 'MinFPModuleSize' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MinFlightLineWidth' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MaxFlightLineNetTerms' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'LevelFlight' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DirectionSink' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DirectionSource' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowNumberBlockConnection' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'StrecthRestriction' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'StretchRectilinear' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MoveRestriction' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayRelFPlan' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'LegalizeMacro' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayFPlanFlightLine' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayPinName' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayBusGuideAsLine' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ExclusiveFlight' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowToUnplace' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'FlightLineInMove' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowConnectionInOutNumber' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ConnectionColorType' is not supported in Tempus Timing Solution.
+**WARN: (EMS-27):	Message (UI-156) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPSYC-6134):	Setting analysis mode to hold does not have any impact on timing analysis as simultaneous setup/hold mode analysis is on. Use '-early' option to report hold timing reports.
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+#WARNING (NRIF-90) Option setNanoRouteMode -route_bottom_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -bottomRoutingLayer instead.
+#WARNING (NRIF-91) Option setNanoRouteMode -route_top_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -topRoutingLayer instead.
+**WARN: (IMPSP-504):	"set_place_mode" cannot be used in timer mode.
+addRing command will ignore shorts while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+**WARN: (IMPSP-5121):	Failed to run 'read_design' because cell 'TIELO' is not a standard cell. Cannot use as a filler. Check the filler cell type in the LEF. Filler cells need to be CLASS CORE.
+**WARN: (IMPSP-5121):	Failed to run 'read_design' because cell 'TIEHI' is not a standard cell. Cannot use as a filler. Check the filler cell type in the LEF. Filler cells need to be CLASS CORE.
+**ERROR: (IMPSP-5234):	No valid tie-cell name given in this string 'TIELO TIEHI'.
+
+Usage: set_tie_hi_lo_mode [-help] [-reset] [-cell {{tieCellList1} {tieCellList2} ...}] [-createHierPort {true|false}]
+                          [-honorDontTouch {true|false}] [-honorDontUse {true|false}] [-maxDistance <dist-in-microns>]
+                          [-maxFanout <nr-pins>] [-modulePrevention {true|false}] [-prefix <tie-prefix>]
+                          [-reportHierPort {true|false}]
+
+**ERROR: (IMPTCM-10):	Failed to set value for option "-cell".
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will not extend to closest target.
+When breaking rings, the power planner will consider the existence of blocks.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+Stripes will not be created over regions without power planning wires.
+Offset for stripe breaking is set to 0.
+Stripes will stop at the boundary of the specified area.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMinRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -bottomRoutingLayer' instead.
+**ERROR: (IMPFP-10172):	Cannot find topCell's floorplan data.
+siFlow : Timing analysis mode is single, using late cdB files
+/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc
+Total number of combinational cells: 314
+Total number of sequential cells: 168
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX6 INVXL INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X4 DLY4X1
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=11/12 05:32:53, mem=1666.7M)
+#% End Load MMMC data post ... (date=11/12 05:32:53, total cpu=0:00:00.0, real=0:00:00.0, peak res=1666.7M, current mem=1666.7M)
+#% Begin Load SymbolTable ... (date=11/12 05:32:53, mem=1666.7M)
+#% End Load SymbolTable ... (date=11/12 05:32:53, total cpu=0:00:00.0, real=0:00:00.0, peak res=1666.9M, current mem=1666.9M)
+Reading property file /home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/spi_bridge_top.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2231.9M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: FUNC_SS_WORST
+    RC-Corner Name        : WORST
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/libs/mmmc/BEST/gpdk045.tch'
+ 
+ Analysis View: FUNC_FF_BEST
+    RC-Corner Name        : BEST
+    RC-Corner Index       : 1
+    RC-Corner Temperature : 0 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/libs/mmmc/BEST/gpdk045.tch'
+Restoring parasitic data from file '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/spi_bridge_top.rcdb.d' ...
+**WARN: (IMPEXT-3298):	Parasitic database '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/spi_bridge_top.rcdb.d' was created in 'postRoute' mode. The current mode of the tool is 'Quantus QRC'. Changing mode to make it similar to parasitic database.
+**WARN: (IMPEXT-7000):	The option '-effortLevel low' for setExtractRCMode is ignored because only Quantus QRC extraction mode, that is, '-engine postRoute -effortLevel signoff' is supported in Tempus Timing Solution. To avoid this message, remove this option from your scripts.
+Begin read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 2231.930M)
+Following multi-corner parasitics specified:
+	/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/spi_bridge_top.rcdb.d (rcdb)
+		Cell spi_bridge_top has rcdb /home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/spi_bridge_top.rcdb.d specified
+Cell spi_bridge_top, hinst 
+Done read_parasitics... (cpu: 0:00:00.1 real: 0:00:00.0 mem: 2239.930M)
+#% Begin Loading timing constraints ... (date=11/12 05:32:54, mem=1681.5M)
+Reading timing constraints file '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc' ...
+Current (total cpu=0:00:30.0, real=0:00:51.0, peak res=2049.0M, current mem=2049.0M)
+spi_bridge_top
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (EMS-62):	Message <IMPCTE-285> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (EMS-62):	Message <IMPCTE-290> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (EMS-62):	Message <IMPCTE-289> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2086.5M, current mem=2086.5M)
+Current (total cpu=0:00:30.1, real=0:00:51.0, peak res=2086.5M, current mem=2086.5M)
+Reading latency file '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/mmmc/views/FUNC_SS_WORST/latency.sdc' ...
+Reading latency file '/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/mmmc/views/FUNC_FF_BEST/latency.sdc' ...
+#% End Loading timing constraints ... (date=11/12 05:32:54, total cpu=0:00:00.4, real=0:00:00.0, peak res=2086.6M, current mem=2086.6M)
+FUNC_SS_WORST FUNC_FF_BEST
+FF_BEST SS_WORST
+#% Begin Load power constraints ... (date=11/12 05:32:54, mem=2086.6M)
+'set_default_switching_activity' finished successfully.
+#% End Load power constraints ... (date=11/12 05:32:55, total cpu=0:00:00.0, real=0:00:01.0, peak res=2087.3M, current mem=2087.3M)
+#% Begin load AAE data ... (date=11/12 05:32:55, mem=2087.4M)
+AAE DB initialization (MEM=2724.95 CPU=0:00:00.0 REAL=0:00:00.0) 
+#% End load AAE data ... (date=11/12 05:32:55, total cpu=0:00:00.4, real=0:00:00.0, peak res=2092.9M, current mem=2092.9M)
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version (null). They will be removed in the next release. 
+timing_enable_separate_device_slew_effect_sensitivities
+Ending "read_design" (total cpu=0:00:05.7, real=0:00:05.0, peak res=2094.0M, current mem=1939.1M)
+<CMD> set_propagated_clock [all_clocks]
+<CMD> report_annotated_parasitics > reports/sta/RouteDesign/00_parasitics.rpt
+<CMD> check_timing -verbose                > $RPT/01_check_timing.rpt
+AAE_INFO: opIsDesignInPostRouteState() is 0
+**ERROR: (IMPESI-4001):	CTE single analysis mode does not support SI analysis. It continues with -siAware false.
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_SS_WORST'
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_FF_BEST'
+Start delay calculation (fullDC) (1 T). (MEM=2399.66)
+/home/hah003/PROJ1/Proj1_make/TOP/PNR/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc
+End delay calculation. (MEM=2930.31 CPU=0:00:00.7 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2922.31 CPU=0:00:00.9 REAL=0:00:01.0)
+<CMD> report_analysis_coverage             > $RPT/02_coverage.rpt
+<CMD> report_timing -late -view $SETUP_VIEW -max_paths $NPATHS -path_type summary  > $RPT/10_setup_summary.rpt
+<CMD> report_timing -late -view $SETUP_VIEW -max_paths 10 -path_type full_clock -net > $RPT/11_setup_paths.rpt
+<CMD> report_timing -early -view $HOLD_VIEW -max_paths $NPATHS -path_type summary  > $RPT/20_hold_summary.rpt
+<CMD> report_timing -early -view $HOLD_VIEW -max_paths 10 -path_type full_clock -net > $RPT/21_hold_paths.rpt
+<CMD> report_timing -check_type recovery -view $SETUP_VIEW -max_paths 20 -path_type full_clock > $RPT/30_recovery.rpt
+<CMD> report_timing -check_type removal  -view $HOLD_VIEW  -max_paths 20 -path_type full_clock > $RPT/31_removal.rpt
+<CMD> report_clock_timing -type skew    -view $SETUP_VIEW > $RPT/40_clock_skew_setup.rpt
+<CMD> report_clock_timing -type latency -view $SETUP_VIEW > $RPT/41_clock_latency_setup.rpt
+<CMD> report_clock_timing -type skew    -view $HOLD_VIEW  > $RPT/42_clock_skew_hold.rpt
+<CMD> report_constraint -all_violators > reports/sta/RouteDesign/50_drv.rpt
+<CMD> report_timing -late -view $SETUP_VIEW -from $PRE_FROM -to $PRE_TO  -path_type full_clock -net > $RPT/60_pre_vs_post.rpt
+<CMD> report_timing $mode -view $view -max_paths 1 -collection
+<CMD> report_timing $mode -view $view -max_paths 1 -collection
+<CMD> write_sdf -view $SETUP_VIEW ${TOP}_post_wst.sdf
+*Info: outputing delay to SDF file "spi_bridge_top_post_wst.sdf".
+**WARN: (SDF-808):	The software is currently operating in a high performance mode which optimizes the handling of multiple timing arcs between input and output pin pairs. With the current settings, the SDF file generated will contain the same delay information for all of these arcs. To have the SDF recalculated with explicit pin pair data, you should use the option '-recompute_delay_calc'. This setting is recommended for generating SDF for functional  simulation applications.
+<CMD> write_sdf -view $HOLD_VIEW  ${TOP}_post_bst.sdf
+*Info: outputing delay to SDF file "spi_bridge_top_post_bst.sdf".
+**WARN: (SDF-808):	The software is currently operating in a high performance mode which optimizes the handling of multiple timing arcs between input and output pin pairs. With the current settings, the SDF file generated will contain the same delay information for all of these arcs. To have the SDF recalculated with explicit pin pair data, you should use the option '-recompute_delay_calc'. This setting is recommended for generating SDF for functional  simulation applications.
+Loading  (spi_bridge_top)
+Traverse HInst (spi_bridge_top)
+<CMD> exit
+
+*** Memory Usage v#1 (Current mem = 2844.691M, initial mem = 642.340M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPFP-10172          1  Cannot find topCell's floorplan data.    
+WARNING   IMPEXT-3298          1  Parasitic database '%s' was created in '...
+WARNING   IMPEXT-7000          1  The option '%s %s' for setExtractRCMode ...
+WARNING   UI-638               2  The %s to the command '%s' %s ignored si...
+WARNING   UI-156             122  preference name '%s' is not supported in...
+WARNING   IMPSYC-6134          1  Setting analysis mode to %s does not hav...
+ERROR     IMPESI-4001          1  CTE single analysis mode does not suppor...
+WARNING   IMPSP-5121           2  Failed to run '%s' because cell '%s' is ...
+ERROR     IMPSP-5234           1  No valid tie-cell name given in this str...
+WARNING   IMPSP-504            1  "%s" cannot be used in timer mode.       
+WARNING   NRIF-90              1  Option setNanoRouteMode -route_bottom_ro...
+WARNING   NRIF-91              1  Option setNanoRouteMode -route_top_routi...
+WARNING   IMPCTE-285         266  Could not locate cell %s in library %s.  
+WARNING   IMPCTE-289         152  set_driving_cell : %s Use the cell in li...
+WARNING   IMPCTE-290         152  Could not locate cell %s in any library ...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+ERROR     IMPTCM-10            1  Failed to set value for option "%s".     
+WARNING   IMPTCM-77            1  Option "%s" for command %s is obsolete a...
+WARNING   IMPPSP-1003          2  Found use of '%s'. This will continue to...
+WARNING   SDF-808              2  The software is currently operating in a...
+WARNING   TECHLIB-302         20  No function defined for cell '%s'. The c...
+*** Message Summary: 728 warning(s), 4 error(s)
+
+--- Ending "Tempus Timing Solution" (totcpu=0:00:42.9, real=0:01:48, mem=2844.7M) ---

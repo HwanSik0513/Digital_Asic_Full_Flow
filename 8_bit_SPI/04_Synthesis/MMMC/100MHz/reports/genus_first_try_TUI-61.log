@@ -1,0 +1,441 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2024 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[21:44:35.158617] Configured Lic search path (22.01-s003): 5280@localhost
+
+Version: 22.17-s071_1, built Wed Sep 11 20:37:05 PDT 2024
+Options: -files ./script/spi_bridge_top_45nm_MMMC.tcl -log ./log/all.log 
+Date:    Tue Nov 10 21:44:35 2026
+Host:    kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*2physical cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB) (394624392KB)
+PID:     268561
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[21:44:35.432041] Periodic Lic check successful
+[21:44:35.432048] Feature usage summary:
+[21:44:35.432049] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (1 second elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (13 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source ./script/spi_bridge_top_45nm_MMMC.tcl
+#@ Begin verbose source ./script/spi_bridge_top_45nm_MMMC.tcl
+@file(spi_bridge_top_45nm_MMMC.tcl) 10: set TOP_DESIGN spi_bridge_top
+@file(spi_bridge_top_45nm_MMMC.tcl) 12: set LOG_DIR      "./log"
+@file(spi_bridge_top_45nm_MMMC.tcl) 13: set RPT_DIR      "./report"
+@file(spi_bridge_top_45nm_MMMC.tcl) 14: set UNMAPPED_DIR "./unmapped"
+@file(spi_bridge_top_45nm_MMMC.tcl) 15: set MAPPED_DIR   "./mapped"
+@file(spi_bridge_top_45nm_MMMC.tcl) 17: file mkdir $LOG_DIR
+@file(spi_bridge_top_45nm_MMMC.tcl) 18: file mkdir $RPT_DIR
+@file(spi_bridge_top_45nm_MMMC.tcl) 19: file mkdir $UNMAPPED_DIR
+@file(spi_bridge_top_45nm_MMMC.tcl) 20: file mkdir $MAPPED_DIR
+@file(spi_bridge_top_45nm_MMMC.tcl) 25: set STD_LIB_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing"
+@file(spi_bridge_top_45nm_MMMC.tcl) 26: set IO_LIB_PATH  "../../../GPDK045/digital/giolib045_v3.5/timing"
+@file(spi_bridge_top_45nm_MMMC.tcl) 27: set LEF_LIB_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/lef ../../../GPDK045/digital/giolib045_v3.5/lef"
+@file(spi_bridge_top_45nm_MMMC.tcl) 28: set QRC_FILE_PATH "../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx"
+@file(spi_bridge_top_45nm_MMMC.tcl) 31: set MMMC_FILE "./cons/spi_bridge_top_syn.mmmc.tcl"
+@file(spi_bridge_top_45nm_MMMC.tcl) 32: set LEF_LIST {gsclib045_tech.lef gsclib045_macro.lef giolib045.lef}
+@file(spi_bridge_top_45nm_MMMC.tcl) 34: set_db auto_ungroup none
+  Setting attribute of root '/': 'auto_ungroup' = none
+@file(spi_bridge_top_45nm_MMMC.tcl) 35: set_db max_cpus_per_server 2
+  Setting attribute of root '/': 'max_cpus_per_server' = 2
+@file(spi_bridge_top_45nm_MMMC.tcl) 37: set_db syn_generic_effort high
+  Setting attribute of root '/': 'syn_generic_effort' = high
+@file(spi_bridge_top_45nm_MMMC.tcl) 38: set_db syn_map_effort high
+  Setting attribute of root '/': 'syn_map_effort' = high
+@file(spi_bridge_top_45nm_MMMC.tcl) 39: set_db syn_opt_effort high
+  Setting attribute of root '/': 'syn_opt_effort' = high
+@file(spi_bridge_top_45nm_MMMC.tcl) 41: set_db init_lib_search_path [concat $STD_LIB_PATH $IO_LIB_PATH $LEF_LIB_PATH $QRC_FILE_PATH]
+  Setting attribute of root '/': 'init_lib_search_path' = ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing ../../../GPDK045/digital/giolib045_v3.5/timing ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/lef ../../../GPDK045/digital/giolib045_v3.5/lef ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx
+@file(spi_bridge_top_45nm_MMMC.tcl) 44: read_mmmc $MMMC_FILE
+  Setting attribute of root '/': 'is_read_mmmc_flow' = true
+Sourcing './cons/spi_bridge_top_syn.mmmc.tcl' (Tue Nov 10 21:44:48 KST 2026)...
+#@ Begin verbose source ./cons/spi_bridge_top_syn.mmmc.tcl
+@file(spi_bridge_top_syn.mmmc.tcl) 22: set GPDK        "../../../GPDK045/digital"
+@file(spi_bridge_top_syn.mmmc.tcl) 23: set STD_TIMING  "$GPDK/gsclib045_all_v4.4/gsclib045/timing"
+@file(spi_bridge_top_syn.mmmc.tcl) 24: set IO_TIMING   "$GPDK/giolib045_v3.5/timing"
+@file(spi_bridge_top_syn.mmmc.tcl) 25: set QRC_TECH    "$GPDK/gsclib045_all_v4.4/gsclib045_tech/qrc/qx/gpdk045.tch"
+@file(spi_bridge_top_syn.mmmc.tcl) 30: create_library_set -name SS_Max_0p90v_125c \
+    -timing [list $STD_TIMING/slow_vdd1v0_basicCells.lib \
+                  $IO_TIMING/pads_SS_s1vg.lib]
+@file(spi_bridge_top_syn.mmmc.tcl) 34: create_library_set -name FF_Min_1p10v_0c \
+    -timing [list $STD_TIMING/fast_vdd1v0_basicCells.lib \
+                  $IO_TIMING/pads_FF_s1vg.lib]
+@file(spi_bridge_top_syn.mmmc.tcl) 43: create_timing_condition -name TC_SS -library_sets { SS_Max_0p90v_125c }
+@file(spi_bridge_top_syn.mmmc.tcl) 44: create_timing_condition -name TC_FF -library_sets { FF_Min_1p10v_0c }
+@file(spi_bridge_top_syn.mmmc.tcl) 49: create_rc_corner -name WORST -temperature 125 -qrc_tech $QRC_TECH
+@file(spi_bridge_top_syn.mmmc.tcl) 50: create_rc_corner -name BEST  -temperature 0   -qrc_tech $QRC_TECH
+@file(spi_bridge_top_syn.mmmc.tcl) 55: create_delay_corner -name SS_WORST \
+    -early_timing_condition { TC_SS } -late_timing_condition { TC_SS } \
+    -early_rc_corner WORST            -late_rc_corner WORST
+@file(spi_bridge_top_syn.mmmc.tcl) 59: create_delay_corner -name FF_BEST \
+    -early_timing_condition { TC_FF } -late_timing_condition { TC_FF } \
+    -early_rc_corner BEST             -late_rc_corner BEST
+@file(spi_bridge_top_syn.mmmc.tcl) 69: create_constraint_mode -name FUNC \
+    -sdc_files { ./cons/spi_bridge_top.sdc }
+@file(spi_bridge_top_syn.mmmc.tcl) 75: create_analysis_view -name FUNC_SS_WORST -constraint_mode FUNC -delay_corner SS_WORST
+@file(spi_bridge_top_syn.mmmc.tcl) 76: create_analysis_view -name FUNC_FF_BEST  -constraint_mode FUNC -delay_corner FF_BEST
+@file(spi_bridge_top_syn.mmmc.tcl) 85: set_analysis_view -setup { FUNC_SS_WORST FUNC_FF_BEST } -hold { FUNC_FF_BEST }
+
+  Message Summary for Library both libraries:
+  *******************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 16
+  *******************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow_vdd1v0_basicCells.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'pads_SS_s1vg.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Found libraries with and without pg_pin construct. [LBR-12]
+        : Libraries with and without pg_pin construct have been loaded.
+        : This can lead to issues later in the flow.
+Info    : Set default library domain. [LBR-109]
+        : The default library domain is 'library_domain:TC_SS'.
+#@ End verbose source ./cons/spi_bridge_top_syn.mmmc.tcl
+@file(spi_bridge_top_45nm_MMMC.tcl) 45: read_physical -lef $LEF_LIST
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_HV' has no resistance value.
+        : If this is the expected behavior, this message can be ignored.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_2x1_HV_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M2_M1_1x2_HV_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_VH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_HH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_VV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_M_NH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_M_SH' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_E' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_2x1_VH_W' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_N' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M3_M2_1x2_VH_S' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M4_M3_HV' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'M4_M3_VV' has no resistance value.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'PHYS-129'.
+
+  According to lef_library, there are total 11 routing layers [ V(5) / H(6) ]
+
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDB' was marked 'avoid' because there was no physical data in the LEF file.
+        : To prevent the library cell from being set to 'avoid', set attribute 'lib_lef_consistency_check_enable' to 'false'.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDI' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDO' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDOZ' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF2RX1 cannot be found in library.
+        : Ensure that the proper library files are available and have been imported.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF2RX2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF2X1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF2X2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF4RX1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF4RX2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF4X1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell DFF4X2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL16 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL32 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL4 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL64 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL8 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FSWNX1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FSWX1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell HSWDNX1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell HSWDX1 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell HSWNX1 cannot be found in library.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'PHYS-279'.
+@file(spi_bridge_top_45nm_MMMC.tcl) 47: set_db hdl_array_naming_style %s_%d
+  Setting attribute of root '/': 'hdl_array_naming_style' = %s_%d
+@file(spi_bridge_top_45nm_MMMC.tcl) 48: set_db / .uniquify_naming_style ${TOP_DESIGN}_%s_%d
+Warning : Elaborated designs already exist in memory. [TUI-900]
+        : uniquify_naming_style will be applied only to new designs.
+        : See '::legacy::set_attribute -h uniquify_naming_style root' for help.
+  Setting attribute of root '/': 'uniquify_naming_style' = spi_bridge_top_%s_%d
+@file(spi_bridge_top_45nm_MMMC.tcl) 53: set RTL_SOURCES "../RTL/Async_fifo.v \
+                 ../RTL/Pulse_sync.v \
+                 ../RTL/Register_block.v \
+                 ../RTL/Reset_sync.v \
+                 ../RTL/Sclk_gen.v \
+                 ../RTL/Spi_master.v \
+                 ../RTL/Spi_slave.v \
+                 ../RTL/Spi_bridge_top.v"
+@file(spi_bridge_top_45nm_MMMC.tcl) 62: read_hdl $RTL_SOURCES
+@file(spi_bridge_top_45nm_MMMC.tcl) 63: elaborate $TOP_DESIGN
+  Libraries have 324 usable logic and 128 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'spi_bridge_top' from file '../RTL/Spi_bridge_top.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'spi_master' in file '../RTL/Spi_master.v' on line 80.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'spi_slave' in file '../RTL/Spi_slave.v' on line 113.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'spi_bridge_top'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+-------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (s) | 
+-------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |        0.00 | 
+| ume_merge         |       0 |       0 |        0.00 | 
+| ume_ssm           |       0 |       0 |        0.00 | 
+| ume_cse           |       0 |       0 |        0.00 | 
+| ume_shrink        |       0 |       0 |        0.00 | 
+| ume_sweep         |       0 |       0 |        0.00 | 
+-------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: spi_bridge_top, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+--------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (s) | 
+--------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |        0.00 | 
+| hlo_clip_mux_input             |       0 |       0 |        0.00 | 
+| hlo_clip                       |       0 |       0 |        0.00 | 
+| hlo_cleanup                    |       0 |       0 |        0.00 | 
+--------------------------------------------------------------------
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(spi_bridge_top_45nm_MMMC.tcl) 65: time_info Elaboration
+stamp 'Elaboration' being created for table 'default'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:08(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |   21:44:43 (Nov10) |  211.7 MB | init
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:15(00:00:07) |  00:00:07(00:00:07) | 100.0(100.0) |   21:44:50 (Nov10) |  382.9 MB | Elaboration
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 2 * 1   (id: default, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+@file(spi_bridge_top_45nm_MMMC.tcl) 68: init_design
+
+  Message Summary for Library both libraries:
+  *******************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 16
+  *******************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'fast_vdd1v0_basicCells.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.100000, 0.000000) in library 'pads_FF_s1vg.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP10' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP5' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP7' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP9' must have an output pin.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDB' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDI' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDO' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'IORINGDOZ' was marked 'avoid' because there was no physical data in the LEF file.
+Warning : Inconsistency detected among the units specified in the timing libraries being used. [LBR-714]
+        : Libraries with inconsistent time/capacitance units were loaded.
+        : Default system time/capacitance unit will be used.
+Started checking and loading power intent for design spi_bridge_top...
+======================================================================
+No power intent for design 'spi_bridge_top'.
+Completed checking and loading power intent for design spi_bridge_top (runtime:0.00s memory_usage:0.00M peak_memory:0.00M).
+===========================================================================================================================
+#
+# Reading SDC ./cons/spi_bridge_top.sdc for view:FUNC_SS_WORST (constraint_mode:FUNC)
+#
+  Libraries have 324 usable logic and 128 usable sequential lib-cells.
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      1 , failed      0 (runtime  0.00)
+ "all_outputs"              - successful      1 , failed      0 (runtime  0.00)
+ "create_clock"             - successful      1 , failed      0 (runtime  0.01)
+ "create_generated_clock"   - successful      1 , failed      0 (runtime  0.06)
+ "get_cells"                - successful      2 , failed      0 (runtime  0.00)
+ "get_clocks"               - successful     10 , failed      0 (runtime  0.00)
+ "get_pins"                 - successful      2 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      8 , failed      0 (runtime  0.01)
+ "remove_from_collection"   - successful      1 , failed      0 (runtime  0.00)
+ "set_clock_latency"        - successful      2 , failed      0 (runtime  0.00)
+ "set_clock_transition"     - successful      2 , failed      0 (runtime  0.00)
+ "set_clock_uncertainty"    - successful      2 , failed      0 (runtime  0.00)
+ "set_driving_cell"         - successful      1 , failed      0 (runtime  0.00)
+ "set_false_path"           - successful      2 , failed      0 (runtime  0.00)
+ "set_ideal_network"        - successful      1 , failed      0 (runtime  0.01)
+ "set_input_delay"          - successful      2 , failed      0 (runtime  0.01)
+ "set_load"                 - successful      1 , failed      0 (runtime  0.00)
+ "set_output_delay"         - successful      2 , failed      0 (runtime  0.00)
+ "set_units"                - successful      2 , failed      0 (runtime  0.00)
+read_sdc completed in 00:00:01 (hh:mm:ss)
+Error   : A required object parameter could not be found. [TUI-61] [::legacy::get_attribute]
+        : An object named 'object_deleted' could not be found.
+        : Check to make sure that the object exists and is of the correct type.  The 'what_is' command can be used to determine the type of an object.
+
+Usage: ::legacy::get_attribute <string> [<object>+]
+
+    <string>:
+        attribute name 
+    [<object>+]:
+        object of interest (must be unique) 
+#@ End verbose source ./script/spi_bridge_top_45nm_MMMC.tcl
+1
+Encountered problems processing file: ./script/spi_bridge_top_45nm_MMMC.tcl
+WARNING: This version of the tool is 789 days old.
+@genus:root: 2> quit
+
+Lic Summary:
+[21:46:27.277258] Cdslmd servers: kopo-seongnam
+[21:46:27.277267] Feature usage summary:
+[21:46:27.277267] Genus_Synthesis
+
+Normal exit.

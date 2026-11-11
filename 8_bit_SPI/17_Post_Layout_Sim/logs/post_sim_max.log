@@ -1,0 +1,2385 @@
+xrun(64): 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s012: Started on Nov 12, 2026 at 06:40:11 KST
+xrun
+	-64bit
+	+max_err_count+50
+	+define+sdf_post_wst
+	-access +rwc
+	-gui
+	+libext+.v
+	../../TESTBENCH/tb_spi_bridge_top.v
+	spi_bridge_top_pnr_hier.v
+	../../../RTL/Async_fifo.v
+	../../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v
+	-l post_sim_max.log
+file: ../../TESTBENCH/tb_spi_bridge_top.v
+	module worklib.tb_spi_bridge_top:v
+		errors: 0, warnings: 0
+file: spi_bridge_top_pnr_hier.v
+	module worklib.pulse_sync:v
+		errors: 0, warnings: 0
+	module worklib.register_block:v
+		errors: 0, warnings: 0
+	module worklib.reset_sync:v
+		errors: 0, warnings: 0
+	module worklib.spi_bridge_top_reset_sync_1:v
+		errors: 0, warnings: 0
+	module worklib.async_fifo_DATA_WIDTH8_ADDR_WIDTH4:v
+		errors: 0, warnings: 0
+	module worklib.sclk_gen:v
+		errors: 0, warnings: 0
+	module worklib.spi_master:v
+		errors: 0, warnings: 0
+	module worklib.spi_slave:v
+		errors: 0, warnings: 0
+	module worklib.async_fifo_DATA_WIDTH8_ADDR_WIDTH2:v
+		errors: 0, warnings: 0
+	module worklib.spi_bridge_top:v
+		errors: 0, warnings: 0
+file: ../../../RTL/Async_fifo.v
+	module worklib.async_fifo:v
+		errors: 0, warnings: 0
+file: ../../../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v
+	module worklib.ACHCONX2:v
+		errors: 0, warnings: 0
+	module worklib.ADDFHX1:v
+		errors: 0, warnings: 0
+	module worklib.ADDFHX2:v
+		errors: 0, warnings: 0
+	module worklib.ADDFHX4:v
+		errors: 0, warnings: 0
+	module worklib.ADDFHXL:v
+		errors: 0, warnings: 0
+	module worklib.ADDFX1:v
+		errors: 0, warnings: 0
+	module worklib.ADDFX2:v
+		errors: 0, warnings: 0
+	module worklib.ADDFX4:v
+		errors: 0, warnings: 0
+	module worklib.ADDFXL:v
+		errors: 0, warnings: 0
+	module worklib.ADDHX1:v
+		errors: 0, warnings: 0
+	module worklib.ADDHX2:v
+		errors: 0, warnings: 0
+	module worklib.ADDHX4:v
+		errors: 0, warnings: 0
+	module worklib.ADDHXL:v
+		errors: 0, warnings: 0
+	module worklib.AND2X1:v
+		errors: 0, warnings: 0
+	module worklib.AND2X2:v
+		errors: 0, warnings: 0
+	module worklib.AND2X4:v
+		errors: 0, warnings: 0
+	module worklib.AND2X6:v
+		errors: 0, warnings: 0
+	module worklib.AND2X8:v
+		errors: 0, warnings: 0
+	module worklib.AND2XL:v
+		errors: 0, warnings: 0
+	module worklib.AND3X1:v
+		errors: 0, warnings: 0
+	module worklib.AND3X2:v
+		errors: 0, warnings: 0
+	module worklib.AND3X4:v
+		errors: 0, warnings: 0
+	module worklib.AND3X6:v
+		errors: 0, warnings: 0
+	module worklib.AND3X8:v
+		errors: 0, warnings: 0
+	module worklib.AND3XL:v
+		errors: 0, warnings: 0
+	module worklib.AND4X1:v
+		errors: 0, warnings: 0
+	module worklib.AND4X2:v
+		errors: 0, warnings: 0
+	module worklib.AND4X4:v
+		errors: 0, warnings: 0
+	module worklib.AND4X6:v
+		errors: 0, warnings: 0
+	module worklib.AND4X8:v
+		errors: 0, warnings: 0
+	module worklib.AND4XL:v
+		errors: 0, warnings: 0
+	module worklib.ANTENNA:v
+		errors: 0, warnings: 0
+	module worklib.AO21X1:v
+		errors: 0, warnings: 0
+	module worklib.AO21X2:v
+		errors: 0, warnings: 0
+	module worklib.AO21X4:v
+		errors: 0, warnings: 0
+	module worklib.AO21XL:v
+		errors: 0, warnings: 0
+	module worklib.AO22X1:v
+		errors: 0, warnings: 0
+	module worklib.AO22X2:v
+		errors: 0, warnings: 0
+	module worklib.AO22X4:v
+		errors: 0, warnings: 0
+	module worklib.AO22XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI211X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI211X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI211X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI211XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI21X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI21X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI21X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI21XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI221X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI221X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI221X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI221XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI222X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI222X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI222X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI222XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI22X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI22X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI22X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI22XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB1X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB1X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB1X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB1XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB2X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB2X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB2X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI2BB2XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI31X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI31X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI31X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI31XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI32X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI32X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI32X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI32XL:v
+		errors: 0, warnings: 0
+	module worklib.AOI33X1:v
+		errors: 0, warnings: 0
+	module worklib.AOI33X2:v
+		errors: 0, warnings: 0
+	module worklib.AOI33X4:v
+		errors: 0, warnings: 0
+	module worklib.AOI33XL:v
+		errors: 0, warnings: 0
+	module worklib.BMXIX2:v
+		errors: 0, warnings: 0
+	module worklib.BMXIX4:v
+		errors: 0, warnings: 0
+	module worklib.BUFX12:v
+		errors: 0, warnings: 0
+	module worklib.BUFX16:v
+		errors: 0, warnings: 0
+	module worklib.BUFX2:v
+		errors: 0, warnings: 0
+	module worklib.BUFX20:v
+		errors: 0, warnings: 0
+	module worklib.BUFX3:v
+		errors: 0, warnings: 0
+	module worklib.BUFX4:v
+		errors: 0, warnings: 0
+	module worklib.BUFX6:v
+		errors: 0, warnings: 0
+	module worklib.BUFX8:v
+		errors: 0, warnings: 0
+	module worklib.CLKAND2X12:v
+		errors: 0, warnings: 0
+	module worklib.CLKAND2X2:v
+		errors: 0, warnings: 0
+	module worklib.CLKAND2X3:v
+		errors: 0, warnings: 0
+	module worklib.CLKAND2X4:v
+		errors: 0, warnings: 0
+	module worklib.CLKAND2X6:v
+		errors: 0, warnings: 0
+	module worklib.CLKAND2X8:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX12:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX16:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX2:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX20:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX3:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX4:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX6:v
+		errors: 0, warnings: 0
+	module worklib.CLKBUFX8:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX1:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX12:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX16:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX2:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX20:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX3:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX4:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX6:v
+		errors: 0, warnings: 0
+	module worklib.CLKINVX8:v
+		errors: 0, warnings: 0
+	module worklib.CLKMX2X12:v
+		errors: 0, warnings: 0
+	module worklib.CLKMX2X2:v
+		errors: 0, warnings: 0
+	module worklib.CLKMX2X3:v
+		errors: 0, warnings: 0
+	module worklib.CLKMX2X4:v
+		errors: 0, warnings: 0
+	module worklib.CLKMX2X6:v
+		errors: 0, warnings: 0
+	module worklib.CLKMX2X8:v
+		errors: 0, warnings: 0
+	module worklib.CLKXOR2X1:v
+		errors: 0, warnings: 0
+	module worklib.CLKXOR2X2:v
+		errors: 0, warnings: 0
+	module worklib.CLKXOR2X4:v
+		errors: 0, warnings: 0
+	module worklib.CLKXOR2X8:v
+		errors: 0, warnings: 0
+	module worklib.DECAP10:v
+		errors: 0, warnings: 0
+	module worklib.DECAP2:v
+		errors: 0, warnings: 0
+	module worklib.DECAP3:v
+		errors: 0, warnings: 0
+	module worklib.DECAP4:v
+		errors: 0, warnings: 0
+	module worklib.DECAP5:v
+		errors: 0, warnings: 0
+	module worklib.DECAP6:v
+		errors: 0, warnings: 0
+	module worklib.DECAP7:v
+		errors: 0, warnings: 0
+	module worklib.DECAP8:v
+		errors: 0, warnings: 0
+	module worklib.DECAP9:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFHQX8:v
+		errors: 0, warnings: 0
+	module worklib.DFFNSRX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFNSRX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFNSRX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFNSRXL:v
+		errors: 0, warnings: 0
+	module worklib.DFFQX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFQX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFQX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFQXL:v
+		errors: 0, warnings: 0
+	module worklib.DFFRHQX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFRHQX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFRHQX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFRHQX8:v
+		errors: 0, warnings: 0
+	module worklib.DFFRX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFRX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFRX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFRXL:v
+		errors: 0, warnings: 0
+	module worklib.DFFSHQX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFSHQX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFSHQX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFSHQX8:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRHQX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRHQX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRHQX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRHQX8:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFSRXL:v
+		errors: 0, warnings: 0
+	module worklib.DFFSX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFSX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFSX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFSXL:v
+		errors: 0, warnings: 0
+	module worklib.DFFTRX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFTRX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFTRX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFTRXL:v
+		errors: 0, warnings: 0
+	module worklib.DFFX1:v
+		errors: 0, warnings: 0
+	module worklib.DFFX2:v
+		errors: 0, warnings: 0
+	module worklib.DFFX4:v
+		errors: 0, warnings: 0
+	module worklib.DFFXL:v
+		errors: 0, warnings: 0
+	module worklib.DLY1X1:v
+		errors: 0, warnings: 0
+	module worklib.DLY1X4:v
+		errors: 0, warnings: 0
+	module worklib.DLY2X1:v
+		errors: 0, warnings: 0
+	module worklib.DLY2X4:v
+		errors: 0, warnings: 0
+	module worklib.DLY3X1:v
+		errors: 0, warnings: 0
+	module worklib.DLY3X4:v
+		errors: 0, warnings: 0
+	module worklib.DLY4X1:v
+		errors: 0, warnings: 0
+	module worklib.DLY4X4:v
+		errors: 0, warnings: 0
+	module worklib.EDFFHQX1:v
+		errors: 0, warnings: 0
+	module worklib.EDFFHQX2:v
+		errors: 0, warnings: 0
+	module worklib.EDFFHQX4:v
+		errors: 0, warnings: 0
+	module worklib.EDFFHQX8:v
+		errors: 0, warnings: 0
+	module worklib.EDFFTRX1:v
+		errors: 0, warnings: 0
+	module worklib.EDFFTRX2:v
+		errors: 0, warnings: 0
+	module worklib.EDFFTRX4:v
+		errors: 0, warnings: 0
+	module worklib.EDFFTRXL:v
+		errors: 0, warnings: 0
+	module worklib.EDFFX1:v
+		errors: 0, warnings: 0
+	module worklib.EDFFX2:v
+		errors: 0, warnings: 0
+	module worklib.EDFFX4:v
+		errors: 0, warnings: 0
+	module worklib.EDFFXL:v
+		errors: 0, warnings: 0
+	module worklib.HOLDX1:v
+		errors: 0, warnings: 0
+	module worklib.INVX1:v
+		errors: 0, warnings: 0
+	module worklib.INVX12:v
+		errors: 0, warnings: 0
+	module worklib.INVX16:v
+		errors: 0, warnings: 0
+	module worklib.INVX2:v
+		errors: 0, warnings: 0
+	module worklib.INVX20:v
+		errors: 0, warnings: 0
+	module worklib.INVX3:v
+		errors: 0, warnings: 0
+	module worklib.INVX4:v
+		errors: 0, warnings: 0
+	module worklib.INVX6:v
+		errors: 0, warnings: 0
+	module worklib.INVX8:v
+		errors: 0, warnings: 0
+	module worklib.INVXL:v
+		errors: 0, warnings: 0
+	module worklib.MDFFHQX1:v
+		errors: 0, warnings: 0
+	module worklib.MDFFHQX2:v
+		errors: 0, warnings: 0
+	module worklib.MDFFHQX4:v
+		errors: 0, warnings: 0
+	module worklib.MDFFHQX8:v
+		errors: 0, warnings: 0
+	module worklib.MX2X1:v
+		errors: 0, warnings: 0
+	module worklib.MX2X2:v
+		errors: 0, warnings: 0
+	module worklib.MX2X4:v
+		errors: 0, warnings: 0
+	module worklib.MX2X6:v
+		errors: 0, warnings: 0
+	module worklib.MX2X8:v
+		errors: 0, warnings: 0
+	module worklib.MX2XL:v
+		errors: 0, warnings: 0
+	module worklib.MX3X1:v
+		errors: 0, warnings: 0
+	module worklib.MX3X2:v
+		errors: 0, warnings: 0
+	module worklib.MX3X4:v
+		errors: 0, warnings: 0
+	module worklib.MX3XL:v
+		errors: 0, warnings: 0
+	module worklib.MX4X1:v
+		errors: 0, warnings: 0
+	module worklib.MX4X2:v
+		errors: 0, warnings: 0
+	module worklib.MX4X4:v
+		errors: 0, warnings: 0
+	module worklib.MX4XL:v
+		errors: 0, warnings: 0
+	module worklib.MXI2X1:v
+		errors: 0, warnings: 0
+	module worklib.MXI2X2:v
+		errors: 0, warnings: 0
+	module worklib.MXI2X4:v
+		errors: 0, warnings: 0
+	module worklib.MXI2X6:v
+		errors: 0, warnings: 0
+	module worklib.MXI2X8:v
+		errors: 0, warnings: 0
+	module worklib.MXI2XL:v
+		errors: 0, warnings: 0
+	module worklib.MXI3X1:v
+		errors: 0, warnings: 0
+	module worklib.MXI3X2:v
+		errors: 0, warnings: 0
+	module worklib.MXI3X4:v
+		errors: 0, warnings: 0
+	module worklib.MXI3XL:v
+		errors: 0, warnings: 0
+	module worklib.MXI4X1:v
+		errors: 0, warnings: 0
+	module worklib.MXI4X2:v
+		errors: 0, warnings: 0
+	module worklib.MXI4X4:v
+		errors: 0, warnings: 0
+	module worklib.MXI4XL:v
+		errors: 0, warnings: 0
+	module worklib.NAND2BX1:v
+		errors: 0, warnings: 0
+	module worklib.NAND2BX2:v
+		errors: 0, warnings: 0
+	module worklib.NAND2BX4:v
+		errors: 0, warnings: 0
+	module worklib.NAND2BXL:v
+		errors: 0, warnings: 0
+	module worklib.NAND2X1:v
+		errors: 0, warnings: 0
+	module worklib.NAND2X2:v
+		errors: 0, warnings: 0
+	module worklib.NAND2X4:v
+		errors: 0, warnings: 0
+	module worklib.NAND2X6:v
+		errors: 0, warnings: 0
+	module worklib.NAND2X8:v
+		errors: 0, warnings: 0
+	module worklib.NAND2XL:v
+		errors: 0, warnings: 0
+	module worklib.NAND3BX1:v
+		errors: 0, warnings: 0
+	module worklib.NAND3BX2:v
+		errors: 0, warnings: 0
+	module worklib.NAND3BX4:v
+		errors: 0, warnings: 0
+	module worklib.NAND3BXL:v
+		errors: 0, warnings: 0
+	module worklib.NAND3X1:v
+		errors: 0, warnings: 0
+	module worklib.NAND3X2:v
+		errors: 0, warnings: 0
+	module worklib.NAND3X4:v
+		errors: 0, warnings: 0
+	module worklib.NAND3X6:v
+		errors: 0, warnings: 0
+	module worklib.NAND3X8:v
+		errors: 0, warnings: 0
+	module worklib.NAND3XL:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BBX1:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BBX2:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BBX4:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BBXL:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BX1:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BX2:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BX4:v
+		errors: 0, warnings: 0
+	module worklib.NAND4BXL:v
+		errors: 0, warnings: 0
+	module worklib.NAND4X1:v
+		errors: 0, warnings: 0
+	module worklib.NAND4X2:v
+		errors: 0, warnings: 0
+	module worklib.NAND4X4:v
+		errors: 0, warnings: 0
+	module worklib.NAND4X6:v
+		errors: 0, warnings: 0
+	module worklib.NAND4X8:v
+		errors: 0, warnings: 0
+	module worklib.NAND4XL:v
+		errors: 0, warnings: 0
+	module worklib.NOR2BX1:v
+		errors: 0, warnings: 0
+	module worklib.NOR2BX2:v
+		errors: 0, warnings: 0
+	module worklib.NOR2BX4:v
+		errors: 0, warnings: 0
+	module worklib.NOR2BXL:v
+		errors: 0, warnings: 0
+	module worklib.NOR2X1:v
+		errors: 0, warnings: 0
+	module worklib.NOR2X2:v
+		errors: 0, warnings: 0
+	module worklib.NOR2X4:v
+		errors: 0, warnings: 0
+	module worklib.NOR2X6:v
+		errors: 0, warnings: 0
+	module worklib.NOR2X8:v
+		errors: 0, warnings: 0
+	module worklib.NOR2XL:v
+		errors: 0, warnings: 0
+	module worklib.NOR3BX1:v
+		errors: 0, warnings: 0
+	module worklib.NOR3BX2:v
+		errors: 0, warnings: 0
+	module worklib.NOR3BX4:v
+		errors: 0, warnings: 0
+	module worklib.NOR3BXL:v
+		errors: 0, warnings: 0
+	module worklib.NOR3X1:v
+		errors: 0, warnings: 0
+	module worklib.NOR3X2:v
+		errors: 0, warnings: 0
+	module worklib.NOR3X4:v
+		errors: 0, warnings: 0
+	module worklib.NOR3X6:v
+		errors: 0, warnings: 0
+	module worklib.NOR3X8:v
+		errors: 0, warnings: 0
+	module worklib.NOR3XL:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BBX1:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BBX2:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BBX4:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BBXL:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BX1:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BX2:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BX4:v
+		errors: 0, warnings: 0
+	module worklib.NOR4BXL:v
+		errors: 0, warnings: 0
+	module worklib.NOR4X1:v
+		errors: 0, warnings: 0
+	module worklib.NOR4X2:v
+		errors: 0, warnings: 0
+	module worklib.NOR4X4:v
+		errors: 0, warnings: 0
+	module worklib.NOR4X6:v
+		errors: 0, warnings: 0
+	module worklib.NOR4X8:v
+		errors: 0, warnings: 0
+	module worklib.NOR4XL:v
+		errors: 0, warnings: 0
+	module worklib.OA21X1:v
+		errors: 0, warnings: 0
+	module worklib.OA21X2:v
+		errors: 0, warnings: 0
+	module worklib.OA21X4:v
+		errors: 0, warnings: 0
+	module worklib.OA21XL:v
+		errors: 0, warnings: 0
+	module worklib.OA22X1:v
+		errors: 0, warnings: 0
+	module worklib.OA22X2:v
+		errors: 0, warnings: 0
+	module worklib.OA22X4:v
+		errors: 0, warnings: 0
+	module worklib.OA22XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI211X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI211X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI211X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI211XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI21X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI21X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI21X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI21XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI221X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI221X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI221X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI221XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI222X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI222X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI222X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI222XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI22X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI22X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI22X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI22XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB1X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB1X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB1X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB1XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB2X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB2X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB2X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI2BB2XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI31X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI31X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI31X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI31XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI32X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI32X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI32X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI32XL:v
+		errors: 0, warnings: 0
+	module worklib.OAI33X1:v
+		errors: 0, warnings: 0
+	module worklib.OAI33X2:v
+		errors: 0, warnings: 0
+	module worklib.OAI33X4:v
+		errors: 0, warnings: 0
+	module worklib.OAI33XL:v
+		errors: 0, warnings: 0
+	module worklib.OR2X1:v
+		errors: 0, warnings: 0
+	module worklib.OR2X2:v
+		errors: 0, warnings: 0
+	module worklib.OR2X4:v
+		errors: 0, warnings: 0
+	module worklib.OR2X6:v
+		errors: 0, warnings: 0
+	module worklib.OR2X8:v
+		errors: 0, warnings: 0
+	module worklib.OR2XL:v
+		errors: 0, warnings: 0
+	module worklib.OR3X1:v
+		errors: 0, warnings: 0
+	module worklib.OR3X2:v
+		errors: 0, warnings: 0
+	module worklib.OR3X4:v
+		errors: 0, warnings: 0
+	module worklib.OR3X6:v
+		errors: 0, warnings: 0
+	module worklib.OR3X8:v
+		errors: 0, warnings: 0
+	module worklib.OR3XL:v
+		errors: 0, warnings: 0
+	module worklib.OR4X1:v
+		errors: 0, warnings: 0
+	module worklib.OR4X2:v
+		errors: 0, warnings: 0
+	module worklib.OR4X4:v
+		errors: 0, warnings: 0
+	module worklib.OR4X6:v
+		errors: 0, warnings: 0
+	module worklib.OR4X8:v
+		errors: 0, warnings: 0
+	module worklib.OR4XL:v
+		errors: 0, warnings: 0
+	module worklib.SDFFHQX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFHQX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFHQX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFHQX8:v
+		errors: 0, warnings: 0
+	module worklib.SDFFNSRX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFNSRX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFNSRX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFNSRXL:v
+		errors: 0, warnings: 0
+	module worklib.SDFFQX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFQX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFQX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFQXL:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRHQX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRHQX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRHQX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRHQX8:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFRXL:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSHQX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSHQX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSHQX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSHQX8:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRHQX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRHQX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRHQX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRHQX8:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSRXL:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFSXL:v
+		errors: 0, warnings: 0
+	module worklib.SDFFTRX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFTRX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFTRX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFTRXL:v
+		errors: 0, warnings: 0
+	module worklib.SDFFX1:v
+		errors: 0, warnings: 0
+	module worklib.SDFFX2:v
+		errors: 0, warnings: 0
+	module worklib.SDFFX4:v
+		errors: 0, warnings: 0
+	module worklib.SDFFXL:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFHQX1:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFHQX2:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFHQX4:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFHQX8:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFTRX1:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFTRX2:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFTRX4:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFTRXL:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFX1:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFX2:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFX4:v
+		errors: 0, warnings: 0
+	module worklib.SEDFFXL:v
+		errors: 0, warnings: 0
+	module worklib.SMDFFHQX1:v
+		errors: 0, warnings: 0
+	module worklib.SMDFFHQX2:v
+		errors: 0, warnings: 0
+	module worklib.SMDFFHQX4:v
+		errors: 0, warnings: 0
+	module worklib.SMDFFHQX8:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX1:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX12:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX16:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX2:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX20:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX3:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX4:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX6:v
+		errors: 0, warnings: 0
+	module worklib.TBUFX8:v
+		errors: 0, warnings: 0
+	module worklib.TBUFXL:v
+		errors: 0, warnings: 0
+	module worklib.TIEHI:v
+		errors: 0, warnings: 0
+	module worklib.TIELO:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX12:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX16:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX2:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX20:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX3:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX4:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX6:v
+		errors: 0, warnings: 0
+	module worklib.TLATNCAX8:v
+		errors: 0, warnings: 0
+	module worklib.TLATNSRX1:v
+		errors: 0, warnings: 0
+	module worklib.TLATNSRX2:v
+		errors: 0, warnings: 0
+	module worklib.TLATNSRX4:v
+		errors: 0, warnings: 0
+	module worklib.TLATNSRXL:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX12:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX16:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX2:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX20:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX3:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX4:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX6:v
+		errors: 0, warnings: 0
+	module worklib.TLATNTSCAX8:v
+		errors: 0, warnings: 0
+	module worklib.TLATNX1:v
+		errors: 0, warnings: 0
+	module worklib.TLATNX2:v
+		errors: 0, warnings: 0
+	module worklib.TLATNX4:v
+		errors: 0, warnings: 0
+	module worklib.TLATNXL:v
+		errors: 0, warnings: 0
+	module worklib.TLATSRX1:v
+		errors: 0, warnings: 0
+	module worklib.TLATSRX2:v
+		errors: 0, warnings: 0
+	module worklib.TLATSRX4:v
+		errors: 0, warnings: 0
+	module worklib.TLATSRXL:v
+		errors: 0, warnings: 0
+	module worklib.TLATX1:v
+		errors: 0, warnings: 0
+	module worklib.TLATX2:v
+		errors: 0, warnings: 0
+	module worklib.TLATX4:v
+		errors: 0, warnings: 0
+	module worklib.TLATXL:v
+		errors: 0, warnings: 0
+	module worklib.XNOR2X1:v
+		errors: 0, warnings: 0
+	module worklib.XNOR2X2:v
+		errors: 0, warnings: 0
+	module worklib.XNOR2X4:v
+		errors: 0, warnings: 0
+	module worklib.XNOR2XL:v
+		errors: 0, warnings: 0
+	module worklib.XNOR3X1:v
+		errors: 0, warnings: 0
+	module worklib.XNOR3XL:v
+		errors: 0, warnings: 0
+	module worklib.XOR2X1:v
+		errors: 0, warnings: 0
+	module worklib.XOR2X2:v
+		errors: 0, warnings: 0
+	module worklib.XOR2X4:v
+		errors: 0, warnings: 0
+	module worklib.XOR2XL:v
+		errors: 0, warnings: 0
+	module worklib.XOR3X1:v
+		errors: 0, warnings: 0
+	module worklib.XOR3XL:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_r_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_r:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_s_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_s:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_err:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_dff_sr_1:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_r:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_s:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_sr_0:v
+		errors: 0, warnings: 0
+	primitive worklib.altos_latch_sr_1:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb_spi_bridge_top
+		ACHCONX2
+		ADDFHX1
+		ADDFHX2
+		ADDFHX4
+		ADDFHXL
+		ADDFX2
+		ADDFX4
+		ADDFXL
+		ADDHX2
+		ADDHX4
+		ADDHXL
+		AND2X6
+		AND2X8
+		AND2XL
+		AND3X2
+		AND3X4
+		AND3X6
+		AND3X8
+		AND4X1
+		AND4X4
+		AND4X6
+		AND4X8
+		AND4XL
+		ANTENNA
+		AO21X2
+		AO21X4
+		AO21XL
+		AO22X2
+		AO22XL
+		AOI211X1
+		AOI211X2
+		AOI211X4
+		AOI211XL
+		AOI21X2
+		AOI21X4
+		AOI21XL
+		AOI221X2
+		AOI221X4
+		AOI221XL
+		AOI222X2
+		AOI222X4
+		AOI222XL
+		AOI22X2
+		AOI22X4
+		AOI22XL
+		AOI2BB1X1
+		AOI2BB1X2
+		AOI2BB1X4
+		AOI2BB1XL
+		AOI2BB2X1
+		AOI2BB2X2
+		AOI2BB2X4
+		AOI2BB2XL
+		AOI31X1
+		AOI31X2
+		AOI31X4
+		AOI31XL
+		AOI32X1
+		AOI32X2
+		AOI32X4
+		AOI32XL
+		AOI33X1
+		AOI33X2
+		AOI33X4
+		AOI33XL
+		BMXIX2
+		BMXIX4
+		BUFX12
+		BUFX16
+		BUFX2
+		BUFX20
+		BUFX4
+		BUFX8
+		CLKAND2X12
+		CLKAND2X2
+		CLKAND2X3
+		CLKAND2X4
+		CLKAND2X6
+		CLKAND2X8
+		CLKBUFX12
+		CLKBUFX16
+		CLKBUFX20
+		CLKBUFX6
+		CLKINVX1
+		CLKINVX12
+		CLKINVX16
+		CLKINVX2
+		CLKINVX20
+		CLKINVX3
+		CLKINVX4
+		CLKINVX6
+		CLKINVX8
+		CLKMX2X12
+		CLKMX2X2
+		CLKMX2X3
+		CLKMX2X4
+		CLKMX2X6
+		CLKMX2X8
+		CLKXOR2X2
+		CLKXOR2X4
+		CLKXOR2X8
+		DECAP10
+		DECAP2
+		DECAP3
+		DECAP4
+		DECAP5
+		DECAP6
+		DECAP7
+		DECAP8
+		DECAP9
+		DFFHQX2
+		DFFHQX4
+		DFFHQX8
+		DFFNSRX2
+		DFFNSRXL
+		DFFQX1
+		DFFRHQX2
+		DFFRHQX4
+		DFFRHQX8
+		DFFRX4
+		DFFRXL
+		DFFSHQX1
+		DFFSHQX2
+		DFFSHQX4
+		DFFSHQX8
+		DFFSRHQX1
+		DFFSRHQX2
+		DFFSRHQX4
+		DFFSRHQX8
+		DFFSRX1
+		DFFSRX2
+		DFFSRX4
+		DFFSRXL
+		DFFSX1
+		DFFSX2
+		DFFSX4
+		DFFSXL
+		DFFTRX1
+		DFFTRX2
+		DFFTRX4
+		DFFTRXL
+		DFFX1
+		DFFX2
+		DFFX4
+		DFFXL
+		DLY1X1
+		DLY1X4
+		DLY2X1
+		DLY2X4
+		DLY3X1
+		DLY3X4
+		DLY4X1
+		DLY4X4
+		EDFFHQX2
+		EDFFHQX4
+		EDFFHQX8
+		EDFFTRX1
+		EDFFTRX2
+		EDFFTRX4
+		EDFFTRXL
+		EDFFX1
+		EDFFX2
+		EDFFX4
+		EDFFXL
+		HOLDX1
+		INVX12
+		INVX16
+		INVX20
+		INVX4
+		INVX6
+		INVX8
+		MDFFHQX1
+		MDFFHQX2
+		MDFFHQX4
+		MDFFHQX8
+		MX2X2
+		MX2X4
+		MX2X6
+		MX2X8
+		MX2XL
+		MX3X1
+		MX3X2
+		MX3X4
+		MX3XL
+		MX4X1
+		MX4X2
+		MX4X4
+		MX4XL
+		MXI2X1
+		MXI2X2
+		MXI2X4
+		MXI2X6
+		MXI2X8
+		MXI3X1
+		MXI3X2
+		MXI3X4
+		MXI3XL
+		MXI4X1
+		MXI4X2
+		MXI4X4
+		MXI4XL
+		NAND2BX2
+		NAND2BX4
+		NAND2BXL
+		NAND2X2
+		NAND2X6
+		NAND2X8
+		NAND2XL
+		NAND3BX4
+		NAND3X4
+		NAND3X6
+		NAND3X8
+		NAND3XL
+		NAND4BBX1
+		NAND4BBX2
+		NAND4BBX4
+		NAND4BBXL
+		NAND4BX1
+		NAND4BX2
+		NAND4BX4
+		NAND4BXL
+		NAND4X1
+		NAND4X2
+		NAND4X4
+		NAND4X6
+		NAND4X8
+		NAND4XL
+		NOR2BX2
+		NOR2BX4
+		NOR2BXL
+		NOR2X4
+		NOR2X6
+		NOR2X8
+		NOR2XL
+		NOR3BX2
+		NOR3BX4
+		NOR3BXL
+		NOR3X4
+		NOR3X6
+		NOR3X8
+		NOR3XL
+		NOR4BBX2
+		NOR4BBX4
+		NOR4BBXL
+		NOR4BX1
+		NOR4BX2
+		NOR4BX4
+		NOR4BXL
+		NOR4X2
+		NOR4X4
+		NOR4X6
+		NOR4X8
+		NOR4XL
+		OA21X2
+		OA21X4
+		OA21XL
+		OA22X1
+		OA22X2
+		OA22X4
+		OA22XL
+		OAI211X2
+		OAI211X4
+		OAI211XL
+		OAI21X2
+		OAI21X4
+		OAI21XL
+		OAI221X1
+		OAI221X2
+		OAI221X4
+		OAI221XL
+		OAI222X1
+		OAI222X2
+		OAI222X4
+		OAI222XL
+		OAI22X1
+		OAI22X2
+		OAI22X4
+		OAI22XL
+		OAI2BB1X4
+		OAI2BB1XL
+		OAI2BB2X1
+		OAI2BB2X2
+		OAI2BB2X4
+		OAI2BB2XL
+		OAI31X1
+		OAI31X2
+		OAI31X4
+		OAI31XL
+		OAI32X1
+		OAI32X2
+		OAI32X4
+		OAI32XL
+		OAI33X1
+		OAI33X2
+		OAI33X4
+		OAI33XL
+		OR2X4
+		OR2X6
+		OR2X8
+		OR2XL
+		OR3X4
+		OR3X6
+		OR3X8
+		OR3XL
+		OR4X2
+		OR4X4
+		OR4X6
+		OR4X8
+		OR4XL
+		SDFFHQX1
+		SDFFHQX2
+		SDFFHQX4
+		SDFFHQX8
+		SDFFNSRX1
+		SDFFNSRX2
+		SDFFNSRX4
+		SDFFNSRXL
+		SDFFQX1
+		SDFFQX2
+		SDFFQX4
+		SDFFQXL
+		SDFFRHQX1
+		SDFFRHQX2
+		SDFFRHQX4
+		SDFFRHQX8
+		SDFFRX1
+		SDFFRX2
+		SDFFRX4
+		SDFFRXL
+		SDFFSHQX1
+		SDFFSHQX2
+		SDFFSHQX4
+		SDFFSHQX8
+		SDFFSRHQX1
+		SDFFSRHQX2
+		SDFFSRHQX4
+		SDFFSRHQX8
+		SDFFSRX1
+		SDFFSRX2
+		SDFFSRX4
+		SDFFSRXL
+		SDFFSX1
+		SDFFSX2
+		SDFFSX4
+		SDFFSXL
+		SDFFTRX1
+		SDFFTRX2
+		SDFFTRX4
+		SDFFTRXL
+		SDFFX1
+		SDFFX2
+		SDFFX4
+		SDFFXL
+		SEDFFHQX1
+		SEDFFHQX2
+		SEDFFHQX4
+		SEDFFHQX8
+		SEDFFTRX1
+		SEDFFTRX2
+		SEDFFTRX4
+		SEDFFTRXL
+		SEDFFX1
+		SEDFFX2
+		SEDFFX4
+		SEDFFXL
+		SMDFFHQX1
+		SMDFFHQX2
+		SMDFFHQX4
+		SMDFFHQX8
+		TBUFX1
+		TBUFX12
+		TBUFX16
+		TBUFX2
+		TBUFX20
+		TBUFX3
+		TBUFX4
+		TBUFX6
+		TBUFX8
+		TBUFXL
+		TIELO
+		TLATNCAX12
+		TLATNCAX16
+		TLATNCAX2
+		TLATNCAX20
+		TLATNCAX3
+		TLATNCAX4
+		TLATNCAX6
+		TLATNCAX8
+		TLATNSRX1
+		TLATNSRX2
+		TLATNSRX4
+		TLATNSRXL
+		TLATNTSCAX12
+		TLATNTSCAX16
+		TLATNTSCAX2
+		TLATNTSCAX20
+		TLATNTSCAX3
+		TLATNTSCAX4
+		TLATNTSCAX6
+		TLATNTSCAX8
+		TLATNX1
+		TLATNX2
+		TLATNX4
+		TLATNXL
+		TLATSRX1
+		TLATSRX2
+		TLATSRX4
+		TLATSRXL
+		TLATX1
+		TLATX2
+		TLATX4
+		TLATXL
+		XNOR2X2
+		XNOR2X4
+		XNOR2XL
+		XNOR3X1
+		XNOR3XL
+		XOR2X1
+		XOR2X2
+		XOR2X4
+		XOR2XL
+		XOR3X1
+		XOR3XL
+	Reading SDF file from location "spi_bridge_top_post_wst.sdf"
+	Writing compiled SDF file to "spi_bridge_top_post_wst.sdf.X".
+	Annotating SDF timing data:
+		Compiled SDF file:     spi_bridge_top_post_wst.sdf.X
+		Log file:              sdf_annotate_post_max.log
+		Backannotation scope:  tb_spi_bridge_top.dut
+		Configuration file:    
+		MTM control:           MAXIMUM
+		Scale factors:         
+		Scale type:            
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_dst_sync_d_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 2826>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_dst_sync_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 2845>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_dst_meta_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 2864>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_overflow_pulse_sync.r_src_toggle_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 2883>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.055) (0.085)) of instance tb_spi_bridge_top.dut.u_register_block.r_rx_fifo_rd_en_d_reg of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 4297>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.055) (0.085)) of instance tb_spi_bridge_top.dut.u_reset_sync_aclk.rst_n_sync_reg of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 4318>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.063) (0.094)) of instance tb_spi_bridge_top.dut.u_reset_sync_aclk.r_meta_ff_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 4337>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.099) (0.131)) of instance tb_spi_bridge_top.dut.u_reset_sync_sclk.rst_n_sync_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 4356>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.099) (0.131)) of instance tb_spi_bridge_top.dut.u_reset_sync_sclk.r_meta_ff_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 4375>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5044>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5063>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5082>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5101>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5120>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5139>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.05) (0.11)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5158>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5177>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5196>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5215>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5234>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5253>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5272>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_wclk_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5291>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5310>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5329>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5348>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5367>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5386>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5405>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5424>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5443>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5462>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_rclk_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5481>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5500>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5519>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5538>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 5557>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (negedge CKN) (0.149) (-0.066)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_empty_reg of module DFFNSRX1 <./spi_bridge_top_post_wst.sdf, line 8481>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (negedge CKN) (0.068) (-0.015)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_empty_reg of module DFFNSRX1 <./spi_bridge_top_post_wst.sdf, line 8482>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_full_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 8501>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 8520>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_gray_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 8539>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.055) (0.167)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 8558>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 8577>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_gray_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 8596>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.055) (0.167)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10617>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.063) (0.176)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10636>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_wr_ptr_bin_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10655>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.018) (0.128)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_3 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 10676>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.018) (0.129)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_2 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 10697>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.018) (0.129)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_1 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 10718>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.018) (0.128)) of instance tb_spi_bridge_top.dut.u_rx_fifo.r_rd_ptr_bin_reg_0 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 10739>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_sclk_gen.o_sclk_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10758>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.018) (0.129)) of instance tb_spi_bridge_top.dut.u_sclk_gen.r_toggle_phase_reg of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 10792>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.bit_cnt_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10852>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.059) (0.178)) of instance tb_spi_bridge_top.dut.u_spi_master.bit_cnt_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10871>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.bit_cnt_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10890>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10909>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10928>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10947>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10966>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 10985>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.09) (0.14)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_5 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11004>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.09) (0.14)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_6 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11023>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.idle_cnt_reg_7 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11042>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (negedge CKN) (0.122) (-0.042)) of instance tb_spi_bridge_top.dut.u_spi_master.o_cs_n_reg of module DFFNSRX4 <./spi_bridge_top_post_wst.sdf, line 11067>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (negedge CKN) (0.047) (0.002)) of instance tb_spi_bridge_top.dut.u_spi_master.o_cs_n_reg of module DFFNSRX4 <./spi_bridge_top_post_wst.sdf, line 11068>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (negedge CKN) (0.03) (0.038)) of instance tb_spi_bridge_top.dut.u_spi_master.o_mosi_reg of module DFFNSRX4 <./spi_bridge_top_post_wst.sdf, line 11093>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (negedge CKN) (0.115) (-0.066)) of instance tb_spi_bridge_top.dut.u_spi_master.o_mosi_reg of module DFFNSRX4 <./spi_bridge_top_post_wst.sdf, line 11094>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11113>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.072) (0.174)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11132>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11151>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11170>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11189>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_5 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11208>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_6 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11227>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_shift_out_reg_7 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11246>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11265>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.072) (0.174)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11284>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11303>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11322>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_5 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11341>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_6 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11360>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.064) (0.183)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_7 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11379>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.059) (0.178)) of instance tb_spi_bridge_top.dut.u_spi_master.setup_cnt_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 11398>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_master.r_tx_byte_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12248>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.056) (0.16)) of instance tb_spi_bridge_top.dut.u_spi_master.state_reg_1 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 12269>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.058) (0.162)) of instance tb_spi_bridge_top.dut.u_spi_master.state_reg_0 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 12290>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.07) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_slave.bit_cnt_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12415>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_valid_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12434>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12453>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_6 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12472>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12491>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12510>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12552>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.063) (0.175)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_7 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12583>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_5 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12602>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_tx_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12621>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_spi_slave.bit_cnt_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12640>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_cur_from_hold_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 12754>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (negedge CKN) (0.03) (0.038)) of instance tb_spi_bridge_top.dut.u_spi_slave.o_miso_reg of module DFFNSRX4 <./spi_bridge_top_post_wst.sdf, line 12884>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (negedge CKN) (0.115) (-0.066)) of instance tb_spi_bridge_top.dut.u_spi_slave.o_miso_reg of module DFFNSRX4 <./spi_bridge_top_post_wst.sdf, line 12885>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.051) (0.171)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_0 of module DFFRX2 <./spi_bridge_top_post_wst.sdf, line 12906>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.051) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_1 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 12927>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.051) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_2 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 12948>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.051) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_3 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 12969>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.053) (0.172)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_4 of module DFFRX2 <./spi_bridge_top_post_wst.sdf, line 12990>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.052) (0.174)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_5 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 13011>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.051) (0.171)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_7 of module DFFRX2 <./spi_bridge_top_post_wst.sdf, line 13106>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.051) (0.171)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_shift_rx_reg_6 of module DFFRX2 <./spi_bridge_top_post_wst.sdf, line 13127>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13146>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13165>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.089) (0.153)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13184>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_3 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13203>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.089) (0.153)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_4 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13222>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_5 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13241>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_6 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13260>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.173)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_hold_reg_7 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13279>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.056) (0.171)) of instance tb_spi_bridge_top.dut.u_spi_slave.r_tx_pop_d_reg of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 13605>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_spi_slave.bit_cnt_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13690>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.061) (0.165)) of instance tb_spi_bridge_top.dut.u_spi_slave.state_reg_0 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 13711>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.072) (0.174)) of instance tb_spi_bridge_top.dut.u_spi_slave.state_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 13730>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_wclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14139>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_rclk_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14158>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14177>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14196>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14215>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_wclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14234>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_rclk_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14253>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_reg_1 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14272>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14291>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14310>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14355>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.089) (0.153)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14374>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_wclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14505>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_rclk_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14524>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14543>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.065) (0.177)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 14562>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge SN) (negedge CKN) (0.129) (-0.047)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_empty_reg of module DFFNSRX1 <./spi_bridge_top_post_wst.sdf, line 15323>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (negedge CKN) (0.04) (0.011)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_empty_reg of module DFFNSRX1 <./spi_bridge_top_post_wst.sdf, line 15324>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_full_reg of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 15343>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_bin_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 15362>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.068) (0.18)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 15381>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_bin_reg_0 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 15400>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_bin_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 15419>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.028) (0.136)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_reg_2 of module DFFRHQX1 <./spi_bridge_top_post_wst.sdf, line 15438>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.018) (0.129)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_bin_reg_1 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 16007>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.078) (0.142)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_bin_reg_1 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 16028>.
+xmelab: *W,SDFNET: Unable to annotate to non-existent timing check (RECREM (posedge RN) (posedge CK) (-0.078) (0.142)) of instance tb_spi_bridge_top.dut.u_tx_fifo.r_rd_ptr_bin_reg_0 of module DFFRX1 <./spi_bridge_top_post_wst.sdf, line 16049>.
+	Annotation completed with 0 Errors and 149 Warnings
+	SDF statistics: 
+		 No. of Pathdelays = 3756    	 No. of Disabled Pathdelays = 0        Annotated = 60.84% (2285/3756) 
+		 No. of Tchecks    = 3359    	 No. of Disabled Tchecks    = 0        Annotated = 54.96% (1846/3359) 
+				        Total(T) 	   Disabled(D) 	    Annotated(A)	  Percentage(A/(T-D))
+		 Path Delays	          3756	             0	              2285	                 60.84
+		       $hold	           238	             0	                 0	                  0.00
+		      $width	          1200	             0	               835	                 69.58
+		   $recovery	           238	             0	                 0	                  0.00
+		  $setuphold	          1683	             0	              1011	                 60.07
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.TLATXL:v <0x62d812b7>
+			streams:   0, words:     0
+		worklib.TLATX4:v <0x713b6a43>
+			streams:   0, words:     0
+		worklib.TLATX2:v <0x2279f15b>
+			streams:   0, words:     0
+		worklib.TLATX1:v <0x0bd8bcd7>
+			streams:   0, words:     0
+		worklib.TLATSRXL:v <0x5f8fb3a5>
+			streams:   0, words:     0
+		worklib.TLATSRX4:v <0x40469d7b>
+			streams:   0, words:     0
+		worklib.TLATSRX2:v <0x28bd1aec>
+			streams:   0, words:     0
+		worklib.TLATSRX1:v <0x298b024e>
+			streams:   0, words:     0
+		worklib.TLATNXL:v <0x0dba700a>
+			streams:   0, words:     0
+		worklib.TLATNX4:v <0x46a9fd83>
+			streams:   0, words:     0
+		worklib.TLATNX2:v <0x55986fb4>
+			streams:   0, words:     0
+		worklib.TLATNX1:v <0x694b7dc6>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX8:v <0x6c89c57e>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX6:v <0x66b1e579>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX4:v <0x11f9eff1>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX3:v <0x48bbcc40>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX20:v <0x2fb7de73>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX2:v <0x6bec914d>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX16:v <0x369b27b6>
+			streams:   0, words:     0
+		worklib.TLATNTSCAX12:v <0x7ba69b66>
+			streams:   0, words:     0
+		worklib.TLATNSRXL:v <0x535588fa>
+			streams:   0, words:     0
+		worklib.TLATNSRX4:v <0x3d5659c3>
+			streams:   0, words:     0
+		worklib.TLATNSRX2:v <0x10f66797>
+			streams:   0, words:     0
+		worklib.TLATNSRX1:v <0x2f339066>
+			streams:   0, words:     0
+		worklib.TLATNCAX8:v <0x4e8f56e8>
+			streams:   0, words:     0
+		worklib.TLATNCAX6:v <0x3b2402d8>
+			streams:   0, words:     0
+		worklib.TLATNCAX4:v <0x2cfb912a>
+			streams:   0, words:     0
+		worklib.TLATNCAX3:v <0x7f3bd3e9>
+			streams:   0, words:     0
+		worklib.TLATNCAX20:v <0x3e255552>
+			streams:   0, words:     0
+		worklib.TLATNCAX2:v <0x1dc1f2cb>
+			streams:   0, words:     0
+		worklib.TLATNCAX16:v <0x69cc0985>
+			streams:   0, words:     0
+		worklib.TLATNCAX12:v <0x00c82778>
+			streams:   0, words:     0
+		worklib.SMDFFHQX8:v <0x37e65ab5>
+			streams:   0, words:     0
+		worklib.SMDFFHQX4:v <0x62790e30>
+			streams:   0, words:     0
+		worklib.SMDFFHQX2:v <0x0c1bcf89>
+			streams:   0, words:     0
+		worklib.SMDFFHQX1:v <0x3f87c4ae>
+			streams:   0, words:     0
+		worklib.SEDFFXL:v <0x265732d3>
+			streams:   0, words:     0
+		worklib.SEDFFX4:v <0x743e9540>
+			streams:   0, words:     0
+		worklib.SEDFFX2:v <0x53d4f1c2>
+			streams:   0, words:     0
+		worklib.SEDFFX1:v <0x58d29bca>
+			streams:   0, words:     0
+		worklib.SEDFFTRXL:v <0x4f46e703>
+			streams:   0, words:     0
+		worklib.SEDFFTRX4:v <0x76d3fbbf>
+			streams:   0, words:     0
+		worklib.SEDFFTRX2:v <0x2d17b25d>
+			streams:   0, words:     0
+		worklib.SEDFFTRX1:v <0x00f596ac>
+			streams:   0, words:     0
+		worklib.SEDFFHQX8:v <0x3292c2d5>
+			streams:   0, words:     0
+		worklib.SEDFFHQX4:v <0x739cf567>
+			streams:   0, words:     0
+		worklib.SEDFFHQX2:v <0x22fd5e2c>
+			streams:   0, words:     0
+		worklib.SEDFFHQX1:v <0x4ee0e072>
+			streams:   0, words:     0
+		worklib.SDFFXL:v <0x0e75dcdc>
+			streams:   0, words:     0
+		worklib.SDFFX4:v <0x1197237c>
+			streams:   0, words:     0
+		worklib.SDFFX2:v <0x2b431f26>
+			streams:   0, words:     0
+		worklib.SDFFX1:v <0x2eda5942>
+			streams:   0, words:     0
+		worklib.SDFFTRXL:v <0x3b123981>
+			streams:   0, words:     0
+		worklib.SDFFTRX4:v <0x301ddcca>
+			streams:   0, words:     0
+		worklib.SDFFTRX2:v <0x2bec863f>
+			streams:   0, words:     0
+		worklib.SDFFTRX1:v <0x3a4a18f7>
+			streams:   0, words:     0
+		worklib.SDFFSXL:v <0x29ea186b>
+			streams:   0, words:     0
+		worklib.SDFFSX4:v <0x73796a05>
+			streams:   0, words:     0
+		worklib.SDFFSX2:v <0x4f593fe4>
+			streams:   0, words:     0
+		worklib.SDFFSX1:v <0x15e47eef>
+			streams:   0, words:     0
+		worklib.SDFFSRXL:v <0x28bf4227>
+			streams:   0, words:     0
+		worklib.SDFFSRX4:v <0x639f2f74>
+			streams:   0, words:     0
+		worklib.SDFFSRX2:v <0x747cb414>
+			streams:   0, words:     0
+		worklib.SDFFSRX1:v <0x7f8d79a4>
+			streams:   0, words:     0
+		worklib.SDFFSRHQX8:v <0x7ac6a439>
+			streams:   0, words:     0
+		worklib.SDFFSRHQX4:v <0x6b877092>
+			streams:   0, words:     0
+		worklib.SDFFSRHQX2:v <0x166c41ae>
+			streams:   0, words:     0
+		worklib.SDFFSRHQX1:v <0x6899d930>
+			streams:   0, words:     0
+		worklib.SDFFSHQX8:v <0x35914102>
+			streams:   0, words:     0
+		worklib.SDFFSHQX4:v <0x1afbea11>
+			streams:   0, words:     0
+		worklib.SDFFSHQX2:v <0x780564f1>
+			streams:   0, words:     0
+		worklib.SDFFSHQX1:v <0x389c9313>
+			streams:   0, words:     0
+		worklib.SDFFRXL:v <0x0ffd1015>
+			streams:   0, words:     0
+		worklib.SDFFRX4:v <0x556e627b>
+			streams:   0, words:     0
+		worklib.SDFFRX2:v <0x694e379a>
+			streams:   0, words:     0
+		worklib.SDFFRX1:v <0x33f37691>
+			streams:   0, words:     0
+		worklib.SDFFRHQX8:v <0x45544bc4>
+			streams:   0, words:     0
+		worklib.SDFFRHQX4:v <0x6a3ee0d7>
+			streams:   0, words:     0
+		worklib.SDFFRHQX2:v <0x08c06e37>
+			streams:   0, words:     0
+		worklib.SDFFRHQX1:v <0x485999d5>
+			streams:   0, words:     0
+		worklib.SDFFQXL:v <0x117232c9>
+			streams:   0, words:     0
+		worklib.SDFFQX4:v <0x20ac4cd9>
+			streams:   0, words:     0
+		worklib.SDFFQX2:v <0x4a21d8de>
+			streams:   0, words:     0
+		worklib.SDFFQX1:v <0x0a2cc9b4>
+			streams:   0, words:     0
+		worklib.SDFFNSRXL:v <0x14ef6749>
+			streams:   0, words:     0
+		worklib.SDFFNSRX4:v <0x7346acb9>
+			streams:   0, words:     0
+		worklib.SDFFNSRX2:v <0x222707f2>
+			streams:   0, words:     0
+		worklib.SDFFNSRX1:v <0x4e3ab9ac>
+			streams:   0, words:     0
+		worklib.SDFFHQX8:v <0x735b90d6>
+			streams:   0, words:     0
+		worklib.SDFFHQX4:v <0x0daed85f>
+			streams:   0, words:     0
+		worklib.SDFFHQX2:v <0x5f6cff3b>
+			streams:   0, words:     0
+		worklib.SDFFHQX1:v <0x07eb5c1b>
+			streams:   0, words:     0
+		worklib.MDFFHQX8:v <0x39905e02>
+			streams:   0, words:     0
+		worklib.MDFFHQX4:v <0x4765168b>
+			streams:   0, words:     0
+		worklib.MDFFHQX2:v <0x15a731ef>
+			streams:   0, words:     0
+		worklib.MDFFHQX1:v <0x4d2092cf>
+			streams:   0, words:     0
+		worklib.EDFFXL:v <0x5b8aff17>
+			streams:   0, words:     0
+		worklib.EDFFX4:v <0x5acde871>
+			streams:   0, words:     0
+		worklib.EDFFX2:v <0x025aa3c2>
+			streams:   0, words:     0
+		worklib.EDFFX1:v <0x03a9853b>
+			streams:   0, words:     0
+		worklib.EDFFTRXL:v <0x54804904>
+			streams:   0, words:     0
+		worklib.EDFFTRX4:v <0x1fa02457>
+			streams:   0, words:     0
+		worklib.EDFFTRX2:v <0x0843bf37>
+			streams:   0, words:     0
+		worklib.EDFFTRX1:v <0x03b27287>
+			streams:   0, words:     0
+		worklib.EDFFHQX8:v <0x0d101cac>
+			streams:   0, words:     0
+		worklib.EDFFHQX4:v <0x353d6f47>
+			streams:   0, words:     0
+		worklib.EDFFHQX2:v <0x7575e500>
+			streams:   0, words:     0
+		worklib.DFFXL:v <0x3a12c083>
+			streams:   0, words:     0
+		worklib.DFFX4:v <0x412f5b5e>
+			streams:   0, words:     0
+		worklib.DFFX2:v <0x6733b587>
+			streams:   0, words:     0
+		worklib.DFFX1:v <0x3090a910>
+			streams:   0, words:     0
+		worklib.DFFTRXL:v <0x597e932e>
+			streams:   0, words:     0
+		worklib.DFFTRX4:v <0x3b6a5089>
+			streams:   0, words:     0
+		worklib.DFFTRX2:v <0x29a9719d>
+			streams:   0, words:     0
+		worklib.DFFTRX1:v <0x783bb95e>
+			streams:   0, words:     0
+		worklib.DFFSXL:v <0x6ec6ca86>
+			streams:   0, words:     0
+		worklib.DFFSX4:v <0x0e563613>
+			streams:   0, words:     0
+		worklib.DFFSX2:v <0x763b8f1c>
+			streams:   0, words:     0
+		worklib.DFFSX1:v <0x67b5d0bb>
+			streams:   0, words:     0
+		worklib.DFFSRXL:v <0x7b3932e9>
+			streams:   0, words:     0
+		worklib.DFFSRX4:v <0x4ae74cf9>
+			streams:   0, words:     0
+		worklib.DFFSRX2:v <0x206ad8fe>
+			streams:   0, words:     0
+		worklib.DFFSRX1:v <0x6067c994>
+			streams:   0, words:     0
+		worklib.DFFSRHQX8:v <0x20576901>
+			streams:   0, words:     0
+		worklib.DFFSRHQX4:v <0x116d65a0>
+			streams:   0, words:     0
+		worklib.DFFSRHQX2:v <0x0d5d080b>
+			streams:   0, words:     0
+		worklib.DFFSRHQX1:v <0x07e85525>
+			streams:   0, words:     0
+		worklib.DFFSHQX8:v <0x618318e8>
+			streams:   0, words:     0
+		worklib.DFFSHQX4:v <0x19d97223>
+			streams:   0, words:     0
+		worklib.DFFSHQX2:v <0x50bf9c2f>
+			streams:   0, words:     0
+		worklib.DFFSHQX1:v <0x05ea5bbb>
+			streams:   0, words:     0
+		worklib.DFFRXL:v <0x519865fa>
+			streams:   0, words:     0
+		worklib.DFFRX4:v <0x3108996f>
+			streams:   0, words:     0
+		worklib.DFFRHQX8:v <0x3122cff9>
+			streams:   0, words:     0
+		worklib.DFFRHQX4:v <0x4978a532>
+			streams:   0, words:     0
+		worklib.DFFRHQX2:v <0x001e4b3e>
+			streams:   0, words:     0
+		worklib.DFFQX1:v <0x6d47ca46>
+			streams:   0, words:     0
+		worklib.DFFNSRXL:v <0x0eda0a26>
+			streams:   0, words:     0
+		worklib.DFFNSRX2:v <0x15344e3c>
+			streams:   0, words:     0
+		worklib.DFFHQX8:v <0x44617bbf>
+			streams:   0, words:     0
+		worklib.DFFHQX4:v <0x3a67a96a>
+			streams:   0, words:     0
+		worklib.DFFHQX2:v <0x28dc4320>
+			streams:   0, words:     0
+		worklib.DFFNSRX1:v <0x4c651093>
+			streams:   0, words:     0
+		worklib.DFFRX2:v <0x48600155>
+			streams:   0, words:     0
+		worklib.DFFNSRX4:v <0x1606c513>
+			streams:   0, words:     0
+		worklib.DFFNSRX4:v <0x55112b52>
+			streams:   0, words:     0
+		worklib.DFFRX1:v <0x2ff2985d>
+			streams:   0, words:     0
+		worklib.DFFRX1:v <0x16d11651>
+			streams:   0, words:     0
+		worklib.DFFNSRX1:v <0x4b1de815>
+			streams:   0, words:     0
+		worklib.DFFHQX1:v <0x3419a4d9>
+			streams:   0, words:     0
+		worklib.EDFFHQX1:v <0x26733463>
+			streams:   0, words:     0
+		worklib.DFFRHQX1:v <0x5afc76d7>
+			streams:   0, words:     0
+		worklib.DFFRHQX1:v <0x63dff8db>
+			streams:   0, words:     0
+		worklib.DFFRX1:v <0x59ee5ef2>
+			streams:   0, words:     0
+		worklib.DFFRX1:v <0x6aede2f8>
+			streams:   0, words:     0
+		worklib.DFFQXL:v <0x726a2314>
+			streams:   0, words:     0
+		worklib.DFFHQX1:v <0x0d3a2ad5>
+			streams:   0, words:     0
+		worklib.DFFQX2:v <0x592ad86e>
+			streams:   0, words:     0
+		worklib.DFFQX4:v <0x64dcf6d4>
+			streams:   0, words:     0
+		worklib.DFFQXL:v <0x4b49ad18>
+			streams:   0, words:     0
+		worklib.DFFRHQX1:v <0x632982bd>
+			streams:   0, words:     0
+		worklib.DFFRHQX1:v <0x5a0a0cb1>
+			streams:   0, words:     0
+		worklib.tb_spi_bridge_top:v <0x5a65b08d>
+			streams:  40, words: 138632
+		worklib.spi_bridge_top:v <0x531c6727>
+			streams:   0, words:     0
+		worklib.async_fifo:v <0x50f8a38b>
+			streams:  23, words:  7756
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                    Instances  Unique
+		Modules:                 1406     501
+		UDPs:                     938      14
+		Primitives:              4586       6
+		Timing outputs:          1516     375
+		Registers:                585     266
+		Scalar wires:            4123       -
+		Expanded wires:            16       2
+		Vectored wires:             3       -
+		Always blocks:             18      18
+		Initial blocks:            12      12
+		Parallel blocks:            1       1
+		Cont. assignments:          1       3
+		Pseudo assignments:        11      11
+		Timing checks:           5042     279
+		Interconnect:            2479      16
+		Delayed tcheck signals:  1367     758
+		Simulation timescale:     1ps
+	Writing initial simulation snapshot: worklib.tb_spi_bridge_top:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM2203/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm tb_spi_bridge_top.dut.ACLK tb_spi_bridge_top.dut.o_dbg_cs_n
+Created probe 1
+xcelium> run
+[195000] TEST 1: RX path end-to-end, 6 frames
+[1115000] PASS: RX_DATA_REG sequential byte = 0
+[1815000] PASS: RX_DATA_REG sequential byte = 1
+[2735000] PASS: RX_DATA_REG sequential byte = 2
+[3435000] PASS: RX_DATA_REG sequential byte = 3
+[4135000] PASS: RX_DATA_REG sequential byte = 4
+[4816000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4835000] PASS: RX_DATA_REG sequential byte = 5
+[4835000] TEST 2: TX path end-to-end
+[4856000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4896000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4936000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[4976000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5016000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=1 MISO=0
+[5056000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=00 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5096000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=5a VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5136000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=5a VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5176000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=5a VALID=1 CUR=1 SHIFT=5a POP=0 MISO=0
+[5216000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=5a VALID=0 CUR=1 SHIFT=b4 POP=0 MISO=1
+[5256000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=5a VALID=0 CUR=1 SHIFT=68 POP=0 MISO=0
+[5296000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=5a VALID=0 CUR=1 SHIFT=d0 POP=0 MISO=1
+[5336000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=5a VALID=0 CUR=1 SHIFT=a0 POP=0 MISO=1
+[5376000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=5a VALID=0 CUR=1 SHIFT=40 POP=0 MISO=0
+[5416000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=5a VALID=0 CUR=1 SHIFT=80 POP=0 MISO=1
+[5456000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=5a VALID=0 CUR=1 SHIFT=00 POP=0 MISO=0
+[5496000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=5a VALID=0 CUR=1 SHIFT=00 POP=0 MISO=0
+[5497000] TX frame 1: MISO = 0x5a READY=1
+[5497000] PASS: TX_DATA_REG to MISO = 1
+[5497000] TEST 3: TX Burst path end-to-end
+[5536000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:5535580 PS, negedge D:5535620 PS,  0.03 : 30 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_0
+            Time: 5535649 PS
+
+[5576000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5616000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5656000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=1 MISO=0
+[5696000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=5a VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[5736000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5776000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5816000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5856000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5896000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=11 VALID=1 CUR=0 SHIFT=00 POP=0 MISO=0
+[5936000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=11 VALID=1 CUR=1 SHIFT=11 POP=0 MISO=0
+[5976000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=11 VALID=0 CUR=1 SHIFT=22 POP=1 MISO=0
+[6016000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=11 VALID=0 CUR=1 SHIFT=44 POP=0 MISO=0
+[6056000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=22 VALID=1 CUR=1 SHIFT=88 POP=0 MISO=1
+[6096000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=22 VALID=1 CUR=1 SHIFT=10 POP=0 MISO=0
+[6136000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=22 VALID=1 CUR=1 SHIFT=20 POP=0 MISO=0
+[6176000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=22 VALID=1 CUR=1 SHIFT=40 POP=0 MISO=0
+[6216000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=22 VALID=1 CUR=1 SHIFT=80 POP=0 MISO=1
+[6256000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=22 VALID=1 CUR=1 SHIFT=00 POP=0 MISO=1
+[6257000] BURST frame 1: MISO=0x11 READY=1
+[6257000] PASS: TX Burst byte 1 = 0x11
+[6296000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=22 VALID=1 CUR=1 SHIFT=22 POP=0 MISO=0
+[6336000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6376000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6416000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6456000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6496000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6536000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6576000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6616000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6656000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=22 VALID=1 CUR=1 SHIFT=44 POP=0 MISO=0
+[6696000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=22 VALID=1 CUR=1 SHIFT=22 POP=0 MISO=0
+[6736000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=22 VALID=0 CUR=1 SHIFT=44 POP=1 MISO=0
+[6776000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=22 VALID=0 CUR=1 SHIFT=88 POP=0 MISO=1
+[6816000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=1 CUR=1 SHIFT=10 POP=0 MISO=0
+[6856000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=1 CUR=1 SHIFT=20 POP=0 MISO=0
+[6896000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=1 CUR=1 SHIFT=40 POP=0 MISO=0
+[6936000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=1 CUR=1 SHIFT=80 POP=0 MISO=1
+[6976000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=1 CUR=1 SHIFT=00 POP=0 MISO=0
+[7016000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=1 CUR=1 SHIFT=00 POP=0 MISO=0
+[7017000] BURST frame 2: MISO=0x22 READY=1
+[7017000] PASS: TX Burst byte 2 = 0x22
+[7056000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=1 CUR=1 SHIFT=33 POP=0 MISO=0
+[7096000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7136000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7176000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7216000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7256000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7296000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7336000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7376000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7416000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=1 CUR=1 SHIFT=66 POP=0 MISO=0
+[7456000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=1 CUR=1 SHIFT=33 POP=0 MISO=0
+[7496000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=1 SHIFT=66 POP=0 MISO=0
+[7536000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=1 SHIFT=cc POP=0 MISO=1
+[7576000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=1 SHIFT=98 POP=0 MISO=1
+[7616000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=1 SHIFT=30 POP=0 MISO=0
+[7656000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=1 SHIFT=60 POP=0 MISO=0
+[7696000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=1 SHIFT=c0 POP=0 MISO=1
+[7736000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=1 SHIFT=80 POP=0 MISO=1
+[7776000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=1 SHIFT=00 POP=0 MISO=1
+[7777000] BURST frame 3: MISO=0x33 READY=1
+[7777000] PASS: TX Burst byte 3 = 0x33
+[7777000] PASS: TX Burst sequence 11 -> 22 -> 33
+[7777000] TEST 4: RX FIFO Full / Overflow
+[7816000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7856000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7896000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7936000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[7976000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8016000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8056000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8096000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8136000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8176000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8216000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8256000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8296000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8336000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8376000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8416000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8456000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8496000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8536000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8576000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8616000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8656000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8696000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8736000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8776000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8816000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8856000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8896000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8936000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[8976000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9016000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9056000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9096000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9136000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9176000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9216000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9256000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9296000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9336000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9376000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9416000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9456000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9496000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9536000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9576000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9616000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9656000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9696000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9736000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9776000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9816000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9856000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9896000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9936000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[9976000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10016000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10056000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10096000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10136000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10176000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10216000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10256000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10296000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10336000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10376000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10416000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10456000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10496000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10536000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10576000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10616000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10656000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10696000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10736000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10776000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10816000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10856000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10896000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10936000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[10976000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11016000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11056000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11096000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11136000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11176000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11216000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11256000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11296000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11336000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11376000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11416000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11456000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11496000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11536000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11576000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11616000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11656000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11696000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11736000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11776000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11816000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11856000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11896000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11936000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[11976000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12016000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12056000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12096000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12136000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12176000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12216000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12256000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12296000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12336000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12376000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12416000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12456000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12496000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12536000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12576000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12616000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12656000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12696000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12736000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12776000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12816000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12856000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12896000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12936000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[12976000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13016000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13056000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13096000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13136000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13176000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13216000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13256000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13296000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13336000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13376000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13416000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13456000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13496000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13536000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13576000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13616000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13656000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13696000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13736000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13776000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13816000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13856000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13896000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13936000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[13976000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14016000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14056000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14096000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14136000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14176000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14216000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14256000] TX_DEBUG CS=0 STATE=1 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14296000] TX_DEBUG CS=0 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14336000] TX_DEBUG CS=0 STATE=2 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14376000] TX_DEBUG CS=0 STATE=2 BIT=2 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14416000] TX_DEBUG CS=0 STATE=2 BIT=3 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14456000] TX_DEBUG CS=0 STATE=2 BIT=4 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14496000] TX_DEBUG CS=0 STATE=2 BIT=5 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14536000] TX_DEBUG CS=0 STATE=2 BIT=6 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14576000] TX_DEBUG CS=0 STATE=2 BIT=7 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14616000] TX_DEBUG CS=0 STATE=3 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14656000] TX_DEBUG CS=1 STATE=2 BIT=0 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14696000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14736000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14776000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14816000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14856000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14896000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14936000] TX_DEBUG CS=1 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[14976000] TX_DEBUG CS=0 STATE=0 BIT=1 HOLD=33 VALID=0 CUR=0 SHIFT=00 POP=0 MISO=0
+[25415000] TEST4 status=1a level=16 overflow=1
+[25415000] PASS: TEST4 RX FIFO FULL = 1
+[25415000] PASS: TEST4 RX FIFO LEVEL = 10
+[25415000] PASS: TEST4 OVERFLOW sticky = 1
+[25415000] PASS: TEST4 OVERFLOW output = 1
+[25675000] PASS: TEST4 FULL cleared after drain = 0
+[25755000] PASS: TEST4 OVERFLOW cleared = 0
+[25755000] TEST 5: TX FIFO Full / Boundary
+[26035000] TEST5 FIFO ACCEPT a1
+[26055000] TEST5 FIFO ACCEPT b2
+
+Warning!  Timing violation
+           $setuphold<hold>( posedge CK:26055580 PS, negedge D:26055590 PS,  0.02 : 20 PS,  0.05 : 50 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3286
+           Scope: tb_spi_bridge_top.dut.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_1
+            Time: 26055609 PS
+
+[26075000] TEST5 FIFO ACCEPT c3
+[26095000] TEST5 FIFO ACCEPT d4
+TEST5 ATTEMPTED=8 ACCEPTED=4 NOT_ACCEPTED=4 FULL_CYCLES=11
+PASS: TEST5 FIFO Full observed
+PASS: TEST5 order[0]=a1
+PASS: TEST5 order[1]=b2
+PASS: TEST5 order[2]=c3
+PASS: TEST5 order[3]=d4
+[32098000] TEST 6: Reset During Transfer
+[32620000] TEST6 ASSERT RESET mid-frame CS=0 BIT=3
+
+Warning!  Timing violation
+           $setuphold<setup>( negedge CKN:32620770 PS, negedge D:32620660 PS,  0.13 : 130 PS,  -0.04 : -40 PS );
+            File: /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045_svt_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v, line = 3095
+           Scope: tb_spi_bridge_top.dut.u_spi_slave.o_miso_reg
+            Time: 32620770 PS
+
+[32740000] PASS: TEST6 CS inactive in reset = 1
+[32740000] PASS: TEST6 RX FIFO empty in reset = 1
+[32740000] PASS: TEST6 TX FIFO empty in reset = 1
+[32740000] PASS: TEST6 overflow cleared in reset = 0
+[32740000] PASS: TEST6 RX valid cleared in reset = 0
+[33685000] PASS: TEST6 first RX byte after reset = 0
+[34347000] TEST6 recovery MISO frame 1 = 6b
+[34347000] PASS: TEST6 TX recovered after reset = 1
+[34347000] TEST 7: Repeated Reset / Release Timing
+[34788000] TEST7 RESET #1 asserted during transfer
+[34789000] PASS: EST7 CS released on reset assert = 1
+[34789000] PASS: TEST7 overflow reset = 0
+[34795000] PASS: TEST7 RX FIFO reset = 1
+[34795000] PASS: TEST7 TX FIFO reset = 1
+[35735000] PASS: TEST7 first RX byte after reset = 0
+[36078000] TEST7 RESET #2 asserted during transfer
+[36079000] PASS: EST7 CS released on reset assert = 1
+[36079000] PASS: TEST7 overflow reset = 0
+[36091000] PASS: TEST7 RX FIFO reset = 1
+[36091000] PASS: TEST7 TX FIFO reset = 1
+[37035000] PASS: TEST7 first RX byte after reset = 0
+[37378000] TEST7 RESET #3 asserted during transfer
+[37379000] PASS: EST7 CS released on reset assert = 1
+[37379000] PASS: TEST7 overflow reset = 0
+[37433000] PASS: TEST7 RX FIFO reset = 1
+[37433000] PASS: TEST7 TX FIFO reset = 1
+[37433000] PASS: EST7 RX valid reset (55ns pulse) = 0
+[38375000] PASS: TEST7 first RX byte after reset = 0
+[39797000] TEST7 recovery TX frame 1 = a7
+[39797000] PASS:  recovered after repeated resets = 1
+[39797000] TEST 8: Async FIFO CDC/Gray pointer
+[39890000] PASS: TEST8 initial empty = 1
+[39890000] PASS: TEST8 initial not full = 0
+[40211000] PASS: TEST8 full at 16 writes = 1
+[40250000] PASS: TEST8 full blocks extra write = 10
+[40768000] PASS: TEST8 empty after 16 reads = 1
+[40768000] PASS: TEST8 level zero = 0
+[41594000] PASS: TEST8 empty after wrap = 1
+[41594000] PASS: EST8 Gray single-bit transitions = 0
+[41594000] PASS: TEST8 write count = 20
+[41594000] PASS: TEST8 read count = 20
+[41594000] TEST 9: Concurrent FIFO read/write stress
+[41720000] PASS: TEST9 initial empty = 1
+[44016000] PASS: TEST9 writes = 80
+[44016000] PASS: TEST9 reads = 80
+[44016000] PASS: TEST9 FIFO empty = 1
+[44016000] PASS: TEST9 FIFO level = 0
+[44016000] TEST 10: Register and protocol corner cases
+[44205000] PASS: ST10 unmapped address reads zero = 0
+[44235000] PASS: TEST10 IRQ enable readback = 4
+[44265000] PASS: TEST10 IRQ disable readback = 0
+[44290000] PASS: TEST10 drain finishes = 0
+[44350000] PASS: TEST10 overflow clear = 0
+[44927000] PASS: TEST10 CS idle after frame = 1
+[44927000] PASS: TEST10 completed SPI frame = 1
+[44927000] ALL TESTS PASSED (tb_spi_bridge_top)
+Simulation complete via $finish(1) at time 44926894 PS + 0
+/home/hah003/PROJ1/Proj1_make/TOP/SIM/TESTBENCH/tb_spi_bridge_top.v:1082     $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	22.03-s012: Exiting on Nov 12, 2026 at 06:44:11 KST  (total: 00:04:00)

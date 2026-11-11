@@ -1,0 +1,70 @@
+Multi-Mode Analysis View Report
+_______________________________
+
++ ALL Views
+   |
+   + Analysis View:  FUNC_SS_WORST
+     |
+     + Delay Calc Corner: SS_WORST
+     |   |
+     |   + timing_condition: TC_SS
+     |   |    |
+     |   |    + library_sets: SS_Max_0p90v_125c
+     |   |        |
+     |   |        + timing: /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib
+                             /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/giolib045_v3.5/timing/pads_SS_s1vg.lib
+     |   |
+     |   |
+     |   |
+     |   + rc_corner: WORST
+     |   |    |
+     |   |    + postRoute_res: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_cap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_xcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkres: 1.0 1.0 1.0
+     |   |    |
+     |   |    + qx_tech_file: /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx/gpdk045.tch
+     |   |    |
+     |   |    + temperature: 125.0
+     |
+     + Constraint Mode: FUNC
+     |   |
+     |   + SDC Constraint Files: ./cons/spi_bridge_top.sdc
+   |
+   + Analysis View:  FUNC_FF_BEST
+     |
+     + Delay Calc Corner: FF_BEST
+     |   |
+     |   + timing_condition: TC_FF
+     |   |    |
+     |   |    + library_sets: FF_Min_1p10v_0c
+     |   |        |
+     |   |        + timing: /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib
+                             /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/giolib045_v3.5/timing/pads_FF_s1vg.lib
+     |   |
+     |   |
+     |   |
+     |   + rc_corner: BEST
+     |   |    |
+     |   |    + postRoute_res: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_cap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_xcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkcap: 1.0 1.0 1.0
+     |   |    |
+     |   |    + postRoute_clkres: 1.0 1.0 1.0
+     |   |    |
+     |   |    + qx_tech_file: /home/hah003/PROJ1/Proj1_make/TOP/SYN/../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045_tech/qrc/qx/gpdk045.tch
+     |   |    |
+     |   |    + temperature: 0.0
+     |
+     + Constraint Mode: FUNC
+     |   |
+     |   + SDC Constraint Files: ./cons/spi_bridge_top.sdc

@@ -8,7 +8,7 @@
 | Operating condition | `PVT_1P1V_0C` |
 | Constraint | [`constraints/spi_bridge_top.sdc`](constraints/spi_bridge_top.sdc) → Genus 출력 [`spi_bridge_top_syn_final.sdc`](constraints/spi_bridge_top_syn_final.sdc) |
 
-합성 직후 넷리스트를 배치 전(ideal clock, wire-load 없이 physical library 기준) 상태로 분석한 결과입니다. 배치 후 STA는 [13_Post_STA](../../../13_Post_STA/FAST/500MHz)에 있습니다.
+합성 직후 넷리스트를 배치 전(ideal clock, wire-load 없이 physical library 기준) 상태로 분석한 결과입니다. 배치 후 STA는 [15_Post_STA](../../../15_Post_STA/FAST/500MHz)에 있습니다.
 
 ---
 
@@ -71,7 +71,7 @@ R2R = reg→reg, I2R = input→reg, R2O = reg→output, I2O = input→output (`r
 
 ## Analysis
 
-합성 단계 STA는 ideal clock 기준이라 클럭 트리 지연과 실제 배선이 반영되지 않습니다. 배치·배선 후 결과는 13_Post_STA와 비교해 보세요.
+합성 단계 STA는 ideal clock 기준이라 클럭 트리 지연과 실제 배선이 반영되지 않습니다. 배치·배선 후 결과는 15_Post_STA와 비교해 보세요.
 
 ### A.1 Slack by Cost Group / Path Type
 
