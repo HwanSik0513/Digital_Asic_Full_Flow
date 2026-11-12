@@ -29,13 +29,39 @@
 
 > hold +0.002 ns가 빠듯한 것은 Innovus hold fix의 기본 목표 slack이 0이라 최소한의 버퍼만 넣기 때문입니다. 여유가 필요하면 `setOptMode -holdTargetSlack`으로 목표를 올립니다.
 
+## Analysis
+
+### A.1 WNS by Stage
+
+![](images/01_WNS_Trend.png)
+
+- **What** — 단계별 setup(SS) / hold(FF) WNS 변화
+- **Observe** — setup -0.448 → +0.035 ns
+- **Observe** — hold -0.105 (CTS 직후) → +0.002 ns
+- **Insight** — setup은 배치·CTS 단계에서, hold는 CTS 직후 한 번에 닫힙니다. post-route의 DRV 단계 값은 OCV 모드·RC 추출 전 값이라 일시적으로 낮게 보입니다.
+
+### A.2 Instance Growth
+
+![](images/02_Instance_Growth.png)
+
+- **What** — 단계별 인스턴스 수와 단계별로 추가된 셀
+- **Observe** — 959 → 970 → 1090 → 1090
+- **Observe** — place_opt +11, CTS +23, postCTS hold +61, postRoute hold +0
+
+요약 리포트: [`reports/timing_closure_summary.rpt`](reports/timing_closure_summary.rpt)
+
 ## Files
 
 ```text
 16_Timing_Closure/MMMC/625MHz/
 ├── README.md
 │
+├── images/
+│   ├── 01_WNS_Trend.png
+│   └── 02_Instance_Growth.png
+│
 ├── reports/
+│   ├── timing_closure_summary.rpt
 │   ├── timing_postRoute/
 │   │   ├── spi_bridge_top_postRoute.summary
 │   │   └── spi_bridge_top_postRoute_all.tarpt

@@ -1,0 +1,97 @@
+########################################
+# MMMC view for spi_bridge_top (core-only block, no IO pads)
+#   - Setup : SS / 125C / WORST RC
+#   - Hold  : FF / 0C   / BEST RC
+########################################
+
+########################################
+########## Create RC_ Corner ###########
+########################################
+
+create_rc_corner -name BEST \
+   -cap_table "../../../GPDK045/digital/gsclib045_all_v4.4/captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl" \
+   -preRoute_res {1.0} \
+   -preRoute_cap {1.0} \
+   -preRoute_clkres {0.0} \
+   -preRoute_clkcap {0.0} \
+   -postRoute_res {1.0} \
+   -postRoute_cap {1.0} \
+   -postRoute_xcap {1.0} \
+   -postRoute_clkres {0.0} \
+   -postRoute_clkcap {0.0} \
+   -T 0 \
+   -qx_tech_file ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/qrc/qx/gpdk045.tch
+
+create_rc_corner -name WORST \
+   -cap_table "../../../GPDK045/digital/gsclib045_all_v4.4/captable/cln28hpl_1p10m+alrdl_5x2yu2yz_typical.capTbl" \
+   -preRoute_res {1.0} \
+   -preRoute_cap {1.0} \
+   -preRoute_clkres {0.0} \
+   -preRoute_clkcap {0.0} \
+   -postRoute_res {1.0} \
+   -postRoute_cap {1.0} \
+   -postRoute_xcap {1.0} \
+   -postRoute_clkres {0.0} \
+   -postRoute_clkcap {0.0} \
+   -T 125 \
+   -qx_tech_file ../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/qrc/qx/gpdk045.tch
+
+########################################
+########## Create Library_Set ##########
+########################################
+# IO pad libraries (pads_FF/SS_s1vg.lib) removed: spi_bridge_top netlist has no pad cells.
+
+create_library_set -name FF_Min_1p10v_0c \
+   -timing \
+    [list \
+	../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib \
+	../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib \
+    ]
+
+create_library_set -name SS_Max_0p90v_125c \
+   -timing \
+    [list \
+	../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib \
+	../../../GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib \
+    ]
+
+########################################
+########## Create Delay_Corner #########
+########################################
+
+create_delay_corner -name FF_BEST \
+   -library_set FF_Min_1p10v_0c \
+   -rc_corner BEST
+
+create_delay_corner -name SS_WORST \
+   -library_set SS_Max_0p90v_125c \
+   -rc_corner WORST
+
+############################################
+########## Create Constraint_Mode ##########
+############################################
+# SDC exported from Genus (ACLK 10 ns + SCLK generated clock /4 from ACLK).
+# Check the actual file name with: ls ../SYN/mapped/*.sdc
+
+create_constraint_mode -name FUNC \
+   -sdc_files [list ../SYN/mapped/spi_bridge_top_syn_final.sdc]
+
+############################################
+########### Create Analysis_view ###########
+############################################
+
+create_analysis_view -name FUNC_FF_BEST \
+   -constraint_mode FUNC \
+   -delay_corner FF_BEST
+
+create_analysis_view -name FUNC_SS_WORST \
+   -constraint_mode FUNC \
+   -delay_corner SS_WORST
+
+############################################
+############ Set Analysis_view #############
+############################################
+
+set_analysis_view -setup [list FUNC_SS_WORST] \
+   -hold  [list FUNC_FF_BEST]
+

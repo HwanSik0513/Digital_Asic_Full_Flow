@@ -2,34 +2,64 @@
 
 | Item | Value |
 |---|---|
-| Clock | **ACLK 1.6 ns (625 MHz)**, SCLK = ACLK ÷ 4 |
-| Tool | Cadence Innovus 22.17 |
-| Script | [`scripts/3_PostCTSopt.tcl`](scripts/3_PostCTSopt.tcl) — `ccopt_design` (target skew 0.01 ns) → `optDesign -postCTS` → `optDesign -postCTS -hold` |
+| Clock | **ACLK 1.6 ns (625 MHz)**, SCLK = ACLK ÷ 4 (generated clock) |
+| Run | Fmax 실험 — 합성·PnR 모두 닫힌 최고 주파수 (1.6 ns) |
+| Tool | Cadence Innovus 22.17 (CCOpt) |
+| Script | [`scripts/3_PostCTSopt.tcl`](scripts/3_PostCTSopt.tcl) — `ccopt_design` → `optDesign -postCTS` → `optDesign -postCTS -hold` |
+| DB | `PlaceOpt` → `PostCTSopt` |
+| CTS target | `target_skew 0.01 ns` |
 
 > **MMMC PnR** — setup view `FUNC_SS_WORST` (slow_vdd1v0, RC WORST, 125 °C), hold view `FUNC_FF_BEST` (fast_vdd1v0, RC BEST, 0 °C). 입력은 [04_Synthesis/MMMC](../../../04_Synthesis/MMMC)의 같은 주파수 넷리스트와 SDC입니다. 전체 흐름은 `all.tcl` 한 번 실행 (BUFX2 사용 금지 가드 포함).
 
-## Result
+---
 
-| Step | Setup WNS (SS) | Hold WNS (FF) |
-|---|---|---|
-| `ccopt_design` 중간 | −0.402 (22) ns | — |
-| `timeDesign -postCTS` | +0.003 ns | — |
-| `optDesign -postCTS` | +0.003 ns | **−0.105 (16) ns** ← 클럭 트리가 생기며 hold 위반 발생 |
-| `optDesign -postCTS -hold` | +0.003 ns | **+0.000 ns** |
+## 1. Result
 
 | Clock tree | Value |
 |---|---|
-| Clock cells | 21 + 2 inv |
-| Sinks | 344 |
-| CCOpt skew group `ACLK/FUNC` max insertion | 0.592 ns (SCLK 생성 FF 뒤 sink 포함, skew target ignored) |
+| Clock cells | **21 buffer + 2 inverter = 23** (48.91 µm²) |
+| Sinks | 344 flip-flop clock pins |
+| Clock wire | trunk 141.8 + leaf 1010.0 = 1151.8 µm |
+| Insertion delay (SS setup.late, ACLK group) | 0.200 ~ 0.794 ns → group skew 0.594 ns |
 
-- 합성까지는 ideal clock이라 hold 위반이 보이지 않았습니다. CTS로 실제 클럭 트리가 생기자 hold 위반 16개가 나타났고, FF 코너 기준 hold fix가 이를 모두 없앴습니다.
-- Tempus로 본 최종 skew는 ACLK 0 / SCLK 0.066 ns (100 MHz run, [15_Post_STA](../../../15_Post_STA/MMMC/100MHz)).
+| Step | Setup WNS (SS) | Hold WNS (FF) |
+|---|---|---|
+| `timeDesign -postCTS` | +0.003 ns | — |
+| `optDesign -postCTS` | +0.003 ns | **-0.105 ns** (TNS -1.187, 16 위반) |
+| `optDesign -postCTS -hold` | +0.003 ns | **+0.000 ns** (+61 cells) |
 
-| | |
-|---|---|
-| ![](images/01_CTS_Innovus.png) | **01** ccopt_design 후 |
-| ![](images/02_PostCTS_Opt_Innovus.png) | **02** postCTS setup·hold 최적화 후 |
+> CCOpt skew group의 0.2 ns 하한은 SDC source latency, 최대값은 SCLK 생성 FF(`u_sclk_gen/o_sclk_reg`) 뒤에 매달린 SCLK 도메인 sink까지 포함한 값이라 target 0.01 ns를 "not met"으로 표시합니다. 실제 클럭별 skew는 기준 run(100 MHz)의 Tempus 결과로 ACLK 0.000 / SCLK 0.066 ns입니다 ([15_Post_STA/MMMC/100MHz](../../../15_Post_STA/MMMC/100MHz)).
+
+## Analysis
+
+### A.1 After ccopt_design
+
+![](images/01_CTS_Innovus.png)
+
+- **What** — 클럭 트리 생성 직후
+- **Observe** — 버퍼 21개 + 인버터 2개
+
+### A.2 After postCTS optimization
+
+![](images/02_PostCTS_Opt_Innovus.png)
+
+- **What** — postCTS setup·hold 최적화 후
+- **Observe** — hold fix로 61개 셀 추가
+
+### A.3 Clock Tree
+
+![](images/03_Clock_Tree.png)
+
+- **What** — PostCTSopt DEF의 `USE CLOCK` net과 CTS 셀 위치
+- **Observe** — clock wire 1152 µm, sink 344개
+
+### A.4 Skew / Hold after CTS
+
+![](images/04_Skew_HoldFix.png)
+
+- **What** — insertion delay 범위와 hold fix 전후
+- **Observe** — hold -0.105 ns (16 위반) → +0.000 ns
+- **Insight** — 합성 단계에서는 ideal clock이라 hold 위반이 보이지 않았습니다. 실제 클럭 트리가 생기자 같은 FIFO 경로 16개가 깨졌고, FF 코너 기준 hold fix가 지연 버퍼로 모두 해소했습니다. hold를 CTS 이후에 고치는 이유입니다.
 
 ## Files
 
@@ -39,7 +69,9 @@
 │
 ├── images/
 │   ├── 01_CTS_Innovus.png
-│   └── 02_PostCTS_Opt_Innovus.png
+│   ├── 02_PostCTS_Opt_Innovus.png
+│   ├── 03_Clock_Tree.png
+│   └── 04_Skew_HoldFix.png
 │
 ├── reports/
 │   ├── clock/

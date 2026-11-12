@@ -15,3 +15,5 @@
 | [FAST / 500MHz](FAST/500MHz) | Innovus `extractRC` (effort low, captable) | — |
 | [FAST / 1GHz](FAST/1GHz) | Innovus `extractRC` (effort low, captable) | — |
 | **[MMMC / 100MHz](MMMC/100MHz)** | Innovus `extractRC` + Tempus annotation 100 % (1,030 / 1,030) | **WORST / BEST 출력, SPEF 기반 Tempus setup +7.716 / hold +0.002 ns** |
+| [MMMC / 500MHz](MMMC/500MHz) | Innovus `extractRC` (R 15,920 / C 16,250) | — |
+| [MMMC / 625MHz](MMMC/625MHz) | Innovus `extractRC` (R 17,483 / C 17,919) | — |

@@ -15,3 +15,5 @@
 | [FAST / 500MHz](FAST/500MHz) | +0.024 ns | 0 | +0.007 ns | PASS |
 | [FAST / 1GHz](FAST/1GHz) | -0.481 ns | 88 | -0.091 ns | FAIL |
 | **[MMMC / 100MHz](MMMC/100MHz)** | **+7.716 ns (Tempus)** | 0 | **+0.002 ns** | **PASS** (recovery +9.291 / removal +0.038 ns) |
+| [MMMC / 500MHz](MMMC/500MHz) | +0.083 ns | 0 | +0.006 ns | PASS |
+| [MMMC / 625MHz](MMMC/625MHz) | +0.035 ns | 0 | +0.002 ns | PASS |

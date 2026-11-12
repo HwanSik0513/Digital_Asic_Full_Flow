@@ -77,11 +77,29 @@ hold worst는 TX FIFO 메모리(ACLK 쓰기) → 읽기 레지스터(SCLK) 경�
 
 `check_timing` 경고: ACLK no drive(2, 입력 drive 미지정), ARESETn no input delay(비동기 리셋), unconstrained endpoint 32(디버그 출력 `o_dbg_*`와 SN/RN 상수 핀) — 모두 설계 의도입니다 ([`reports/01_check_timing.rpt`](reports/01_check_timing.rpt)).
 
+## 6. Slack Distribution (Innovus postRoute 리포트)
+
+![](images/01_Slack_Histogram.png)
+
+- **What** — Innovus `timeDesign` worst 50 setup / 50 hold 경로의 slack 분포
+- **Observe** — setup 7.716 ~ 8.665 ns, hold 0.002 ~ 0.070 ns, 음수 0
+- **Insight** — 100 MHz에서는 setup 여유가 7.7 ns 이상이라, 실제 한계는 hold(+2 ps)입니다. hold fix 목표가 0이라 최소 버퍼만 들어간 결과입니다.
+
+![](images/02_Clock_Domain_Paths.png)
+
+- **What** — worst 경로의 launch → capture 클럭 쌍
+- **Observe** — setup: ACLK -> ACLK 49, SCLK -> ACLK 1
+- **Observe** — hold: ACLK -> ACLK 13, ACLK -> SCLK 16, SCLK -> SCLK 21
+
 ## Files
 
 ```text
 15_Post_STA/MMMC/100MHz/
 ├── README.md
+│
+├── images/
+│   ├── 01_Slack_Histogram.png
+│   └── 02_Clock_Domain_Paths.png
 │
 ├── reports/
 │   ├── 00_parasitics.rpt

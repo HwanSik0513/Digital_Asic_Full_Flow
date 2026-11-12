@@ -63,7 +63,14 @@ PnR MMMC 파일과 SDC만 읽은 첫 시도([`reports/tempus_spef_try1_no_latenc
 |---|---|---|---|
 | `timeDesign` | +7.716 ns, 0 / 650 위반 | +0.002 ns, 0 위반 | 74.704 % |
 
-## 5. Notes
+## 5. RC Extraction Summary
+
+![](images/01_RC_Extraction_Summary.png)
+
+- **What** — route 후 extractRC로 추출된 R / C 개수와 추출 설정
+- **Observe** — R 15,559 / C 15,867 — SPEF에 들어간 개수와 같음
+
+## 6. Notes
 
 - 로그의 `IMPESI-4001` (single 모드에서 SI 분석 미지원)은 SI를 원래 끈 상태라 영향이 없습니다.
 - RC corner별 QRC 파일이 따로 없어 BEST/WORST는 같은 captable에 온도만 다릅니다. 코너 간 지연 차이는 주로 SS/FF 라이브러리에서 나옵니다.
@@ -73,6 +80,9 @@ PnR MMMC 파일과 SDC만 읽은 첫 시도([`reports/tempus_spef_try1_no_latenc
 ```text
 14_RC_Extraction/MMMC/100MHz/
 ├── README.md
+│
+├── images/
+│   └── 01_RC_Extraction_Summary.png
 │
 ├── logs/
 │   └── tempus_spef_sta.log

@@ -1,0 +1,16 @@
+# Timing Closure Summary - spi_bridge_top (MMMC / 625MHz, ACLK 1.6 ns)
+# Innovus 22.17, setup FUNC_SS_WORST (SS/125C), hold FF_BEST (FF/0C); values from innovus.log and reports/timing
+
+Stage                               Setup WNS   Hold WNS
+--------------------------------------------------------
+place_opt_design (initial)             -0.448          -
+place_opt_design (final)               -0.001          -
+timeDesign -preCTS                     -0.010          -
+timeDesign -postCTS                    +0.003          -
+postCTS opt (before hold fix)          +0.003     -0.105
+postCTS hold fix                       +0.003     +0.000
+postRoute DRV opt (OCV)                -0.072          -
+postRoute final                        +0.035     +0.002
+
+Instances  InitDesign 959 / PlaceOpt 970 / PostCTSopt 1090 / RouteDesign 1090
+CTS cells 23 (21 buf + 2 inv), postCTS hold fix cells 61, postRoute hold fix cells 0
