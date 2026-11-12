@@ -23,6 +23,7 @@
 | 13 Post LEC | synthesis ↔ PnR netlist | **PASS** 357 / 357 |
 | 14 RC / SPEF | netlist + SDC + SPEF → Tempus | setup +7.716 / hold +0.002 ns (DB 결과와 동일), annotation 100 % |
 | 15 Post STA | Tempus (SS / FF) | setup +7.716 / hold +0.002 / recovery +9.291 / removal +0.038 ns, RC 100 % |
+| 16 Timing Closure | Tempus hold ECO (hold fix 끈 run) | hold **−0.098 → +0.012 ns**, CLKBUFX2 76개, setup 7.714 ns 유지, DRC 0 |
 | 17 Post-Layout GLS | PnR netlist + Tempus SDF (max / min) | ALL TESTS PASSED ×2 |
 | 18 Final Verification | verify_drc / verifyConnectivity | 0 / 0 |
 | 19 Final Results | power (vectorless) | 60.6 µW, 971 instances, die 91.6 × 90.25 µm |
@@ -59,7 +60,7 @@
 | 13 | [Post LEC](13_Post_LEC) | Conformal, 합성 ↔ PnR 넷리스트 | 완료 (PASS) |
 | 14 | [RC Extraction](14_RC_Extraction) | Innovus extractRC, SPEF + Tempus 재현 | 완료 |
 | 15 | [Post STA](15_Post_STA) | Tempus signoff STA | 완료 (100 MHz) |
-| 16 | [Timing Closure](16_Timing_Closure) | optDesign, BUFX2 ECO 사례 | 완료 / Tempus hold ECO 예정 |
+| 16 | [Timing Closure](16_Timing_Closure) | optDesign, BUFX2 ECO 사례, Tempus hold ECO | 완료 |
 | 17 | [Post Layout Sim](17_Post_Layout_Sim) | PnR 넷리스트 + SDF GLS (max/min) | 완료 (PASS) |
 | 18 | [Final Verification](18_Final_Verification) | DRC, connectivity | 완료 (LVS 없음) |
 | 19 | [Final Results](19_Final_Results) | GDS, 넷리스트, SDF, PPA | 완료 |

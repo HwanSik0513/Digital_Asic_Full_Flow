@@ -1,0 +1,2231 @@
+
+Cadence Tempus(TM) Timing Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v22.17-s087_1, built Tue Oct 1 11:02:53 PDT 2024
+Options:	-files tempus_hold_eco.tcl -log tempus_hold_eco.log 
+Date:		Thu Nov 12 23:32:58 2026
+Host:		kopo-seongnam (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (20cores*80cpus*Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz 28160KB)
+OS:		CentOS Linux 7 (Core)
+
+License:
+		[23:32:58.158649] Configured Lic search path (22.01-s003): 5280@localhost
+
+		tpsxl	Tempus Timing Signoff Solution XL	22.1	Denied
+		tpsl	Tempus Timing Signoff Solution L	22.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (770 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_1479_Kd2nqJ'.
+#@ Processing -files option
+Sourcing tcl/tk file 'tempus_hold_eco.tcl' ...
+<CMD> read_design RouteDesign.dat spi_bridge_top
+# Tempus Timing Solution 22.17-s087_1
+# read_design
+#  dir RouteDesign.dat spi_bridge_top
+Set Default Input Pin Transition as 0.1 ps.
+Loading design 'spi_bridge_top' saved by 'Innovus' '22.17-s086_1' on 'Thu Nov 12 22:53:11 2026'.
+#% Begin Load MMMC data ... (date=11/12 23:33:21, mem=1292.1M)
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=11/12 23:33:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=1292.1M, current mem=1287.6M)
+BEST WORST
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/lef/gsclib045_tech.lef' ...
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/lef/gsclib045_macro.lef' ...
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/lef/gsclib045_multibitsDFF.lef' ...
+Loading view definition file from /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/viewDefinition.tcl
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib)
+Read 489 cells in library 'slow_vdd1v0' 
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'slow_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP9'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP8'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP7'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP6'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP5'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP4'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP3'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP2'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'DECAP10'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNA'. The cell will only be used for analysis. (File /home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib)
+Read 489 cells in library 'fast_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'fast_vdd1v0' 
+*** End library_loading (cpu=0.02min, real=0.02min, mem=12.5M, fe_cpu=0.40min, fe_real=0.40min, fe_mem=1543.4M) ***
+#% Begin Load netlist data ... (date=11/12 23:33:22, mem=1295.7M)
+*** Begin netlist parsing (mem=1543.4M) ***
+Reading verilogBinary netlist '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.v.bin'
+
+*** Memory Usage v#1 (Current mem = 1915.410M, initial mem = 642.340M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=1915.4M) ***
+#% End Load netlist data ... (date=11/12 23:33:23, total cpu=0:00:00.5, real=0:00:01.0, peak res=1431.9M, current mem=1420.3M)
+Reading pin dir info from /tmp/ssv_tmpdir_1479_Kd2nqJ/.bbx_1479_f4eddf7a-1023-4e30-a652-fd40a67727cb.
+Set top cell to spi_bridge_top.
+Building hierarchical netlist for Cell spi_bridge_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 1020 modules.
+** info: there are 903 stdCell insts.
+** info: there are 903 stdCell insts with at least one signal pin.
+** info: there are 7 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 2284.367M, initial mem = 642.340M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Set Shrink Factor to 0.90000
+Loading preference file /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/gui.pref.tcl ...
+**WARN: (UI-156):	preference name 'MinFPModuleSize' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MinFlightLineWidth' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MaxFlightLineNetTerms' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'LevelFlight' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DirectionSink' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DirectionSource' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowNumberBlockConnection' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'StrecthRestriction' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'StretchRectilinear' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MoveRestriction' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayRelFPlan' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'LegalizeMacro' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayFPlanFlightLine' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayPinName' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayBusGuideAsLine' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ExclusiveFlight' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowToUnplace' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'FlightLineInMove' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowConnectionInOutNumber' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ConnectionColorType' is not supported in Tempus Timing Solution.
+**WARN: (EMS-27):	Message (UI-156) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPSYC-6134):	Setting analysis mode to hold does not have any impact on timing analysis as simultaneous setup/hold mode analysis is on. Use '-early' option to report hold timing reports.
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+#WARNING (NRIF-90) Option setNanoRouteMode -route_bottom_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -bottomRoutingLayer instead.
+#WARNING (NRIF-91) Option setNanoRouteMode -route_top_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -topRoutingLayer instead.
+**WARN: (IMPSP-504):	"set_place_mode" cannot be used in timer mode.
+addRing command will ignore shorts while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+**WARN: (IMPSP-5121):	Failed to run 'read_design' because cell 'TIELO' is not a standard cell. Cannot use as a filler. Check the filler cell type in the LEF. Filler cells need to be CLASS CORE.
+**WARN: (IMPSP-5121):	Failed to run 'read_design' because cell 'TIEHI' is not a standard cell. Cannot use as a filler. Check the filler cell type in the LEF. Filler cells need to be CLASS CORE.
+**ERROR: (IMPSP-5234):	No valid tie-cell name given in this string 'TIELO TIEHI'.
+
+Usage: set_tie_hi_lo_mode [-help] [-reset] [-cell {{tieCellList1} {tieCellList2} ...}] [-createHierPort {true|false}]
+                          [-honorDontTouch {true|false}] [-honorDontUse {true|false}] [-maxDistance <dist-in-microns>]
+                          [-maxFanout <nr-pins>] [-modulePrevention {true|false}] [-prefix <tie-prefix>]
+                          [-reportHierPort {true|false}]
+
+**ERROR: (IMPTCM-10):	Failed to set value for option "-cell".
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will not extend to closest target.
+When breaking rings, the power planner will consider the existence of blocks.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+Stripes will not be created over regions without power planning wires.
+Offset for stripe breaking is set to 0.
+Stripes will stop at the boundary of the specified area.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMinRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -bottomRoutingLayer' instead.
+**ERROR: (IMPFP-10172):	Cannot find topCell's floorplan data.
+siFlow : Timing analysis mode is single, using late cdB files
+/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc
+Total number of combinational cells: 314
+Total number of sequential cells: 168
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX6 INVXL INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X4 DLY4X1
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=11/12 23:33:24, mem=1673.4M)
+#% End Load MMMC data post ... (date=11/12 23:33:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1673.4M, current mem=1673.4M)
+#% Begin Load SymbolTable ... (date=11/12 23:33:24, mem=1673.4M)
+#% End Load SymbolTable ... (date=11/12 23:33:24, total cpu=0:00:00.0, real=0:00:00.0, peak res=1673.6M, current mem=1673.6M)
+Reading property file /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2217.5M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: FUNC_SS_WORST
+    RC-Corner Name        : WORST
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/mmmc/BEST/gpdk045.tch'
+ 
+ Analysis View: FUNC_FF_BEST
+    RC-Corner Name        : BEST
+    RC-Corner Index       : 1
+    RC-Corner Temperature : 0 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/mmmc/BEST/gpdk045.tch'
+Restoring parasitic data from file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d' ...
+**WARN: (IMPEXT-3298):	Parasitic database '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d' was created in 'postRoute' mode. The current mode of the tool is 'Quantus QRC'. Changing mode to make it similar to parasitic database.
+**WARN: (IMPEXT-7000):	The option '-effortLevel low' for setExtractRCMode is ignored because only Quantus QRC extraction mode, that is, '-engine postRoute -effortLevel signoff' is supported in Tempus Timing Solution. To avoid this message, remove this option from your scripts.
+Begin read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 2217.508M)
+Following multi-corner parasitics specified:
+	/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d (rcdb)
+		Cell spi_bridge_top has rcdb /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d specified
+Cell spi_bridge_top, hinst 
+Done read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 2225.508M)
+#% Begin Loading timing constraints ... (date=11/12 23:33:24, mem=1689.0M)
+Reading timing constraints file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc' ...
+Current (total cpu=0:00:26.4, real=0:00:27.0, peak res=2052.3M, current mem=2052.3M)
+spi_bridge_top
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (EMS-62):	Message <IMPCTE-285> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (EMS-62):	Message <IMPCTE-290> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (EMS-62):	Message <IMPCTE-289> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=2089.5M, current mem=2089.5M)
+Current (total cpu=0:00:26.5, real=0:00:27.0, peak res=2089.5M, current mem=2089.5M)
+Reading latency file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/views/FUNC_SS_WORST/latency.sdc' ...
+Reading latency file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/views/FUNC_FF_BEST/latency.sdc' ...
+#% End Loading timing constraints ... (date=11/12 23:33:25, total cpu=0:00:00.4, real=0:00:01.0, peak res=2089.6M, current mem=2089.6M)
+FUNC_SS_WORST FUNC_FF_BEST
+FF_BEST SS_WORST
+#% Begin Load power constraints ... (date=11/12 23:33:25, mem=2089.6M)
+'set_default_switching_activity' finished successfully.
+#% End Load power constraints ... (date=11/12 23:33:25, total cpu=0:00:00.0, real=0:00:00.0, peak res=2090.3M, current mem=2090.3M)
+#% Begin load AAE data ... (date=11/12 23:33:25, mem=2090.3M)
+AAE DB initialization (MEM=2702.78 CPU=0:00:00.0 REAL=0:00:00.0) 
+#% End load AAE data ... (date=11/12 23:33:25, total cpu=0:00:00.5, real=0:00:00.0, peak res=2095.9M, current mem=2095.9M)
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version (null). They will be removed in the next release. 
+timing_enable_separate_device_slew_effect_sensitivities
+Ending "read_design" (total cpu=0:00:05.8, real=0:00:06.0, peak res=2097.1M, current mem=1942.1M)
+<CMD> set_propagated_clock [all_clocks]
+<CMD> report_annotated_parasitics > reports/eco/00_parasitics.rpt
+<CMD> report_timing -early -view $HOLD_VIEW  -max_slack 0 -max_paths 200 -path_type summary > $RPT/00_hold_before.rpt
+AAE_INFO: opIsDesignInPostRouteState() is 0
+**ERROR: (IMPESI-4001):	CTE single analysis mode does not support SI analysis. It continues with -siAware false.
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_SS_WORST'
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_FF_BEST'
+Start delay calculation (fullDC) (1 T). (MEM=2377.5)
+/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc
+End delay calculation. (MEM=2908.14 CPU=0:00:00.7 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=2900.14 CPU=0:00:00.9 REAL=0:00:01.0)
+<CMD> report_timing -late  -view $SETUP_VIEW -max_paths 20 -path_type summary               > $RPT/10_setup_before.rpt
+<CMD> report_timing -early -view $HOLD_VIEW -max_slack 0 -max_paths $MAX_EP -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC0_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+**WARN: (TCLCMD-1681):	The software has performed a full/partial timing reset. All existing timing path and timing point collection references have been invalidated and may no longer be referenced.
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC1_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC2_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC3_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC4_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC5_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC6_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC7_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC8_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC9_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC10_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC11_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC12_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC13_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC14_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC15_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC16_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC17_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC18_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC19_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC20_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC21_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC22_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC23_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC24_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC25_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC26_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC27_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC28_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC29_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC30_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC31_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC32_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC33_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC34_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC35_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC36_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC37_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC38_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC39_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC40_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC41_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC42_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC43_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC44_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC45_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC46_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC47_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC48_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC49_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC50_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC51_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC52_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC53_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC54_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC55_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC56_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC57_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC58_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC59_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC60_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC61_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC62_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC63_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC64_n_48 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC65_n_48 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC66_n_48 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_6/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC67_n_49 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_6/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_6/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC68_n_49 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_6/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_6/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC69_n_49 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_6/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC70_n_46 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC71_n_46 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC72_n_46 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_7/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC73_n_52 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_7/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_7/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC74_n_52 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_7/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_7/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC75_n_52 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_7/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $HOLD_VIEW  -max_paths 20 -path_type summary > $RPT/30_hold_after.rpt
+<CMD> report_timing -late  -view $SETUP_VIEW -max_paths 20 -path_type summary > $RPT/40_setup_after.rpt
+<CMD> report_timing $mode -view $view -max_paths 1 -collection
+<CMD> report_timing $mode -view $view -max_paths 1 -collection
+<CMD> write_eco -format innovus -output innovus.eco
+<CMD> read_design RouteDesign.dat spi_bridge_top
+# Tempus Timing Solution 22.17-s087_1
+# read_design
+#  dir RouteDesign.dat spi_bridge_top
+**WARN: (IMPSYC-6379):	freeDesign does not completely reset all design states and settings. This is because resetting all design states and settings would cause error or crash when you would restore the database or edit it after using freeDesign.
+#WARNING (NRIF-90) Option setNanoRouteMode -route_bottom_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -bottomRoutingLayer instead.
+#WARNING (NRIF-91) Option setNanoRouteMode -route_top_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -topRoutingLayer instead.
+
+viaInitial starts at Thu Nov 12 23:33:41 2026
+viaInitial ends at Thu Nov 12 23:33:41 2026
+Free PSO.
+Cleaning up the current multi-corner RC extraction setup.
+**WARN: (TCLCMD-1681):	The software has performed a full/partial timing reset. All existing timing path and timing point collection references have been invalidated and may no longer be referenced.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+
+*** Memory Usage v#1 (Current mem = 1997.301M, initial mem = 642.340M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Loading design 'spi_bridge_top' saved by 'Innovus' '22.17-s086_1' on 'Thu Nov 12 22:53:11 2026'.
+#% Begin Load MMMC data ... (date=11/12 23:33:43, mem=1621.9M)
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+**WARN: (UI-638):	The option '-cap_table' to the command 'create_rc_corner' is ignored since it is related to the RC extraction mode which Tempus does not support. Tempus only supports the signoff QRC extraction.
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=11/12 23:33:43, total cpu=0:00:00.0, real=0:00:00.0, peak res=1621.9M, current mem=1621.2M)
+BEST WORST
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/lef/gsclib045_tech.lef' ...
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/lef/gsclib045_macro.lef' ...
+Reading pin direction from '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/lef/gsclib045_multibitsDFF.lef' ...
+Loading view definition file from /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/viewDefinition.tcl
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib' ...
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 489 cells in library 'slow_vdd1v0' 
+Reading SS_Max_0p90v_125c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'slow_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_basicCells.lib' ...
+Read 489 cells in library 'fast_vdd1v0' 
+Reading FF_Min_1p10v_0c timing library '/home/hah003/PROJ1/GPDK045/digital/gsclib045_all_v4.4/gsclib045/timing/fast_vdd1v0_multibitsDFF.lib' ...
+Read 16 cells in library 'fast_vdd1v0' 
+*** End library_loading (cpu=0.02min, real=0.02min, mem=0.0M, fe_cpu=0.62min, fe_real=0.78min, fe_mem=1997.3M) ***
+#% Begin Load netlist data ... (date=11/12 23:33:45, mem=1615.6M)
+*** Begin netlist parsing (mem=1997.3M) ***
+Reading verilogBinary netlist '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.v.bin'
+
+*** Memory Usage v#1 (Current mem = 2241.316M, initial mem = 642.340M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=2241.3M) ***
+#% End Load netlist data ... (date=11/12 23:33:45, total cpu=0:00:00.5, real=0:00:00.0, peak res=1737.3M, current mem=1737.3M)
+Reading pin dir info from /tmp/ssv_tmpdir_1479_Kd2nqJ/.bbx_1479_f4eddf7a-1023-4e30-a652-fd40a67727cb.
+Set top cell to spi_bridge_top.
+Building hierarchical netlist for Cell spi_bridge_top ...
+***** UseNewTieNetMode *****.
+*** Netlist is unique.
+** info: there are 1020 modules.
+** info: there are 903 stdCell insts.
+** info: there are 903 stdCell insts with at least one signal pin.
+** info: there are 7 Pad insts.
+
+*** Memory Usage v#1 (Current mem = 2584.359M, initial mem = 642.340M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Set Shrink Factor to 0.90000
+Loading preference file /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/gui.pref.tcl ...
+**WARN: (UI-156):	preference name 'MinFPModuleSize' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MinFlightLineWidth' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MaxFlightLineNetTerms' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'LevelFlight' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DirectionSink' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DirectionSource' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowNumberBlockConnection' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'StrecthRestriction' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'StretchRectilinear' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'MoveRestriction' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayRelFPlan' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'LegalizeMacro' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayFPlanFlightLine' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayPinName' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'DisplayBusGuideAsLine' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ExclusiveFlight' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowToUnplace' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'FlightLineInMove' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ShowConnectionInOutNumber' is not supported in Tempus Timing Solution.
+**WARN: (UI-156):	preference name 'ConnectionColorType' is not supported in Tempus Timing Solution.
+**WARN: (EMS-27):	Message (UI-156) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPSYC-6134):	Setting analysis mode to hold does not have any impact on timing analysis as simultaneous setup/hold mode analysis is on. Use '-early' option to report hold timing reports.
+**WARN: (IMPTCM-77):	Option "-drouteStartIteration" for command setNanoRouteMode is obsolete and will be removed in a future release. The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, remove the obsolete option from your script.
+#WARNING (NRIF-90) Option setNanoRouteMode -route_bottom_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -bottomRoutingLayer instead.
+#WARNING (NRIF-91) Option setNanoRouteMode -route_top_routing_layer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -topRoutingLayer instead.
+**WARN: (IMPSP-504):	"set_place_mode" cannot be used in timer mode.
+addRing command will ignore shorts while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will consider rows while creating rings.
+The ring targets are set to core/block ring wires.
+**WARN: (IMPSP-5121):	Failed to run 'read_design' because cell 'TIELO' is not a standard cell. Cannot use as a filler. Check the filler cell type in the LEF. Filler cells need to be CLASS CORE.
+**WARN: (IMPSP-5121):	Failed to run 'read_design' because cell 'TIEHI' is not a standard cell. Cannot use as a filler. Check the filler cell type in the LEF. Filler cells need to be CLASS CORE.
+**ERROR: (IMPSP-5234):	No valid tie-cell name given in this string 'TIELO TIEHI'.
+
+Usage: set_tie_hi_lo_mode [-help] [-reset] [-cell {{tieCellList1} {tieCellList2} ...}] [-createHierPort {true|false}]
+                          [-honorDontTouch {true|false}] [-honorDontUse {true|false}] [-maxDistance <dist-in-microns>]
+                          [-maxFanout <nr-pins>] [-modulePrevention {true|false}] [-prefix <tie-prefix>]
+                          [-reportHierPort {true|false}]
+
+**ERROR: (IMPTCM-10):	Failed to set value for option "-cell".
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will not extend to closest target.
+When breaking rings, the power planner will consider the existence of blocks.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+Stripes will not be created over regions without power planning wires.
+Offset for stripe breaking is set to 0.
+Stripes will stop at the boundary of the specified area.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMinRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -bottomRoutingLayer' instead.
+**ERROR: (IMPFP-10172):	Cannot find topCell's floorplan data.
+/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: FUNC_SS_WORST
+    RC-Corner Name        : WORST
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/mmmc/BEST/gpdk045.tch'
+ 
+ Analysis View: FUNC_FF_BEST
+    RC-Corner Name        : BEST
+    RC-Corner Index       : 1
+    RC-Corner Temperature : 0 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner Technology file: '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/libs/mmmc/BEST/gpdk045.tch'
+Total number of combinational cells: 314
+Total number of sequential cells: 168
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+Total number of physical cells: 0
+List of usable buffers: BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX6 INVXL INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X4 DLY4X1
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+#% Begin Load MMMC data post ... (date=11/12 23:33:46, mem=1982.9M)
+#% End Load MMMC data post ... (date=11/12 23:33:46, total cpu=0:00:00.0, real=0:00:00.0, peak res=1982.9M, current mem=1982.9M)
+#% Begin Load SymbolTable ... (date=11/12 23:33:46, mem=1982.9M)
+#% End Load SymbolTable ... (date=11/12 23:33:46, total cpu=0:00:00.0, real=0:00:00.0, peak res=1983.1M, current mem=1983.1M)
+Reading property file /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=2505.0M) ***
+Set Default Input Pin Transition as 0.1 ps.
+Restoring parasitic data from file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d' ...
+**WARN: (IMPEXT-3298):	Parasitic database '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d' was created in 'postRoute' mode. The current mode of the tool is 'Quantus QRC'. Changing mode to make it similar to parasitic database.
+**WARN: (IMPEXT-7000):	The option '-effortLevel low' for setExtractRCMode is ignored because only Quantus QRC extraction mode, that is, '-engine postRoute -effortLevel signoff' is supported in Tempus Timing Solution. To avoid this message, remove this option from your scripts.
+Begin read_parasitics... (cpu: 0:00:00.0 real: 0:00:00.0 mem: 2504.961M)
+Following multi-corner parasitics specified:
+	/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d (rcdb)
+		Cell spi_bridge_top has rcdb /home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/spi_bridge_top.rcdb.d specified
+Cell spi_bridge_top, hinst 
+Done read_parasitics... (cpu: 0:00:00.1 real: 0:00:00.0 mem: 2509.961M)
+#% Begin Loading timing constraints ... (date=11/12 23:33:47, mem=1992.6M)
+Reading timing constraints file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc' ...
+Current (total cpu=0:00:39.7, real=0:00:49.0, peak res=2313.3M, current mem=2313.3M)
+spi_bridge_top
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-285):	Could not locate cell DFFHQX1 in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (EMS-62):	Message <IMPCTE-285> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_SS_WORST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (IMPCTE-290):	Could not locate cell DFFHQX1 in any library for view FUNC_FF_BEST.
+**WARN: (IMPCTE-289):	set_driving_cell :  Use the cell in library slow_vdd1v0.
+**WARN: (EMS-62):	Message <IMPCTE-290> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+**WARN: (EMS-62):	Message <IMPCTE-289> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+INFO (CTE): Constraints read successfully.
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=2330.3M, current mem=2330.3M)
+Current (total cpu=0:00:39.8, real=0:00:49.0, peak res=2330.3M, current mem=2330.3M)
+Reading latency file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/views/FUNC_SS_WORST/latency.sdc' ...
+Reading latency file '/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/views/FUNC_FF_BEST/latency.sdc' ...
+#% End Loading timing constraints ... (date=11/12 23:33:47, total cpu=0:00:00.4, real=0:00:00.0, peak res=2330.3M, current mem=2330.3M)
+FUNC_SS_WORST FUNC_FF_BEST
+FF_BEST SS_WORST
+#% Begin Load power constraints ... (date=11/12 23:33:47, mem=2330.3M)
+'set_default_switching_activity' finished successfully.
+#% End Load power constraints ... (date=11/12 23:33:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=2330.3M, current mem=2330.3M)
+#% Begin load AAE data ... (date=11/12 23:33:47, mem=2330.3M)
+AAE DB initialization (MEM=2810.43 CPU=0:00:00.0 REAL=0:00:00.0) 
+#% End load AAE data ... (date=11/12 23:33:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=2331.2M, current mem=2331.2M)
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version (null). They will be removed in the next release. 
+timing_enable_separate_device_slew_effect_sensitivities
+Ending "read_design" (total cpu=0:00:05.3, real=0:00:05.0, peak res=2332.5M, current mem=2173.9M)
+<CMD> set_propagated_clock [all_clocks]
+<CMD> report_annotated_parasitics > reports/eco/00_parasitics.rpt
+<CMD> report_timing -early -view $HOLD_VIEW  -max_slack 0 -max_paths 200 -path_type summary > $RPT/00_hold_before.rpt
+AAE_INFO: opIsDesignInPostRouteState() is 0
+**ERROR: (IMPESI-4001):	CTE single analysis mode does not support SI analysis. It continues with -siAware false.
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_FF_BEST'
+Using master clock 'ACLK' for generated clock 'SCLK' in view 'FUNC_SS_WORST'
+Start delay calculation (fullDC) (1 T). (MEM=2597.79)
+/home/hah003/PROJ1/Proj1_make/TOP/PNR_HOLDECO/RouteDesign.dat/mmmc/modes/FUNC/FUNC.sdc
+End delay calculation. (MEM=3124.89 CPU=0:00:00.6 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=3116.89 CPU=0:00:00.8 REAL=0:00:01.0)
+<CMD> report_timing -late  -view $SETUP_VIEW -max_paths 20 -path_type summary               > $RPT/10_setup_before.rpt
+<CMD> report_timing -early -view $HOLD_VIEW -max_slack 0 -max_paths $MAX_EP -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC0_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+**WARN: (TCLCMD-1681):	The software has performed a full/partial timing reset. All existing timing path and timing point collection references have been invalidated and may no longer be referenced.
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC1_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC2_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC3_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC4_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC5_r_rd_ptr_gray_1 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC6_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC7_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC8_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC9_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC10_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC11_r_wr_ptr_gray_1 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC12_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC13_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC14_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC15_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC16_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC17_r_wr_ptr_gray_2 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC18_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC19_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC20_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC21_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC22_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC23_r_rd_ptr_gray_0 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC24_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC25_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC26_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC27_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC28_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC29_r_wr_ptr_gray_0 (CLKBUFX2) to drive load u_tx_fifo/r_wr_ptr_gray_meta_r_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC30_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC31_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC32_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC33_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC34_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC35_r_rd_ptr_gray_3 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC36_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC37_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC38_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC39_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC40_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC41_r_rd_ptr_gray_2 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC42_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC43_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC44_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC45_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC46_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_rx_fifo/FE_ECOC47_r_rd_ptr_gray_4 (CLKBUFX2) to drive load u_rx_fifo/r_rd_ptr_gray_meta_w_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC48_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC49_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC50_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_2/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC51_n_45 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_2/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC52_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC53_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC54_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_4/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC55_n_51 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_4/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC56_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC57_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC58_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_5/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC59_n_50 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_5/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC60_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC61_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC62_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_0/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC63_n_47 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_0/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC64_n_48 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC65_n_48 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_3/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC66_n_48 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_3/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_6/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC67_n_49 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_6/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_6/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC68_n_49 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_6/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_6/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC69_n_49 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_6/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC70_n_46 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC71_n_46 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_1/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC72_n_46 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_1/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_7/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC73_n_52 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_7/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_7/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC74_n_52 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_7/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> add_repeater -term u_tx_fifo/o_rd_data_reg_7/D -cell CLKBUFX2
+#################################################################################
+# Design Name: spi_bridge_top
+# Design Mode: 65nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Add inst u_tx_fifo/FE_ECOC75_n_52 (CLKBUFX2) to drive load u_tx_fifo/o_rd_data_reg_7/D 
+<CMD> report_timing -early -view $view -to $pin -max_paths 1 -collection
+<CMD> report_timing -early -view $HOLD_VIEW  -max_paths 20 -path_type summary > $RPT/30_hold_after.rpt
+<CMD> report_timing -late  -view $SETUP_VIEW -max_paths 20 -path_type summary > $RPT/40_setup_after.rpt
+<CMD> report_timing $mode -view $view -max_paths 1 -collection
+<CMD> report_timing $mode -view $view -max_paths 1 -collection
+<CMD> write_eco -format innovus -output innovus.eco
+<CMD> exit
+
+*** Memory Usage v#1 (Current mem = 3207.055M, initial mem = 642.340M) ***
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPFP-10172          2  Cannot find topCell's floorplan data.    
+WARNING   IMPEXT-3298          2  Parasitic database '%s' was created in '...
+WARNING   IMPEXT-7000          2  The option '%s %s' for setExtractRCMode ...
+WARNING   UI-638               4  The %s to the command '%s' %s ignored si...
+WARNING   UI-156             244  preference name '%s' is not supported in...
+WARNING   IMPSYC-6379          1  freeDesign does not completely reset all...
+WARNING   IMPSYC-6134          2  Setting analysis mode to %s does not hav...
+ERROR     IMPESI-4001          2  CTE single analysis mode does not suppor...
+WARNING   IMPSP-5121           4  Failed to run '%s' because cell '%s' is ...
+ERROR     IMPSP-5234           2  No valid tie-cell name given in this str...
+WARNING   IMPSP-504            2  "%s" cannot be used in timer mode.       
+WARNING   NRIF-90              3  Option setNanoRouteMode -route_bottom_ro...
+WARNING   NRIF-91              3  Option setNanoRouteMode -route_top_routi...
+WARNING   IMPCTE-285         532  Could not locate cell %s in library %s.  
+WARNING   IMPCTE-289         304  set_driving_cell : %s Use the cell in li...
+WARNING   IMPCTE-290         304  Could not locate cell %s in any library ...
+WARNING   IMPCTE-107           2  The following globals have been obsolete...
+ERROR     IMPTCM-10            2  Failed to set value for option "%s".     
+WARNING   IMPTCM-77            2  Option "%s" for command %s is obsolete a...
+WARNING   IMPPSP-1003          4  Found use of '%s'. This will continue to...
+WARNING   TCLCMD-1681          3  The software has performed a full/partia...
+WARNING   TECHLIB-302         40  No function defined for cell '%s'. The c...
+*** Message Summary: 1458 warning(s), 8 error(s)
+
+--- Ending "Tempus Timing Solution" (totcpu=0:00:44.8, real=0:00:57.0, mem=3207.1M) ---

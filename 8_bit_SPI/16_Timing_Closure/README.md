@@ -1,6 +1,6 @@
 # 16. Timing Closure
 
-Innovus `optDesign`(setup / hold / DRV)으로 타이밍을 닫은 결과입니다. BUFX2 TechSite 위반 수정 사례는 [MMMC/500MHz_BUFX2_case](MMMC/500MHz_BUFX2_case)에 있습니다. Tempus hold ECO 실습(hold fix를 끈 run)은 예정입니다.
+Innovus `optDesign`(setup / hold / DRV)으로 타이밍을 닫은 결과입니다. BUFX2 TechSite 위반 수정 사례는 [MMMC/500MHz_BUFX2_case](MMMC/500MHz_BUFX2_case)에 있습니다. Tempus hold ECO 실습(hold fix를 끈 run → Tempus ECO → Innovus 적용)은 [MMMC/100MHz_HoldECO](MMMC/100MHz_HoldECO)에 있습니다.
 
 > **폴더 구성** — `SLOW` / `FAST`는 slow(SS) / fast(FF) 라이브러리 하나로 합성한 넷리스트를 같은 PnR 조건으로 구현한 **비교 실험**입니다. `MMMC`는 합성도 SS·FF MMMC로 바꾼 **최종 방식**이며, `MMMC/100MHz`가 사양 주파수 기준 run, `500MHz`·`625MHz`는 Fmax 실험입니다.
 
@@ -18,6 +18,7 @@ Innovus `optDesign`(setup / hold / DRV)으로 타이밍을 닫은 결과입니�
 | [MMMC / 500MHz](MMMC/500MHz) | -0.115 → +0.006 ns | +0.083 ns | 73.85 % |
 | [MMMC / 625MHz](MMMC/625MHz) | -0.105 → +0.002 ns | +0.035 ns | 68.22 % |
 | [MMMC / 500MHz_BUFX2_case](MMMC/500MHz_BUFX2_case) | BUFX2 TechSite 13 → 0 (ECO) | +0.080 ns | 73.06 % |
+| [MMMC / 100MHz_HoldECO](MMMC/100MHz_HoldECO) | -0.098 → +0.012 ns (Tempus ECO, CLKBUFX2 76) | +7.714 ns | 75.08 % |
 
 ## Scripts
 
