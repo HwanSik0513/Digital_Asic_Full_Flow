@@ -63,7 +63,7 @@ preCTS는 클럭이 ideal이라 hold는 보지 않습니다. 리포트: [`report
 ![](images/05_Module_Amoeba_Innovus.png)
 
 - **What** — 모듈별 영역 (amoeba view)
-- **Observe** — 같은 모듈 셀이 묶여 놓인 영역 (A.6과 같은 정보를 Innovus에서 표시)
+- **Observe** — 모듈별 경계선과 이름(u_tx_fifo, u_rx_fifo, u_register_block, u_spi_master, u_spi_slave 등)이 표시되어, 같은 모듈 셀이 묶여 놓인 영역을 확인 (A.6과 같은 정보를 Innovus 화면으로 표시)
 
 ### A.6 Placement by Module
 

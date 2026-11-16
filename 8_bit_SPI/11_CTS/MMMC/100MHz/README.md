@@ -61,6 +61,22 @@
 - **Observe** — hold -0.102 ns (16 위반) → +0.000 ns
 - **Insight** — 합성 단계에서는 ideal clock이라 hold 위반이 보이지 않았습니다. 실제 클럭 트리가 생기자 같은 FIFO 경로 16개가 깨졌고, FF 코너 기준 hold fix가 지연 버퍼로 모두 해소했습니다. hold를 CTS 이후에 고치는 이유입니다.
 
+### A.5 Clock Net Only (Innovus)
+
+![](images/05_Clock_Net_Innovus.png)
+
+- **What** — PostCTSopt DB에서 clock net만 표시한 Innovus 화면 (signal net 숨김)
+- **Observe** — ACLK 입력 핀에서 시작해 CTS 버퍼(네모)를 거쳐 코어 전체의 FF sink로 퍼지는 클럭 배선만 보임
+- **Insight** — A.3의 DEF 기반 그림을 실제 툴 화면으로 확인한 것입니다.
+
+### A.6 Clock Tree Debugger
+
+![](images/06_Clock_Tree_Debugger.png)
+
+- **What** — CCOpt Clock Tree Debugger (view `SS_WORST`), 세로축 = insertion delay (ns)
+- **Observe** — 루트 0.20 ns(SDC source latency)에서 시작해 버퍼 레벨을 지나 sink 그룹이 0.7~0.8 ns 대에 모임
+- **Insight** — sink 그룹 사이의 높이 차이가 skew입니다. 위 표의 skew group 값(하한 0.2 ns 포함)이 이 그림의 세로 범위와 대응합니다.
+
 ## Files
 
 ```text
@@ -71,7 +87,9 @@
 │   ├── 01_CTS_Innovus.png
 │   ├── 02_PostCTS_Opt_Innovus.png
 │   ├── 03_Clock_Tree.png
-│   └── 04_Skew_HoldFix.png
+│   ├── 04_Skew_HoldFix.png
+│   ├── 05_Clock_Net_Innovus.png
+│   └── 06_Clock_Tree_Debugger.png
 │
 ├── reports/
 │   ├── clock/

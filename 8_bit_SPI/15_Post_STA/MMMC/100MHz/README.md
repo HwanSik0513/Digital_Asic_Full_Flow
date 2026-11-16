@@ -91,6 +91,26 @@ hold worst는 TX FIFO 메모리(ACLK 쓰기) → 읽기 레지스터(SCLK) 경�
 - **Observe** — setup: ACLK -> ACLK 49, SCLK -> ACLK 1
 - **Observe** — hold: ACLK -> ACLK 13, ACLK -> SCLK 16, SCLK -> SCLK 21
 
+## 7. Tempus GUI
+
+### 7.1 Analysis (hold.mtarpt)
+
+![](images/03_Tempus_Analysis.png)
+
+- **What** — Tempus Analysis 창에 hold 리포트(`hold.mtarpt`)를 읽은 화면
+- **Observe** — Total Path 648, Passing 648, Failing 0. Path List 상위는 `ACLK -> SCLK` 경로이며 1~7위가 `u_tx_fifo/mem_reg_* -> u_tx_fifo/o_rd_data_reg_*`
+- **Insight** — hold 여유가 가장 작은 곳은 TX FIFO의 메모리 → 읽기 데이터 레지스터 경로입니다.
+
+### 7.2 Timing Path Analyzer (worst hold path)
+
+![](images/04_Tempus_Path_Analyzer.png)
+
+- **What** — 7.1의 1위 경로를 Timing Path Analyzer로 연 화면 (view `FUNC_FF_BEST`)
+- **Observe** — Hold Check, slack +0.002 ns (required 0.331 / arrival 0.333), skew 0.144 ns
+- **Observe** — start `u_tx_fifo/mem_reg_2_4/Q` (ACLK, latency 0.200) → end `u_tx_fifo/o_rd_data_reg_4/D` (SCLK, latency 0.344)
+- **Observe** — data path에 hold 버퍼 `FE_PHC84_n_51` (CLKBUFX2), `FE_PHC100_n_51` (CLKBUFX4)가 들어가 있음
+- **Insight** — capture 쪽(SCLK) latency가 launch(ACLK)보다 커서 hold가 빡빡해지고, PnR hold fix가 지연 버퍼 두 개로 +2 ps를 만든 경로입니다.
+
 ## Files
 
 ```text
@@ -99,7 +119,9 @@ hold worst는 TX FIFO 메모리(ACLK 쓰기) → 읽기 레지스터(SCLK) 경�
 │
 ├── images/
 │   ├── 01_Slack_Histogram.png
-│   └── 02_Clock_Domain_Paths.png
+│   ├── 02_Clock_Domain_Paths.png
+│   ├── 03_Tempus_Analysis.png
+│   └── 04_Tempus_Path_Analyzer.png
 │
 ├── reports/
 │   ├── 00_parasitics.rpt

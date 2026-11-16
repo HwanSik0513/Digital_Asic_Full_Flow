@@ -27,6 +27,10 @@ Pre LEC와 달리 Unreachable이 없습니다. 두 쪽 모두 이미 합성된 �
 
 ![](images/01_LEC_GUI_PASS.png)
 
+실제 사용한 dofile [`scripts/script_pnr.tcl`](scripts/script_pnr.tcl) 화면 (PnR 넷리스트 = Golden, 합성 넷리스트 = Revised):
+
+![](images/02_Dofile_script_pnr.png)
+
 > **Golden / Revised 방향** — 일반적으로 이전 단계(합성)를 Golden, 다음 단계(PnR)를 Revised로 둡니다. 이 run은 반대로 PnR을 Golden으로 읽었습니다. 등가성 검사는 양방향 대칭이므로 PASS 결과 자체는 유효하며, 다음 run부터는 합성 = Golden으로 맞출 예정입니다. 같은 비교용 dofile 예시는 [`scripts/syn2pnr.do`](scripts/syn2pnr.do)에 있습니다.
 
 ## Files
@@ -36,7 +40,8 @@ Pre LEC와 달리 Unreachable이 없습니다. 두 쪽 모두 이미 합성된 �
 ├── README.md
 │
 ├── images/
-│   └── 01_LEC_GUI_PASS.png
+│   ├── 01_LEC_GUI_PASS.png
+│   └── 02_Dofile_script_pnr.png
 │
 ├── logs/
 │   └── spi_bridge_PNR_lec.log

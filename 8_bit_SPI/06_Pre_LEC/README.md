@@ -41,6 +41,10 @@ dofile 순서: `read library` → `read design -golden` (RTL) → `read design -
 
 ![](images/01_LEC_Dofile.png)
 
+실제 batch용 dofile [`scripts/spi_RTL.tcl`](scripts/spi_RTL.tcl) 화면:
+
+![](images/02_Dofile_spi_RTL.png)
+
 > Genus가 만드는 `fv/.../rtl_to_fv_map.do`는 RTL ↔ Genus 중간 넷리스트 비교라서, 최종 넷리스트까지 확인하려면 위처럼 넷리스트를 직접 Revised로 읽습니다. Genus `write_do_lec`으로 dofile을 만드는 방법은 [`scripts/write_lec_dofile.tcl`](scripts/write_lec_dofile.tcl)에 있습니다.
 
 ## Files
@@ -50,7 +54,8 @@ dofile 순서: `read library` → `read design -golden` (RTL) → `read design -
 ├── README.md
 │
 ├── images/
-│   └── 01_LEC_Dofile.png
+│   ├── 01_LEC_Dofile.png
+│   └── 02_Dofile_spi_RTL.png
 │
 ├── logs/
 │   └── lec_rtl_syn.log

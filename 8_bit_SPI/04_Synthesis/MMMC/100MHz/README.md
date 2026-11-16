@@ -7,7 +7,7 @@
 | Corner | **MMMC** — setup `FUNC_SS_WORST` (slow_vdd1v0, 125 °C) + `FUNC_FF_BEST` (fast_vdd1v0, 0 °C), hold view `FUNC_FF_BEST` |
 | Clock | **ACLK 10 ns (100 MHz)**, SCLK = ACLK ÷ 4 (generated clock) |
 | Tool | Cadence Genus 22.17 |
-| Script | [`scripts/spi_bridge_top_45nm_MMMC.tcl`](scripts/spi_bridge_top_45nm_MMMC.tcl) + [`scripts/spi_bridge_top_syn.mmmc.tcl`](scripts/spi_bridge_top_syn.mmmc.tcl) (run: [`scripts/run_synthesis`](scripts/run_synthesis)) |
+| Script | [`scripts/spi_bridge_top_45nm_MMMC.tcl`](scripts/spi_bridge_top_45nm_MMMC.tcl) + [`scripts/spi_bridge_top_syn.mmmc.tcl`](scripts/spi_bridge_top_syn.mmmc.tcl) (run: [`scripts/run_synthesis2`](scripts/run_synthesis2)) |
 | Output | `results/spi_bridge_top_syn_final.v` → PnR 입력 넷리스트 |
 
 > **왜 MMMC로 바꿨나** — SLOW/FAST 비교 실험에서, 합성 코너(FF)가 PnR 검사 코너(SS)와 다르면 합성 slack이 좋아 보여도 PnR에서 깨진다는 것을 확인했습니다 (FAST 1GHz: 합성 +109 ps → PnR setup −481 ps). 그래서 라이브러리를 코너별 library set으로 묶고, setup 판정을 SS 코너로 고정하는 MMMC 합성으로 바꿨습니다.
@@ -69,11 +69,80 @@ report_* + report_timing -view FUNC_SS_WORST / FUNC_FF_BEST → write_hdl / writ
 | 첫 실행 `TUI-61: object_deleted` ([`reports/genus_first_try_TUI-61.log`](reports/genus_first_try_TUI-61.log)) | SDC 맨 위 `reset_design`이 두 번째 view의 SDC를 읽을 때 첫 view에서 만든 객체를 지움 | SDC의 `reset_design` 주석 처리 → 정상 완료 ([`reports/genus_all.log`](reports/genus_all.log)) |
 | 출력 SDC에 `set_ideal_network`(ACLK, ARESETn) 없음 | `write_sdc -view` 출력 차이 | PnR은 CTS 전까지 클럭을 ideal로 다루므로 영향 작음. 기록만 함 |
 
+## Scripts (실제 화면)
+
+`scripts/`의 파일을 vim으로 연 화면입니다.
+
+### S.1 SDC — clock / I/O
+
+![](images/01_SDC_clock_io.png)
+
+- `create_clock ACLK -period $CLK_PERIOD` (기본 10 ns), `set_clock_latency -source -max 0.2` + `-max 0.2`, `set_clock_uncertainty -setup 0.1`
+- `create_generated_clock SCLK -divide_by 4` (source pin `u_sclk_gen/o_sclk_reg/Q`)
+- `set_input_delay` / `set_output_delay` -max 0.1 / -min 0.01
+- 맨 위 `#reset_design` — TUI-61 수정 흔적 (5. Issues 참고)
+
+### S.2 SDC — 예외 / attribute
+
+![](images/02_SDC_exceptions.png)
+
+- `set_false_path -to {o_dbg_*}` (debug 출력), `set_false_path -from ARESETn` (비동기 리셋 입력)
+- `set_ideal_network {ACLK ARESETn}`
+- CDC `set_max_delay -datapath_only`는 주석 상태 (미적용)
+
+### S.3 MMMC 정의 — spi_bridge_top_syn.mmmc.tcl
+
+![](images/03_MMMC_tcl.png)
+
+- library set `SS_Max_0p90v_125c` / `FF_Min_1p10v_0c` → timing condition `TC_SS` / `TC_FF`
+- rc corner `WORST` (125 °C) / `BEST` (0 °C) → delay corner `SS_WORST` / `FF_BEST`
+- constraint mode `FUNC` = `spi_bridge_top.sdc`
+- `set_analysis_view -setup {FUNC_SS_WORST FUNC_FF_BEST} -hold {FUNC_FF_BEST}`
+
+### S.4 Genus 메인 스크립트 — 설정 · 읽기
+
+![](images/04_Genus_setup.png)
+
+- `syn_generic/map/opt_effort high`, `read_mmmc` + `read_physical -lef`
+- `read_hdl` (RTL 8개) → `elaborate` → `init_design` (이 시점에 SDC 적용)
+- `source dont_use_45nm.tcl` → `check_timing_intent`
+
+### S.5 Genus 메인 스크립트 — 합성 · 출력
+
+![](images/05_Genus_syn_flow.png)
+
+- `syn_generic` → `syn_map` → `syn_opt`, 단계별 `write_db` / `report_*`
+- `report_timing -view FUNC_SS_WORST` / `FUNC_FF_BEST` (20a / 20b)
+- `write_hdl`, `write_sdc -view FUNC_SS_WORST`, `write_sdf` → PnR · LEC · GLS 입력
+
+### S.6 dont_use_45nm.tcl
+
+![](images/06_dont_use.png)
+
+- `set_dont_use` ANTENNA*, DLY*, HOLD*, TIE*, TLA*, DFFS*, SDFF* (FILL*, DFFRH*는 주석)
+- 지연 셀(DLY*, HOLD*)은 합성에서 쓰지 않고 hold 보정은 PnR에서 수행, scan FF(SDFF*)는 DFT 미적용이라 제외
+
+### S.7 실행 스크립트
+
+![](images/07_run_synthesis2.png)
+
+- `genus -f ./script/spi_bridge_top_45nm_MMMC.tcl -log ./log/all.log`
+- 실행 파일: [`scripts/run_synthesis2`](scripts/run_synthesis2). 같은 폴더의 [`scripts/run_synthesis`](scripts/run_synthesis)는 `spi_bridge_top_45nm_SLOW.tcl`을 호출하는 SLOW용 파일입니다.
+
 ## 6. Files
 
 ```text
 04_Synthesis/MMMC/100MHz/
 ├── README.md
+│
+├── images/
+│   ├── 01_SDC_clock_io.png
+│   ├── 02_SDC_exceptions.png
+│   ├── 03_MMMC_tcl.png
+│   ├── 04_Genus_setup.png
+│   ├── 05_Genus_syn_flow.png
+│   ├── 06_dont_use.png
+│   └── 07_run_synthesis2.png
 │
 ├── reports/
 │   ├── 00_check_design.rpt
@@ -101,6 +170,7 @@ report_* + report_timing -view FUNC_SS_WORST / FUNC_FF_BEST → write_hdl / writ
 └── scripts/
     ├── dont_use_45nm.tcl
     ├── run_synthesis
+    ├── run_synthesis2
     ├── spi_bridge_top.sdc
     ├── spi_bridge_top_45nm_MMMC.tcl
     └── spi_bridge_top_syn.mmmc.tcl
@@ -111,6 +181,15 @@ report_* + report_timing -view FUNC_SS_WORST / FUNC_FF_BEST → write_hdl / writ
 ```text
 04_Synthesis/MMMC/100MHz/
 ├── README.md
+│
+├── images/
+│   ├── 01_SDC_clock_io.png
+│   ├── 02_SDC_exceptions.png
+│   ├── 03_MMMC_tcl.png
+│   ├── 04_Genus_setup.png
+│   ├── 05_Genus_syn_flow.png
+│   ├── 06_dont_use.png
+│   └── 07_run_synthesis2.png
 │
 ├── reports/
 │   ├── 00_check_design.rpt
@@ -140,6 +219,7 @@ report_* + report_timing -view FUNC_SS_WORST / FUNC_FF_BEST → write_hdl / writ
 └── scripts/
     ├── dont_use_45nm.tcl
     ├── run_synthesis
+    ├── run_synthesis2
     ├── spi_bridge_top.sdc
     ├── spi_bridge_top_45nm_MMMC.tcl
     └── spi_bridge_top_syn.mmmc.tcl
