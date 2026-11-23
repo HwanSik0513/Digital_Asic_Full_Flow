@@ -1,0 +1,6 @@
+PADVDD    u_pad_vdd0   ();
+PADVSS    u_pad_vss0   ();
+PADVDD    u_pad_vdd1   ();
+PADVSS    u_pad_vss1   ();
+PADVDDIOR u_pad_vddior ();
+PADVSSIOR u_pad_vssior ();

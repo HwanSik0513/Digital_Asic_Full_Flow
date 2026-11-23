@@ -1,0 +1,13 @@
+chip_top LEC (Conformal) - run in TOP/EC
+
+  mkdir -p log
+  lec -nogui -dofile ./script/lec_pre_rtl_vs_syn.tcl      (06_Pre_LEC  : RTL vs synthesis)
+  lec -nogui -dofile ./script/lec_post_syn_vs_pnr.tcl     (13_Post_LEC : synthesis vs PnR)
+
+  GUI : lec   then at the SETUP> prompt   dofile ./script/lec_pre_rtl_vs_syn.tcl
+
+Result to check in log/chip_top_lec_pre.log / chip_top_lec_post.log
+  report verification : "6. Compare Results: PASS"
+  report statistics   : Primary outputs / State key points  -> all Equivalent
+  Unmapped "Unreachable" state points are flops Genus removed as constant or
+  unused (e.g. upper data RAM / regfile bits never read) - expected, list them.

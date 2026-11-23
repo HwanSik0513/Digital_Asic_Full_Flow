@@ -1,0 +1,53 @@
+xrun(64): 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s012: Started on Nov 21, 2026 at 06:18:47 KST
+xrun
+	-64bit
+	-access +rwc
+	-f filelist.f
+		../../RTL/Reset_sync.v
+		../../RTL/Pulse_sync.v
+		../../RTL/Async_fifo.v
+		../../RTL/Spi_slave.v
+		../../RTL/Register_block.v
+		../../RTL/Spi_slave_bridge.v
+		../TESTBENCH/Spi_master.v
+		../TESTBENCH/tb_spi_slave_bridge.v
+	-top tb_spi_slave_bridge
+	-l func_sim.log
+Loading snapshot worklib.tb_spi_slave_bridge:v .................... Done
+xcelium> source /tools/cadence/XCELIUM2203/tools/xcelium/files/xmsimrc
+xcelium> run
+[500000] ---- TEST 0 : reset values ----
+[506000] PASS: TEST0 STATUS = 0x01 (EMPTY only)
+[516000] PASS: TEST0 CONTROL = 0x00
+[526000] PASS: TEST0 FIFO_LEVEL = 0
+[536000] PASS: TEST0 TX_DATA readback = 0x00
+[536000] PASS: TEST0 o_overflow = 0, o_rx_valid = 0
+[577000] ---- TEST 1 : RX path ----
+[6856000] PASS: TEST1 RX bytes 0x00..0x07 in order
+[6856000] ---- TEST 2 : TX path / TX_FULL ----
+[6906000] PASS: TEST2 STATUS.TX_FULL = 1 after 4 writes
+[6916000] PASS: TEST2 TX_DATA readback = 0xA3 (last written)
+[7066000] PASS: TEST2 STATUS.TX_FULL returns to 0 as the slave pops
+[10725000] PASS: TEST2 host received 0xA0 on MISO
+[10725000] PASS: TEST2 bytes before 0xA0 are 0x00 (TX underflow default)
+[10725000] PASS: TEST2 MISO sequence A0, A1, A2, A3 (no loss, no reorder)
+[10725000] PASS: TEST2 MISO returns to 0x00 after the FIFO empties
+[10725000] ---- TEST 3 : SPI_BUSY ----
+[10796000] PASS: TEST3 STATUS.SPI_BUSY toggles (frame / inter-frame gap)
+[10796000] ---- TEST 4 : RX FULL / OVERFLOW / CLEAR ----
+[20056000] PASS: TEST4 FIFO_LEVEL reaches 16
+[20066000] PASS: TEST4 STATUS.FULL = 1 when FIFO_LEVEL = 16 (ACLK-domain flag)
+[20066000] PASS: TEST4 STATUS.EMPTY = 0
+[20846000] PASS: TEST4 OVERFLOW sticky set, o_overflow = 1
+[21716000] PASS: TEST4 OVERFLOW cleared by CONTROL[1]
+[21716000] PASS: TEST4 RX_VALID cleared by FIFO_CLEAR (prefetch discarded)
+[21846000] PASS: TEST4 FIFO drained (level <= 2 while host keeps sending)
+[21856000] PASS: TEST4 STATUS.FULL = 0 after drain
+[21856000] ---- TEST 5 : RX after clear ----
+[25546000] PASS: TEST5 5 consecutive RX bytes increment by 1 after FIFO_CLEAR
+[26546000] ALL TESTS PASSED (tb_spi_slave_bridge)
+Simulation complete via $finish(1) at time 26546 NS + 0
+../TESTBENCH/tb_spi_slave_bridge.v:430     $finish ;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s012: Exiting on Nov 21, 2026 at 06:18:48 KST  (total: 00:00:01)

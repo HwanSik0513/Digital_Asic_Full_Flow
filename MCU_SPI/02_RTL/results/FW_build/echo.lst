@@ -1,0 +1,24 @@
+00000000  3c018000  lui   $1, 0x8000          # $1 = 0x8000_0000 (I/O base)
+00000004  20020008  addi  $2, $0, 8           # $2 = ECHO_N
+00000008  ac200020  sw    $0, 32($1)          # GPIO_OUT = 0x00 (running)
+0000000c  8c230004  lw    $3, 4($1)           # STATUS
+00000010  30630008  andi  $3, $3, 0x0008      # RX_VALID
+00000014  1060fffd  beq   $3, $0, wait_rx
+00000018  8c240000  lw    $4, 0($1)           # RX_DATA (pop)
+0000001c  20840001  addi  $4, $4, 1           # +1
+00000020  308400ff  andi  $4, $4, 0x00ff      # keep 8 bits
+00000024  8c230004  lw    $3, 4($1)           # STATUS
+00000028  30630020  andi  $3, $3, 0x0020      # TX_FULL
+0000002c  1460fffd  bne   $3, $0, wait_tx
+00000030  ac240010  sw    $4, 16($1)          # TX_DATA (push)
+00000034  2042ffff  addi  $2, $2, -1
+00000038  1440fff4  bne   $2, $0, loop
+0000003c  8c230004  lw    $3, 4($1)           # STATUS
+00000040  30630010  andi  $3, $3, 0x0010      # OVERFLOW
+00000044  14600003  bne   $3, $0, fail
+00000048  200500a5  addi  $5, $0, 0x00a5      # PASS code
+0000004c  ac250020  sw    $5, 32($1)          # GPIO_OUT
+00000050  08000017  j     done
+00000054  200500ee  addi  $5, $0, 0x00ee      # FAIL code
+00000058  ac250020  sw    $5, 32($1)
+0000005c  08000017  done:   j     done                # halt loop

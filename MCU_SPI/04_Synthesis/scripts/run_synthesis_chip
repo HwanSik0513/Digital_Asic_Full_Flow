@@ -1,0 +1,10 @@
+#!/bin/csh -f
+## chip_top synthesis (MMMC)
+echo -n "Syn Start : " > cds_syn_runtime
+date >> cds_syn_runtime
+
+mkdir -p log
+genus -f ./script/chip_top_45nm_MMMC.tcl -log ./log/chip_top.log
+
+echo -n "Syn End   : " >> cds_syn_runtime
+date >> cds_syn_runtime

@@ -1,0 +1,197 @@
+                          CONFORMAL (R)
+                   Version 22.10-s300 (29-Aug-2022) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2022. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1546 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 0.35    seconds
+Elapse time  : 23      seconds
+Memory usage : 80.50   M bytes
+// Command: read library -verilog -both \
+//          	/home/hitech010/PROJ2/GPDK045/digital/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v \
+//          	/home/hitech010/PROJ2/GPDK045/digital/giolib045_v3.5/vlog/pads_SS_s1vg.v
+// Parsing file /home/hitech010/PROJ2/GPDK045/digital/gsclib045_all_v4.4/gsclib045/verilog/slow_vdd1v0_basicCells.v ...
+// Parsing file /home/hitech010/PROJ2/GPDK045/digital/giolib045_v3.5/vlog/pads_SS_s1vg.v ...
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:120)
+// Note: (VLG8) Buffer inserted (occurrence:1392)
+// Note: (VLG9.2) The `define macro is used (occurrence:14)
+// Warning: (UDP3.2) Primitive has unspecified term(s) (occurrence:4)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:497)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:1036)
+// Note: (DIR6.3) Conditional compiler directive clause is effective (occurrence:14)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:2)
+// Warning: (HRC3.2a) Module/entity has no I/O ports (occurrence:9)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 0.52    seconds
+Elapse time  : 24      seconds
+Memory usage : 104.64  M bytes
+// Command: read design \
+//          	../RTL/Reset_sync.v \
+//          	../RTL/Pulse_sync.v \
+//          	../RTL/Async_fifo.v \
+//          	../RTL/Spi_slave.v \
+//          	../RTL/Register_block.v \
+//          	../RTL/Spi_slave_bridge.v \
+//          	../RTL/Sc_cu.v \
+//          	../RTL/Alu.v \
+//          	../RTL/Regfile.v \
+//          	../RTL/Mips_cpu.v \
+//          	../RTL/Data_ram.v \
+//          	../FW/build/echo_rom.v \
+//          	../RTL/Mcu_core.v \
+//          	../RTL/Chip_top.v \
+//          	-verilog -golden -root chip_top
+// Parsing file ../RTL/Reset_sync.v ...
+// Parsing file ../RTL/Pulse_sync.v ...
+// Parsing file ../RTL/Async_fifo.v ...
+// Parsing file ../RTL/Spi_slave.v ...
+// Parsing file ../RTL/Register_block.v ...
+// Parsing file ../RTL/Spi_slave_bridge.v ...
+// Parsing file ../RTL/Sc_cu.v ...
+// Parsing file ../RTL/Alu.v ...
+// Parsing file ../RTL/Regfile.v ...
+// Parsing file ../RTL/Mips_cpu.v ...
+// Parsing file ../RTL/Data_ram.v ...
+// Parsing file ../FW/build/echo_rom.v ...
+// Parsing file ../RTL/Mcu_core.v ...
+// Parsing file ../RTL/Chip_top.v ...
+// Golden root module is set to 'chip_top'
+// Warning: (RTL1.2) Variable/signal is assigned by multiple non-blocking assignments (occurrence:1)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:9)
+// Note: (RTL5.5a) Default case item with non-X assignment(s) (occurrence:5)
+// Warning: (RTL7.3) Array index in RHS might be out of range (occurrence:2)
+// Warning: (RTL7.4) Array index in LHS might be out of range (occurrence:1)
+// Warning: (RTL10) Both posedge and negedge are used in different always/process (occurrence:5)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:49)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:14)
+// Note: (HRC3.5b) Open output port connection is detected (occurrence:2)
+// Note: Read VERILOG design successfully
+// Command: read design \
+//          	../SYN/mapped/chip_top_syn_final.v \
+//          	-verilog -revised -root chip_top
+// Parsing file ../SYN/mapped/chip_top_syn_final.v ...
+// Revised root module is set to 'chip_top'
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:7)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:47)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:26)
+// Warning: There are 7 undriven nets in Revised
+// Warning: There are 7 undriven pins in Revised
+// Note: Read VERILOG design successfully
+CPU time     : 0.85    seconds
+Elapse time  : 29      seconds
+Memory usage : 123.25  M bytes
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// Warning: (F34) Converted 64 X assignment(s) as don't care(s)
+// Processing Revised ...
+// Modeling Revised ...
+// (F28) Converted 7 internal output port(s) to inout port(s)
+CPU time     : 1.53    seconds
+Elapse time  : 33      seconds
+Memory usage : 154.60  M bytes
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            5      9      1600      1614    
+--------------------------------------------------------------------------------
+Revised           5      9      1600      1614    
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Unreachable       768       768     
+================================================================================
+Revised:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Unreachable       768       768     
+================================================================================
+CPU time     : 1.78    seconds
+Elapse time  : 34      seconds
+Memory usage : 156.54  M bytes
+// Command: add compare points -all
+// 1609 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           9      1600      1609    
+================================================================================
+CPU time     : 6.17    seconds
+Elapse time  : 39      seconds
+Memory usage : 209.70  M bytes
+// Command: report verification
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  1
+     Multiple clocks in the design:                            yes
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+================================================================================
+// Command: report statistics
+Mapping and compare statistics
+================================================================================
+                     Compare Result       Golden            Revised
+--------------------------------------------------------------------------------
+Root module name                          chip_top          chip_top          
+
+Primary inputs                                 5                  5
+   Mapped                                      5                  5
+
+Primary outputs                                9                  9
+   Mapped                                      9                  9
+      Equivalent                  9
+
+State key points                            2368               2368
+   Mapped                                   1600               1600
+      Equivalent               1600
+   Unmapped                                  768                768
+      Unreachable                            768                768
+================================================================================
+// Command: report unmapped points -summary
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Unreachable       768       768     
+================================================================================
+Revised:
+--------------------------------------------------------------------------------
+Unmapped points   DFF       Total   
+--------------------------------------------------------------------------------
+Unreachable       768       768     
+================================================================================
+// Command: report compare data -class nonequivalent
+0 Non-equivalent point(s) reported
+0 compared point(s) reported
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           9      1600      1609    
+================================================================================

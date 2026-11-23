@@ -1,0 +1,69 @@
+
+
+Working Directory = /home/hah003/PROJ2/Proj2_make/TOP/SYN
+QoS Summary for chip_top
+================================================================================
+Metric                          syn_generic     syn_map         syn_opt        
+================================================================================
+
+View : FUNC_SS_WORST
+Slack (ps):                     3,824              20               1
+  R2R (ps):                     3,824              20               1
+  I2R (ps):                    17,047          17,074          17,074
+  R2O (ps):                     6,533           6,501           6,501
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+TNS (ps):                           0               0               0
+  R2R (ps):                         0               0               0
+  I2R (ps):                         0               0               0
+  R2O (ps):                         0               0               0
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+Failing Paths:                      0               0               0
+
+View : FUNC_FF_BEST
+Slack (ps):                     7,472           7,455           7,455
+  R2R (ps):                     8,240           7,645           7,645
+  I2R (ps):                    17,488          17,494          17,494
+  R2O (ps):                     7,472           7,455           7,455
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+TNS (ps):                           0               0               0
+  R2R (ps):                         0               0               0
+  I2R (ps):                         0               0               0
+  R2O (ps):                         0               0               0
+  I2O (ps):                  no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value
+Failing Paths:                      0               0               0
+
+Cell Area:                    201,600         228,694         228,584
+Total Cell Area:              201,600         228,694         228,584
+Leaf Instances:                11,073           6,839           6,775
+Total Instances:               11,073           6,839           6,775
+Utilization (%):                 0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value
+================================================================================
+CPU  Runtime (h:m:s):        00:01:29        00:01:38        00:00:45
+Real Runtime (h:m:s):        00:01:23        00:01:18        00:00:43
+CPU  Elapsed (h:m:s):        00:01:40        00:03:18        00:04:03
+Real Elapsed (h:m:s):        00:01:28        00:02:46        00:03:29
+Memory (MB):                  1842.48         1846.17         1847.99
+================================================================================
+================================================================================
+Flow Settings:
+================================================================================
+Total Runtime (h:m:s): 00:03:25
+Total Memory (MB):     1847.99
+Executable Version:    22.17-s071_1
+================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

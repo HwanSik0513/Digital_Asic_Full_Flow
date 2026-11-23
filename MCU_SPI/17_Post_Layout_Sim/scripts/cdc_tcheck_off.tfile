@@ -1,0 +1,37 @@
+// Xcelium timing file for chip_top post-layout GLS (xrun -tfile)
+// Timing checks OFF on the first stage of every synchronizer only.
+// These flops sample a signal from the other clock domain (or the
+// asynchronous ARESETn) on purpose: a setup/hold violation there is the
+// expected metastability window, which the 2nd stage absorbs. With the
+// check on, the cell model drives X through its notifier and the X would
+// travel into the design (not a real failure).
+// Tempus reports the same flops as "untested" (Setup/Hold 20, Recovery/Removal 9).
+//
+// Async FIFO Gray pointer synchronizers: RX FIFO ADDR_WIDTH 4 -> 5-bit pointers,
+// TX FIFO ADDR_WIDTH 2 -> 3-bit pointers (async_fifo_DATA_WIDTH8_ADDR_WIDTH2)
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_0 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_1 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_2 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_3 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_rd_ptr_gray_meta_w_reg_4 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_0 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_1 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_2 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_3 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_rx_fifo.r_wr_ptr_gray_meta_r_reg_4 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_0 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_1 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_tx_fifo.r_rd_ptr_gray_meta_w_reg_2 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_0 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_1 -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_tx_fifo.r_wr_ptr_gray_meta_r_reg_2 -tcheck
+// overflow pulse synchronizer (SCLK -> ACLK) and SPI_BUSY 2-FF synchronizer
+PATH tb_chip_top.dut.u_core.u_spi.u_overflow_pulse_sync.r_dst_meta_reg -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.r_spi_busy_meta_reg -tcheck
+// reset synchronizers: async assert from ARESETn (false path in the SDC)
+PATH tb_chip_top.dut.u_core.u_reset_sync_core.r_meta_ff_reg -tcheck
+PATH tb_chip_top.dut.u_core.u_reset_sync_core.rst_n_sync_reg -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_reset_sync_aclk.r_meta_ff_reg -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_reset_sync_aclk.rst_n_sync_reg -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_reset_sync_sclk.r_meta_ff_reg -tcheck
+PATH tb_chip_top.dut.u_core.u_spi.u_reset_sync_sclk.rst_n_sync_reg -tcheck

@@ -1,0 +1,152 @@
+xrun(64): 22.03-s012: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	22.03-s012: Started on Nov 16, 2026 at 23:41:40 KST
+xrun
+	-64bit
+	-access +rwc
+	-f filelist_mcu.f
+		../../RTL/Reset_sync.v
+		../../RTL/Pulse_sync.v
+		../../RTL/Async_fifo.v
+		../../RTL/Spi_slave.v
+		../../RTL/Register_block.v
+		../../RTL/Spi_slave_bridge.v
+		../../RTL/Sc_cu.v
+		../../RTL/Alu.v
+		../../RTL/Regfile.v
+		../../RTL/Mips_cpu.v
+		../../RTL/Data_ram.v
+		../../RTL/Mcu_core.v
+		../../FW/build/echo_rom.v
+		../TESTBENCH/Spi_master.v
+		../TESTBENCH/tb_mcu_core.v
+	-top tb_mcu_core
+	-l mcu_sim.log
+file: ../../RTL/Reset_sync.v
+	module worklib.reset_sync:v
+		errors: 0, warnings: 0
+file: ../../RTL/Pulse_sync.v
+	module worklib.pulse_sync:v
+		errors: 0, warnings: 0
+file: ../../RTL/Async_fifo.v
+	module worklib.async_fifo:v
+		errors: 0, warnings: 0
+file: ../../RTL/Spi_slave.v
+	module worklib.spi_slave:v
+		errors: 0, warnings: 0
+file: ../../RTL/Register_block.v
+	module worklib.register_block:v
+		errors: 0, warnings: 0
+file: ../../RTL/Spi_slave_bridge.v
+	module worklib.spi_slave_bridge:v
+		errors: 0, warnings: 0
+file: ../../RTL/Sc_cu.v
+	module worklib.sc_cu:v
+		errors: 0, warnings: 0
+file: ../../RTL/Alu.v
+	module worklib.alu:v
+		errors: 0, warnings: 0
+file: ../../RTL/Regfile.v
+	module worklib.regfile:v
+		errors: 0, warnings: 0
+file: ../../RTL/Mips_cpu.v
+	module worklib.mips_cpu:v
+		errors: 0, warnings: 0
+file: ../../RTL/Data_ram.v
+	module worklib.data_ram:v
+		errors: 0, warnings: 0
+file: ../../RTL/Mcu_core.v
+	module worklib.mcu_core:v
+		errors: 0, warnings: 0
+file: ../../FW/build/echo_rom.v
+	module worklib.inst_rom:v
+		errors: 0, warnings: 0
+file: ../TESTBENCH/Spi_master.v
+	module worklib.spi_master:v
+		errors: 0, warnings: 0
+file: ../TESTBENCH/tb_mcu_core.v
+	module worklib.tb_mcu_core:v
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		tb_mcu_core
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.spi_master:v <0x5eb7ef26>
+			streams:  19, words:  7166
+		worklib.register_block:v <0x190ec563>
+			streams:  22, words:  6976
+		worklib.pulse_sync:v <0x6caf310c>
+			streams:   6, words:  1604
+		worklib.async_fifo:v <0x288d1ea3>
+			streams:  22, words:  7158
+		worklib.async_fifo:v <0x60d91147>
+			streams:  22, words:  7162
+		worklib.spi_slave:v <0x0bad5589>
+			streams:  22, words:  7793
+		worklib.data_ram:v <0x2849bcff>
+			streams:   3, words:  1084
+		worklib.inst_rom:v <0x2a79bd43>
+			streams:   1, words:   745
+		worklib.alu:v <0x2ed82738>
+			streams:   6, words:  2455
+		worklib.regfile:v <0x54f7793d>
+			streams:   5, words:  2511
+		worklib.sc_cu:v <0x2c3ffbac>
+			streams:  12, words: 12326
+		worklib.mips_cpu:v <0x666594bd>
+			streams:  17, words:  4162
+		worklib.reset_sync:v <0x08292709>
+			streams:   3, words:   805
+		worklib.tb_mcu_core:v <0x597e46b4>
+			streams:  16, words: 21126
+		worklib.spi_slave_bridge:v <0x1f740a63>
+			streams:   7, words:  1530
+		worklib.mcu_core:v <0x0a131106>
+			streams:  10, words:  2778
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                18      15
+		Registers:             108      85
+		Scalar wires:           87       -
+		Expanded wires:         64       2
+		Vectored wires:         43       -
+		Always blocks:          59      49
+		Initial blocks:          7       7
+		Cont. assignments:      53     103
+		Pseudo assignments:     10      10
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_mcu_core:v
+Loading snapshot worklib.tb_mcu_core:v .................... Done
+xcelium> source /tools/cadence/XCELIUM2203/tools/xcelium/files/xmsimrc
+xcelium> run
+[0] GPIO_OUT = 0x00
+[536000] INFO: reset released, SPI host started
+[6985000] GPIO_OUT = 0xa5
+[6995000] PASS: GPIO_OUT = 0xA5 (echo program reports PASS, no RX overflow)
+[10643000]   RX pop 0 : 0x00
+[10643000]   RX pop 1 : 0x01
+[10643000]   RX pop 2 : 0x02
+[10643000]   RX pop 3 : 0x03
+[10643000]   RX pop 4 : 0x04
+[10643000]   RX pop 5 : 0x05
+[10643000]   RX pop 6 : 0x06
+[10643000]   RX pop 7 : 0x07
+[10643000] PASS: CPU popped exactly 8 RX bytes: 0x00..0x07 in order
+[10643000]   MISO echo 0 : 0x01 (expected 0x01)
+[10643000]   MISO echo 1 : 0x02 (expected 0x02)
+[10643000]   MISO echo 2 : 0x03 (expected 0x03)
+[10643000]   MISO echo 3 : 0x04 (expected 0x04)
+[10643000]   MISO echo 4 : 0x05 (expected 0x05)
+[10643000]   MISO echo 5 : 0x06 (expected 0x06)
+[10643000]   MISO echo 6 : 0x07 (expected 0x07)
+[10643000]   MISO echo 7 : 0x08 (expected 0x08)
+[10643000] PASS: host received echoes 0x01..0x08 in order on MISO
+[10643000] PASS: CPU in halt loop (pc = 0x5C, 'done: j done')
+[11643000] ALL TESTS PASSED (tb_mcu_core)
+Simulation complete via $finish(1) at time 11642500 PS + 0
+../TESTBENCH/tb_mcu_core.v:209     $finish ;
+xcelium> exit
+TOOL:	xrun(64)	22.03-s012: Exiting on Nov 16, 2026 at 23:41:41 KST  (total: 00:00:01)

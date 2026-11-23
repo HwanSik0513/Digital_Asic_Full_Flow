@@ -1,0 +1,35 @@
+--- /mnt/user-data/uploads/c31a8eba-Register_block.v	2026-11-16 13:53:33.473475587 +0900
++++ rtl/register_block.v	2026-11-16 14:03:14.777242569 +0900
+@@ -36,7 +36,7 @@
+ output       o_rx_fifo_rd_en   ; // RX FIFO, read side (ACLK domain)
+ input  [7:0] i_rx_fifo_rd_data ;
+ input        i_rx_fifo_empty   ;
+-input        i_rx_fifo_full    ;
++input        i_rx_fifo_full    ; // must be an ACLK-domain signal (CDC-01 fix in top)
+ input  [4:0] i_rx_fifo_level   ; // ADDR_WIDTH=4 -> 5-bit level
+ 
+ output       o_tx_fifo_wr_en   ; // TX FIFO, write side (ACLK domain)
+@@ -164,11 +164,21 @@
+ // ---------------------------------------------------------------
+ // Read mux (combinational)
+ // ---------------------------------------------------------------
+-wire [7:0] w_status_reg_val = {3'b000 , // [7:5] reserved
++// TX_FULL (STATUS[5], added for the MCU integration):
++// A TX_DATA write reaches the TX FIFO one ACLK cycle later (registered
++// o_tx_fifo_wr_en), and the FIFO's full flag updates on that same edge.
++// OR-ing in the pending write closes that one-cycle window, so software
++// that polls STATUS right after a write never sees "not full" for a FIFO
++// that is about to become full. Cost: bit 5 reads 1 for one extra cycle
++// after every TX write. Both terms are ACLK-domain signals (no CDC).
++wire w_tx_full_status = i_tx_fifo_full || o_tx_fifo_wr_en ;
++
++wire [7:0] w_status_reg_val = {2'b00 , // [7:6] reserved
++                              w_tx_full_status  , // [5] TX_FULL
+                               r_overflow_sticky , // [4] OVERFLOW
+                               rx_data_buf_valid , // [3] RX_VALID
+                               i_spi_busy_sync   , // [2] SPI_BUSY
+-                              i_rx_fifo_full    , // [1] FULL
++                              i_rx_fifo_full    , // [1] FULL (RX, ACLK-domain, see top)
+                               i_rx_fifo_empty}; // [0] EMPTY
+ 
+ wire [7:0] w_control_reg_val = {5'b00000, irq_enable, 1'b0, 1'b0} ;
